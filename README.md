@@ -17,4 +17,4 @@
 
  # Others
  + 레포지터리 오너 : alsrhks2508@yu.ac.kr
- + ![공모전 사이트]([https://www.kfpd.org/51/38])
+ + [공모전 사이트](https://www.kfpd.org/51/38)
