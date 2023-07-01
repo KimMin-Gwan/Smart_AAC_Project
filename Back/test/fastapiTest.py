@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 def 작명():
-    return FileResponse('./template/index.html')
+    return 'The Compass Server'
 
 from pydantic import BaseModel
 class Model(BaseModel):
