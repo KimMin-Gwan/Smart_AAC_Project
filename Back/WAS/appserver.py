@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
-from pydantic import BaseModel
+#from pydantic import BaseModel
 from fastapi import UploadFile, File
 import soundfile as sf
 #import Mainfucntion as mainfunction
@@ -22,26 +22,20 @@ app = FastAPI()
 def main():
     return 'The Compass Server'
 
-class Model(BaseModel):
-    name : str
+#class Model(BaseModel):
+    #name : str
 
 #wav 데이터 받기
-@app.post('/get/wav')
-def recog_voice(file: UploadFile = File(...)):
-    with open(file, "r") as contents:
-        result = contents.read()
-    #mainfunction.recog_wav(contents)
-    #result = mainfunction.get_wav_return()
-    #if result == -1:
-    #    return 'Error'
-    #get_audio_header_info(file)
-    return {"result" : result}
+@app.post('/get_wav')
+async def recog_voice(file: UploadFile = File(..., required = False)):
+    contents = await file.read()
+    return {"filename": 'hi'}
 
 #GPS 데이터 보내기
 @app.post('/get/id')
-def recog_GPS():
+async def recog_GPS():
     contents = 10
-    return contents
+    return {"filename": contents}
 
 
 """
