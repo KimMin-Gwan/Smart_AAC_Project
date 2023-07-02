@@ -2,13 +2,15 @@ from fastapi import FastAPI
 #from fastapi.responses import FileResponse
 from fastapi import UploadFile, File
 from constant import GPS
+import uvicorn
 
 class AppServer():
     def __init__(self, mainfunction):
         self.app = FastAPI()
         self.mainfunction = mainfunction
+        self.register_routes()
 
-    def run(self):
+    def register_routes(self):
         #wav 데이터 받기
         @self.app.post('/get_wav')
         async def recog_voice(file: UploadFile = File(..., required = False)):
@@ -39,6 +41,10 @@ class AppServer():
             result = self.mainfunction.recog_gps(x, y)
 
             return {"Category": result}
+        
+    def run_server(self, HOST, PORT):
+        uvicorn.run(self.app, host=HOST, port= PORT)
+
 
 
         
