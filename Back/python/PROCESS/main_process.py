@@ -1,4 +1,4 @@
-
+import WavRecognizer
 
 class MainFunction():
     def __init__(self):
@@ -12,7 +12,13 @@ class MainFunction():
         else:
             print("Error")
 
+    #wav 분석
     def recog_wav(file):
+        recognizer = WavRecognizer(file)
+        result = recognizer.recognizer(file)
+        return result
+
+
 
 
     def recog_gps(x, y):
