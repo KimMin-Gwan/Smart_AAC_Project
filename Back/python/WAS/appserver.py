@@ -27,12 +27,24 @@ async def recog_voice(file: UploadFile = File(..., required = False)):
 
     return {"result" : result}
 
+# GPS 데이터 형식
+class GPS(BaseModel):
+    x:str
+    y:str
 
 #GPS 데이터 보내기
-@app.post('/get/id')
-async def recog_GPS():
-    contents = 10
-    return {"filename": contents}
+@app.post('/get_gps')
+async def recog_GPS(data : GPS):
+    if data is None:
+        print('gps not uploaded')
+        return {"error": "data did not usable"}
+
+    x = int(data.x)
+    y = int(data.y)
+    # result:str
+    result = mainfunction.recog_gps(x, y)
+
+    return {"Category": result}
 
 
 """
