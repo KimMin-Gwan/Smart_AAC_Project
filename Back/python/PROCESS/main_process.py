@@ -1,4 +1,5 @@
-import WavRecognizer
+from recognize_wav import WavRecognizer
+from gps import *
 
 class MainFunction():
     def __init__(self):
@@ -13,13 +14,23 @@ class MainFunction():
             print("Error")
 
     #wav 분석
-    def recog_wav(file):
+    #라벨을 반환
+    def recog_wav(self, file):
+        self.status = 1
+        self()
+
+        # ---------------
+        # 분석기 생성
         recognizer = WavRecognizer(file)
+        # 분석
         result = recognizer.recognizer(file)
+        # 분석기 메모리 반환
+        recognizer = None
+        # ---------------
+
+        self.status = 0
+        self()
         return result
-
-
-
 
     def recog_gps(x, y):
         pass
