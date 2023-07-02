@@ -20,7 +20,11 @@ print(json.dumps(gps_data(128.755739,35.834908)['documents'][0]["road_address"][
 #gps 정보 받아오기
 #건물 ㅔㄷ이터 보내주기
 #try except < 건물 데이터 없으며 데이턱 ㅏ없으니 사용
-class gps():
+class gps():   
+    def __init__():
+        self.lat = lon
+        self.lon = lon
+
     def __gps_location():
         #안드로이드 애플리케이션에서 gps 데이틀 받아옴
         return 0
@@ -35,12 +39,14 @@ class gps():
 
     def __you_are_here():
         try:
-            return json.dumps(self.__where_am_i(128.755739,35.834908)['documents'][0]["road_address"]["building_name"],indent=4,ensure_ascii=False)
+            data = json.dumps(self.__where_am_i()['documents'][0]["road_address"]["building_name"],indent=4,ensure_ascii=False)
+            return 
         
         except:
-            return print("건물 데이터 못찾음 대신 다 보여드림", json.dumps(self.__where_am_i(128.755739,35.834908),indent=4,ensure_ascii=False))
+            all_data = print("건물 데이터 못찾음 대신 다 보여드림", json.dumps(self.__where_am_i(),indent=4,ensure_ascii=False))
+            return 
 
 
-    def __need_great_name_4_this_func():
+    def need_great_name_4_this_func():
         #건물 이름으로 얻은 데이터 분석해서 장소 라벨 보내주기 ex)식당, 병원, 약국, 학교
         return 0
