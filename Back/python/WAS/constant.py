@@ -4,3 +4,7 @@ from pydantic import BaseModel
 class GPS(BaseModel):
     x:str
     y:str
+
+
+WAV_SAVE_PATH = "./temp/"
+
