@@ -6,6 +6,7 @@ import speech_recognition as sr
 
 
 class WavRecognizer():
+    # 생성자
     def __init__(self, file):
         self.path = __file__ + file.filename
     
@@ -14,6 +15,8 @@ class WavRecognizer():
         os.system(f'cd {now_loc}')
         os.system('ls')
 
+    # file을 로컬에 저장
+    # 성공하면 1 실패하면 -1 반환 
     def __save_real_file(self, object_file):
         try:
             with open(self.path, "wb") as f:
@@ -24,6 +27,7 @@ class WavRecognizer():
             print("Error : ", str(e))
             return -1
     
+    #wav 파일을 text(str) 형태로 분해
     def __speech_to_text(self):
         try:
             r = sr.Recognizer()
@@ -35,10 +39,14 @@ class WavRecognizer():
             print("Error : ", str(e))
             return " "
     
+    ## text를 분석
     def __recognizing(self):
         # 군집화나 RNN으로 분석해서 리턴시켜야됨
         pass
 
+    ## 분석기
+    ## 정상적인 결과는 라벨을 반환
+    ## 정상적인 결과 출력이 안되면 defualt를 반환
     def recognizer(self, file):
         flag = self.__save_real_file(object_file = file.file)
         if flag == -1:
