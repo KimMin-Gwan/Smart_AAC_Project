@@ -21,15 +21,15 @@ print(json.dumps(gps_data(128.755739,35.834908)['documents'][0]["road_address"][
 #건물 ㅔㄷ이터 보내주기
 #try except < 건물 데이터 없으며 데이턱 ㅏ없으니 사용
 class gps():   
-    def __init__():
-        self.lat = lon
+    def __init__(self, lat, lon):
+        self.lat = lat
         self.lon = lon
 
-    def __gps_location():
+    def __gps_location(self):
         #안드로이드 애플리케이션에서 gps 데이틀 받아옴
         return 0
 
-    def __where_am_i():
+    def __where_am_i(self):
         #gps 경도 위도로 현재 위치의 정보 받기
         lon = self.__gps_location() #gps 위치 받은거 경도 위도 잘라서 넣어주기
         lat = 0
@@ -37,7 +37,7 @@ class gps():
         result = requests.get(urlparse(url).geturl(), headers=constant.header).json()        
         return result
 
-    def __you_are_here():
+    def __you_are_here(self):
         try:
             data = json.dumps(self.__where_am_i()['documents'][0]["road_address"]["building_name"],indent=4,ensure_ascii=False)
             return 
@@ -47,6 +47,6 @@ class gps():
             return 
 
 
-    def need_great_name_4_this_func():
+    def need_great_name_4_this_func(self):
         #건물 이름으로 얻은 데이터 분석해서 장소 라벨 보내주기 ex)식당, 병원, 약국, 학교
         return 0
