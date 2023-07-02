@@ -5,15 +5,14 @@ from fastapi import UploadFile, File
 import soundfile as sf
 import speech_recognition as sr
 import asyncio
+import shutil
+import time
 
-async def recog_wav(file):
+def recog_wav(file):
     r = sr.Recognizer()
     with sr.AudioFile(file) as source:
         audio = r.record(source, duration = 120)
-    loop = asyncio.get_event_loop()
-    text = await loop.run_in_executor(None, 
-                                    r.recognize_google,
-                                    audio, 'ko-KR')
+    text = r.recognize_google(audio_data=audio, language='ko-KR')
     print(text)
 
 
@@ -28,10 +27,14 @@ async def recog_voice(file: UploadFile = File(..., required = False)):
     else:
         print('wav file upload complete')
     try:
-        await recog_wav(file.file)
+        save_path = f"./temp/{file.filename}"
+        with open(save_path, "wb") as f:
+            shutil.copyfileobj(file.file, f)
+        print(f"WAV file saved to {save_path}")
+        time.sleep(0.5)
+        recog_wav(save_path)
     except Exception as e:
-        #print("Error : ", str(e))
-        print("type : ", type(file))
+        print("Error : ", str(e))
 
 
     #if result == 'default':
