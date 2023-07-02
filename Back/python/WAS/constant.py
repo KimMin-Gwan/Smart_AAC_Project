@@ -6,5 +6,4 @@ class GPS(BaseModel):
     y:str
 
 
-WAV_SAVE_PATH = "./temp/"
 
