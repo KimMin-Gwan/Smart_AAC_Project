@@ -10,9 +10,7 @@ def gps_data(lon, lat):
     result = requests.get(urlparse(url).geturl(),
         headers=header).json()
 
-   #확인용 출력
-    print(json.dumps(gps_data(128.755739,35.834908),indent=4,ensure_ascii=False))  
-       
     return result
 
-
+#확인용 출력
+print(json.dumps(gps_data(128.755739,35.834908),indent=4,ensure_ascii=False))  
