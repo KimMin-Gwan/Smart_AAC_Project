@@ -8,8 +8,8 @@ input_coord ="WGS84"  좌표계
 CategoryGroupCode 하단 참조
 radius 검색 범위
 """
-header={"Authorization": "KakaoAK #"} #나중에 초기화 파일로 빼낼거(인증키)
-
+header={"Authorization": "KakaoAK REST-API-KEY"} #나중에 초기화 파일로 빼낼거(인증키)
+param={"query=이마트"}
 #좌표로 행정구역정보 받기
 def notNamed1(x, y):
     url = f"https://dapi.kakao.com/v2/local/geo/coord2regioncode.json?x={x}&y={y}"
@@ -18,16 +18,18 @@ def notNamed1(x, y):
     return result
 
 #좌표로 주소 변환하기
-def notNamed2(x, y, input_coord):
-    url = f"https://dapi.kakao.com/v2/local/geo/coord2address.json?x={x}&y={y}&input_coord={input_coord}"
+def notNamed2(x, y):
+    url = f"https://dapi.kakao.com/v2/local/geo/coord2address.json?x={x}&y={y}"
     result = requests.get(urlparse(url).geturl(),
         headers=header).json()
+    return result
 
 #키워드로 장소 검색하기 (수정중)
 def notNamed3(x, y, radius):
     url = f"https://dapi.kakao.com/v2/local/search/keyword.json?y={y}&x={x}&radius={radius}"
     result = requests.get(urlparse(url).geturl(),
-        headers=header, params={}).json()
+        headers=header, params=param).json()
+    return result
 
 #카테고리로 장소 검색하기
 def notNamed4(CategoryGroupCode, radius):
@@ -37,7 +39,7 @@ def notNamed4(CategoryGroupCode, radius):
     return result
 
 
-print(json.dumps(notNamed2(128.761500,35.830631,"WGS84"),indent=4,ensure_ascii=False))
+print(json.dumps(notNamed2(128.755739,35.834908),indent=4,ensure_ascii=False))
 
 """
 CategoryGroupCode
