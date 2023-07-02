@@ -41,7 +41,10 @@ class AppServer():
             x = int(data.x)
             y = int(data.y)
             # result:str
-            result = self.mainfunction.recog_gps(x, y)
+            try:
+                result = self.mainfunction.recog_gps(x, y)
+            except Exception as e:
+                print("Erro : ", str(e))
 
             return {"Category": result}
         
