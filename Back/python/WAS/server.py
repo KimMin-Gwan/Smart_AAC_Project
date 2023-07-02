@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi import UploadFile, File
 from constant import GPS
 import uvicorn
+from constant import WAV_SAVE_PATH
 
 class AppServer():
     def __init__(self, mainfunction):
@@ -19,8 +20,10 @@ class AppServer():
                 return {"error": "No file provided"}
             else:
                 print('wav file upload complete')
-
-            result = self.mainfunction.recog_wav(file)
+            try:
+                result = self.mainfunction.recog_wav(file)
+            except Exception as e:
+                print("Error : ", str(e))
 
             if result == 'default':
                 return {"error" : "Recognize Fail"}
@@ -38,7 +41,10 @@ class AppServer():
             x = int(data.x)
             y = int(data.y)
             # result:str
-            result = self.mainfunction.recog_gps(x, y)
+            try:
+                result = self.mainfunction.recog_gps(x, y)
+            except Exception as e:
+                print("Erro : ", str(e))
 
             return {"Category": result}
         

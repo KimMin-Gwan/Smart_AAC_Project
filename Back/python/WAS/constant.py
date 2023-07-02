@@ -4,3 +4,6 @@ from pydantic import BaseModel
 class GPS(BaseModel):
     x:str
     y:str
+
+
+
