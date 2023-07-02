@@ -5,5 +5,16 @@ class MainFunction():
         self.status = 0
     
     def __call__(self):
-        if self.status
+        if self.status == 0:
+            print("Init") 
+        elif self.status == 1:
+            print("Working")
+        else:
+            print("Error")
+
+    def recog_wav(file):
+
+
+    def recog_gps(x, y):
+        pass
 
