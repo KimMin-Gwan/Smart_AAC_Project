@@ -2,7 +2,7 @@ import os
 from google.cloud import storage
 
 #클라욷 연결
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="clever-oasis-391111-6b11bee44796.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="###.json"
 
 #연결 확인
 storage_client = storage.Client()

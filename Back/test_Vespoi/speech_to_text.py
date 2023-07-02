@@ -1,5 +1,5 @@
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="clever-oasis-391111-6b11bee44796.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="###.json"
 
 ### Sample Code ###
 
