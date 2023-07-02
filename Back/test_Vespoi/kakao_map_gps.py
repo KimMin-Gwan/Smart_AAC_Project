@@ -8,7 +8,7 @@ input_coord ="WGS84"  좌표계
 CategoryGroupCode 하단 참조
 radius 검색 범위
 """
-header={"Authorization": "KakaoAK REST-API-KEY"} #나중에 초기화 파일로 빼낼거(인증키)
+header={"Authorization": "KakaoAK 468b7fd043830d2a5ddb6fff0a000b5b"} #나중에 초기화 파일로 빼낼거(인증키)
 param={"query=이마트"}
 #좌표로 행정구역정보 받기
 def notNamed1(x, y):
