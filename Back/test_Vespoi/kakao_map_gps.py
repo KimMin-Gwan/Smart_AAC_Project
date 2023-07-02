@@ -40,6 +40,7 @@ def notNamed4(CategoryGroupCode, radius):
 
 
 print(json.dumps(notNamed2(128.755739,35.834908),indent=4,ensure_ascii=False))
+print(json.dumps(notNamed2(128.755739,35.834908)['documents'][0]["road_address"]["building_name"],indent=4,ensure_ascii=False))
 
 """
 CategoryGroupCode

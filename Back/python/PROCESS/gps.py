@@ -14,3 +14,4 @@ def gps_data(lon, lat):
 
 #확인용 출력
 print(json.dumps(gps_data(128.755739,35.834908),indent=4,ensure_ascii=False))  
+print(json.dumps(gps_data(128.755739,35.834908)['documents'][0]["road_address"]["building_name"],indent=4,ensure_ascii=False))
