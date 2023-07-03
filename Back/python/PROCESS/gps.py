@@ -3,7 +3,7 @@ from urllib.parse import urlparse
 import json
 import constant
 
-class gps():   
+class GPS():   
     def __init__(self, lat, lon):
         self.lat = lat
         self.lon = lon
@@ -22,7 +22,8 @@ class gps():
 
     def __location_name(self):
         try:
-            data = json.dumps(self.__where_am_i()['documents'][0]["road_address"]["building_name"],indent=4,ensure_ascii=False)
+            data = json.dumps(self.__where_am_i()['documents'][0]["road_address"]["building_name"],
+                              indent=4,ensure_ascii=False)
             return 
         
         except:
