@@ -1,3 +1,6 @@
+"""
+# 데이터 셋 변경으로 인해 코드 변화
+
 import os
 import pandas as pd
 import json
@@ -38,3 +41,6 @@ print(dataframe.head)
 
 #for i in file_list:
 #    file = 
+
+"""
+
