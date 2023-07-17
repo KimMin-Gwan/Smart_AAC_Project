@@ -1,0 +1,218 @@
+[
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_main_pass_.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\main_pass_.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_login_compass.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\login_compass.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_fragment_register_pw.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\fragment_register_pw.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_place_category.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_place_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_search_location.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_search_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_circle_shape.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\circle_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_mainactivity_btn_round.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\mainactivity_btn_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_login_back_btn.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\login_back_btn.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable-mdpi_login_check_outline.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable-mdpi\\login_check_outline.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_mainactivity_pass_img.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\mainactivity_pass_img.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_fragment_register_phone.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\fragment_register_phone.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_title.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_pass_category.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_pass_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_rectangle_button_design.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\rectangle_button_design.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_main_daily_btn.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\main_daily_btn.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_main_urgencypass.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\main_urgencypass.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_main_urgency_pass.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\main_urgency_pass.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_mainactivity_btn_round_daily.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\mainactivity_btn_round_daily.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_register_back_btn.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\register_back_btn.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_title_text.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\title_text.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_fragment_register_name.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\fragment_register_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_register_main.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_register_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_title_sub_text.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\title_sub_text.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_register_subtext.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\register_subtext.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_rectangle_button_design_title.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\rectangle_button_design_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_search_location.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\search_location.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_main_pass_btn.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\main_pass_btn.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_login_main.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_login_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_daily_category.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_daily_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_search_location_img.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\search_location_img.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_title_compass.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\title_compass.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.compass_aac.app-merged_res-42:/layout_activity_main.xml.flat",
+        "source": "com.example.compass_aac.app-main-44:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_main_user.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\main_user.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_urgency_category.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_urgency_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_search_location_progress_bar.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\search_location_progress_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-merged_res-42:\\drawable_main_daily_pass.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-44:\\drawable\\main_daily_pass.png"
+    }
+]
