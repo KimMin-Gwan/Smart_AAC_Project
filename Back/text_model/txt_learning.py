@@ -9,7 +9,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning) # FutureWarning �
 
 
 FILE_PATH = './'
-FILE_NAME = 'new_korean_dataset.json'
+FILE_NAME = 'new_korean_intence.json'
 
 with open(FILE_PATH + FILE_NAME, 'r', encoding='UTF8') as f:
     json_data = json.load(f)
@@ -31,12 +31,12 @@ intence.drop_duplicates( subset=['patterns'], inplace = True)
 # ---------------------------------------------
 # 라벨 분석기
 raw_label = intence['tag'].unique().tolist()
-print(raw_label[0:10])
+#print(raw_label[0:10])
 
 num_label = len(raw_label)
 
 label_dict = [{x: i+1} for i, x in enumerate(raw_label)]
-print(label_dict[0:10])
+#print(label_dict[0:10])
 
 # 리스트를 딕셔너리로 해체 
 label_data = {}
@@ -49,8 +49,8 @@ intence['label'] = intence['tag'].map(label_data)
 #print(intence.head)
 # ----------------------------------------------
 # 데이터 체크
-print(intence.head())
-print(f'num_labels : {num_label}')
+#print(intence.head())
+#print(f'num_labels : {num_label}')
 
 # -----------------------------------------------------------
 # bag of words
@@ -77,8 +77,8 @@ Y = intence['label'].tolist()
 # 데이터 길이측정
 intence['length'] = ''
 intence['length'] = intence['patterns'].str.len()
-print(intence.head())
-print(intence.describe())
+#print(intence.head())
+#print(intence.describe())
 
 # 평균 최대 길이 알아내기 
 print(intence['length'][intence['length'] < 20].count())
@@ -90,10 +90,10 @@ X = pad_sequences(train_seq, maxlen = 20)
 X = X.tolist()
 
 trainX, valX, trainY, valY = train_test_split(X, Y, test_size=0.2, random_state=42)
-
 import tensorflow as tf
 # ----------------------------------------------------------------
 """
+
 shape = np.array(trainX).shape
 #print(shape)
 #(2800, 100)
@@ -127,7 +127,7 @@ for sample in test_sentence:
     test_list.append(temp.replace(' ', ''))
     
 #테스트 포인트
-index = 19
+index = 109
 
 #조사해본 문자열
 print("test")
