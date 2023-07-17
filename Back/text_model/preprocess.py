@@ -23,20 +23,24 @@ def process(df, intence, l_tag):
     tag = 'NAN'
     flag = 0
 
-    for i in range (1, len(df)):
+    for i in range (1, len(df)-1):
         if i%1000 == 0:
             print(f'{i}번째 Processing')
         
         data = df.loc[i]
 
         #1. 만약 점원인데 질문을 한다면
-        if data['SPEAKER'] == '점원' and data['QA'] == 'Q':
+        #if data['SPEAKER'] == '점원' and data['QA'] == 'Q':
+        if data['QA'] == 'Q':
             # 2. 뭘 질문하고, 카테고리가 뭔가
             q_data = df.loc[i+1]
+            if q_data['QA'] == 'Q':
+                continue
             patterns = data['SENTENCE']
             # 3. 거기에 대한 대답은 뭐고, 카테고리가 뭔가
-            #response = q_data['SENTENCE']
-            tag = q_data['지식베이스']
+            response = q_data['SENTENCE']
+            #tag = q_data['지식베이스']
+            tag = q_data['MAIN']
             if type(tag) == temp:
                 continue
 
@@ -48,7 +52,7 @@ def process(df, intence, l_tag):
         else:
             continue
             
-
+        arg = tag
 
         """
         tag를 하나의 프레임 단위로 생성해야됨
@@ -66,46 +70,46 @@ def process(df, intence, l_tag):
         #for arg in tag:
             #print(arg)
         #data_one = dict()
-        for arg in tag:
-            flag = 0
-            # 첫번째 데이터
-            if len(intence) == 0:
-                data_one = {"tag" : arg,
-                            "patterns" : [patterns]
-                            #"response" : [response]
-                }
-                intence.append(data_one)
-                #print('intence : \n', intence)
-                #print()
-                # 다음 루프로
-                l_tag.append(arg)
-                continue
-            
-            # 검색후 있으면 거기다가 추가
-            for a_intence in intence:
-                if a_intence['tag'] == arg:
-                    #print('if', arg)
-                    #print('patterns : ', patterns)
-                    #print('response : ', response)
-                    a_intence['patterns'].append(patterns)
-                    #a_intence['response'].append(response)
-                    # 추가하고 나서 다음 루프로
-                    #print()
-                    flag = 1
-                    break
-            if flag == 1:
-                continue
-            # 검색해도 없으면 새로 추가
-            #print('patterns : ', patterns)
-            #print('response : ', response)
+        #for arg in tag:
+        flag = 0
+        # 첫번째 데이터
+        if len(intence) == 0:
             data_one = {"tag" : arg,
-                        "patterns" : [patterns]
-                        #"response" : [response]
+                        "patterns" : [patterns],
+                        "response" : [response]
             }
             intence.append(data_one)
             #print('intence : \n', intence)
             #print()
+            # 다음 루프로
             l_tag.append(arg)
+            continue
+        
+        # 검색후 있으면 거기다가 추가
+        for a_intence in intence:
+            if a_intence['tag'] == arg:
+                #print('if', arg)
+                #print('patterns : ', patterns)
+                #print('response : ', response)
+                a_intence['patterns'].append(patterns)
+                a_intence['response'].append(response)
+                # 추가하고 나서 다음 루프로
+                #print()
+                flag = 1
+                break
+        if flag == 1:
+            continue
+        # 검색해도 없으면 새로 추가
+        #print('patterns : ', patterns)
+        #print('response : ', response)
+        data_one = {"tag" : arg,
+                    "patterns" : [patterns],
+                    "response" : [response]
+        }
+        intence.append(data_one)
+        #print('intence : \n', intence)
+        #print()
+        l_tag.append(arg)
 
     return intence, l_tag
     #intence = pd.Series(intence)
@@ -147,7 +151,7 @@ def main():
     json_data = {'intence' : intence}
     #print(json_data)
 
-    with open(file_path + 'korean_dataset.json', 'w', encoding='utf-8') as f : 
+    with open(file_path + 'korean_intence.json', 'w', encoding='utf-8') as f : 
         json.dump(json_data, f, indent=4, ensure_ascii=False)
 
     print(l_tag)
