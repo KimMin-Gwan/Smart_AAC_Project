@@ -12,6 +12,8 @@
 # Contents
  + 사용 언어 : Kotlin, python
  + 플랫폼 : 안드로이드
+ + 서버 플랫폼 : AWS(flask)
+
  
 <br>
 
