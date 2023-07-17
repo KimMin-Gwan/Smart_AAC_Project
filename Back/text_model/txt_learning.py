@@ -36,7 +36,7 @@ raw_label = intence['tag'].unique().tolist()
 num_label = len(raw_label)
 
 label_dict = [{x: i+1} for i, x in enumerate(raw_label)]
-#print(label_dict[0:10])
+print(label_dict)
 
 # 리스트를 딕셔너리로 해체 
 label_data = {}
@@ -127,7 +127,7 @@ for sample in test_sentence:
     test_list.append(temp.replace(' ', ''))
     
 #테스트 포인트
-index = 109
+index = 188
 
 #조사해본 문자열
 print("test")
