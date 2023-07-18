@@ -13,51 +13,42 @@ package com.example.compass_aac.views.location
 
 import android.Manifest
 import android.content.pm.PackageManager
-import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.databinding.ActivitySearchLocationBinding
-import com.example.compass_aac.datas.ConvertGPS
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlin.coroutines.suspendCoroutine
+import com.example.compass_aac.viewmodels.LocationViewModel
+
 
 
 class SearchLocation : AppCompatActivity() {
     companion object {
         const val PERMISSIONS_REQUEST_CODE = 100
-        val REQUIRED_PERMISSIONS = arrayOf(
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION
-        )
+        val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
     }
 
-    private lateinit var fusedLocationClient: FusedLocationProviderClient
-    private val scope = CoroutineScope(Dispatchers.Main)
+    private lateinit var locationViewModel: LocationViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //뷰 바인딩
+        // 뷰 바인딩
         val binding = ActivitySearchLocationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // 뷰모델 연결
+        locationViewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory(application)).get(LocationViewModel::class.java)
 
-
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
+        // 권한 허용 -> 비동기로 위치 정보 불러오기, 허용 X -> 권한 요청
         if (checkPermissions()) {
-            fetchLocationAsync()
+            locationViewModel.fetchLocationAsync()
         } else {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, PERMISSIONS_REQUEST_CODE)
         }
-
     }
+
+    // 위치 권한이 허용되었는지 확인 -> true, false
     private fun checkPermissions(): Boolean {
         for (permission in REQUIRED_PERMISSIONS) {
             if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
@@ -67,33 +58,7 @@ class SearchLocation : AppCompatActivity() {
         return true
     }
 
-    private fun fetchLocationAsync() = scope.launch {
-        val location = getLastKnownLocation()
-        location?.let {
-            Log.d("Location", "Latitude: ${location.latitude}, Longitude: ${location.longitude}")
-            val XY= ConvertGPS(0, location.latitude, location.longitude)
-            Log.d("좌표 값", "${XY.x}, ${XY.y}")
-        }
-    }
-
-    private suspend fun getLastKnownLocation(): Location? = suspendCoroutine { continuation ->
-        if (ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_COARSE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            return@suspendCoroutine
-        }
-        fusedLocationClient.lastLocation.addOnSuccessListener { location ->
-            continuation.resumeWith(Result.success(location))
-        }.addOnFailureListener { e ->
-            continuation.resumeWith(Result.failure(e))
-        }
-    }
-
+    // 위치 권한 요청 후 사용자의 응답을 처리하는 메서드
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == PERMISSIONS_REQUEST_CODE && grantResults.size == REQUIRED_PERMISSIONS.size) {
@@ -104,10 +69,12 @@ class SearchLocation : AppCompatActivity() {
                     break
                 }
             }
-
+            // 모든 권한 허용됨 -> 위치 정보 가져오기
             if (checkResult) {
-                fetchLocationAsync()
-            } else {
+                locationViewModel.fetchLocationAsync()
+            }
+            // 권한 거부됨 -> 권한이 필요하다는 toast 메세지
+            else {
                 Toast.makeText(this, "Location permissions are necessary for the app to run", Toast.LENGTH_SHORT).show()
             }
         }
