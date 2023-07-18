@@ -1,3 +1,14 @@
+/** Project : 2023 AAC Compass
+ * Program Purpose and Features :
+ * - SearchLocation.kt에서 위치 권한 허용을 받아와 viewmodel에서 위치 정보 찾기
+ * Author : ES.KEE
+ * First Write Date : 2023.07.14
+ * ==========================================================================
+ * Program history
+ * ==========================================================================
+ * Author            Date            Version        History        code to fix
+ **/
+
 package com.example.compass_aac.viewmodels
 
 import android.Manifest

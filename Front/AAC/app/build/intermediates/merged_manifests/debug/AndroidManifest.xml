@@ -7,7 +7,7 @@
     <uses-sdk
         android:minSdkVersion="24"
         android:targetSdkVersion="33" />
-    //위치 권한
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
@@ -32,6 +32,25 @@
         android:testOnly="true"
         android:theme="@style/Theme.Compass_AAC" >
         <activity
+            android:name="com.example.compass_aac.ChooseWordVoice"
+            android:exported="false" />
+        <activity
+            android:name="com.example.compass_aac.HearVoice"
+            android:exported="false" />
+        <activity
+            android:name="com.example.compass_aac.ShowSelectedWord"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.example.compass_aac.ChooseWordPass"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.example.compass_aac.views.login.activity.RegisterMain"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
@@ -40,13 +59,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.compass_aac.views.login.activity.TitleActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name="com.example.compass_aac.views.category.UrgencyCategory"
             android:exported="false" />
@@ -70,10 +83,6 @@
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.example.compass_aac.androidx-startup"
@@ -88,6 +97,10 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"

@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    //위치 권한
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,15 +17,18 @@
         android:theme="@style/Theme.Compass_AAC"
         tools:targetApi="31">
         <activity
-            android:name=".views.login.activity.RegisterMain"
-            android:exported="false"
-            android:windowSoftInputMode="adjustPan"/>
-        <activity
-            android:name=".views.login.activity.LoginMain"
+            android:name=".views.voiceaac.ChooseWordVoice"
             android:exported="false" />
         <activity
-            android:name=".views.login.activity.TitleActivity"
-            android:exported="true">
+            android:name=".views.voiceaac.HearVoice"
+            android:exported="false" />
+        <activity
+            android:name=".views.voiceaac.ShowSelectedWord"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".views.voiceaac.ChooseWordPass"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,13 +36,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.category.UrgencyCategory"
+            android:name=".views.login.activity.RegisterMain"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".views.login.activity.LoginMain"
             android:exported="false" />
         <activity
-            android:name=".views.category.DailyCategory"
+            android:name=".views.login.activity.TitleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".views.urgencyaac.UrgencyCategory"
             android:exported="false" />
         <activity
-            android:name=".views.category.PassCategory"
+            android:name=".views.dailyaac.DailyCategory"
+            android:exported="false" />
+        <activity
+            android:name=".views.voiceaac.PassCategory"
             android:exported="false" />
         <activity
             android:name=".views.location.SearchLocation"

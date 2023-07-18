@@ -16,8 +16,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.compass_aac.databinding.ActivityMainBinding
-import com.example.compass_aac.views.category.DailyCategory
-import com.example.compass_aac.views.category.UrgencyCategory
+import com.example.compass_aac.views.dailyaac.DailyCategory
+import com.example.compass_aac.views.urgencyaac.UrgencyCategory
 import com.example.compass_aac.views.location.SearchLocation
 
 class MainActivity : AppCompatActivity() {
