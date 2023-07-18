@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
 MERGED from [androidx.databinding:databinding-adapters:8.0.2] C:\Users\ellen\.gradle\caches\transforms-3\37e34a4f04e5bf5e075ea15edfaf45b1\transformed\databinding-adapters-8.0.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-ktx:8.0.2] C:\Users\ellen\.gradle\caches\transforms-3\6ed6edf287e76540addfabe91053f989\transformed\jetified-databinding-ktx-8.0.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:8.0.2] C:\Users\ellen\.gradle\caches\transforms-3\55a342d1fc5f4714a99bb467f420ed9c\transformed\databinding-runtime-8.0.2\AndroidManifest.xml:2:1-7:12
@@ -15,6 +15,10 @@ MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\ellen\.gradl
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\ellen\.gradle\caches\transforms-3\4b9a65c5434382b7065f69f69f387d72\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\0e75c4dcb88433781ef87239032a3af0\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\5ef7260f09cc2d76daa3cbb54b3fc42d\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\ellen\.gradle\caches\transforms-3\399840dfb371d24d9c9da1f1ec3105f3\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\e88c3de901f3f497e167f436bda29e7a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\ellen\.gradle\caches\transforms-3\56e62e139c8568d2be97d47f88d522f3\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\2886680b0420ad45f2330a26c3c11b08\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\ellen\.gradle\caches\transforms-3\9e13cf9eef918fe47162bcbaf46431c0\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.7.2] C:\Users\ellen\.gradle\caches\transforms-3\02096c2af784b0a6c954e235cbb4419d\transformed\jetified-activity-1.7.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity-ktx:1.7.2] C:\Users\ellen\.gradle\caches\transforms-3\a31ceadc0a0cc40894360d22515ce548\transformed\jetified-activity-ktx-1.7.2\AndroidManifest.xml:17:1-22:12
@@ -63,33 +67,53 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ellen\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\049e8e377a4d59e15ada9f5e977a37b5\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\691c3eb1123dea5378792564eb43ba7d\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\1537022724144fb9a19d24c3b238a585\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
 	package
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:1-51:12
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:1-55:12
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:8:5-85
+	android:name
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:8:22-82
 application
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:5:5-49:19
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:9:5-53:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\ellen\.gradle\caches\transforms-3\0e466e082ce5afcc144e4cf15259a1c4\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\ellen\.gradle\caches\transforms-3\0e466e082ce5afcc144e4cf15259a1c4\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ellen\.gradle\caches\transforms-3\195e0627611a73a3304f37a087286808\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ellen\.gradle\caches\transforms-3\195e0627611a73a3304f37a087286808\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [com.kofigyan.stateprogressbar:stateprogressbar:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\25c01d2809c3d2c860ad65914cff2772\transformed\jetified-stateprogressbar-1.0.0\AndroidManifest.xml:11:5-12:19
 MERGED from [com.kofigyan.stateprogressbar:stateprogressbar:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\25c01d2809c3d2c860ad65914cff2772\transformed\jetified-stateprogressbar-1.0.0\AndroidManifest.xml:11:5-12:19
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\ellen\.gradle\caches\transforms-3\399840dfb371d24d9c9da1f1ec3105f3\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\ellen\.gradle\caches\transforms-3\399840dfb371d24d9c9da1f1ec3105f3\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\e88c3de901f3f497e167f436bda29e7a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\e88c3de901f3f497e167f436bda29e7a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\ellen\.gradle\caches\transforms-3\56e62e139c8568d2be97d47f88d522f3\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\ellen\.gradle\caches\transforms-3\56e62e139c8568d2be97d47f88d522f3\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\2886680b0420ad45f2330a26c3c11b08\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\2886680b0420ad45f2330a26c3c11b08\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\e0adb38651949f9f29396027c7281aa0\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\e0adb38651949f9f29396027c7281aa0\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.core:core:1.12.0-alpha05] C:\Users\ellen\.gradle\caches\transforms-3\e920160f38101319e02131fea61f9bd5\transformed\core-1.12.0-alpha05\AndroidManifest.xml:28:5-89
@@ -105,93 +129,93 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ellen\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0-alpha05] C:\Users\ellen\.gradle\caches\transforms-3\e920160f38101319e02131fea61f9bd5\transformed\core-1.12.0-alpha05\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:14:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:8:9-54
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:12:9-54
 	android:roundIcon
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:15:9-54
 	tools:targetApi
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:14:9-29
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:18:9-29
 	android:icon
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:13:9-49
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:17:9-49
 	android:dataExtractionRules
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:7:9-65
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:11:9-65
 activity#com.example.compass_aac.views.login.activity.RegisterMain
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:15:9-18:54
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:19:9-22:54
 	android:windowSoftInputMode
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:18:13-52
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:22:13-52
 	android:exported
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:17:13-37
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:16:13-62
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:20:13-62
 activity#com.example.compass_aac.views.login.activity.LoginMain
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:19:9-21:40
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:21:13-37
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:20:13-59
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:24:13-59
 activity#com.example.compass_aac.views.login.activity.TitleActivity
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:22:9-30:20
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:26:9-34:20
 	android:exported
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:24:13-36
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:23:13-63
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:27:13-63
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:32:27-74
 activity#com.example.compass_aac.views.category.UrgencyCategory
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:31:9-33:40
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:35:9-37:40
 	android:exported
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:33:13-37
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:32:13-59
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:36:13-59
 activity#com.example.compass_aac.views.category.DailyCategory
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:34:9-36:40
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:38:9-40:40
 	android:exported
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:36:13-37
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:40:13-37
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:35:13-57
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:39:13-57
 activity#com.example.compass_aac.views.category.PassCategory
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:37:9-39:40
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:41:9-43:40
 	android:exported
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:38:13-56
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:42:13-56
 activity#com.example.compass_aac.views.location.SearchLocation
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:40:9-42:40
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:44:9-46:40
 	android:exported
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:42:13-37
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:41:13-58
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:45:13-58
 activity#com.example.compass_aac.views.splash.Splash
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:43:9-45:40
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:47:9-49:40
 	android:exported
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:49:13-37
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:44:13-48
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:48:13-48
 activity#com.example.compass_aac.views.MainActivity
-ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:46:9-48:40
+ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:50:9-52:40
 	android:exported
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:48:13-37
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:52:13-37
 	android:name
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml:47:13-47
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:51:13-47
 uses-sdk
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:8.0.2] C:\Users\ellen\.gradle\caches\transforms-3\37e34a4f04e5bf5e075ea15edfaf45b1\transformed\databinding-adapters-8.0.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:databinding-adapters:8.0.2] C:\Users\ellen\.gradle\caches\transforms-3\37e34a4f04e5bf5e075ea15edfaf45b1\transformed\databinding-adapters-8.0.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:databinding-ktx:8.0.2] C:\Users\ellen\.gradle\caches\transforms-3\6ed6edf287e76540addfabe91053f989\transformed\jetified-databinding-ktx-8.0.2\AndroidManifest.xml:5:5-44
@@ -214,6 +238,14 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ellen\.gradle\cac
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\0e75c4dcb88433781ef87239032a3af0\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\5ef7260f09cc2d76daa3cbb54b3fc42d\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\5ef7260f09cc2d76daa3cbb54b3fc42d\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\ellen\.gradle\caches\transforms-3\399840dfb371d24d9c9da1f1ec3105f3\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\ellen\.gradle\caches\transforms-3\399840dfb371d24d9c9da1f1ec3105f3\transformed\jetified-play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\e88c3de901f3f497e167f436bda29e7a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\e88c3de901f3f497e167f436bda29e7a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\ellen\.gradle\caches\transforms-3\56e62e139c8568d2be97d47f88d522f3\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\ellen\.gradle\caches\transforms-3\56e62e139c8568d2be97d47f88d522f3\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\2886680b0420ad45f2330a26c3c11b08\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\2886680b0420ad45f2330a26c3c11b08\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\ellen\.gradle\caches\transforms-3\9e13cf9eef918fe47162bcbaf46431c0\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\ellen\.gradle\caches\transforms-3\9e13cf9eef918fe47162bcbaf46431c0\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.7.2] C:\Users\ellen\.gradle\caches\transforms-3\02096c2af784b0a6c954e235cbb4419d\transformed\jetified-activity-1.7.2\AndroidManifest.xml:20:5-44
@@ -310,16 +342,30 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\ellen\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\691c3eb1123dea5378792564eb43ba7d\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\1537022724144fb9a19d24c3b238a585\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\1537022724144fb9a19d24c3b238a585\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\ellen\AAC\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\e88c3de901f3f497e167f436bda29e7a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\e88c3de901f3f497e167f436bda29e7a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\e88c3de901f3f497e167f436bda29e7a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\e88c3de901f3f497e167f436bda29e7a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\2886680b0420ad45f2330a26c3c11b08\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\2886680b0420ad45f2330a26c3c11b08\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\2886680b0420ad45f2330a26c3c11b08\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\e0adb38651949f9f29396027c7281aa0\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ellen\.gradle\caches\transforms-3\144a2d6ea462806820d7eab0d50a2df8\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:24:9-32:20

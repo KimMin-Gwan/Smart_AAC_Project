@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.app-mergeDebugResources-40:/values-land/values-land.xml",
+            "outputFile": "com.example.compass_aac.app-mergeDebugResources-42:/values-land/values-land.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\ellen\\AAC\\app\\src\\main\\res\\values-land\\dimens.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "57",
-                        "endOffsets": "69"
-                    },
-                    "to": {
-                        "startLines": "5",
-                        "startColumns": "4",
-                        "startOffsets": "264",
-                        "endColumns": "57",
-                        "endOffsets": "317"
-                    }
-                },
                 {
                     "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\4b9a65c5434382b7065f69f69f387d72\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
                     "from": {
@@ -28,6 +11,23 @@
                         "startOffsets": "55,125,196",
                         "endColumns": "69,70,67",
                         "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ellen\\Github\\Smart_AAC_Project\\Front\\AAC\\app\\src\\main\\res\\values-land\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "57",
+                        "endOffsets": "70"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "264",
+                        "endColumns": "57",
+                        "endOffsets": "317"
                     }
                 },
                 {

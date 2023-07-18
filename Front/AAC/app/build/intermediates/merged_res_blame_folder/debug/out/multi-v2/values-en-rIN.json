@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.app-mergeDebugResources-40:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.example.compass_aac.app-mergeDebugResources-42:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\e920160f38101319e02131fea61f9bd5\\transformed\\core-1.12.0-alpha05\\res\\values-en-rIN\\values-en-rIN.xml",

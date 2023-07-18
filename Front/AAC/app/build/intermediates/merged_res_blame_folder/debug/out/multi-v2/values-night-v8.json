@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.app-mergeDebugResources-40:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.compass_aac.app-mergeDebugResources-42:/values-night-v8/values-night-v8.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\ellen\\AAC\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "100",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "318"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "169"
-                    }
-                },
                 {
                     "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\0e466e082ce5afcc144e4cf15259a1c4\\transformed\\material-1.9.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
@@ -54,6 +35,25 @@
                         "startOffsets": "174,244,328,412,508,610,712,3567",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "239,323,407,503,605,707,801,3651"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ellen\\Github\\Smart_AAC_Project\\Front\\AAC\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "323"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "169"
                     }
                 }
             ]

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.app-mergeDebugResources-40:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.example.compass_aac.app-mergeDebugResources-42:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\0e466e082ce5afcc144e4cf15259a1c4\\transformed\\material-1.9.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
