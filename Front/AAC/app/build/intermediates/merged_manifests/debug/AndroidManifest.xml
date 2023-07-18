@@ -7,10 +7,13 @@
     <uses-sdk
         android:minSdkVersion="24"
         android:targetSdkVersion="33" />
-
+    <!-- 위치 권한 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- 음성 인식 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <permission
         android:name="com.example.compass_aac.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -32,23 +35,24 @@
         android:testOnly="true"
         android:theme="@style/Theme.Compass_AAC" >
         <activity
-            android:name="com.example.compass_aac.ChooseWordVoice"
+            android:name="com.example.compass_aac.views.voiceaac.ChooseWordVoice"
             android:exported="false" />
         <activity
-            android:name="com.example.compass_aac.HearVoice"
-            android:exported="false" />
-        <activity
-            android:name="com.example.compass_aac.ShowSelectedWord"
-            android:exported="false" >
-        </activity>
-        <activity
-            android:name="com.example.compass_aac.ChooseWordPass"
+            android:name="com.example.compass_aac.views.voiceaac.HearVoice"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.compass_aac.views.voiceaac.ShowSelectedWord"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.example.compass_aac.views.voiceaac.ChooseWordPass"
+            android:exported="false" >
         </activity>
         <activity
             android:name="com.example.compass_aac.views.login.activity.RegisterMain"
@@ -61,13 +65,13 @@
             android:name="com.example.compass_aac.views.login.activity.TitleActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.compass_aac.views.category.UrgencyCategory"
+            android:name="com.example.compass_aac.views.urgencyaac.UrgencyCategory"
             android:exported="false" />
         <activity
-            android:name="com.example.compass_aac.views.category.DailyCategory"
+            android:name="com.example.compass_aac.views.dailyaac.DailyCategory"
             android:exported="false" />
         <activity
-            android:name="com.example.compass_aac.views.category.PassCategory"
+            android:name="com.example.compass_aac.views.voiceaac.PassCategory"
             android:exported="false" />
         <activity
             android:name="com.example.compass_aac.views.location.SearchLocation"

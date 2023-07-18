@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HearVoice">
+    android:background="@color/white"
+    tools:context=".views.voiceaac.HearVoice">
     <ImageButton
-        android:id="@+id/select_word_back_btn"
+        android:id="@+id/hear_voice_back_btn"
         android:layout_width="44dp"
         android:layout_height="54dp"
         android:layout_marginTop="16dp"
@@ -39,14 +40,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageView
-        android:id="@+id/imageView6"
+
+    <!-- 음성인식을 다했을때 visible = true로 변경, 코틀린파일에서   -->
+
+    <ImageButton
+        android:id="@+id/hear_voice_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="108dp"
+        android:background="@color/white"
         android:src="@drawable/voice_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/compass" />
 
@@ -55,27 +59,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="결제는 어떻게 도와드릴까요? "
+        android:text="음성인식 버튼을 눌러주세요."
+        android:background="@drawable/text_voice_radius"
+        android:padding="13dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/hear_voice_btn" />
 
-
-<!-- 음성인식을 다했을때 visible = true로 변경, 코틀린파일에서   -->
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/hear_voice_end_btn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:text="음성 인식 완료"
+        android:visibility="invisible"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/voice_to_text_tv"
-        app:layout_constraintVertical_bias="0.889"
-        android:visibility="invisible"/>
+        app:layout_constraintVertical_bias="0.889" />
 
 
 

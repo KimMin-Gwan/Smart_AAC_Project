@@ -37,12 +37,14 @@ id compass
 id constraintLayout3
 id constraintLayout4
 id constraintLayout5
+id hear_voice_back_btn
+id hear_voice_btn
+id hear_voice_end_btn
 id imageView
 id imageView2
 id imageView3
 id imageView4
 id imageView5
-id imageView6
 id login_app_bar
 id login_back_btn
 id login_btn

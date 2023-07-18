@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -25,25 +26,30 @@ public final class ActivityHearVoiceBinding implements ViewBinding {
   public final TextView compass;
 
   @NonNull
+  public final ImageButton hearVoiceBackBtn;
+
+  @NonNull
+  public final ImageButton hearVoiceBtn;
+
+  @NonNull
+  public final MaterialButton hearVoiceEndBtn;
+
+  @NonNull
   public final ImageView imageView;
-
-  @NonNull
-  public final ImageView imageView6;
-
-  @NonNull
-  public final ImageButton selectWordBackBtn;
 
   @NonNull
   public final TextView voiceToTextTv;
 
   private ActivityHearVoiceBinding(@NonNull ConstraintLayout rootView, @NonNull TextView compass,
-      @NonNull ImageView imageView, @NonNull ImageView imageView6,
-      @NonNull ImageButton selectWordBackBtn, @NonNull TextView voiceToTextTv) {
+      @NonNull ImageButton hearVoiceBackBtn, @NonNull ImageButton hearVoiceBtn,
+      @NonNull MaterialButton hearVoiceEndBtn, @NonNull ImageView imageView,
+      @NonNull TextView voiceToTextTv) {
     this.rootView = rootView;
     this.compass = compass;
+    this.hearVoiceBackBtn = hearVoiceBackBtn;
+    this.hearVoiceBtn = hearVoiceBtn;
+    this.hearVoiceEndBtn = hearVoiceEndBtn;
     this.imageView = imageView;
-    this.imageView6 = imageView6;
-    this.selectWordBackBtn = selectWordBackBtn;
     this.voiceToTextTv = voiceToTextTv;
   }
 
@@ -80,21 +86,27 @@ public final class ActivityHearVoiceBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.hear_voice_back_btn;
+      ImageButton hearVoiceBackBtn = ViewBindings.findChildViewById(rootView, id);
+      if (hearVoiceBackBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.hear_voice_btn;
+      ImageButton hearVoiceBtn = ViewBindings.findChildViewById(rootView, id);
+      if (hearVoiceBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.hear_voice_end_btn;
+      MaterialButton hearVoiceEndBtn = ViewBindings.findChildViewById(rootView, id);
+      if (hearVoiceEndBtn == null) {
+        break missingId;
+      }
+
       id = R.id.imageView;
       ImageView imageView = ViewBindings.findChildViewById(rootView, id);
       if (imageView == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView6;
-      ImageView imageView6 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView6 == null) {
-        break missingId;
-      }
-
-      id = R.id.select_word_back_btn;
-      ImageButton selectWordBackBtn = ViewBindings.findChildViewById(rootView, id);
-      if (selectWordBackBtn == null) {
         break missingId;
       }
 
@@ -104,8 +116,8 @@ public final class ActivityHearVoiceBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityHearVoiceBinding((ConstraintLayout) rootView, compass, imageView,
-          imageView6, selectWordBackBtn, voiceToTextTv);
+      return new ActivityHearVoiceBinding((ConstraintLayout) rootView, compass, hearVoiceBackBtn,
+          hearVoiceBtn, hearVoiceEndBtn, imageView, voiceToTextTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!--위치 권한-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!--음성 인식-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -21,19 +24,20 @@
             android:exported="false" />
         <activity
             android:name=".views.voiceaac.HearVoice"
-            android:exported="false" />
-        <activity
-            android:name=".views.voiceaac.ShowSelectedWord"
-            android:exported="false">
-        </activity>
-        <activity
-            android:name=".views.voiceaac.ChooseWordPass"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.voiceaac.ShowSelectedWord"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".views.voiceaac.ChooseWordPass"
+            android:exported="false" >
         </activity>
         <activity
             android:name=".views.login.activity.RegisterMain"
