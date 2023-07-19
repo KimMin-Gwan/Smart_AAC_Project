@@ -19,22 +19,48 @@ for i in split_data:
 
 #print(text_data)
 
-dict_data = {}
+location = ["카페","학교"]
+AAC = ["커피","에이드"]
 
-label = "20"
+dict_data = {"AAC": [] }
+
+location_label="10"
+aac_label = "100"
+ai_label = "20"
+
+index = 0
+for i in location:
+    index = index + 1
+    dict_data["AAC"].append({
+        "id": int(location_label + str(index)),
+        "node" : [],
+        "name" : i
+    })
+
+index = 0
+for i in AAC:
+    index = index + 1
+    dict_data["AAC"].append({
+        "id": int(aac_label + str(index)),
+        "node" : [],
+        "name" : i
+    })
+
 index = 0
 for i in text_data:  
     index = index + 1
-    dict_data[i] =  {
-        "id": int(label + str(index))
-    }    
+    dict_data["AAC"].append({
+        "id": int(ai_label + str(index)),
+        "node" : [],
+        "name" : i
+    })
     #print(i)
 #print(dict_data)
 
 json_data = json.dumps(dict_data, indent="\t", ensure_ascii=False)
 print(json_data)
 print(type(json_data))
+#print(dict_data)
 
-
-with open('AI_json_data.json', 'w') as f:
-    f.write(json_data)
+with open('json_data.json', 'w') as f:
+   f.write(json_data)
