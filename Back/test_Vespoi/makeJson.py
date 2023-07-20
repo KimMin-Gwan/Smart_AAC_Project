@@ -14,19 +14,20 @@ split_data = data.split(',')
 text_data = []
 for i in split_data:
     new_str = re.sub(r"[^\uAC00-\uD7A3a-zA-Z\s]", "", i)
+    new_str = new_str.replace(" ", "")
     #print(new_str)
     text_data.append(new_str)
 
 #print(text_data)
 
-location = ["카페","학교"]
+location = ["카페","병원","식당","학교"]
 AAC = ["커피","에이드"]
 
 dict_data = {"AAC": [] }
 
-location_label="10"
-aac_label = "100"
-ai_label = "20"
+location_label="10" #장소
+aac_label = "100" #기본 AAC
+ai_label = "20" #AI 카테고리
 
 index = 0
 for i in location:
@@ -58,9 +59,18 @@ for i in text_data:
 #print(dict_data)
 
 json_data = json.dumps(dict_data, indent="\t", ensure_ascii=False)
-print(json_data)
-print(type(json_data))
+# print(json_data)
+# print(type(json_data))
 #print(dict_data)
 
-with open('json_data.json', 'w') as f:
-   f.write(json_data)
+# with open('json_data.json', 'w') as f:
+#    f.write(json_data)
+def id_finder(name):
+    for i in dict_data["AAC"]:
+        if(i["name"]==name):
+            return i["id"]
+
+def node_updater(id, node):
+    for i in dict_data["AAC"]:
+        if(i["id"]==id):
+            id["node"].append(node)
