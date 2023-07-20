@@ -12,16 +12,18 @@
 package com.example.compass_aac.views.location
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.databinding.ActivitySearchLocationBinding
 import com.example.compass_aac.viewmodels.LocationViewModel
-
+import com.example.compass_aac.views.voiceaac.PassCategory
 
 
 class SearchLocation : AppCompatActivity() {
@@ -40,9 +42,30 @@ class SearchLocation : AppCompatActivity() {
         // 뷰모델 연결
         locationViewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory(application)).get(LocationViewModel::class.java)
 
+        //프로그래스바 업데이트
+        locationViewModel.isLoading.observe(this, Observer { isLoading ->
+            binding.progressBar.isIndeterminate= isLoading
+        })
+
+        // 위치 정보 성공적으로 가져오면 -> intent
+        locationViewModel.locationResult.observe(this, Observer { result ->
+            // 위치 정보를 가져오는 작업이 완료되면 실행됩니다.
+            result.onSuccess { location ->
+                // 위치 정보를 성공적으로 가져온 경우
+                val intent = Intent(this, PassCategory::class.java)
+                startActivity(intent)
+            }.onFailure { e ->
+                Toast.makeText(this, "위치 정보를 가져오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
+                // 위치 정보를 가져오는 데 실패한 경우 에러 처리
+            }
+        })
+
+
         // 권한 허용 -> 비동기로 위치 정보 불러오기, 허용 X -> 권한 요청
         if (checkPermissions()) {
+            //위치 정보 가져오는 동안 프로그래스바 실행, 위치 정보 다 가져오면 placeCategory로 intent
             locationViewModel.fetchLocationAsync()
+
         } else {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, PERMISSIONS_REQUEST_CODE)
         }
@@ -71,6 +94,7 @@ class SearchLocation : AppCompatActivity() {
             }
             // 모든 권한 허용됨 -> 위치 정보 가져오기
             if (checkResult) {
+                //위치 정보 가져오는 동안 프로그래스바 실행, 위치 정보 다 가져오면 placeCategory로 intent
                 locationViewModel.fetchLocationAsync()
             }
             // 권한 거부됨 -> 권한이 필요하다는 toast 메세지

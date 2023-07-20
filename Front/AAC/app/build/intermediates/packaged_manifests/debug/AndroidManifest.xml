@@ -39,13 +39,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.compass_aac.views.voiceaac.HearVoice"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name="com.example.compass_aac.views.voiceaac.ShowSelectedWord"
             android:exported="false" >
@@ -63,7 +57,13 @@
             android:exported="false" />
         <activity
             android:name="com.example.compass_aac.views.login.activity.TitleActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.example.compass_aac.views.urgencyaac.UrgencyCategory"
             android:exported="false" />

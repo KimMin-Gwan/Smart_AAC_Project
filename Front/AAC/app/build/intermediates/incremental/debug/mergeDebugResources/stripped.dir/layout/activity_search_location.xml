@@ -35,11 +35,11 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
+        style="?android:attr/progressBarStyleLarge"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:background="@drawable/circle_shape"
-        android:indeterminate="false"
+        android:indeterminate="true"
         android:max="100"
         android:progress="10"
         android:progressDrawable="@drawable/search_location_progress_bar"
