@@ -28,7 +28,7 @@ class GPS():
         
         except:
             all_data = print("건물 데이터 못찾음 대신 다 보여드림", json.dumps(self.__where_am_i(),indent=4,ensure_ascii=False))
-            return all_data
+            return all_data #나중에 수정 해야됨  ex) 건물 이름 정보를 찾을 수 없습니다.
 
 
     def gps_analyzer(self):
@@ -47,5 +47,5 @@ class GPS():
 
             return data #가?끔 건물이름이 ""로 들어와서 제대로 작동 안하긴함
         except:
-            return json.dumps(result,indent=4,ensure_ascii=False)
+            return json.dumps(result,indent=4,ensure_ascii=False) #나중에 수정 해야됨 ex) 정보를 불러올 수 없습니다.
 
