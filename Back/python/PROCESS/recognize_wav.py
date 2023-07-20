@@ -1,7 +1,7 @@
 import os
 import shutil
 import speech_recognition as sr
-
+from category_ai import Classifier
 # 유저 별로 꼬이지 않도록 설계해야함
 
 
@@ -39,10 +39,15 @@ class WavRecognizer():
             print("Error : ", str(e))
             return " "
     
+
+    ## try except 로 변경해야함
     ## text를 분석
-    def __recognizing(self):
+    def __recognizing(self, text):
         # 군집화나 RNN으로 분석해서 리턴시켜야됨
-        pass
+        classifier = Classifier(text)
+        result = classifier.classifier()
+        # {real_txt : class key}
+        return result
 
     ## 분석기
     ## 정상적인 결과는 라벨을 반환
@@ -57,7 +62,7 @@ class WavRecognizer():
         if text == " ":
             return "default"
         
-        result = self.__recognizing()
+        result = self.__recognizing(text)
 
         return result
 
