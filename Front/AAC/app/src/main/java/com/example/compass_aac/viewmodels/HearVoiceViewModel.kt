@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 
 class HearVoiceViewModel : ViewModel() {
 
-    // LiveData for the recognized speech text
+    // 인식된 음성을 텍스트로 업데이트하기 위한 viewmodel
     val recognizedSpeechText = MutableLiveData<String>()
     val isEndOfSpeech = MutableLiveData<Boolean>()
 
@@ -13,7 +13,7 @@ class HearVoiceViewModel : ViewModel() {
         recognizedSpeechText.value = text
     }
 
-    fun setEndOfSpeech(endOfSpeech: Boolean) { // 추가된 줄
+    fun setEndOfSpeech(endOfSpeech: Boolean) {
         isEndOfSpeech.value = endOfSpeech
     }
 }

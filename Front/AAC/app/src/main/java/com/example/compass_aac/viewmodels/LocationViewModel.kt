@@ -26,6 +26,7 @@ import com.example.compass_aac.datas.ConvertGPS
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
@@ -33,18 +34,33 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
 class LocationViewModel(application: Application) : AndroidViewModel(application) {
-    val locationData = MutableLiveData<Location?>()
+
+    //프로그래스바 제어
+    val isLoading = MutableLiveData<Boolean>()
+
+    //위치 받기 성공 -> view에서 PassCategory로 intent 해줌
+    val locationResult = MutableLiveData<Result<Location?>>()
 
     private val fusedLocationClient: FusedLocationProviderClient by lazy {
         LocationServices.getFusedLocationProviderClient(application)
     }
-
     fun fetchLocationAsync() = viewModelScope.launch {
-        val location = getLastKnownLocation()
-        location?.let {
-            Log.d("Location", "Latitude: ${location.latitude}, Longitude: ${location.longitude}")
-            val XY = ConvertGPS(0, location.latitude, location.longitude)
-            Log.d("좌표 값", "${XY.x}, ${XY.y}")
+        isLoading.postValue(true)
+        try {
+            val location = getLastKnownLocation()
+            location?.let {
+                Log.d("Location", "Latitude: ${location.latitude}, Longitude: ${location.longitude}")
+                val XY = ConvertGPS(0, location.latitude, location.longitude)
+                Log.d("좌표 값", "${XY.x}, ${XY.y}")
+                delay(2000)
+                locationResult.postValue(Result.success(location)) // 결과를 LiveData에 저장
+            }
+        } catch (e: Exception) {
+            locationResult.postValue(Result.failure(e)) // 실패한 경우 에러를 LiveData에 저장
+            Log.e("LocationViewModel", "Error fetching location", e)
+        } finally {
+            delay(2000)
+            isLoading.postValue(false)
         }
     }
 

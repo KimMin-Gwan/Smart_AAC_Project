@@ -66,56 +66,56 @@
 39            android:exported="false" />
 39-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:24:13-37
 40        <activity
-40-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:25:9-33:20
+40-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:25:9-27:39
 41            android:name="com.example.compass_aac.views.voiceaac.HearVoice"
 41-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:26:13-53
-42            android:exported="true" >
+42            android:exported="true" />
 42-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:27:13-36
-43            <intent-filter>
-43-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:28:13-32:29
-44                <action android:name="android.intent.action.MAIN" />
-44-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:29:17-69
-44-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:29:25-66
-45
-46                <category android:name="android.intent.category.LAUNCHER" />
-46-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:31:17-77
-46-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:31:27-74
-47            </intent-filter>
-48        </activity>
-49        <activity
-49-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:34:9-37:20
-50            android:name="com.example.compass_aac.views.voiceaac.ShowSelectedWord"
-50-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:35:13-60
-51            android:exported="false" >
-51-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:36:13-37
-52        </activity>
-53        <activity
-53-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:38:9-41:20
-54            android:name="com.example.compass_aac.views.voiceaac.ChooseWordPass"
-54-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:39:13-58
-55            android:exported="false" >
-55-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:40:13-37
-56        </activity>
-57        <activity
-57-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:42:9-45:55
-58            android:name="com.example.compass_aac.views.login.activity.RegisterMain"
-58-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:43:13-62
-59            android:exported="false"
-59-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:44:13-37
-60            android:windowSoftInputMode="adjustPan" />
-60-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:45:13-52
-61        <activity
-61-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:46:9-48:40
-62            android:name="com.example.compass_aac.views.login.activity.LoginMain"
-62-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:47:13-59
-63            android:exported="false" />
-63-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:48:13-37
-64        <activity
-64-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:49:9-51:39
-65            android:name="com.example.compass_aac.views.login.activity.TitleActivity"
-65-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:50:13-63
-66            android:exported="true" />
-66-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:51:13-36
+43        <activity
+43-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:28:9-31:20
+44            android:name="com.example.compass_aac.views.voiceaac.ShowSelectedWord"
+44-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:29:13-60
+45            android:exported="false" >
+45-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:30:13-37
+46        </activity>
+47        <activity
+47-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:32:9-35:20
+48            android:name="com.example.compass_aac.views.voiceaac.ChooseWordPass"
+48-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:33:13-58
+49            android:exported="false" >
+49-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:34:13-37
+50        </activity>
+51        <activity
+51-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:36:9-39:55
+52            android:name="com.example.compass_aac.views.login.activity.RegisterMain"
+52-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:37:13-62
+53            android:exported="false"
+53-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:38:13-37
+54            android:windowSoftInputMode="adjustPan" />
+54-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:39:13-52
+55        <activity
+55-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:40:9-42:40
+56            android:name="com.example.compass_aac.views.login.activity.LoginMain"
+56-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:41:13-59
+57            android:exported="false" />
+57-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:42:13-37
+58        <activity
+58-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:43:9-51:20
+59            android:name="com.example.compass_aac.views.login.activity.TitleActivity"
+59-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:44:13-63
+60            android:exported="true" >
+60-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:45:13-36
+61            <intent-filter>
+61-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:46:13-50:29
+62                <action android:name="android.intent.action.MAIN" />
+62-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:47:17-69
+62-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:47:25-66
+63
+64                <category android:name="android.intent.category.LAUNCHER" />
+64-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:49:17-77
+64-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:49:27-74
+65            </intent-filter>
+66        </activity>
 67        <activity
 67-->C:\Users\ellen\Github\Smart_AAC_Project\Front\AAC\app\src\main\AndroidManifest.xml:52:9-54:40
 68            android:name="com.example.compass_aac.views.urgencyaac.UrgencyCategory"
