@@ -25,8 +25,7 @@ def make_dict_location(dict_aac,aac_data):
         index = index + 1
         dict_aac["AAC"].append({
             "id": int(location_label + str(index)),
-            "parent_node" : [],
-            "child_node" : [],
+            "node" : [],
             "name" : i
         })
 
@@ -37,8 +36,7 @@ def make_dict_AAC(dict_aac,aac_data):
         index = index + 1
         dict_aac["AAC"].append({
             "id": int(aac_label + str(index)),
-            "parent_node" : [],
-            "child_node" : [],
+            "node" : [],
             "name" : i
         })
 
@@ -49,8 +47,7 @@ def make_dict_ai(dict_aac,aac_data):
         index = index + 1
         dict_aac["AAC"].append({
             "id": int(ai_label + str(index)),
-            "parent_node" : [],
-            "child_node" : [],
+            "node" : [],
             "name" : i
         })
         #print(i)
