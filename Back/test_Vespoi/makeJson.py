@@ -27,14 +27,15 @@ dict_data = {"AAC": [] }
 
 location_label="10" #장소
 aac_label = "100" #기본 AAC
-ai_label = "20" #AI 카테고리
+ai_label = "200" #AI 카테고리
 
 index = 0
 for i in location:
     index = index + 1
     dict_data["AAC"].append({
         "id": int(location_label + str(index)),
-        "node" : [],
+        "parent_node" : [],
+        "child_node" : [],
         "name" : i
     })
 
@@ -43,7 +44,8 @@ for i in AAC:
     index = index + 1
     dict_data["AAC"].append({
         "id": int(aac_label + str(index)),
-        "node" : [],
+        "parent_node" : [],
+        "child_node" : [],
         "name" : i
     })
 
@@ -52,7 +54,8 @@ for i in text_data:
     index = index + 1
     dict_data["AAC"].append({
         "id": int(ai_label + str(index)),
-        "node" : [],
+        "parent_node" : [],
+        "child_node" : [],
         "name" : i
     })
     #print(i)
@@ -63,14 +66,19 @@ json_data = json.dumps(dict_data, indent="\t", ensure_ascii=False)
 # print(type(json_data))
 #print(dict_data)
 
-# with open('json_data.json', 'w') as f:
-#    f.write(json_data)
+with open('json_data.json', 'w') as f:
+   f.write(json_data)
 def id_finder(name):
     for i in dict_data["AAC"]:
         if(i["name"]==name):
             return i["id"]
 
-def node_updater(id, node):
+def parent_node_updater(id, node):
     for i in dict_data["AAC"]:
         if(i["id"]==id):
-            id["node"].append(node)
+            id["parent_node"].append(node)
+
+def child_node_updater(id, node):
+    for i in dict_data["AAC"]:
+        if(i["id"]==id):
+            id["child_node"].append(node)
