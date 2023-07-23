@@ -1,1 +1,1 @@
-header={"Authorization": "KakaoAK 468b7fd043830d2a5ddb6fff0a000b5b"}
+header={"Authorization": "KakaoAK ____"}
