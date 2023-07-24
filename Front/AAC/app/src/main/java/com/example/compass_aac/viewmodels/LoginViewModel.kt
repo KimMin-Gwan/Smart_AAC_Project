@@ -15,6 +15,7 @@ package com.example.compass_aac.viewmodels
 import android.app.Activity
 import android.content.ContentValues.TAG
 import android.content.Context
+import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.LiveData
@@ -45,9 +46,9 @@ class LoginViewModel:ViewModel() {
 
 
     fun CheckLogin(){
-        val enteredUsername = _userloginphone.value
+        val enteredUserphone = _userloginphone.value
         val enteredPassword = _userloginpw.value
-        Log.d("entered", "${enteredPassword}, ${enteredUsername}")
+        Log.d("entered", "${enteredUserphone}, $enteredPassword")
 
 //        val apiService = UserService().provideUserApiService()
 

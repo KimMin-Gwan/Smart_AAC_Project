@@ -4,16 +4,16 @@
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-46:\\layout\\activity_daily_category.xml"
     },
     {
+        "merged": "com.example.compass_aac.app-mergeDebugResources-43:/layout/activity_choose_word_voice.xml",
+        "source": "com.example.compass_aac.app-main-46:/layout/activity_choose_word_voice.xml"
+    },
+    {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-mergeDebugResources-43:\\layout\\activity_title.xml",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-46:\\layout\\activity_title.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-mergeDebugResources-43:\\layout\\activity_login_main.xml",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-46:\\layout\\activity_login_main.xml"
-    },
-    {
-        "merged": "com.example.compass_aac.app-mergeDebugResources-43:/layout/activity_search_location.xml",
-        "source": "com.example.compass_aac.app-main-46:/layout/activity_search_location.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-mergeDebugResources-43:\\layout\\activity_hear_voice.xml",
@@ -42,6 +42,10 @@
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-mergeDebugResources-43:\\layout\\activity_splash.xml",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-46:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-mergeDebugResources-43:\\layout\\activity_choose_pass_category_item.xml",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-main-46:\\layout\\activity_choose_pass_category_item.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.app-mergeDebugResources-43:\\layout\\activity_choose_word_item.xml",

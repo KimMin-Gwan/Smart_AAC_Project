@@ -12,11 +12,21 @@ package com.example.compass_aac.views.voiceaac
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.compass_aac.R
+import com.example.compass_aac.databinding.ActivityChooseVoiceWordVoiceBinding
+import com.example.compass_aac.databinding.ActivityChooseWordVoiceBinding
 
 class ChooseWordVoice : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_word_voice)
+
+        //뷰 바인딩
+        val binding = ActivityChooseWordVoiceBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val voicetext = intent.getStringExtra("voiceText")
+        binding.voiceText.text = voicetext
+        Log.d("voiceText", voicetext!! )
     }
 }

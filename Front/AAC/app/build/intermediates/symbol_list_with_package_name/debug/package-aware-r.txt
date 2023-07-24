@@ -3216,6 +3216,9 @@ id callMeasure
 id cancel_action
 id cancel_button
 id carryVelocity
+id category_btn
+id category_img
+id category_name
 id center
 id centerCrop
 id centerInside
@@ -3477,6 +3480,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id pass_category_gridview
 id password_toggle
 id path
 id pathRelative
@@ -3659,6 +3663,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id voiceText
 id voice_to_text_tv
 id west
 id wide
@@ -3784,6 +3789,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_choose_pass_category_item
 layout activity_choose_voice_word_voice
 layout activity_choose_word_item
 layout activity_choose_word_pass

@@ -13,9 +13,11 @@
 package com.example.compass_aac.views.login.activity
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.text.TextUtils
 import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
@@ -37,11 +39,15 @@ class LoginMain : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
-//        binding.loginBtn.isEnabled= false
+        binding.loginBtn.isEnabled= false
+        if (!binding.loginBtn.isEnabled){
+            binding.loginBtn.setBackgroundColor(Color.parseColor("#CACACA"))
+        }
 
         //전화번호 edittext 처리
         binding.loginPhoneEdt.addTextChangedListener { editable ->
             editable?.let {
+                checkLoginButtonStatus()
                 viewModel.updateUserLoginPhone(it.toString())
             }
         }
@@ -49,6 +55,7 @@ class LoginMain : AppCompatActivity() {
         //비밀번호 edittext 처리
         binding.loginPwEdt.addTextChangedListener { editable ->
             editable?.let {
+                checkLoginButtonStatus()
                 viewModel.updateUserLoginPassword(it.toString())
             }
         }
@@ -77,6 +84,9 @@ class LoginMain : AppCompatActivity() {
 
         // 모든 EditText가 비어있지 않은 경우 로그인 버튼 활성화
         loginBtn.isEnabled = phone.isNotEmpty() && password.isNotEmpty()
+        if (loginBtn.isEnabled){
+            loginBtn.setBackgroundColor(Color.parseColor("#000000"))
+        }
 
     }
 

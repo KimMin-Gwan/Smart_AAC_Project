@@ -32,6 +32,9 @@ drawable title_sub_text
 drawable title_text
 drawable voice_btn
 id button2
+id category_btn
+id category_img
+id category_name
 id choose_pass_back_btn
 id compass
 id constraintLayout3
@@ -55,6 +58,7 @@ id main_daily_btn
 id main_pass_btn
 id main_urgency_btn
 id main_user
+id pass_category_gridview
 id progressBar
 id register_app_bar
 id register_back_btn
@@ -76,7 +80,9 @@ id textView5
 id title_login_btn
 id title_register_btn
 id title_tv
+id voiceText
 id voice_to_text_tv
+layout activity_choose_pass_category_item
 layout activity_choose_voice_word_voice
 layout activity_choose_word_item
 layout activity_choose_word_pass

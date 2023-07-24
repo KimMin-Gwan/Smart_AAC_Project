@@ -16,6 +16,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -48,18 +49,32 @@ class SearchLocation : AppCompatActivity() {
         })
 
         // 위치 정보 성공적으로 가져오면 -> intent
-        locationViewModel.locationResult.observe(this, Observer { result ->
-            // 위치 정보를 가져오는 작업이 완료되면 실행됩니다.
-            result.onSuccess { location ->
-                // 위치 정보를 성공적으로 가져온 경우
-                val intent = Intent(this, PassCategory::class.java)
-                startActivity(intent)
-            }.onFailure { e ->
-                Toast.makeText(this, "위치 정보를 가져오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
-                // 위치 정보를 가져오는 데 실패한 경우 에러 처리
-            }
-        })
+//        locationViewModel.locationResult.observe(this, Observer { result ->
+//            // 위치 정보를 가져오는 작업이 완료되면 실행됩니다.
+//            result.onSuccess { location ->
+//                // 위치 정보를 성공적으로 가져온 경우
+//                val intent = Intent(this, PassCategory::class.java)
+//                startActivity(intent)
+//            }.onFailure { e ->
+//                Toast.makeText(this, "위치 정보를 가져오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
+//                // 위치 정보를 가져오는 데 실패한 경우 에러 처리
+//            }
+//        })
 
+        locationViewModel.categoryResult.observe(this) { result ->
+            if (result.isSuccess) {
+                val category = result.getOrNull()
+                if (category != null) {
+                    val intent = Intent(this, PassCategory::class.java)
+                    // Category 정보 Passcategory로 넘겨주기
+                    intent.putExtra("CATEGORY", category)
+                    startActivity(intent)
+                }
+            } else {
+                // 에러 처리
+                Log.e("MainActivity", "Error fetching category", result.exceptionOrNull())
+            }
+        }
 
         // 권한 허용 -> 비동기로 위치 정보 불러오기, 허용 X -> 권한 요청
         if (checkPermissions()) {

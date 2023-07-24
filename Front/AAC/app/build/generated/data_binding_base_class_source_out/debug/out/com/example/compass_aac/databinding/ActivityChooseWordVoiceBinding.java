@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,11 +27,16 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
   @NonNull
   public final ImageButton selectWordBackBtn;
 
+  @NonNull
+  public final TextView voiceText;
+
   private ActivityChooseWordVoiceBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ScrollView scrollView3, @NonNull ImageButton selectWordBackBtn) {
+      @NonNull ScrollView scrollView3, @NonNull ImageButton selectWordBackBtn,
+      @NonNull TextView voiceText) {
     this.rootView = rootView;
     this.scrollView3 = scrollView3;
     this.selectWordBackBtn = selectWordBackBtn;
+    this.voiceText = voiceText;
   }
 
   @Override
@@ -72,8 +78,14 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.voiceText;
+      TextView voiceText = ViewBindings.findChildViewById(rootView, id);
+      if (voiceText == null) {
+        break missingId;
+      }
+
       return new ActivityChooseWordVoiceBinding((ConstraintLayout) rootView, scrollView3,
-          selectWordBackBtn);
+          selectWordBackBtn, voiceText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
