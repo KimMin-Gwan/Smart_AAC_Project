@@ -4,6 +4,7 @@ package com.example.compass_aac.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -20,14 +21,19 @@ public final class ActivityPassCategoryBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final GridView passCategoryGridview;
+
+  @NonNull
   public final TextView textView;
 
   @NonNull
   public final TextView textView3;
 
-  private ActivityPassCategoryBinding(@NonNull ScrollView rootView, @NonNull TextView textView,
+  private ActivityPassCategoryBinding(@NonNull ScrollView rootView,
+      @NonNull GridView passCategoryGridview, @NonNull TextView textView,
       @NonNull TextView textView3) {
     this.rootView = rootView;
+    this.passCategoryGridview = passCategoryGridview;
     this.textView = textView;
     this.textView3 = textView3;
   }
@@ -59,6 +65,12 @@ public final class ActivityPassCategoryBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.pass_category_gridview;
+      GridView passCategoryGridview = ViewBindings.findChildViewById(rootView, id);
+      if (passCategoryGridview == null) {
+        break missingId;
+      }
+
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
@@ -71,7 +83,8 @@ public final class ActivityPassCategoryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPassCategoryBinding((ScrollView) rootView, textView, textView3);
+      return new ActivityPassCategoryBinding((ScrollView) rootView, passCategoryGridview, textView,
+          textView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
