@@ -143,6 +143,7 @@ pred = predict[index]
 max_value = max(pred)
 max_index = pred.index(max_value)
 
+
 for key, value in label_data.items():
     if value == max_index:
         print('정답 : ', key)
