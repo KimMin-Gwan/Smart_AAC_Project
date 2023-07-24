@@ -2,8 +2,9 @@
 
 import java.lang.ArithmeticException
 import java.security.KeyStore.TrustedCertificateEntry
+import java.util.Dictionary
 
-enum class NodeStatus {
+enum class NodeStatus {
     USING,
     NOT_USING,
     Disable
@@ -35,7 +36,7 @@ class Node(){
     // == 오버라이딩
     override fun equals(other : Any?) : Boolean {
         if ( this === other ) return true
-        if ( other !is Vertex ) return false
+        if ( other !is Node ) return false
         return this._id == other._id && this.name == other.name
     }
     // print 오버라이딩
@@ -60,13 +61,13 @@ class NodeList(var size : Int){
             return this.node_Array[index]
         else
             throw ArithmeticException("Invalid Execss !")
-            //return Node()
+        //return Node()
     }
     fun getSize() : Int = this.num_node
     // 노드 인덱스에 맞춰서 배열에 삽입
     fun addNode(node : Node){
         if (this.num_node < this.size){
-            var index = node.getID()
+            val index = node.getID()
             node_Array[index] = node
             this.num_node++
         }
@@ -82,26 +83,30 @@ class NodeList(var size : Int){
 // 트리 구조에서 생성될 실제 노드와 포인터
 /// 자신 : self_node, 자식 : child_node
 class Tree_Node(val self_node : Node) {
-    var child_node = ArrayList<Node>()
-    // 자식 노드 설정
-    fun setChildNode(node_list : NodeList) {
-        var child_list : ArrayList<Int> = this.self_node.getChildIndexList()
-        var num_child : Int = child_list.size
-        // child_node는 각각의 노드에 대한 포인터
-        for (arg in child_list) {
-            child_node.add(node_list.getNode(arg))
-        }
+    var child_tree_node = ArrayList<Tree_Node>()
+    var num_child : Int = 0
+    fun setChildNodePointer(tree_node_list : ArrayList<Tree_Node>) {
+        this.child_tree_node = tree_node_list
     }
+
     // 현재 노드의 이름 접근
     fun getName() : String = this.self_node.getName()
-    fun getChild() : ArrayList<Node> = this.child_node
+    fun getChildNodeList() : ArrayList<Int> = this.self_node.getChildIndexList()
+    fun getNumChild() : Int = this.num_child
+    fun getChild() : ArrayList<Tree_Node> = this.child_tree_node
+    fun setNodeStatus(status : NodeStatus) { this.self_node.setNodeStatus(status) }
+    override fun equals(other: Any?): Boolean {
+        if (this == other) return true
+        if (other !is Tree_Node) return false
+        return this.self_node == other.self_node
+    }
 }
 
 // 트리 알고리즘
-class ACC_Tree(var root_index :Int, var node_list : NodeList)
+class ACC_Tree(var root_index :Int, val node_list : NodeList)
 {
     // nodes[0] == root
-    var nodes = ArrayList<Tree_Node>()
+    val nodes = ArrayList<Tree_Node>()
     var root : Node = Node()
     init{
         try{
@@ -116,32 +121,89 @@ class ACC_Tree(var root_index :Int, var node_list : NodeList)
     //재귀함수로 구성해야함
     fun makeTree(root_node : Tree_Node){
         this.nodes.add(root_node)
-        this.makeChild(root_node)
+        this._makeChild(root_node)
     }
 
-    fun makeChild(now_node : Tree_Node){
-        var child_list : ArrayList<Node> = now_node.getChild()
+    // 재귀 부분
+    fun _makeChild(now_node : Tree_Node){
+        val child_list : ArrayList<Int> = now_node.getChildNodeList()
         var now_node_list = ArrayList<Tree_Node>()
         // 재귀 탈출 (자식이 더 없을 때)
-        if (child_list[0].getID() == -1)
+        if (child_list[0] == -1)
             return
+        // 자식 노드를 하나씩 Tree Node로 생성
         for (node in child_list)
         {
-            now_node_list.add(Tree_Node(node))
-            this.nodes.add(Tree_Node(node))
+            // 노드를 생성
+            val temp_node = Tree_Node(this.node_list.getNode(node))
+            // Tree node 자식 배열 포인터로 세팅
+            now_node_list.add(temp_node)
+            // Tree 자체 보관용 포인터
+            this.nodes.add(temp_node)
         }
+        // 노드 포인터 저장
+        now_node.setChildNodePointer(now_node_list)
+
         // 재귀
         for (node in now_node_list) {
-            this.makeChild(node)
+            this._makeChild(node)
         }
+
         // 재귀 탈출 (같은 층에 노드가 더 없을 때)
         return
     }
+
+    //var latest_pick : Tree_Node = this.nodes[0]
+    var num_pick : Int = 0
+    var pick_history = ArrayList<Tree_Node>()
+
+    // ***** 트리 생성후 바로 루트 노드 받아갈 것  ********
+    fun getRootNode() : Tree_Node {
+        this.num_pick ++
+        pick_history.add(this.nodes[0])
+        return this.nodes[0]
+    }
+    // 자식 노드가 있는지 확인해준다. 없다면 false 반환
+    fun isChildExist( now_node : Tree_Node ) : Boolean {
+        if (now_node.getNumChild() <= 0)
+            return false
+        else
+            return true
+    }
+    // 아래 함수를 실행하기 전에 isChildExist()로 자식을 확인할것
+    fun selectNodeFlow(now_node : Tree_Node) : ArrayList<Tree_Node>? {
+        // 자식 수가 0이면 null을 반환
+        now_node.setNodeStatus(NodeStatus.USING)
+        if (now_node.getNumChild() <= 0) {
+            return null
+        }
+        // 후진인지 확인, 후진이라면 히스토리에서 마지막 제거
+        // root만 있을때는 어떻게 되는가?
+        if (pick_history.contains(now_node)){
+            var remove_node : Tree_Node = this.pick_history.removeLast()
+            remove_node.setNodeStatus(NodeStatus.NOT_USING)
+        }
+        else
+            this.pick_history.add(now_node)
+
+        var child_nodes : ArrayList<Tree_Node> = now_node.getChild()
+        return child_nodes
+    }
+
+    // 사용 내역을 지우고, 노드 스테이터스를 제거
+    fun clearTree(){
+        for (i in 0..num_pick)
+        {
+            var remove_node : Tree_Node = this.pick_history.removeLast()
+            remove_node.setNodeStatus(NodeStatus.NOT_USING)
+        }
+    }
 }
 
+class MakeNode(var node_data : Dictionary<String, Array<Int>>)
+{
 
-
-
+}
 
 
 
