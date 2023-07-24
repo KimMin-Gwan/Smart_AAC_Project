@@ -47,6 +47,11 @@ class HearVoice : AppCompatActivity() {
         // 음성인식 후 텍스트보여지는 livedata 관찰
         viewModel.recognizedSpeechText.observe(this, Observer { text ->
             binding.voiceToTextTv.text = text
+            binding.hearVoiceEndBtn.setOnClickListener {
+                val intent = Intent(this@HearVoice, ChooseWordVoice::class.java)
+                intent.putExtra("voiceText", text)
+                startActivity(intent)
+            }
         })
         //음성인식 완료 후 음성 인식 완료 버튼을 수명주기에 맞게 보존
         viewModel.isEndOfSpeech.observe(this, Observer { isEndOfSpeech ->

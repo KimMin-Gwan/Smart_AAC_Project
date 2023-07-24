@@ -80,6 +80,7 @@ id textView5
 id title_login_btn
 id title_register_btn
 id title_tv
+id voiceText
 id voice_to_text_tv
 layout activity_choose_pass_category_item
 layout activity_choose_voice_word_voice
