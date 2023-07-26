@@ -1,4 +1,4 @@
-package com.example.compass_aac.adapters
+package com.example.compass_aac.views.adapters
 
 import android.content.Context
 import android.view.LayoutInflater

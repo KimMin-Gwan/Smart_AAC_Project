@@ -1,4 +1,4 @@
-package com.example.compass_aac.apis
+package com.example.compass_aac.datas.apis
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

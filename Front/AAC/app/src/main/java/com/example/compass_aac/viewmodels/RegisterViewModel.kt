@@ -19,9 +19,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.compass_aac.apis.UserRegisterApiService
-import com.example.compass_aac.apis.UserRegisterService
-import com.example.compass_aac.apis.UserService
+import com.example.compass_aac.datas.apis.UserRegisterApiService
+import com.example.compass_aac.datas.apis.UserRegisterService
+import com.example.compass_aac.datas.apis.UserService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

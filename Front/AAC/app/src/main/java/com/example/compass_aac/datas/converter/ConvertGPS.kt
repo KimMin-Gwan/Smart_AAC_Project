@@ -1,4 +1,4 @@
-package com.example.compass_aac.datas
+package com.example.compass_aac.datas.converter
 
 fun ConvertGPS(mode: Int, lat_X: Double, lng_Y: Double): LatXLngY {
     //위경도 <-> 좌표 변환

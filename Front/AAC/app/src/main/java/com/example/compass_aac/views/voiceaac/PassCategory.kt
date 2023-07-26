@@ -19,7 +19,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.R
-import com.example.compass_aac.adapters.PassCategoryAdapter
+import com.example.compass_aac.views.adapters.PassCategoryAdapter
 import com.example.compass_aac.databinding.ActivityPassCategoryBinding
 import com.example.compass_aac.viewmodels.PassCategoryViewModel
 import com.example.compass_aac.views.MainActivity
