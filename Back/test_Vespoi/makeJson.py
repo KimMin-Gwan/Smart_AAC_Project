@@ -18,7 +18,7 @@ def preprocessing_text_data(file_path):
     
     return text_data
 
-def make_dict_location(dict_aac,aac_data): 
+def make_dict_location(dict_aac,aac_data): #딕셔너리 만들기 장소
     location_label="10" #장소
     index = 0
     for i in aac_data:
@@ -29,8 +29,19 @@ def make_dict_location(dict_aac,aac_data):
             "name" : i
         })
 
-def make_dict_AAC(dict_aac,aac_data):
-    aac_label = "20" #기본 AAC
+def make_dict_category(dict_aac,aac_data): #딕셔너리 만들기 장소 아래 카테고리
+    location_label="20" #카테고리
+    index = 0
+    for i in aac_data:
+        index = index + 1
+        dict_aac["AAC"].append({
+            "id": int(location_label + str(index)),
+            "node" : [],
+            "name" : i
+        })
+
+def make_dict_AAC(dict_aac,aac_data): #딕셔너리 만들기 카테고리 아래 AAC
+    aac_label = "30" #기본 AAC
     index = 0
     for i in aac_data:
         index = index + 1
@@ -40,7 +51,7 @@ def make_dict_AAC(dict_aac,aac_data):
             "name" : i
         })
 
-def make_dict_ai(dict_aac,aac_data):
+def make_dict_ai(dict_aac,aac_data): #딕셔너리 만들기 AI 카테고리
     ai_label = "90" #AI 카테고리
     index = 0
     for i in aac_data:  
@@ -75,4 +86,5 @@ dict_aac = {"AAC": [] }
 make_dict_location(dict_aac,location)
 make_dict_AAC(dict_aac,AAC)
 make_dict_ai(dict_aac,ai_data)
+
 make_json(dict_aac)
