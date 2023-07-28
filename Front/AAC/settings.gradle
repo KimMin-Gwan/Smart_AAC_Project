@@ -15,4 +15,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Compass_AAC"
-include ':app'
+include ':presentation'
+include ':data'
+include ':domain'
