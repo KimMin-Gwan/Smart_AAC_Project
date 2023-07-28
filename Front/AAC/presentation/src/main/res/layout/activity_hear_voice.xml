@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.views.activity.voiceaac.HearVoice">
+    tools:context=".view.voiceaac.HearVoice">
     <ImageButton
         android:id="@+id/hear_voice_back_btn"
         android:layout_width="44dp"

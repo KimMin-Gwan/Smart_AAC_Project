@@ -17,8 +17,13 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.domain.usecase.LoginUseCase
+import com.example.domain.usecase.RegisterUseCase
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class RegisterViewModel :ViewModel(){
+class RegisterViewModel @Inject constructor(private val usecase: RegisterUseCase) :ViewModel(){
 
     private val _userName = MutableLiveData<String>()
     private val userName: LiveData<String> = _userName
@@ -46,6 +51,11 @@ class RegisterViewModel :ViewModel(){
         val registerphone = userPhone.value!!
         val registerpw = userPassword.value!!
         Log.d("register", "${registername}, ${registerphone}, $registerpw")
+
+        viewModelScope.launch {
+            val response = usecase.invoke(registername,registerphone,registerpw)
+
+        }
 
 //        val apiService = UserRegisterService().provideUserRegisterApiService()
 

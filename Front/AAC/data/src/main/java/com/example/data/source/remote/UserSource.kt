@@ -6,13 +6,13 @@ import retrofit2.Response
 
 interface UserSource {
     suspend fun getLoginUser(
-        phone : Int,
+        phone : String,
         password: String
     ) : List<LoginResponse>
 
     suspend fun getRegisterUser(
         name : String,
-        phone: Int,
+        phone: String,
         password: String
-    ) : Response<RegisterResponse>
+    ) : List<RegisterResponse>
 }

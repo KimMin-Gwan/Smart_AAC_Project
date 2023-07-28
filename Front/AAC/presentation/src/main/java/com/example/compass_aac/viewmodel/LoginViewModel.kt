@@ -27,12 +27,12 @@ import javax.inject.Inject
 class LoginViewModel @Inject constructor(private val usecase: LoginUseCase):ViewModel() {
 
     //phone, pw 대한 LiveData 정의
-    val _userloginphone = MutableLiveData<Int>()
-    val userLoginPhone: LiveData<Int> = _userloginphone
+    val _userloginphone = MutableLiveData<String>()
+    val userLoginPhone: LiveData<String> = _userloginphone
     val _userloginpw = MutableLiveData<String>()
     val userLoginPw: LiveData<String> = _userloginpw
 
-    fun updateUserLoginPhone(phone: Editable) {
+    fun updateUserLoginPhone(phone: String) {
         _userloginphone.value = phone
     }
 

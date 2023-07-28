@@ -26,7 +26,7 @@ interface UserApiService {
     @FormUrlEncoded
     @POST("")
     suspend fun loginUser(
-        @Field("phone") phone: Int,
+        @Field("phone") phone: String,
         @Field("password") password: String
     ): List<LoginResponse>
 
@@ -35,8 +35,8 @@ interface UserApiService {
     @POST("")
     suspend fun registerUser(
         @Field("name") name: String,
-        @Field("phone") phone: Int,
+        @Field("phone") phone: String,
         @Field("password") password :String,
-    ): Response<RegisterResponse>
+    ): List<RegisterResponse>
 }
 
