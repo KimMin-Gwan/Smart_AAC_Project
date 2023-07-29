@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 
-mongo_connect = "mongodb+srv://admin:E8SK5rDKm5rHwwhh@cluster0.pmbm4ny.mongodb.net/?retryWrites=true&w=majority"
+mongo_connect = "mongodb+srv://admin:_____________@cluster0.pmbm4ny.mongodb.net/?retryWrites=true&w=majority"
 #client = MongoClient(mongo_connect)
 client = MongoClient(mongo_connect, tlsCAFile=certifi.where())
 db = client.temp
