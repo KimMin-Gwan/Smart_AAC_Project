@@ -18,6 +18,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
@@ -25,11 +26,12 @@ import com.example.compass_aac.R
 import com.example.compass_aac.databinding.ActivityRegisterMainBinding
 import com.example.compass_aac.viewmodel.RegisterViewModel
 import com.example.compass_aac.view.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.regex.Pattern
 
-
+@AndroidEntryPoint
 class RegisterMain : AppCompatActivity() {
-    private lateinit var viewModel: RegisterViewModel
+    private val viewModel: RegisterViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +43,7 @@ class RegisterMain : AppCompatActivity() {
             binding.registerNextBtn.setBackgroundColor(Color.parseColor("#CACACA"))
         }
 
-        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
+//        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
 
         binding.registerNameEdt.addTextChangedListener { editable ->
             editable?.let {

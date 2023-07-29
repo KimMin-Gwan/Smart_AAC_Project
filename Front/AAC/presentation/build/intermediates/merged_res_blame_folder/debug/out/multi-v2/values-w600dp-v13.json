@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.app-mergeDebugResources-42:/values-w600dp-v13/values-w600dp-v13.xml",
+            "outputFile": "com.example.compass_aac.presentation-mergeDebugResources-44:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ellen\\Github\\Smart_AAC_Project\\Front\\AAC\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "source": "C:\\Users\\ellen\\Github\\Smart_AAC_Project\\Front\\AAC\\presentation\\src\\main\\res\\values-w600dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#EEE7E7"
+        android:gravity="center"
+        android:text="단어"
+        android:textColor="#636060"
+        app:cornerRadius="5dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#EEE7E7"
+        android:gravity="center"
+        android:text="단어"
+        android:textColor="#636060"
+        app:cornerRadius="5dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#EEE7E7"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:text="단어"
+        android:textColor="#636060"
+        app:cornerRadius="5dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+
+</LinearLayout>

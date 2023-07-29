@@ -4,8 +4,9 @@ import com.example.data.model.remote.LoginResponse
 import com.example.data.model.remote.RegisterResponse
 import com.example.data.source.UserApiService
 import retrofit2.Response
+import javax.inject.Inject
 
-class UserSourceImpl(private val userapiInterface : UserApiService) : UserSource {
+class UserSourceImpl @Inject constructor(private val userapiInterface : UserApiService) : UserSource {
     override suspend fun getLoginUser(phone: String, password: String): List<LoginResponse> {
         return userapiInterface.loginUser(phone, password)
     }

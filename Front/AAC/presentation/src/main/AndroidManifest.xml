@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
+        android:name=".view.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -19,55 +20,56 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Compass_AAC"
         tools:targetApi="31">
+
         <activity
-            android:name=".ui.views.activity.voiceaac.ChooseWordVoice"
+            android:name=".view.voiceaac.ChooseWordVoice"
             android:exported="false" />
         <activity
-            android:name=".ui.views.activity.voiceaac.HearVoice"
+            android:name=".view.voiceaac.HearVoice"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".view.voiceaac.ShowSelectedWord"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".view.voiceaac.ChooseWordPass"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".view.login.RegisterMain"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.login.LoginMain"
+            android:exported="false" />
+        <activity
+            android:name=".view.login.TitleActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.views.activity.voiceaac.ShowSelectedWord"
-            android:exported="false">
-        </activity>
-        <activity
-            android:name=".ui.views.activity.voiceaac.ChooseWordPass"
-            android:exported="false" >
-        </activity>
-        <activity
-            android:name=".ui.views.activity.login.RegisterMain"
-            android:exported="false"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".ui.views.activity.login.LoginMain"
-            android:exported="false" />
-        <activity
-            android:name=".ui.views.activity.login.TitleActivity"
-            android:exported="true" >
 
         </activity>
         <activity
-            android:name=".ui.views.activity.urgencyaac.UrgencyCategory"
+            android:name=".view.urgencyaac.UrgencyCategory"
             android:exported="false" />
         <activity
-            android:name=".ui.views.activity.dailyaac.DailyCategory"
+            android:name=".view.dailyaac.DailyCategory"
             android:exported="false" />
         <activity
-            android:name=".ui.views.activity.voiceaac.PassCategory"
+            android:name=".view.voiceaac.PassCategory"
             android:exported="false" />
         <activity
-            android:name=".ui.views.activity.location.SearchLocation"
+            android:name=".view.location.SearchLocation"
             android:exported="false" />
         <activity
-            android:name=".ui.views.activity.splash.Splash"
+            android:name=".view.splash.Splash"
             android:exported="false" />
         <activity
-            android:name=".ui.views.activity.MainActivity"
+            android:name=".view.MainActivity"
             android:exported="false" />
     </application>
 

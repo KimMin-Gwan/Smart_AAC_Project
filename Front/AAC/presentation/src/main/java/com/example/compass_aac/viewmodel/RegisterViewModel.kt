@@ -13,6 +13,7 @@
 
 package com.example.compass_aac.viewmodel
 
+import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -20,9 +21,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.usecase.LoginUseCase
 import com.example.domain.usecase.RegisterUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
+@HiltViewModel
 class RegisterViewModel @Inject constructor(private val usecase: RegisterUseCase) :ViewModel(){
 
     private val _userName = MutableLiveData<String>()
@@ -53,29 +58,17 @@ class RegisterViewModel @Inject constructor(private val usecase: RegisterUseCase
         Log.d("register", "${registername}, ${registerphone}, $registerpw")
 
         viewModelScope.launch {
-            val response = usecase.invoke(registername,registerphone,registerpw)
+            withContext(Dispatchers.IO){
+                try {
+                    val response = usecase.invoke(registername,registerphone,registerpw)
+                    Log.d("response", response.toString())
+                }
+                catch (e:Exception){
+                    Log.d(TAG, e.message.toString())
+
+                }
+            }
 
         }
-
-//        val apiService = UserRegisterService().provideUserRegisterApiService()
-
-        // 회원 가입을 위한 서버 통신 등의 작업 수행
-//        viewModelScope.launch {
-//            withContext(Dispatchers.IO){
-//                try {
-//                    val response = apiService.registerUser(registername,registerphone,registerpw)
-//                    if (response.isSuccessful) {
-//                        // handle successful response
-//                        val registrationResponse = response.body()
-//                        // use 'registrationResponse'
-//                    } else {
-//                        // handle error response
-//                    }
-//                } catch (e: Exception) {
-//                    Log.d("error", "${e.message}")
-//                    // handle network error
-//                }
-//            }
-//        }
     }
 }

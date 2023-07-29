@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
@@ -25,15 +26,19 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.databinding.ActivitySearchLocationBinding
 import com.example.compass_aac.viewmodel.LocationViewModel
 import com.example.compass_aac.view.voiceaac.PassCategory
+import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 
 
+@AndroidEntryPoint
 class SearchLocation : AppCompatActivity() {
     companion object {
         const val PERMISSIONS_REQUEST_CODE = 100
         val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
     }
 
-    private lateinit var locationViewModel: LocationViewModel
+    private val locationViewModel: LocationViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,8 +46,8 @@ class SearchLocation : AppCompatActivity() {
         val binding = ActivitySearchLocationBinding.inflate(layoutInflater)
         setContentView(binding.root)
         // 뷰모델 연결
-        locationViewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory(application)).get(
-            LocationViewModel::class.java)
+//        locationViewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory(application)).get(
+//            LocationViewModel::class.java)
 
         //프로그래스바 업데이트
         locationViewModel.isLoading.observe(this, Observer { isLoading ->

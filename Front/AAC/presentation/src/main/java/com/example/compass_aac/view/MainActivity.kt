@@ -20,6 +20,7 @@ import com.example.compass_aac.view.dailyaac.DailyCategory
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory
 import com.example.compass_aac.view.location.SearchLocation
 
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

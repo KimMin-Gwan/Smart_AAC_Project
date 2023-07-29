@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.app-mergeDebugResources-42:/values-v16/values-v16.xml",
+            "outputFile": "com.example.compass_aac.presentation-mergeDebugResources-44:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\4b9a65c5434382b7065f69f69f387d72\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\5d0291e190403db7dee33ef528b9ed59\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\e920160f38101319e02131fea61f9bd5\\transformed\\core-1.12.0-alpha05\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\b8a8fb56f09a80bbb76f16578cd2c09e\\transformed\\core-1.10.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

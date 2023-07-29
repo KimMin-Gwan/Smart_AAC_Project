@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface LocationApiService {
     @FormUrlEncoded
-    @POST("")
+    @POST("/location")
     suspend fun locationXY(
         @Field("nx") nx : Double,
         @Field("ny") ny : Double

@@ -9,12 +9,14 @@ import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
-class LocationDataSourceImpl(
+class LocationDataSourceImpl @Inject constructor(
     private val fusedLocationClient: FusedLocationProviderClient,
-    private val context: Context
+    @ApplicationContext private val context: Context
 ) : LocationDataSource {
     override suspend fun getLocation() = getLastKnownLocation()
 

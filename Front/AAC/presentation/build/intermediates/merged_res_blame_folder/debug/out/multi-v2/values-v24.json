@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.app-mergeDebugResources-42:/values-v24/values-v24.xml",
+            "outputFile": "com.example.compass_aac.presentation-mergeDebugResources-44:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\0e466e082ce5afcc144e4cf15259a1c4\\transformed\\material-1.9.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\a191931e67e775d1e9d095ec48ef944a\\transformed\\material-1.9.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\4b9a65c5434382b7065f69f69f387d72\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\5d0291e190403db7dee33ef528b9ed59\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -33,7 +33,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\401f5fe63cfe7edb03e8b212ff39587b\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\842bef617cf6c11cbe284e86d8cfa230\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

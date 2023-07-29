@@ -17,28 +17,46 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.domain.usecase.GetLocationUseCase
-
+import com.example.compass_aac.view.ConvertGPS
+import com.example.domain.usecase.LocationUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class LocationViewModel @Inject constructor(private val usecase : GetLocationUseCase, application: Application)  : AndroidViewModel(application) {
-    //위치 받기 성공 -> view에서 PassCategory로 intent 해줌
-//    val locationResult = MutableLiveData<Result<Location?>>()
+
+@HiltViewModel
+class LocationViewModel @Inject constructor(private val usecase : LocationUseCase, application: Application)  : AndroidViewModel(application) {
+
     //프로그래스바 제어
     val isLoading = MutableLiveData<Boolean>()
+    //카테고리 값
     val categoryResult = MutableLiveData<Result<String>>()
-    val locationResult = MutableLiveData<Result<Location?>>()
 
     fun fetchLocationAsync() = viewModelScope.launch {
         isLoading.postValue(true)
         try {
             val result = usecase.execute()
-            locationResult.postValue(result)
+            Log.d("location", result.toString())
+            val location: Location? = result.getOrNull()
 
-        } catch (e: Exception) {
-//            locationResult.postValue(Result.failure(e)) // 실패한 경우 에러를 LiveData에 저장
+            Log.d("location", location.toString())
+
+            location?.let {
+                val latitude = it.latitude
+                val longitude = it.longitude
+                Log.d("Location", "Latitude: ${latitude}, Longitude: ${longitude}")
+                val XY = ConvertGPS(0, location.latitude, location.longitude)
+                Log.d("좌표 값", "${XY.x}, ${XY.y}")
+
+
+                //x,y좌표값 서버에 전송 후 카테고리 응답값 받기
+                //받아온 카테고리 값 livedata에 저장
+
+                } ?: run {
+                // location이 null인 경우 실행될 코드를 여기에 작성
+            }
+            } catch (e: Exception) {
             Log.e("LocationViewModel", "Error fetching location", e)
         } finally {
             delay(2000)

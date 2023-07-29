@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.voiceaac.ChooseWordPass">
+    tools:context=".view.voiceaac.ChooseWordPass">
 
     <ImageButton
         android:id="@+id/choose_pass_back_btn"

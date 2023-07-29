@@ -24,7 +24,7 @@ import retrofit2.http.POST
 interface UserApiService {
     //로그인
     @FormUrlEncoded
-    @POST("")
+    @POST("/login")
     suspend fun loginUser(
         @Field("phone") phone: String,
         @Field("password") password: String
@@ -32,7 +32,7 @@ interface UserApiService {
 
     //회원가입
     @FormUrlEncoded
-    @POST("")
+    @POST("/register")
     suspend fun registerUser(
         @Field("name") name: String,
         @Field("phone") phone: String,

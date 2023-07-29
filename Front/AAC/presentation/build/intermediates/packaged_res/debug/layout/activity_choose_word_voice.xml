@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.voiceaac.ChooseWordVoice">
+    tools:context=".view.voiceaac.ChooseWordVoice">
 
     <ImageButton
         android:id="@+id/select_word_back_btn"

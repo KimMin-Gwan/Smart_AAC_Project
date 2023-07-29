@@ -2,16 +2,17 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
+    id 'com.google.dagger.hilt.android'
+
 }
 
 android {
     namespace 'com.example.domain'
-    compileSdk 34
+    compileSdk 33
 
     defaultConfig {
         minSdk 24
-        targetSdk 34
+        targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -28,8 +29,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = "1.8"
     }
+
+
 }
 
 dependencies {
@@ -40,19 +43,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    //Hilt
-    implementation "com.google.dagger:hilt-android:2.41"
-    kapt "com.google.dagger:hilt-android-compiler:2.41"
-
-    // For instrumentation tests
-    androidTestImplementation  'com.google.dagger:hilt-android-testing:2.41'
-    androidTestAnnotationProcessor 'com.google.dagger:hilt-android-compiler:2.41'
-
-    // For local unit tests
-    testImplementation 'com.google.dagger:hilt-android-testing:2.41'
-    testAnnotationProcessor 'com.google.dagger:hilt-android-compiler:2.41'
+    //hilt
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
 }
-
+// Allow references to generated code
 kapt {
     correctErrorTypes true
 }

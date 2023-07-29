@@ -22,6 +22,7 @@
     <uses-permission android:name="com.example.compass_aac.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
+        android:name="com.example.compass_aac.view.MyApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -35,10 +36,29 @@
         android:testOnly="true"
         android:theme="@style/Theme.Compass_AAC" >
         <activity
-            android:name="com.example.compass_aac.views.voiceaac.ChooseWordVoice"
+            android:name="com.example.compass_aac.view.voiceaac.ChooseWordVoice"
             android:exported="false" />
         <activity
-            android:name="com.example.compass_aac.views.voiceaac.HearVoice"
+            android:name="com.example.compass_aac.view.voiceaac.HearVoice"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.compass_aac.view.voiceaac.ShowSelectedWord"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.example.compass_aac.view.voiceaac.ChooseWordPass"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.example.compass_aac.view.login.RegisterMain"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.example.compass_aac.view.login.LoginMain"
+            android:exported="false" />
+        <activity
+            android:name="com.example.compass_aac.view.login.TitleActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,46 +67,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.compass_aac.views.voiceaac.ShowSelectedWord"
-            android:exported="false" >
-        </activity>
-        <activity
-            android:name="com.example.compass_aac.views.voiceaac.ChooseWordPass"
-            android:exported="false" >
-        </activity>
-        <activity
-            android:name="com.example.compass_aac.views.login.activity.RegisterMain"
-            android:exported="false"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.example.compass_aac.views.login.activity.LoginMain"
+            android:name="com.example.compass_aac.view.urgencyaac.UrgencyCategory"
             android:exported="false" />
         <activity
-            android:name="com.example.compass_aac.views.login.activity.TitleActivity"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name="com.example.compass_aac.views.urgencyaac.UrgencyCategory"
+            android:name="com.example.compass_aac.view.dailyaac.DailyCategory"
             android:exported="false" />
         <activity
-            android:name="com.example.compass_aac.views.dailyaac.DailyCategory"
+            android:name="com.example.compass_aac.view.voiceaac.PassCategory"
             android:exported="false" />
         <activity
-            android:name="com.example.compass_aac.views.voiceaac.PassCategory"
+            android:name="com.example.compass_aac.view.location.SearchLocation"
             android:exported="false" />
         <activity
-            android:name="com.example.compass_aac.views.location.SearchLocation"
+            android:name="com.example.compass_aac.view.splash.Splash"
             android:exported="false" />
         <activity
-            android:name="com.example.compass_aac.views.splash.Splash"
-            android:exported="false" />
-        <activity
-            android:name="com.example.compass_aac.views.MainActivity"
+            android:name="com.example.compass_aac.view.MainActivity"
             android:exported="false" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
@@ -102,10 +107,6 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"

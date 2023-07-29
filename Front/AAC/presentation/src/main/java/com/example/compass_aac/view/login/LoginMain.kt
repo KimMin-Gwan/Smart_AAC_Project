@@ -18,22 +18,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import androidx.activity.viewModels
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.view.MainActivity
 import com.example.compass_aac.R
 import com.example.compass_aac.databinding.ActivityLoginMainBinding
 import com.example.compass_aac.viewmodel.LoginViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.HiltAndroidApp
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class LoginMain : AppCompatActivity() {
-    private lateinit var viewModel: LoginViewModel
 
+    private val viewModel: LoginViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityLoginMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+//        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         binding.loginBtn.isEnabled= false
         if (!binding.loginBtn.isEnabled){
@@ -59,7 +65,9 @@ class LoginMain : AppCompatActivity() {
 
         //로그인 버튼 눌렀을 때
         binding.loginBtn.setOnClickListener {
-            viewModel.CheckLogin()
+            val result = viewModel.CheckLogin()
+
+//            if (result == )
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
