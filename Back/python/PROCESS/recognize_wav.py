@@ -5,10 +5,11 @@ from category_ai import Classifier
 # 유저 별로 꼬이지 않도록 설계해야함
 
 
-class WavRecognizer():
+class Recognizer():
     # 생성자
-    def __init__(self, file):
-        self.path = __file__ + file.filename
+    def __init__(self):
+        self.classifier = Classifier()
+        #self.path = __file__ + file.filename
     
     def __call__(self):
         now_loc = __file__
@@ -44,15 +45,17 @@ class WavRecognizer():
     ## text를 분석
     def __recognizing(self, text):
         # 군집화나 RNN으로 분석해서 리턴시켜야됨
-        classifier = Classifier(text)
-        result = classifier.classifier()
+        result = self.classifier.classifier(text)
         # {real_txt : class key}
         return result
+    
+
 
     ## 분석기
     ## 정상적인 결과는 라벨을 반환
     ## 정상적인 결과 출력이 안되면 defualt를 반환
-    def recognizer(self, file):
+    def recognizer(self, text):
+        """
         flag = self.__save_real_file(object_file = file.file)
         if flag == -1:
             return "default"
@@ -61,8 +64,10 @@ class WavRecognizer():
         text = self.__speech_to_text()
         if text == " ":
             return "default"
-        
+        """
         result = self.__recognizing(text)
+
+
 
         return result
 

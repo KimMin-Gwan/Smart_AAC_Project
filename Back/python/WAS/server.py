@@ -25,10 +25,10 @@ class AppServer():
             except Exception as e:
                 print("Error : ", str(e))
 
-            if result == 'default':
+            if result['key'] == 'ERROR':
                 return {"error" : "Recognize Fail"}
 
-            return {"result" : result}
+            return result # {'key' : data}
 
 
         #GPS 데이터 보내기
