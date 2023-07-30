@@ -20,6 +20,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.domain.model.Login
 import com.example.domain.usecase.LoginUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -31,10 +32,15 @@ import javax.inject.Inject
 class LoginViewModel @Inject constructor(private val usecase: LoginUseCase):ViewModel() {
 
     //phone, pw 대한 LiveData 정의
-    val _userloginphone = MutableLiveData<String>()
-    val userLoginPhone: LiveData<String> = _userloginphone
-    val _userloginpw = MutableLiveData<String>()
-    val userLoginPw: LiveData<String> = _userloginpw
+    private val _userloginphone = MutableLiveData<String>()
+    //UI에 변경된 값을 나타내줘야할 때 사용 (지금은 사용 x)
+     val userLoginPhone: LiveData<String> = _userloginphone
+
+    private val _userloginpw = MutableLiveData<String>()
+     val userLoginPw: LiveData<String> = _userloginpw
+
+    private val _loginresult = MutableLiveData<Result<List<Login>>>()
+     val loginresult : LiveData<Result<List<Login>>> get() = _loginresult
 
     fun updateUserLoginPhone(phone: String) {
         _userloginphone.value = phone
@@ -55,12 +61,11 @@ class LoginViewModel @Inject constructor(private val usecase: LoginUseCase):View
                 try {
                     val response = usecase.invoke(enteredUserphone!!,enteredPassword!!)
                     Log.d("response", response.toString())
-
-                    if (response[0].message == "success"){
-
+                    if(response.isNotEmpty()){
+                        _loginresult.postValue(Result.success(response))
                     }
                     else{
-
+                        _loginresult.postValue(Result.failure(Throwable("fail")))
                     }
                 }
                 catch (e :Exception)

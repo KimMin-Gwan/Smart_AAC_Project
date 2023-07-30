@@ -16,7 +16,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.compass_aac.databinding.ActivityTitleBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TitleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

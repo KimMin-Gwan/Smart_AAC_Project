@@ -6,6 +6,10 @@ import android.content.pm.PackageManager
 import android.location.Location
 import com.google.android.gms.location.LocationRequest
 import androidx.core.app.ActivityCompat
+import com.example.data.mapper.MapperToCategory
+import com.example.data.model.remote.CategoryResponse
+import com.example.data.source.LocationApiService
+import com.example.domain.model.Categories
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
@@ -15,10 +19,15 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
 class LocationDataSourceImpl @Inject constructor(
+    private val locationApiService : LocationApiService,
     private val fusedLocationClient: FusedLocationProviderClient,
     @ApplicationContext private val context: Context
 ) : LocationDataSource {
     override suspend fun getLocation() = getLastKnownLocation()
+    override suspend fun getCategories(x: Double, y: Double): List<CategoryResponse> {
+        return locationApiService.locationXY(x,y)
+    }
+
 
     private suspend fun getLastKnownLocation(): Result<Location?> = suspendCoroutine { continuation ->
         val locationRequest = LocationRequest.create().apply {

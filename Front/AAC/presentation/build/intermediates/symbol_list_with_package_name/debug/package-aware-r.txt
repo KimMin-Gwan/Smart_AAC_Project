@@ -3241,7 +3241,6 @@ id compass
 id compress
 id confirm_button
 id constraint
-id constraintLayout
 id constraintLayout3
 id constraintLayout4
 id constraintLayout5
@@ -3372,6 +3371,7 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id login_app_bar
@@ -3389,7 +3389,6 @@ id marquee
 id masked
 id match_constraint
 id match_parent
-id materialButton
 id material_clock_display
 id material_clock_display_and_toggle
 id material_clock_face
@@ -3479,7 +3478,6 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
-id pass_category_gridview
 id password_toggle
 id path
 id pathRelative
@@ -3495,6 +3493,9 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recycler_view
+id recycler_view_pass
+id recycler_view_voice
 id register_app_bar
 id register_back_btn
 id register_name_edt
@@ -3502,6 +3503,7 @@ id register_next_btn
 id register_phone_edt
 id register_pw_edt
 id report_drawn
+id researchBtn
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3518,8 +3520,6 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollView2
-id scrollView3
 id scrollable
 id search_badge
 id search_bar
@@ -3547,11 +3547,14 @@ id search_view_toolbar_container
 id search_voice_btn
 id select_dialog_listview
 id select_word_back_btn
+id select_word_voice_back_btn
 id selected
+id selectedWordVoiceBtn
 id selected_word_answer_btn
 id selected_word_ok_btn
 id selected_word_show_tv
 id selection_type
+id selectwordBtn
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3647,6 +3650,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id ttsBtn
+id ttsBtn1
 id two
 id unchecked
 id uniform

@@ -2,17 +2,23 @@ package com.example.compass_aac.view;
 
 import com.example.compass_aac.module.DataSourceModule;
 import com.example.compass_aac.module.LocationModule;
-import com.example.compass_aac.module.LocationUseCaseModule;
 import com.example.compass_aac.module.NetworkModule;
 import com.example.compass_aac.module.RepositoryModule;
-import com.example.compass_aac.module.UserApiModule;
-import com.example.compass_aac.module.UserSourceModule;
-import com.example.compass_aac.module.UserUseCaseModule;
+import com.example.compass_aac.module.UseCaseModule;
+import com.example.compass_aac.module.UserModule;
+import com.example.compass_aac.view.dailyaac.DailyCategory_GeneratedInjector;
 import com.example.compass_aac.view.location.SearchLocation_GeneratedInjector;
 import com.example.compass_aac.view.login.LoginMain_GeneratedInjector;
 import com.example.compass_aac.view.login.RegisterMain_GeneratedInjector;
+import com.example.compass_aac.view.login.TitleActivity_GeneratedInjector;
+import com.example.compass_aac.view.urgencyaac.UrgencyCategory_GeneratedInjector;
+import com.example.compass_aac.view.voiceaac.ChooseWordPass_GeneratedInjector;
+import com.example.compass_aac.view.voiceaac.ChooseWordVoice_GeneratedInjector;
+import com.example.compass_aac.view.voiceaac.PassCategory_GeneratedInjector;
+import com.example.compass_aac.view.voiceaac.ShowSelectedWord_GeneratedInjector;
 import com.example.compass_aac.viewmodel.LocationViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.LoginViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.PassCategoryViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.RegisterViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
@@ -132,14 +138,12 @@ public final class MyApplication_HiltComponents {
           DataSourceModule.class,
           HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class,
           LocationModule.class,
-          LocationUseCaseModule.class,
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class,
           NetworkModule.class,
           RepositoryModule.class,
-          UserApiModule.class,
-          UserSourceModule.class,
-          UserUseCaseModule.class
+          UseCaseModule.class,
+          UserModule.class
       }
   )
   @Singleton
@@ -167,6 +171,7 @@ public final class MyApplication_HiltComponents {
           LoginViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
+          PassCategoryViewModel_HiltModules.KeyModule.class,
           RegisterViewModel_HiltModules.KeyModule.class
       }
   )
@@ -189,9 +194,17 @@ public final class MyApplication_HiltComponents {
       }
   )
   @ActivityScoped
-  public abstract static class ActivityC implements SearchLocation_GeneratedInjector,
+  public abstract static class ActivityC implements MainActivity_GeneratedInjector,
+      DailyCategory_GeneratedInjector,
+      SearchLocation_GeneratedInjector,
       LoginMain_GeneratedInjector,
       RegisterMain_GeneratedInjector,
+      TitleActivity_GeneratedInjector,
+      UrgencyCategory_GeneratedInjector,
+      ChooseWordPass_GeneratedInjector,
+      ChooseWordVoice_GeneratedInjector,
+      PassCategory_GeneratedInjector,
+      ShowSelectedWord_GeneratedInjector,
       ActivityComponent,
       DefaultViewModelFactories.ActivityEntryPoint,
       HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint,
@@ -208,6 +221,7 @@ public final class MyApplication_HiltComponents {
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           LocationViewModel_HiltModules.BindsModule.class,
           LoginViewModel_HiltModules.BindsModule.class,
+          PassCategoryViewModel_HiltModules.BindsModule.class,
           RegisterViewModel_HiltModules.BindsModule.class
       }
   )

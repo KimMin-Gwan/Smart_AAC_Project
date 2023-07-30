@@ -14,7 +14,9 @@ package com.example.compass_aac.view.dailyaac
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.compass_aac.databinding.ActivityDailyCategoryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DailyCategory : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

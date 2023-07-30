@@ -5,14 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ScrollView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,20 +24,29 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ScrollView scrollView3;
+  public final LinearLayout linearLayout;
 
   @NonNull
-  public final ImageButton selectWordBackBtn;
+  public final RecyclerView recyclerViewVoice;
+
+  @NonNull
+  public final ImageButton selectWordVoiceBackBtn;
+
+  @NonNull
+  public final MaterialButton selectedWordVoiceBtn;
 
   @NonNull
   public final TextView voiceText;
 
   private ActivityChooseWordVoiceBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ScrollView scrollView3, @NonNull ImageButton selectWordBackBtn,
+      @NonNull LinearLayout linearLayout, @NonNull RecyclerView recyclerViewVoice,
+      @NonNull ImageButton selectWordVoiceBackBtn, @NonNull MaterialButton selectedWordVoiceBtn,
       @NonNull TextView voiceText) {
     this.rootView = rootView;
-    this.scrollView3 = scrollView3;
-    this.selectWordBackBtn = selectWordBackBtn;
+    this.linearLayout = linearLayout;
+    this.recyclerViewVoice = recyclerViewVoice;
+    this.selectWordVoiceBackBtn = selectWordVoiceBackBtn;
+    this.selectedWordVoiceBtn = selectedWordVoiceBtn;
     this.voiceText = voiceText;
   }
 
@@ -66,15 +77,27 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.scrollView3;
-      ScrollView scrollView3 = ViewBindings.findChildViewById(rootView, id);
-      if (scrollView3 == null) {
+      id = R.id.linearLayout;
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout == null) {
         break missingId;
       }
 
-      id = R.id.select_word_back_btn;
-      ImageButton selectWordBackBtn = ViewBindings.findChildViewById(rootView, id);
-      if (selectWordBackBtn == null) {
+      id = R.id.recycler_view_voice;
+      RecyclerView recyclerViewVoice = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerViewVoice == null) {
+        break missingId;
+      }
+
+      id = R.id.select_word_voice_back_btn;
+      ImageButton selectWordVoiceBackBtn = ViewBindings.findChildViewById(rootView, id);
+      if (selectWordVoiceBackBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.selectedWordVoiceBtn;
+      MaterialButton selectedWordVoiceBtn = ViewBindings.findChildViewById(rootView, id);
+      if (selectedWordVoiceBtn == null) {
         break missingId;
       }
 
@@ -84,8 +107,8 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityChooseWordVoiceBinding((ConstraintLayout) rootView, scrollView3,
-          selectWordBackBtn, voiceText);
+      return new ActivityChooseWordVoiceBinding((ConstraintLayout) rootView, linearLayout,
+          recyclerViewVoice, selectWordVoiceBackBtn, selectedWordVoiceBtn, voiceText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

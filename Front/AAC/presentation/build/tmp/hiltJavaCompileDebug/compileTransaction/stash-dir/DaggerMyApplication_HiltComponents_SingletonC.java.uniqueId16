@@ -9,36 +9,45 @@ import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 import com.example.compass_aac.module.DataSourceModule;
 import com.example.compass_aac.module.DataSourceModule_ProvideLocationSourceFactory;
+import com.example.compass_aac.module.DataSourceModule_ProvideUserSourceFactory;
 import com.example.compass_aac.module.LocationModule;
 import com.example.compass_aac.module.LocationModule_ProvideFusedLocationProviderClientFactory;
-import com.example.compass_aac.module.LocationUseCaseModule;
-import com.example.compass_aac.module.LocationUseCaseModule_ProvideLocationUseCaseFactory;
+import com.example.compass_aac.module.LocationModule_ProvideLocationApiFactory;
 import com.example.compass_aac.module.NetworkModule;
 import com.example.compass_aac.module.NetworkModule_ProvideOkHttpClientFactory;
 import com.example.compass_aac.module.NetworkModule_ProvideRetrofitFactory;
-import com.example.compass_aac.module.UserApiModule;
-import com.example.compass_aac.module.UserApiModule_ProvideLoginApiFactory;
-import com.example.compass_aac.module.UserSourceModule;
-import com.example.compass_aac.module.UserSourceModule_ProvideUserSourceFactory;
-import com.example.compass_aac.module.UserUseCaseModule;
-import com.example.compass_aac.module.UserUseCaseModule_ProvideLoginUseCaseFactory;
-import com.example.compass_aac.module.UserUseCaseModule_ProvideRegisterUseCaseFactory;
+import com.example.compass_aac.module.UseCaseModule;
+import com.example.compass_aac.module.UseCaseModule_ProvideLocationUseCaseFactory;
+import com.example.compass_aac.module.UseCaseModule_ProvideLoginUseCaseFactory;
+import com.example.compass_aac.module.UseCaseModule_ProvideRegisterUseCaseFactory;
+import com.example.compass_aac.module.UserModule;
+import com.example.compass_aac.module.UserModule_ProvideLoginApiFactory;
+import com.example.compass_aac.view.dailyaac.DailyCategory;
 import com.example.compass_aac.view.location.SearchLocation;
 import com.example.compass_aac.view.login.LoginMain;
 import com.example.compass_aac.view.login.RegisterMain;
+import com.example.compass_aac.view.login.TitleActivity;
+import com.example.compass_aac.view.urgencyaac.UrgencyCategory;
+import com.example.compass_aac.view.voiceaac.ChooseWordPass;
+import com.example.compass_aac.view.voiceaac.ChooseWordVoice;
+import com.example.compass_aac.view.voiceaac.PassCategory;
+import com.example.compass_aac.view.voiceaac.ShowSelectedWord;
 import com.example.compass_aac.viewmodel.LocationViewModel;
 import com.example.compass_aac.viewmodel.LocationViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.compass_aac.viewmodel.LoginViewModel;
 import com.example.compass_aac.viewmodel.LoginViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.compass_aac.viewmodel.PassCategoryViewModel;
+import com.example.compass_aac.viewmodel.PassCategoryViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.compass_aac.viewmodel.RegisterViewModel;
 import com.example.compass_aac.viewmodel.RegisterViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.data.repository.LocationRepositoryImpl;
 import com.example.data.repository.UserRepositoryImpl;
+import com.example.data.source.LocationApiService;
 import com.example.data.source.UserApiService;
 import com.example.data.source.remote.LocationDataSource;
 import com.example.data.source.remote.LocationDataSourceImpl;
-import com.example.data.source.remote.UserSource;
-import com.example.data.source.remote.UserSourceImpl;
+import com.example.data.source.remote.UserDataSource;
+import com.example.data.source.remote.UserDataSourceImpl;
 import com.example.domain.usecase.LocationUseCase;
 import com.example.domain.usecase.LoginUseCase;
 import com.example.domain.usecase.RegisterUseCase;
@@ -90,9 +99,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     private LocationModule locationModule;
 
-    private UserApiModule userApiModule;
-
-    private UserSourceModule userSourceModule;
+    private UserModule userModule;
 
     private Builder() {
     }
@@ -104,6 +111,15 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     public Builder dataSourceModule(DataSourceModule dataSourceModule) {
       this.dataSourceModule = Preconditions.checkNotNull(dataSourceModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder networkModule(NetworkModule networkModule) {
+      Preconditions.checkNotNull(networkModule);
       return this;
     }
 
@@ -126,36 +142,13 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
      * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Deprecated
-    public Builder networkModule(NetworkModule networkModule) {
-      Preconditions.checkNotNull(networkModule);
+    public Builder useCaseModule(UseCaseModule useCaseModule) {
+      Preconditions.checkNotNull(useCaseModule);
       return this;
     }
 
-    /**
-     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
-     */
-    @Deprecated
-    public Builder locationUseCaseModule(LocationUseCaseModule locationUseCaseModule) {
-      Preconditions.checkNotNull(locationUseCaseModule);
-      return this;
-    }
-
-    public Builder userApiModule(UserApiModule userApiModule) {
-      this.userApiModule = Preconditions.checkNotNull(userApiModule);
-      return this;
-    }
-
-    public Builder userSourceModule(UserSourceModule userSourceModule) {
-      this.userSourceModule = Preconditions.checkNotNull(userSourceModule);
-      return this;
-    }
-
-    /**
-     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
-     */
-    @Deprecated
-    public Builder userUseCaseModule(UserUseCaseModule userUseCaseModule) {
-      Preconditions.checkNotNull(userUseCaseModule);
+    public Builder userModule(UserModule userModule) {
+      this.userModule = Preconditions.checkNotNull(userModule);
       return this;
     }
 
@@ -167,13 +160,10 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
       if (locationModule == null) {
         this.locationModule = new LocationModule();
       }
-      if (userApiModule == null) {
-        this.userApiModule = new UserApiModule();
+      if (userModule == null) {
+        this.userModule = new UserModule();
       }
-      if (userSourceModule == null) {
-        this.userSourceModule = new UserSourceModule();
-      }
-      return new SingletonCImpl(applicationContextModule, dataSourceModule, locationModule, userApiModule, userSourceModule);
+      return new SingletonCImpl(applicationContextModule, dataSourceModule, locationModule, userModule);
     }
   }
 
@@ -452,6 +442,14 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
     }
 
     @Override
+    public void injectMainActivity(MainActivity arg0) {
+    }
+
+    @Override
+    public void injectDailyCategory(DailyCategory arg0) {
+    }
+
+    @Override
     public void injectSearchLocation(SearchLocation arg0) {
     }
 
@@ -464,13 +462,37 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
     }
 
     @Override
+    public void injectTitleActivity(TitleActivity arg0) {
+    }
+
+    @Override
+    public void injectUrgencyCategory(UrgencyCategory arg0) {
+    }
+
+    @Override
+    public void injectChooseWordPass(ChooseWordPass arg0) {
+    }
+
+    @Override
+    public void injectChooseWordVoice(ChooseWordVoice arg0) {
+    }
+
+    @Override
+    public void injectPassCategory(PassCategory arg0) {
+    }
+
+    @Override
+    public void injectShowSelectedWord(ShowSelectedWord arg0) {
+    }
+
+    @Override
     public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
       return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(getViewModelKeys(), new ViewModelCBuilder(singletonCImpl, activityRetainedCImpl));
     }
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(3).add(LocationViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(RegisterViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(4).add(LocationViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(PassCategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(RegisterViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -500,6 +522,8 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     private Provider<LoginViewModel> loginViewModelProvider;
 
+    private Provider<PassCategoryViewModel> passCategoryViewModelProvider;
+
     private Provider<RegisterViewModel> registerViewModelProvider;
 
     private ViewModelCImpl(SingletonCImpl singletonCImpl,
@@ -517,12 +541,13 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
         final ViewModelLifecycle viewModelLifecycleParam) {
       this.locationViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
       this.loginViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
-      this.registerViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.passCategoryViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.registerViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(3).put("com.example.compass_aac.viewmodel.LocationViewModel", ((Provider) locationViewModelProvider)).put("com.example.compass_aac.viewmodel.LoginViewModel", ((Provider) loginViewModelProvider)).put("com.example.compass_aac.viewmodel.RegisterViewModel", ((Provider) registerViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(4).put("com.example.compass_aac.viewmodel.LocationViewModel", ((Provider) locationViewModelProvider)).put("com.example.compass_aac.viewmodel.LoginViewModel", ((Provider) loginViewModelProvider)).put("com.example.compass_aac.viewmodel.PassCategoryViewModel", ((Provider) passCategoryViewModelProvider)).put("com.example.compass_aac.viewmodel.RegisterViewModel", ((Provider) registerViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -552,7 +577,10 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
           case 1: // com.example.compass_aac.viewmodel.LoginViewModel 
           return (T) new LoginViewModel(singletonCImpl.provideLoginUseCaseProvider.get());
 
-          case 2: // com.example.compass_aac.viewmodel.RegisterViewModel 
+          case 2: // com.example.compass_aac.viewmodel.PassCategoryViewModel 
+          return (T) new PassCategoryViewModel();
+
+          case 3: // com.example.compass_aac.viewmodel.RegisterViewModel 
           return (T) new RegisterViewModel(singletonCImpl.provideRegisterUseCaseProvider.get());
 
           default: throw new AssertionError(id);
@@ -636,21 +664,15 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     private final ApplicationContextModule applicationContextModule;
 
-    private final UserSourceModule userSourceModule;
-
-    private final UserApiModule userApiModule;
+    private final UserModule userModule;
 
     private final SingletonCImpl singletonCImpl = this;
 
+    private Provider<LocationApiService> provideLocationApiProvider;
+
     private Provider<FusedLocationProviderClient> provideFusedLocationProviderClientProvider;
 
-    private Provider<LocationDataSource> provideLocationSourceProvider;
-
-    private Provider<Retrofit> provideRetrofitProvider;
-
     private Provider<UserApiService> provideLoginApiProvider;
-
-    private Provider<UserSource> provideUserSourceProvider;
 
     private Provider<LoginUseCase> provideLoginUseCaseProvider;
 
@@ -658,51 +680,60 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam,
         DataSourceModule dataSourceModuleParam, LocationModule locationModuleParam,
-        UserApiModule userApiModuleParam, UserSourceModule userSourceModuleParam) {
+        UserModule userModuleParam) {
       this.dataSourceModule = dataSourceModuleParam;
       this.locationModule = locationModuleParam;
       this.applicationContextModule = applicationContextModuleParam;
-      this.userSourceModule = userSourceModuleParam;
-      this.userApiModule = userApiModuleParam;
-      initialize(applicationContextModuleParam, dataSourceModuleParam, locationModuleParam, userApiModuleParam, userSourceModuleParam);
+      this.userModule = userModuleParam;
+      initialize(applicationContextModuleParam, dataSourceModuleParam, locationModuleParam, userModuleParam);
 
+    }
+
+    private Retrofit retrofit() {
+      return NetworkModule_ProvideRetrofitFactory.provideRetrofit(NetworkModule_ProvideOkHttpClientFactory.provideOkHttpClient());
     }
 
     private LocationDataSourceImpl locationDataSourceImpl() {
-      return new LocationDataSourceImpl(provideFusedLocationProviderClientProvider.get(), ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+      return new LocationDataSourceImpl(provideLocationApiProvider.get(), provideFusedLocationProviderClientProvider.get(), ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+    }
+
+    private LocationDataSource locationDataSource() {
+      return DataSourceModule_ProvideLocationSourceFactory.provideLocationSource(dataSourceModule, locationDataSourceImpl());
     }
 
     private LocationRepositoryImpl locationRepositoryImpl() {
-      return new LocationRepositoryImpl(provideLocationSourceProvider.get());
+      return new LocationRepositoryImpl(locationDataSource());
     }
 
     private LocationUseCase locationUseCase() {
-      return LocationUseCaseModule_ProvideLocationUseCaseFactory.provideLocationUseCase(locationRepositoryImpl());
+      return UseCaseModule_ProvideLocationUseCaseFactory.provideLocationUseCase(locationRepositoryImpl());
     }
 
-    private UserSourceImpl userSourceImpl() {
-      return new UserSourceImpl(provideLoginApiProvider.get());
+    private UserDataSourceImpl userDataSourceImpl() {
+      return new UserDataSourceImpl(provideLoginApiProvider.get());
+    }
+
+    private UserDataSource userDataSource() {
+      return DataSourceModule_ProvideUserSourceFactory.provideUserSource(dataSourceModule, userDataSourceImpl());
     }
 
     private UserRepositoryImpl userRepositoryImpl() {
-      return new UserRepositoryImpl(provideUserSourceProvider.get());
+      return new UserRepositoryImpl(userDataSource());
     }
 
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam,
         final DataSourceModule dataSourceModuleParam, final LocationModule locationModuleParam,
-        final UserApiModule userApiModuleParam, final UserSourceModule userSourceModuleParam) {
+        final UserModule userModuleParam) {
+      this.provideLocationApiProvider = DoubleCheck.provider(new SwitchingProvider<LocationApiService>(singletonCImpl, 0));
       this.provideFusedLocationProviderClientProvider = DoubleCheck.provider(new SwitchingProvider<FusedLocationProviderClient>(singletonCImpl, 1));
-      this.provideLocationSourceProvider = DoubleCheck.provider(new SwitchingProvider<LocationDataSource>(singletonCImpl, 0));
-      this.provideRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 5));
-      this.provideLoginApiProvider = DoubleCheck.provider(new SwitchingProvider<UserApiService>(singletonCImpl, 4));
-      this.provideUserSourceProvider = DoubleCheck.provider(new SwitchingProvider<UserSource>(singletonCImpl, 3));
+      this.provideLoginApiProvider = DoubleCheck.provider(new SwitchingProvider<UserApiService>(singletonCImpl, 3));
       this.provideLoginUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<LoginUseCase>(singletonCImpl, 2));
-      this.provideRegisterUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<RegisterUseCase>(singletonCImpl, 6));
+      this.provideRegisterUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<RegisterUseCase>(singletonCImpl, 4));
     }
 
     @Override
-    public void injectMyApplication(MyApplication arg0) {
+    public void injectMyApplication(MyApplication myApplication) {
     }
 
     @Override
@@ -734,26 +765,20 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.example.data.source.remote.LocationDataSource 
-          return (T) DataSourceModule_ProvideLocationSourceFactory.provideLocationSource(singletonCImpl.dataSourceModule, singletonCImpl.locationDataSourceImpl());
+          case 0: // com.example.data.source.LocationApiService 
+          return (T) LocationModule_ProvideLocationApiFactory.provideLocationApi(singletonCImpl.locationModule, singletonCImpl.retrofit());
 
           case 1: // com.google.android.gms.location.FusedLocationProviderClient 
           return (T) LocationModule_ProvideFusedLocationProviderClientFactory.provideFusedLocationProviderClient(singletonCImpl.locationModule, ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
           case 2: // com.example.domain.usecase.LoginUseCase 
-          return (T) UserUseCaseModule_ProvideLoginUseCaseFactory.provideLoginUseCase(singletonCImpl.userRepositoryImpl());
+          return (T) UseCaseModule_ProvideLoginUseCaseFactory.provideLoginUseCase(singletonCImpl.userRepositoryImpl());
 
-          case 3: // com.example.data.source.remote.UserSource 
-          return (T) UserSourceModule_ProvideUserSourceFactory.provideUserSource(singletonCImpl.userSourceModule, singletonCImpl.userSourceImpl());
+          case 3: // com.example.data.source.UserApiService 
+          return (T) UserModule_ProvideLoginApiFactory.provideLoginApi(singletonCImpl.userModule, singletonCImpl.retrofit());
 
-          case 4: // com.example.data.source.UserApiService 
-          return (T) UserApiModule_ProvideLoginApiFactory.provideLoginApi(singletonCImpl.userApiModule, singletonCImpl.provideRetrofitProvider.get());
-
-          case 5: // retrofit2.Retrofit 
-          return (T) NetworkModule_ProvideRetrofitFactory.provideRetrofit(NetworkModule_ProvideOkHttpClientFactory.provideOkHttpClient());
-
-          case 6: // com.example.domain.usecase.RegisterUseCase 
-          return (T) UserUseCaseModule_ProvideRegisterUseCaseFactory.provideRegisterUseCase(singletonCImpl.userRepositoryImpl());
+          case 4: // com.example.domain.usecase.RegisterUseCase 
+          return (T) UseCaseModule_ProvideRegisterUseCaseFactory.provideRegisterUseCase(singletonCImpl.userRepositoryImpl());
 
           default: throw new AssertionError(id);
         }

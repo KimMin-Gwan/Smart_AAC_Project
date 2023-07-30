@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     tools:context=".view.voiceaac.ChooseWordVoice">
 
     <ImageButton
-        android:id="@+id/select_word_back_btn"
+        android:id="@+id/select_word_voice_back_btn"
         android:layout_width="44dp"
         android:layout_height="54dp"
         android:layout_marginTop="16dp"
@@ -18,69 +19,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:id="@+id/scrollView3"
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/selectedWordVoiceBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_word_back_btn"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_word_voice_back_btn">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_voice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/voiceText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginRight="35dp"
-                    android:background="@drawable/text_voice_radius"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="음성인식된 말 넣기"
-                    android:textColor="#636060"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <GridView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:listitem="@layout/activity_choose_voice_word_voice"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:numColumns="3" />
-
-
-        </LinearLayout>
-    </ScrollView>
+            android:layout_marginLeft="20dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/researchBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/selectedWordVoiceBtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:text="선택완료"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
         app:layout_constraintVertical_bias="0.97" />
+
+    <TextView
+        android:id="@+id/voiceText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/text_voice_radius"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="음성인식된 말 넣기"
+        android:textColor="#636060"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/select_word_voice_back_btn"
+        app:layout_constraintVertical_bias="0.105"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@ import javax.inject.Provider;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 
-@ScopeMetadata("javax.inject.Singleton")
+@ScopeMetadata
 @QualifierMetadata
 @DaggerGenerated
 @SuppressWarnings({

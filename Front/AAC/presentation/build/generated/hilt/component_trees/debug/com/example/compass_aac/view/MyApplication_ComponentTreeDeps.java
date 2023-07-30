@@ -19,20 +19,28 @@ import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_andro
 import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_components_SingletonComponent;
 import hilt_aggregated_deps._com_example_compass_aac_module_DataSourceModule;
 import hilt_aggregated_deps._com_example_compass_aac_module_LocationModule;
-import hilt_aggregated_deps._com_example_compass_aac_module_LocationUseCaseModule;
 import hilt_aggregated_deps._com_example_compass_aac_module_NetworkModule;
 import hilt_aggregated_deps._com_example_compass_aac_module_RepositoryModule;
-import hilt_aggregated_deps._com_example_compass_aac_module_UserApiModule;
-import hilt_aggregated_deps._com_example_compass_aac_module_UserSourceModule;
-import hilt_aggregated_deps._com_example_compass_aac_module_UserUseCaseModule;
+import hilt_aggregated_deps._com_example_compass_aac_module_UseCaseModule;
+import hilt_aggregated_deps._com_example_compass_aac_module_UserModule;
+import hilt_aggregated_deps._com_example_compass_aac_view_MainActivity_GeneratedInjector;
 import hilt_aggregated_deps._com_example_compass_aac_view_MyApplication_GeneratedInjector;
+import hilt_aggregated_deps._com_example_compass_aac_view_dailyaac_DailyCategory_GeneratedInjector;
 import hilt_aggregated_deps._com_example_compass_aac_view_location_SearchLocation_GeneratedInjector;
 import hilt_aggregated_deps._com_example_compass_aac_view_login_LoginMain_GeneratedInjector;
 import hilt_aggregated_deps._com_example_compass_aac_view_login_RegisterMain_GeneratedInjector;
+import hilt_aggregated_deps._com_example_compass_aac_view_login_TitleActivity_GeneratedInjector;
+import hilt_aggregated_deps._com_example_compass_aac_view_urgencyaac_UrgencyCategory_GeneratedInjector;
+import hilt_aggregated_deps._com_example_compass_aac_view_voiceaac_ChooseWordPass_GeneratedInjector;
+import hilt_aggregated_deps._com_example_compass_aac_view_voiceaac_ChooseWordVoice_GeneratedInjector;
+import hilt_aggregated_deps._com_example_compass_aac_view_voiceaac_PassCategory_GeneratedInjector;
+import hilt_aggregated_deps._com_example_compass_aac_view_voiceaac_ShowSelectedWord_GeneratedInjector;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_LocationViewModel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_LocationViewModel_HiltModules_KeyModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_LoginViewModel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_LoginViewModel_HiltModules_KeyModule;
+import hilt_aggregated_deps._com_example_compass_aac_viewmodel_PassCategoryViewModel_HiltModules_BindsModule;
+import hilt_aggregated_deps._com_example_compass_aac_viewmodel_PassCategoryViewModel_HiltModules_KeyModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_RegisterViewModel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_RegisterViewModel_HiltModules_KeyModule;
 import hilt_aggregated_deps._dagger_hilt_android_flags_FragmentGetContextFix_FragmentGetContextFixEntryPoint;
@@ -76,20 +84,28 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
     aggregatedDeps = {
         _com_example_compass_aac_module_DataSourceModule.class,
         _com_example_compass_aac_module_LocationModule.class,
-        _com_example_compass_aac_module_LocationUseCaseModule.class,
         _com_example_compass_aac_module_NetworkModule.class,
         _com_example_compass_aac_module_RepositoryModule.class,
-        _com_example_compass_aac_module_UserApiModule.class,
-        _com_example_compass_aac_module_UserSourceModule.class,
-        _com_example_compass_aac_module_UserUseCaseModule.class,
+        _com_example_compass_aac_module_UseCaseModule.class,
+        _com_example_compass_aac_module_UserModule.class,
+        _com_example_compass_aac_view_MainActivity_GeneratedInjector.class,
         _com_example_compass_aac_view_MyApplication_GeneratedInjector.class,
+        _com_example_compass_aac_view_dailyaac_DailyCategory_GeneratedInjector.class,
         _com_example_compass_aac_view_location_SearchLocation_GeneratedInjector.class,
         _com_example_compass_aac_view_login_LoginMain_GeneratedInjector.class,
         _com_example_compass_aac_view_login_RegisterMain_GeneratedInjector.class,
+        _com_example_compass_aac_view_login_TitleActivity_GeneratedInjector.class,
+        _com_example_compass_aac_view_urgencyaac_UrgencyCategory_GeneratedInjector.class,
+        _com_example_compass_aac_view_voiceaac_ChooseWordPass_GeneratedInjector.class,
+        _com_example_compass_aac_view_voiceaac_ChooseWordVoice_GeneratedInjector.class,
+        _com_example_compass_aac_view_voiceaac_PassCategory_GeneratedInjector.class,
+        _com_example_compass_aac_view_voiceaac_ShowSelectedWord_GeneratedInjector.class,
         _com_example_compass_aac_viewmodel_LocationViewModel_HiltModules_BindsModule.class,
         _com_example_compass_aac_viewmodel_LocationViewModel_HiltModules_KeyModule.class,
         _com_example_compass_aac_viewmodel_LoginViewModel_HiltModules_BindsModule.class,
         _com_example_compass_aac_viewmodel_LoginViewModel_HiltModules_KeyModule.class,
+        _com_example_compass_aac_viewmodel_PassCategoryViewModel_HiltModules_BindsModule.class,
+        _com_example_compass_aac_viewmodel_PassCategoryViewModel_HiltModules_KeyModule.class,
         _com_example_compass_aac_viewmodel_RegisterViewModel_HiltModules_BindsModule.class,
         _com_example_compass_aac_viewmodel_RegisterViewModel_HiltModules_KeyModule.class,
         _dagger_hilt_android_flags_FragmentGetContextFix_FragmentGetContextFixEntryPoint.class,

@@ -12,6 +12,7 @@
 package com.example.compass_aac.view.voiceaac
 
 import android.Manifest
+import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +22,8 @@ import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -28,13 +31,23 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.databinding.ActivityHearVoiceBinding
 import com.example.compass_aac.viewmodel.HearVoiceViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+//@AndroidEntryPoint
 class HearVoice : AppCompatActivity() {
+
+    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            val intent= Intent(this@HearVoice, ShowSelectedWord::class.java)
+            startActivity(intent)
+            Log.e(ContentValues.TAG, "뒤로가기 클릭")
+            // 뒤로가기 시 실행할 코드
+        }
+    }
 
     private lateinit var speechRecognizer: SpeechRecognizer
     private lateinit var recognitionListener: RecognitionListener
-    private lateinit var viewModel: HearVoiceViewModel
+    private val viewModel: HearVoiceViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +55,10 @@ class HearVoice : AppCompatActivity() {
         val binding = ActivityHearVoiceBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //viewmodel 생성
-        viewModel = ViewModelProvider(this).get(HearVoiceViewModel::class.java)
+//        viewModel = ViewModelProvider(this).get(HearVoiceViewModel::class.java)
+
+        this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback) //위에서 생성한 콜백 인스턴스 붙여주기
+
 
         // 음성인식 후 텍스트보여지는 livedata 관찰
         viewModel.recognizedSpeechText.observe(this, Observer { text ->
@@ -77,7 +93,8 @@ class HearVoice : AppCompatActivity() {
 
         binding.hearVoiceBackBtn.setOnClickListener {
             viewModel.resetData()
-            onBackPressed()
+            onBackPressedDispatcher.onBackPressed()
+
         }
     }
 

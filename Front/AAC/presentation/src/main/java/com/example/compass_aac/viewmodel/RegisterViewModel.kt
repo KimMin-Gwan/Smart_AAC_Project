@@ -19,6 +19,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.domain.model.Register
 import com.example.domain.usecase.LoginUseCase
 import com.example.domain.usecase.RegisterUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -31,13 +32,17 @@ import javax.inject.Inject
 class RegisterViewModel @Inject constructor(private val usecase: RegisterUseCase) :ViewModel(){
 
     private val _userName = MutableLiveData<String>()
-    private val userName: LiveData<String> = _userName
+    val userName: LiveData<String> = _userName
 
     private val _userPhone = MutableLiveData<String>()
-    private val userPhone: LiveData<String> = _userPhone
+    val userPhone: LiveData<String> = _userPhone
 
     private val _userPassword = MutableLiveData<String>()
-    private val userPassword: LiveData<String> = _userPassword
+    val userPassword: LiveData<String> = _userPassword
+
+    private val _registerResult = MutableLiveData<Result<List<Register>>>()
+    val registerResult :LiveData<Result<List<Register>>> get() = _registerResult
+
 
     fun updateUserName(name: String) {
         _userName.value = name
@@ -52,16 +57,23 @@ class RegisterViewModel @Inject constructor(private val usecase: RegisterUseCase
     }
 
     fun registerUser() {
-        val registername = userName.value!!
-        val registerphone = userPhone.value!!
-        val registerpw = userPassword.value!!
+        val registername = _userName.value!!
+        val registerphone = _userPhone.value!!
+        val registerpw = _userPassword.value!!
         Log.d("register", "${registername}, ${registerphone}, $registerpw")
 
         viewModelScope.launch {
             withContext(Dispatchers.IO){
                 try {
                     val response = usecase.invoke(registername,registerphone,registerpw)
-                    Log.d("response", response.toString())
+                    if (response.isNotEmpty()){
+                        _registerResult.postValue(Result.success(response))
+                        Log.d("response", response.toString())
+                    }
+                    else{
+                        _registerResult.postValue(Result.failure(Throwable("fail")))
+                    }
+
                 }
                 catch (e:Exception){
                     Log.d(TAG, e.message.toString())

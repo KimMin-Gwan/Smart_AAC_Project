@@ -77,13 +77,23 @@ class RegisterMain : AppCompatActivity() {
         //완료 버튼
         binding.registerNextBtn.setOnClickListener {
             viewModel.registerUser()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
         }
 
         //이전으로 돌아가기
         binding.registerBackBtn.setOnClickListener {
             onBackPressed()
+        }
+
+        viewModel.registerResult.observe(this){result ->
+            if(result.isSuccess){
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            else{
+                Toast.makeText(this,"회원가입에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+            }
         }
     }
     // EditText 입력 상태를 확인하여 로그인 버튼 상태 업데이트

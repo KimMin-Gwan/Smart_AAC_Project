@@ -10,12 +10,27 @@
  **/
 package com.example.compass_aac.view.voiceaac
 
+import android.content.ContentValues
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.OnBackPressedCallback
 import com.example.compass_aac.databinding.ActivityChooseWordVoiceBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class ChooseWordVoice : AppCompatActivity() {
+
+
+    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            Log.e(ContentValues.TAG, "뒤로가기 클릭")
+            // 뒤로가기 시 실행할 코드
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -23,17 +38,30 @@ class ChooseWordVoice : AppCompatActivity() {
         val binding = ActivityChooseWordVoiceBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
+
+
         val voicetext = intent.getStringExtra("voiceText")
-        binding.voiceText.text = voicetext
+        binding.voiceText.text = "\"${voicetext}\""
         Log.d("voiceText", voicetext!! )
 
 
-        binding.selectWordBackBtn.setOnClickListener {
+        binding.selectWordVoiceBackBtn.setOnClickListener {
             onBackPressed()
+        }
+
+        binding.selectedWordVoiceBtn.setOnClickListener {
+            val intent = Intent(this, ShowSelectedWord::class.java)
+            startActivity(intent)
+
         }
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 }

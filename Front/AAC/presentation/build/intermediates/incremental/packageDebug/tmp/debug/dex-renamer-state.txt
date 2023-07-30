@@ -1,4 +1,4 @@
-#Sat Jul 29 20:37:37 KST 2023
+#Mon Jul 31 02:24:25 KST 2023
 base.0=C\:\\Users\\ellen\\Github\\Smart_AAC_Project\\Front\\AAC\\presentation\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\ellen\\Github\\Smart_AAC_Project\\Front\\AAC\\presentation\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\14\\classes.dex
 base.10=C\:\\Users\\ellen\\Github\\Smart_AAC_Project\\Front\\AAC\\presentation\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex

@@ -30,7 +30,6 @@ public final class NetworkModule {
         return null;
     }
     
-    @javax.inject.Singleton
     @dagger.Provides
     @org.jetbrains.annotations.NotNull
     public final retrofit2.Retrofit provideRetrofit(@org.jetbrains.annotations.NotNull

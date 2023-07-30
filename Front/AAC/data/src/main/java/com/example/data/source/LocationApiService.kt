@@ -12,5 +12,5 @@ interface LocationApiService {
     suspend fun locationXY(
         @Field("nx") nx : Double,
         @Field("ny") ny : Double
-    ): Response<CategoryResponse>
+    ): List<CategoryResponse>
 }

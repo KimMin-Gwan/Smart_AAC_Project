@@ -37,16 +37,25 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
   @NonNull
   public final TextView selectedWordShowTv;
 
+  @NonNull
+  public final ImageButton ttsBtn;
+
+  @NonNull
+  public final ImageButton ttsBtn1;
+
   private ActivityShowSelectedWordBinding(@NonNull ScrollView rootView,
       @NonNull ImageView imageView5, @NonNull ImageButton selectWordBackBtn,
       @NonNull MaterialButton selectedWordAnswerBtn, @NonNull MaterialButton selectedWordOkBtn,
-      @NonNull TextView selectedWordShowTv) {
+      @NonNull TextView selectedWordShowTv, @NonNull ImageButton ttsBtn,
+      @NonNull ImageButton ttsBtn1) {
     this.rootView = rootView;
     this.imageView5 = imageView5;
     this.selectWordBackBtn = selectWordBackBtn;
     this.selectedWordAnswerBtn = selectedWordAnswerBtn;
     this.selectedWordOkBtn = selectedWordOkBtn;
     this.selectedWordShowTv = selectedWordShowTv;
+    this.ttsBtn = ttsBtn;
+    this.ttsBtn1 = ttsBtn1;
   }
 
   @Override
@@ -106,8 +115,21 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.ttsBtn;
+      ImageButton ttsBtn = ViewBindings.findChildViewById(rootView, id);
+      if (ttsBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.ttsBtn1;
+      ImageButton ttsBtn1 = ViewBindings.findChildViewById(rootView, id);
+      if (ttsBtn1 == null) {
+        break missingId;
+      }
+
       return new ActivityShowSelectedWordBinding((ScrollView) rootView, imageView5,
-          selectWordBackBtn, selectedWordAnswerBtn, selectedWordOkBtn, selectedWordShowTv);
+          selectWordBackBtn, selectedWordAnswerBtn, selectedWordOkBtn, selectedWordShowTv, ttsBtn,
+          ttsBtn1);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

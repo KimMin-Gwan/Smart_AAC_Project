@@ -20,7 +20,7 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 
-//로그인
+//사용자 정보
 interface UserApiService {
     //로그인
     @FormUrlEncoded

@@ -31,21 +31,18 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--    전화번호-->
-
-    <!--    비밀번호-->
-
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="안냐쎄요!\n 로그인 어쩌구 저쩌구"
+            android:text="COMPASS"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="27sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_app_bar" />
 
@@ -60,7 +57,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-
+        <!--    전화번호-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,7 +84,7 @@
             android:maxLines="1"
             app:layout_constraintTop_toBottomOf="@+id/login_app_bar"
             tools:layout_editor_absoluteX="30dp" />
-
+        <!--    비밀번호-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

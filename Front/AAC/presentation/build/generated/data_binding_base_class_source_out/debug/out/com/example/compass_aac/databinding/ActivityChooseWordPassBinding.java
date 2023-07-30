@@ -5,13 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,13 +25,18 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
   public final ImageButton choosePassBackBtn;
 
   @NonNull
-  public final ScrollView scrollView2;
+  public final RecyclerView recyclerViewPass;
+
+  @NonNull
+  public final MaterialButton selectwordBtn;
 
   private ActivityChooseWordPassBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton choosePassBackBtn, @NonNull ScrollView scrollView2) {
+      @NonNull ImageButton choosePassBackBtn, @NonNull RecyclerView recyclerViewPass,
+      @NonNull MaterialButton selectwordBtn) {
     this.rootView = rootView;
     this.choosePassBackBtn = choosePassBackBtn;
-    this.scrollView2 = scrollView2;
+    this.recyclerViewPass = recyclerViewPass;
+    this.selectwordBtn = selectwordBtn;
   }
 
   @Override
@@ -66,14 +72,20 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.scrollView2;
-      ScrollView scrollView2 = ViewBindings.findChildViewById(rootView, id);
-      if (scrollView2 == null) {
+      id = R.id.recycler_view_pass;
+      RecyclerView recyclerViewPass = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerViewPass == null) {
+        break missingId;
+      }
+
+      id = R.id.selectwordBtn;
+      MaterialButton selectwordBtn = ViewBindings.findChildViewById(rootView, id);
+      if (selectwordBtn == null) {
         break missingId;
       }
 
       return new ActivityChooseWordPassBinding((ConstraintLayout) rootView, choosePassBackBtn,
-          scrollView2);
+          recyclerViewPass, selectwordBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

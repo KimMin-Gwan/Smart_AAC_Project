@@ -19,7 +19,7 @@ class LocationModule {
 
     @Singleton
     @Provides
-    fun provideLacationApi(retrofit: Retrofit) : LocationApiService{
+    fun provideLocationApi(retrofit: Retrofit) : LocationApiService{
         return retrofit.create(LocationApiService::class.java)
     }
 

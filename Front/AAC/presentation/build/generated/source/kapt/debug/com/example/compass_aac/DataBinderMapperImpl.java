@@ -6,8 +6,6 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
-import com.example.compass_aac.databinding.ActivityChoosePassCategoryItemBindingImpl;
-import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.Override;
@@ -18,13 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
-  private static final int LAYOUT_ACTIVITYCHOOSEPASSCATEGORYITEM = 1;
-
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(1);
-
-  static {
-    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.compass_aac.R.layout.activity_choose_pass_category_item, LAYOUT_ACTIVITYCHOOSEPASSCATEGORYITEM);
-  }
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(0);
 
   @Override
   public ViewDataBinding getDataBinder(DataBindingComponent component, View view, int layoutId) {
@@ -33,14 +25,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       final Object tag = view.getTag();
       if(tag == null) {
         throw new RuntimeException("view must have a tag");
-      }
-      switch(localizedLayoutId) {
-        case  LAYOUT_ACTIVITYCHOOSEPASSCATEGORYITEM: {
-          if ("layout/activity_choose_pass_category_item_0".equals(tag)) {
-            return new ActivityChoosePassCategoryItemBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_choose_pass_category_item is invalid. Received: " + tag);
-        }
       }
     }
     return null;
@@ -86,19 +70,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(2);
+    static final SparseArray<String> sKeys = new SparseArray<String>(1);
 
     static {
       sKeys.put(0, "_all");
-      sKeys.put(1, "category");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(1);
-
-    static {
-      sKeys.put("layout/activity_choose_pass_category_item_0", com.example.compass_aac.R.layout.activity_choose_pass_category_item);
-    }
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(0);
   }
 }

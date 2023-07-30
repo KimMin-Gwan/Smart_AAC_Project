@@ -17,6 +17,7 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
@@ -29,6 +30,7 @@ import com.example.compass_aac.view.voiceaac.PassCategory
 import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 
 
 @AndroidEntryPoint
@@ -51,21 +53,9 @@ class SearchLocation : AppCompatActivity() {
 
         //프로그래스바 업데이트
         locationViewModel.isLoading.observe(this, Observer { isLoading ->
-            binding.progressBar.isIndeterminate= isLoading
+            binding.progressBar.isIndeterminate = isLoading
+            binding.progressBar.visibility = if(isLoading) View.VISIBLE else View.GONE
         })
-
-        // 위치 정보 성공적으로 가져오면 -> intent
-//        locationViewModel.locationResult.observe(this, Observer { result ->
-//            // 위치 정보를 가져오는 작업이 완료되면 실행됩니다.
-//            result.onSuccess { location ->
-//                // 위치 정보를 성공적으로 가져온 경우
-//                val intent = Intent(this, PassCategory::class.java)
-//                startActivity(intent)
-//            }.onFailure { e ->
-//                Toast.makeText(this, "위치 정보를 가져오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
-//                // 위치 정보를 가져오는 데 실패한 경우 에러 처리
-//            }
-//        })
 
         locationViewModel.categoryResult.observe(this) { result ->
             if (result.isSuccess) {
@@ -73,7 +63,7 @@ class SearchLocation : AppCompatActivity() {
                 if (category != null) {
                     val intent = Intent(this, PassCategory::class.java)
                     // Category 정보 Passcategory로 넘겨주기
-                    intent.putExtra("CATEGORY", category)
+                    intent.putExtra("CATEGORY", category[0].categories)
                     startActivity(intent)
                 }
             } else {
@@ -86,11 +76,17 @@ class SearchLocation : AppCompatActivity() {
         if (checkPermissions()) {
             //위치 정보 가져오는 동안 프로그래스바 실행, 위치 정보 다 가져오면 placeCategory로 intent
             locationViewModel.fetchLocationAsync()
-
+            //임시
+            val intent = Intent(this, PassCategory::class.java)
+            startActivity(intent)
         } else {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, PERMISSIONS_REQUEST_CODE)
         }
+
+
+
     }
+
 
     // 위치 권한이 허용되었는지 확인 -> true, false
     private fun checkPermissions(): Boolean {
