@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi import UploadFile, File
 from constant import GPS
 import uvicorn
-from constant import WAV_SAVE_PATH
+#from constant import WAV_SAVE_PATH
 
 class AppServer():
     def __init__(self, mainfunction):
