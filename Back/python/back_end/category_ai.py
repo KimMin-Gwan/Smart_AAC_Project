@@ -56,18 +56,28 @@ class Classifier():
         self.aac_category = []
         with open(AAC_FILE, 'r', encoding='euc-kr') as f:
             raw_aac = json.load(f)
+
+        aac_name = raw_aac['AAC']
+        """
         for AAC_NAME in raw_aac['AAC']:
             self.aac_category.append(AAC_NAME['name'])
-        
+        """
 
     # 현재 제공하는 AAC에 포함되어있는지 확인
     def __check_category(self, txt):
         print(self.aac_category)
+
+        for arg in self.aac_category:
+            if arg['name'] == txt:
+                return {'key' : arg['id']}
+    
+        return {'key' : 'default'}
+        """
         if txt in self.aac_category:
             return {'key' : txt}
         else:
             return {'key' : 'default'}
-
+        """
 
     # 카테고리 분석기
     def classifier(self, text):
@@ -85,4 +95,3 @@ class Classifier():
 
 
         
-

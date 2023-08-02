@@ -26,7 +26,7 @@ class AppServer():
                 print("Error : ", str(e))
 
             if result['key'] == 'ERROR':
-                return {"error" : "Recognize Fail"}
+                return {"key" : "Recognize Fail"}
 
             return result # {'key' : data}
 
