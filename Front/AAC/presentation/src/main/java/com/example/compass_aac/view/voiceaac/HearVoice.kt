@@ -28,12 +28,11 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.databinding.ActivityHearVoiceBinding
-import com.example.compass_aac.viewmodel.HearVoiceViewModel
+import com.example.compass_aac.viewmodel.voiceaac.HearVoiceViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-//@AndroidEntryPoint
+@AndroidEntryPoint
 class HearVoice : AppCompatActivity() {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
@@ -100,7 +99,7 @@ class HearVoice : AppCompatActivity() {
 
     override fun onBackPressed() {
         viewModel.resetData()
-        super.onBackPressed()
+        onBackPressedDispatcher.onBackPressed()
     }
 
 
@@ -180,5 +179,4 @@ class HearVoice : AppCompatActivity() {
 
         }
     }
-
 }

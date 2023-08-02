@@ -1,6 +1,6 @@
 package com.example.compass_aac.module
 
-import com.example.data.source.UserApiService
+import com.example.data.api.UserApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

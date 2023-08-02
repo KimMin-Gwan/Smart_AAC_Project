@@ -8,16 +8,24 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityChooseWordItemBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
 
-  private ActivityChooseWordItemBinding(@NonNull LinearLayout rootView) {
+  @NonNull
+  public final MaterialButton chooseWordPassTv;
+
+  private ActivityChooseWordItemBinding(@NonNull LinearLayout rootView,
+      @NonNull MaterialButton chooseWordPassTv) {
     this.rootView = rootView;
+    this.chooseWordPassTv = chooseWordPassTv;
   }
 
   @Override
@@ -43,10 +51,19 @@ public final class ActivityChooseWordItemBinding implements ViewBinding {
 
   @NonNull
   public static ActivityChooseWordItemBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.chooseWordPassTv;
+      MaterialButton chooseWordPassTv = ViewBindings.findChildViewById(rootView, id);
+      if (chooseWordPassTv == null) {
+        break missingId;
+      }
 
-    return new ActivityChooseWordItemBinding((LinearLayout) rootView);
+      return new ActivityChooseWordItemBinding((LinearLayout) rootView, chooseWordPassTv);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

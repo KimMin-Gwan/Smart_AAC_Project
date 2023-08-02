@@ -26,6 +26,8 @@ class ChooseWordVoice : AppCompatActivity() {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
+            val intent = Intent(this@ChooseWordVoice, HearVoice::class.java)
+            startActivity(intent)
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
             // 뒤로가기 시 실행할 코드
         }
@@ -47,7 +49,7 @@ class ChooseWordVoice : AppCompatActivity() {
 
 
         binding.selectWordVoiceBackBtn.setOnClickListener {
-            onBackPressed()
+            onBackPressedDispatcher.onBackPressed()
         }
 
         binding.selectedWordVoiceBtn.setOnClickListener {
@@ -57,11 +59,4 @@ class ChooseWordVoice : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
 }

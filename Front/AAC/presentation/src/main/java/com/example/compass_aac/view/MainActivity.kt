@@ -12,20 +12,18 @@
 
 package com.example.compass_aac.view
 
-import android.content.ContentValues
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.viewModels
 import com.example.compass_aac.databinding.ActivityMainBinding
 import com.example.compass_aac.view.dailyaac.DailyCategory
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory
 import com.example.compass_aac.view.location.SearchLocation
 import com.example.compass_aac.view.login.TitleActivity
-import com.example.compass_aac.view.login.TitleActivity_GeneratedInjector
+import com.example.compass_aac.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -33,6 +31,9 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private var backPressedTime: Long = 0
+
+    private val viewModel: MainViewModel by viewModels()
+
 
     //뒤로 가기 두번 누르면 로그아웃되고 다시 로그인 하는 창으로 이동
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
@@ -50,6 +51,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -76,6 +79,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        viewModel.makeNode()
+
+
+//        // 루트 노드 지정 ( 여기선 101 == 카페 로 지정)
+//        val node : Node = node_list.getNode(101)
 
     }
+
 }

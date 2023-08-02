@@ -1,7 +1,7 @@
 package com.example.compass_aac.module
 
 import android.content.Context
-import com.example.data.source.LocationApiService
+import com.example.data.api.LocationApiService
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import dagger.Module
@@ -19,7 +19,7 @@ class LocationModule {
 
     @Singleton
     @Provides
-    fun provideLocationApi(retrofit: Retrofit) : LocationApiService{
+    fun provideLocationApi(retrofit: Retrofit) : LocationApiService {
         return retrofit.create(LocationApiService::class.java)
     }
 

@@ -12,7 +12,6 @@
 
 package com.example.compass_aac.view.voiceaac
 
-import android.content.ContentValues
 import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -21,15 +20,12 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.compass_aac.view.adapters.PassCategoryAdapter
 import com.example.compass_aac.databinding.ActivityPassCategoryBinding
-import com.example.compass_aac.viewmodel.PassCategoryViewModel
+import com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel
 import com.example.compass_aac.view.MainActivity
 import com.example.compass_aac.view.location.SearchLocation
-import com.example.compass_aac.view.login.TitleActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -91,7 +87,7 @@ class PassCategory : AppCompatActivity() {
             Toast.makeText(this, "카테고리 데이터가 없습니다.", Toast.LENGTH_SHORT).show()
         }
 
-        val categories = listOf("카페", "학교", "도서관", "박윤찬", "멍청이", "똥쟁이", "꿀빤다","카페", "학교", "도서관", "박윤찬", "멍청이", "똥쟁이", "꿀빤다")
+        val categories = listOf("카페","음식점","병원","지하철","베이커리","편의점")
 
         // Adapter 생성 및 설정
         val adapter = PassCategoryAdapter(categories)

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.compass_aac.R;
@@ -44,10 +45,12 @@ public final class PassCategoryAdapter extends androidx.recyclerview.widget.Recy
     java.util.List<java.lang.String> newCategories) {
     }
     
-    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\f\u00a8\u0006\r"}, d2 = {"Lcom/example/compass_aac/view/adapters/PassCategoryAdapter$ViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "button", "Landroid/widget/Button;", "getButton", "()Landroid/widget/Button;", "categoryName", "Landroid/widget/TextView;", "getCategoryName", "()Landroid/widget/TextView;", "presentation_debug"})
+    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\r\u001a\u00020\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010\u00a8\u0006\u0011"}, d2 = {"Lcom/example/compass_aac/view/adapters/PassCategoryAdapter$ViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "button", "Landroid/widget/Button;", "getButton", "()Landroid/widget/Button;", "categoryImage", "Landroid/widget/ImageView;", "getCategoryImage", "()Landroid/widget/ImageView;", "categoryName", "Landroid/widget/TextView;", "getCategoryName", "()Landroid/widget/TextView;", "presentation_debug"})
     public static final class ViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
         @org.jetbrains.annotations.NotNull
         private final android.widget.TextView categoryName = null;
+        @org.jetbrains.annotations.NotNull
+        private final android.widget.ImageView categoryImage = null;
         @org.jetbrains.annotations.NotNull
         private final android.widget.Button button = null;
         
@@ -58,6 +61,11 @@ public final class PassCategoryAdapter extends androidx.recyclerview.widget.Recy
         
         @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getCategoryName() {
+            return null;
+        }
+        
+        @org.jetbrains.annotations.NotNull
+        public final android.widget.ImageView getCategoryImage() {
             return null;
         }
         

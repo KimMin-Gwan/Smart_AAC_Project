@@ -26,13 +26,13 @@ public final class ActivityLoginMainBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final Button button2;
-
-  @NonNull
   public final ConstraintLayout constraintLayout3;
 
   @NonNull
   public final ConstraintLayout constraintLayout4;
+
+  @NonNull
+  public final Button goRegisterBtn;
 
   @NonNull
   public final ImageView imageView2;
@@ -61,16 +61,17 @@ public final class ActivityLoginMainBinding implements ViewBinding {
   @NonNull
   public final TextView textView4;
 
-  private ActivityLoginMainBinding(@NonNull ScrollView rootView, @NonNull Button button2,
+  private ActivityLoginMainBinding(@NonNull ScrollView rootView,
       @NonNull ConstraintLayout constraintLayout3, @NonNull ConstraintLayout constraintLayout4,
-      @NonNull ImageView imageView2, @NonNull ConstraintLayout loginAppBar,
-      @NonNull ImageButton loginBackBtn, @NonNull MaterialButton loginBtn,
-      @NonNull MaterialButton loginKakaoBtn, @NonNull EditText loginPhoneEdt,
-      @NonNull EditText loginPwEdt, @NonNull TextView textView2, @NonNull TextView textView4) {
+      @NonNull Button goRegisterBtn, @NonNull ImageView imageView2,
+      @NonNull ConstraintLayout loginAppBar, @NonNull ImageButton loginBackBtn,
+      @NonNull MaterialButton loginBtn, @NonNull MaterialButton loginKakaoBtn,
+      @NonNull EditText loginPhoneEdt, @NonNull EditText loginPwEdt, @NonNull TextView textView2,
+      @NonNull TextView textView4) {
     this.rootView = rootView;
-    this.button2 = button2;
     this.constraintLayout3 = constraintLayout3;
     this.constraintLayout4 = constraintLayout4;
+    this.goRegisterBtn = goRegisterBtn;
     this.imageView2 = imageView2;
     this.loginAppBar = loginAppBar;
     this.loginBackBtn = loginBackBtn;
@@ -109,12 +110,6 @@ public final class ActivityLoginMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button2;
-      Button button2 = ViewBindings.findChildViewById(rootView, id);
-      if (button2 == null) {
-        break missingId;
-      }
-
       id = R.id.constraintLayout3;
       ConstraintLayout constraintLayout3 = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout3 == null) {
@@ -124,6 +119,12 @@ public final class ActivityLoginMainBinding implements ViewBinding {
       id = R.id.constraintLayout4;
       ConstraintLayout constraintLayout4 = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout4 == null) {
+        break missingId;
+      }
+
+      id = R.id.goRegisterBtn;
+      Button goRegisterBtn = ViewBindings.findChildViewById(rootView, id);
+      if (goRegisterBtn == null) {
         break missingId;
       }
 
@@ -181,9 +182,9 @@ public final class ActivityLoginMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginMainBinding((ScrollView) rootView, button2, constraintLayout3,
-          constraintLayout4, imageView2, loginAppBar, loginBackBtn, loginBtn, loginKakaoBtn,
-          loginPhoneEdt, loginPwEdt, textView2, textView4);
+      return new ActivityLoginMainBinding((ScrollView) rootView, constraintLayout3,
+          constraintLayout4, goRegisterBtn, imageView2, loginAppBar, loginBackBtn, loginBtn,
+          loginKakaoBtn, loginPhoneEdt, loginPwEdt, textView2, textView4);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

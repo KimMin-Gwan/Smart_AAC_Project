@@ -12,33 +12,43 @@
 
 package com.example.compass_aac.view.login
 
+import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.core.widget.addTextChangedListener
-import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.view.MainActivity
 import com.example.compass_aac.R
 import com.example.compass_aac.databinding.ActivityLoginMainBinding
-import com.example.compass_aac.viewmodel.LoginViewModel
+import com.example.compass_aac.viewmodel.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginMain : AppCompatActivity() {
 
     private val viewModel: LoginViewModel by viewModels()
+
+    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            val intent= Intent(this@LoginMain, TitleActivity::class.java)
+            startActivity(intent)
+            Log.e(ContentValues.TAG, "뒤로가기 클릭")
+            // 뒤로가기 시 실행할 코드
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityLoginMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback) //위에서 생성한 콜백 인스턴스 붙여주기
 
 //        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
@@ -71,9 +81,14 @@ class LoginMain : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.goRegisterBtn.setOnClickListener {
+            val intent = Intent(this, RegisterMain::class.java)
+            startActivity(intent)
+        }
+
         //뒤로가기
         binding.loginBackBtn.setOnClickListener {
-            onBackPressed()
+            onBackPressedDispatcher.onBackPressed()
         }
 
 

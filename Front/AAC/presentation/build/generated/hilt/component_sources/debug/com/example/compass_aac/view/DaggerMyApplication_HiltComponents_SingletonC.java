@@ -3,6 +3,7 @@ package com.example.compass_aac.view;
 
 import android.app.Activity;
 import android.app.Service;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
@@ -16,6 +17,10 @@ import com.example.compass_aac.module.LocationModule_ProvideLocationApiFactory;
 import com.example.compass_aac.module.NetworkModule;
 import com.example.compass_aac.module.NetworkModule_ProvideOkHttpClientFactory;
 import com.example.compass_aac.module.NetworkModule_ProvideRetrofitFactory;
+import com.example.compass_aac.module.NodeRepository;
+import com.example.compass_aac.module.NodeRepository_ProvideNodeRepositoryImplFactory;
+import com.example.compass_aac.module.TextToSpeechModule;
+import com.example.compass_aac.module.TextToSpeechModule_ProvideTextToSpeechFactory;
 import com.example.compass_aac.module.UseCaseModule;
 import com.example.compass_aac.module.UseCaseModule_ProvideLocationUseCaseFactory;
 import com.example.compass_aac.module.UseCaseModule_ProvideLoginUseCaseFactory;
@@ -30,20 +35,29 @@ import com.example.compass_aac.view.login.TitleActivity;
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory;
 import com.example.compass_aac.view.voiceaac.ChooseWordPass;
 import com.example.compass_aac.view.voiceaac.ChooseWordVoice;
+import com.example.compass_aac.view.voiceaac.HearVoice;
 import com.example.compass_aac.view.voiceaac.PassCategory;
 import com.example.compass_aac.view.voiceaac.ShowSelectedWord;
-import com.example.compass_aac.viewmodel.LocationViewModel;
-import com.example.compass_aac.viewmodel.LocationViewModel_HiltModules_KeyModule_ProvideFactory;
-import com.example.compass_aac.viewmodel.LoginViewModel;
-import com.example.compass_aac.viewmodel.LoginViewModel_HiltModules_KeyModule_ProvideFactory;
-import com.example.compass_aac.viewmodel.PassCategoryViewModel;
-import com.example.compass_aac.viewmodel.PassCategoryViewModel_HiltModules_KeyModule_ProvideFactory;
-import com.example.compass_aac.viewmodel.RegisterViewModel;
-import com.example.compass_aac.viewmodel.RegisterViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.compass_aac.viewmodel.MainViewModel;
+import com.example.compass_aac.viewmodel.MainViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.compass_aac.viewmodel.login.LoginViewModel;
+import com.example.compass_aac.viewmodel.login.LoginViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.compass_aac.viewmodel.login.RegisterViewModel;
+import com.example.compass_aac.viewmodel.login.RegisterViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel;
+import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.compass_aac.viewmodel.voiceaac.LocationViewModel;
+import com.example.compass_aac.viewmodel.voiceaac.LocationViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel;
+import com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel;
+import com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.data.api.LocationApiService;
+import com.example.data.api.UserApiService;
+import com.example.data.repository.FindNodeRepositoryImpl;
 import com.example.data.repository.LocationRepositoryImpl;
+import com.example.data.repository.NodeRepositoryImpl;
 import com.example.data.repository.UserRepositoryImpl;
-import com.example.data.source.LocationApiService;
-import com.example.data.source.UserApiService;
 import com.example.data.source.remote.LocationDataSource;
 import com.example.data.source.remote.LocationDataSourceImpl;
 import com.example.data.source.remote.UserDataSource;
@@ -51,6 +65,7 @@ import com.example.data.source.remote.UserDataSourceImpl;
 import com.example.domain.usecase.LocationUseCase;
 import com.example.domain.usecase.LoginUseCase;
 import com.example.domain.usecase.RegisterUseCase;
+import com.example.domain.usecase.ShowSelectedWordUseCase;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
@@ -135,6 +150,24 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     public Builder locationModule(LocationModule locationModule) {
       this.locationModule = Preconditions.checkNotNull(locationModule);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder nodeRepository(NodeRepository nodeRepository) {
+      Preconditions.checkNotNull(nodeRepository);
+      return this;
+    }
+
+    /**
+     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
+     */
+    @Deprecated
+    public Builder textToSpeechModule(TextToSpeechModule textToSpeechModule) {
+      Preconditions.checkNotNull(textToSpeechModule);
       return this;
     }
 
@@ -478,6 +511,10 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
     }
 
     @Override
+    public void injectHearVoice(HearVoice arg0) {
+    }
+
+    @Override
     public void injectPassCategory(PassCategory arg0) {
     }
 
@@ -492,7 +529,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(4).add(LocationViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(PassCategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(RegisterViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(7).add(ChooseWordPassViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LocationViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(PassCategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(RegisterViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ShowSelectedWordVIewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -518,13 +555,19 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     private final ViewModelCImpl viewModelCImpl = this;
 
+    private Provider<ChooseWordPassViewModel> chooseWordPassViewModelProvider;
+
     private Provider<LocationViewModel> locationViewModelProvider;
 
     private Provider<LoginViewModel> loginViewModelProvider;
 
+    private Provider<MainViewModel> mainViewModelProvider;
+
     private Provider<PassCategoryViewModel> passCategoryViewModelProvider;
 
     private Provider<RegisterViewModel> registerViewModelProvider;
+
+    private Provider<ShowSelectedWordVIewModel> showSelectedWordVIewModelProvider;
 
     private ViewModelCImpl(SingletonCImpl singletonCImpl,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
@@ -536,18 +579,25 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     }
 
+    private ShowSelectedWordUseCase showSelectedWordUseCase() {
+      return new ShowSelectedWordUseCase(singletonCImpl.textToSpeech());
+    }
+
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
-      this.locationViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
-      this.loginViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
-      this.passCategoryViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
-      this.registerViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
+      this.chooseWordPassViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.locationViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.loginViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
+      this.passCategoryViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
+      this.registerViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
+      this.showSelectedWordVIewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 6);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(4).put("com.example.compass_aac.viewmodel.LocationViewModel", ((Provider) locationViewModelProvider)).put("com.example.compass_aac.viewmodel.LoginViewModel", ((Provider) loginViewModelProvider)).put("com.example.compass_aac.viewmodel.PassCategoryViewModel", ((Provider) passCategoryViewModelProvider)).put("com.example.compass_aac.viewmodel.RegisterViewModel", ((Provider) registerViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(7).put("com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel", ((Provider) chooseWordPassViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.LocationViewModel", ((Provider) locationViewModelProvider)).put("com.example.compass_aac.viewmodel.login.LoginViewModel", ((Provider) loginViewModelProvider)).put("com.example.compass_aac.viewmodel.MainViewModel", ((Provider) mainViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel", ((Provider) passCategoryViewModelProvider)).put("com.example.compass_aac.viewmodel.login.RegisterViewModel", ((Provider) registerViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel", ((Provider) showSelectedWordVIewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -571,17 +621,26 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.example.compass_aac.viewmodel.LocationViewModel 
+          case 0: // com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel 
+          return (T) new ChooseWordPassViewModel(singletonCImpl.findNodeRepositoryImpl());
+
+          case 1: // com.example.compass_aac.viewmodel.voiceaac.LocationViewModel 
           return (T) new LocationViewModel(singletonCImpl.locationUseCase(), ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
 
-          case 1: // com.example.compass_aac.viewmodel.LoginViewModel 
+          case 2: // com.example.compass_aac.viewmodel.login.LoginViewModel 
           return (T) new LoginViewModel(singletonCImpl.provideLoginUseCaseProvider.get());
 
-          case 2: // com.example.compass_aac.viewmodel.PassCategoryViewModel 
+          case 3: // com.example.compass_aac.viewmodel.MainViewModel 
+          return (T) new MainViewModel(singletonCImpl.provideNodeRepositoryImplProvider.get());
+
+          case 4: // com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel 
           return (T) new PassCategoryViewModel();
 
-          case 3: // com.example.compass_aac.viewmodel.RegisterViewModel 
+          case 5: // com.example.compass_aac.viewmodel.login.RegisterViewModel 
           return (T) new RegisterViewModel(singletonCImpl.provideRegisterUseCaseProvider.get());
+
+          case 6: // com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel 
+          return (T) new ShowSelectedWordVIewModel(viewModelCImpl.showSelectedWordUseCase(), ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
 
           default: throw new AssertionError(id);
         }
@@ -658,15 +717,17 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
   }
 
   private static final class SingletonCImpl extends MyApplication_HiltComponents.SingletonC {
+    private final ApplicationContextModule applicationContextModule;
+
     private final DataSourceModule dataSourceModule;
 
     private final LocationModule locationModule;
 
-    private final ApplicationContextModule applicationContextModule;
-
     private final UserModule userModule;
 
     private final SingletonCImpl singletonCImpl = this;
+
+    private Provider<NodeRepositoryImpl> provideNodeRepositoryImplProvider;
 
     private Provider<LocationApiService> provideLocationApiProvider;
 
@@ -681,12 +742,16 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam,
         DataSourceModule dataSourceModuleParam, LocationModule locationModuleParam,
         UserModule userModuleParam) {
+      this.applicationContextModule = applicationContextModuleParam;
       this.dataSourceModule = dataSourceModuleParam;
       this.locationModule = locationModuleParam;
-      this.applicationContextModule = applicationContextModuleParam;
       this.userModule = userModuleParam;
       initialize(applicationContextModuleParam, dataSourceModuleParam, locationModuleParam, userModuleParam);
 
+    }
+
+    private FindNodeRepositoryImpl findNodeRepositoryImpl() {
+      return new FindNodeRepositoryImpl(provideNodeRepositoryImplProvider.get());
     }
 
     private Retrofit retrofit() {
@@ -721,15 +786,20 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
       return new UserRepositoryImpl(userDataSource());
     }
 
+    private TextToSpeech textToSpeech() {
+      return TextToSpeechModule_ProvideTextToSpeechFactory.provideTextToSpeech(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+    }
+
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam,
         final DataSourceModule dataSourceModuleParam, final LocationModule locationModuleParam,
         final UserModule userModuleParam) {
-      this.provideLocationApiProvider = DoubleCheck.provider(new SwitchingProvider<LocationApiService>(singletonCImpl, 0));
-      this.provideFusedLocationProviderClientProvider = DoubleCheck.provider(new SwitchingProvider<FusedLocationProviderClient>(singletonCImpl, 1));
-      this.provideLoginApiProvider = DoubleCheck.provider(new SwitchingProvider<UserApiService>(singletonCImpl, 3));
-      this.provideLoginUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<LoginUseCase>(singletonCImpl, 2));
-      this.provideRegisterUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<RegisterUseCase>(singletonCImpl, 4));
+      this.provideNodeRepositoryImplProvider = DoubleCheck.provider(new SwitchingProvider<NodeRepositoryImpl>(singletonCImpl, 0));
+      this.provideLocationApiProvider = DoubleCheck.provider(new SwitchingProvider<LocationApiService>(singletonCImpl, 1));
+      this.provideFusedLocationProviderClientProvider = DoubleCheck.provider(new SwitchingProvider<FusedLocationProviderClient>(singletonCImpl, 2));
+      this.provideLoginApiProvider = DoubleCheck.provider(new SwitchingProvider<UserApiService>(singletonCImpl, 4));
+      this.provideLoginUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<LoginUseCase>(singletonCImpl, 3));
+      this.provideRegisterUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<RegisterUseCase>(singletonCImpl, 5));
     }
 
     @Override
@@ -765,19 +835,22 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.example.data.source.LocationApiService 
+          case 0: // com.example.data.repository.NodeRepositoryImpl 
+          return (T) NodeRepository_ProvideNodeRepositoryImplFactory.provideNodeRepositoryImpl(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 1: // com.example.data.api.LocationApiService 
           return (T) LocationModule_ProvideLocationApiFactory.provideLocationApi(singletonCImpl.locationModule, singletonCImpl.retrofit());
 
-          case 1: // com.google.android.gms.location.FusedLocationProviderClient 
+          case 2: // com.google.android.gms.location.FusedLocationProviderClient 
           return (T) LocationModule_ProvideFusedLocationProviderClientFactory.provideFusedLocationProviderClient(singletonCImpl.locationModule, ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
-          case 2: // com.example.domain.usecase.LoginUseCase 
+          case 3: // com.example.domain.usecase.LoginUseCase 
           return (T) UseCaseModule_ProvideLoginUseCaseFactory.provideLoginUseCase(singletonCImpl.userRepositoryImpl());
 
-          case 3: // com.example.data.source.UserApiService 
+          case 4: // com.example.data.api.UserApiService 
           return (T) UserModule_ProvideLoginApiFactory.provideLoginApi(singletonCImpl.userModule, singletonCImpl.retrofit());
 
-          case 4: // com.example.domain.usecase.RegisterUseCase 
+          case 5: // com.example.domain.usecase.RegisterUseCase 
           return (T) UseCaseModule_ProvideRegisterUseCaseFactory.provideRegisterUseCase(singletonCImpl.userRepositoryImpl());
 
           default: throw new AssertionError(id);

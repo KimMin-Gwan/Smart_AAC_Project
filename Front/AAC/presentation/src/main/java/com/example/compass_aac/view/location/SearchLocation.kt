@@ -16,6 +16,8 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -23,13 +25,10 @@ import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.databinding.ActivitySearchLocationBinding
-import com.example.compass_aac.viewmodel.LocationViewModel
+import com.example.compass_aac.viewmodel.voiceaac.LocationViewModel
 import com.example.compass_aac.view.voiceaac.PassCategory
-import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 
 
@@ -58,17 +57,21 @@ class SearchLocation : AppCompatActivity() {
         })
 
         locationViewModel.categoryResult.observe(this) { result ->
-            if (result.isSuccess) {
-                val category = result.getOrNull()
-                if (category != null) {
-                    val intent = Intent(this, PassCategory::class.java)
-                    // Category 정보 Passcategory로 넘겨주기
-                    intent.putExtra("CATEGORY", category[0].categories)
-                    startActivity(intent)
+            locationViewModel.categoryResult.observe(this) { result ->
+                if (result.isSuccess) {
+                    val category = result.getOrNull()
+                    if (category != null) {
+                        Handler(Looper.getMainLooper()).postDelayed({
+                            val intent = Intent(this, PassCategory::class.java)
+                            // Category 정보 Passcategory로 넘겨주기
+                            intent.putExtra("CATEGORY", category[0].categories)
+                            startActivity(intent)
+                        }, 3000)  // 3 seconds delay
+                    }
+                } else {
+                    // 에러 처리
+                    Log.e("MainActivity", "Error fetching category", result.exceptionOrNull())
                 }
-            } else {
-                // 에러 처리
-                Log.e("MainActivity", "Error fetching category", result.exceptionOrNull())
             }
         }
 

@@ -2,7 +2,7 @@ package com.example.data.source.remote
 
 import com.example.data.model.remote.LoginResponse
 import com.example.data.model.remote.RegisterResponse
-import com.example.data.source.UserApiService
+import com.example.data.api.UserApiService
 import javax.inject.Inject
 
 class UserDataSourceImpl @Inject constructor(private val userApiInterface : UserApiService) : UserDataSource {

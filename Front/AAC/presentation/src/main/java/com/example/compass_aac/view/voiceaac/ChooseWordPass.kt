@@ -19,15 +19,24 @@ import android.speech.tts.TextToSpeech
 import android.speech.tts.TextToSpeech.OnInitListener
 import android.util.Log
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.compass_aac.R
 import com.example.compass_aac.databinding.ActivityChooseWordPassBinding
 import com.example.compass_aac.databinding.ActivityPassCategoryBinding
+import com.example.compass_aac.view.adapters.NodeAdapter
+import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel
+import com.example.compass_aac.viewmodel.voiceaac.HearVoiceViewModel
+import com.example.data.repository.FindNodeRepositoryImpl
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 
 @AndroidEntryPoint
-class ChooseWordPass : AppCompatActivity() {
+class ChooseWordPass() : AppCompatActivity() {
 
+    private lateinit var adapter: NodeAdapter
+    private val viewModel: ChooseWordPassViewModel by viewModels()
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
             val intent = Intent(this@ChooseWordPass, PassCategory::class.java)
@@ -45,6 +54,13 @@ class ChooseWordPass : AppCompatActivity() {
         binding = ActivityChooseWordPassBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val selectedCategory = intent.getStringExtra("selectedCategory")
+        Log.d("selectedCategory", selectedCategory!!)
+
+        viewModel.categories.observe(this){
+            viewModel.updateCategory(it)
+        }
+
         binding.selectwordBtn.setOnClickListener {
             val intent = Intent(this, ShowSelectedWord::class.java)
             startActivity(intent)
@@ -55,5 +71,17 @@ class ChooseWordPass : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
         this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
+
+
+        val categoryIndex = viewModel.returnIndex(selectedCategory)
+        val childTree = viewModel.MakeTree(categoryIndex)
+        Log.d("childTree", childTree.toString())
+
+
+        val findNodeRepository = viewModel.getFindNodeRepositoryImpl()
+
+        adapter = NodeAdapter(childTree,findNodeRepository)
+        binding.recyclerViewPass.layoutManager = GridLayoutManager(this, 3)
+        binding.recyclerViewPass.adapter = adapter
     }
 }

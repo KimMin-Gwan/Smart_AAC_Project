@@ -6,10 +6,8 @@ import android.content.pm.PackageManager
 import android.location.Location
 import com.google.android.gms.location.LocationRequest
 import androidx.core.app.ActivityCompat
-import com.example.data.mapper.MapperToCategory
 import com.example.data.model.remote.CategoryResponse
-import com.example.data.source.LocationApiService
-import com.example.domain.model.Categories
+import com.example.data.api.LocationApiService
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult

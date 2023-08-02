@@ -2967,6 +2967,14 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_clicked_color
+drawable button_unclicked_color
+drawable categorybakery
+drawable categorycafe
+drawable categoryconvenience
+drawable categoryhospital
+drawable categoryrestaurant
+drawable categorysubway
 drawable circle_shape
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -3208,7 +3216,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button2
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3228,6 +3235,7 @@ id chain2
 id chains
 id checkbox
 id checked
+id chooseWordPassTv
 id choose_pass_back_btn
 id chronometer
 id circle_center
@@ -3325,6 +3333,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id goRegisterBtn
 id gone
 id graph
 id graph_wrap

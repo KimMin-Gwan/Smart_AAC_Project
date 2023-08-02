@@ -3,7 +3,9 @@ package com.example.compass_aac.view;
 import com.example.compass_aac.module.DataSourceModule;
 import com.example.compass_aac.module.LocationModule;
 import com.example.compass_aac.module.NetworkModule;
+import com.example.compass_aac.module.NodeRepository;
 import com.example.compass_aac.module.RepositoryModule;
+import com.example.compass_aac.module.TextToSpeechModule;
 import com.example.compass_aac.module.UseCaseModule;
 import com.example.compass_aac.module.UserModule;
 import com.example.compass_aac.view.dailyaac.DailyCategory_GeneratedInjector;
@@ -14,12 +16,16 @@ import com.example.compass_aac.view.login.TitleActivity_GeneratedInjector;
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory_GeneratedInjector;
 import com.example.compass_aac.view.voiceaac.ChooseWordPass_GeneratedInjector;
 import com.example.compass_aac.view.voiceaac.ChooseWordVoice_GeneratedInjector;
+import com.example.compass_aac.view.voiceaac.HearVoice_GeneratedInjector;
 import com.example.compass_aac.view.voiceaac.PassCategory_GeneratedInjector;
 import com.example.compass_aac.view.voiceaac.ShowSelectedWord_GeneratedInjector;
-import com.example.compass_aac.viewmodel.LocationViewModel_HiltModules;
-import com.example.compass_aac.viewmodel.LoginViewModel_HiltModules;
-import com.example.compass_aac.viewmodel.PassCategoryViewModel_HiltModules;
-import com.example.compass_aac.viewmodel.RegisterViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.MainViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.login.LoginViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.login.RegisterViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.voiceaac.LocationViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -141,7 +147,9 @@ public final class MyApplication_HiltComponents {
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class,
           NetworkModule.class,
+          NodeRepository.class,
           RepositoryModule.class,
+          TextToSpeechModule.class,
           UseCaseModule.class,
           UserModule.class
       }
@@ -166,13 +174,16 @@ public final class MyApplication_HiltComponents {
 
   @Subcomponent(
       modules = {
+          ChooseWordPassViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           LocationViewModel_HiltModules.KeyModule.class,
           LoginViewModel_HiltModules.KeyModule.class,
+          MainViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
           PassCategoryViewModel_HiltModules.KeyModule.class,
-          RegisterViewModel_HiltModules.KeyModule.class
+          RegisterViewModel_HiltModules.KeyModule.class,
+          ShowSelectedWordVIewModel_HiltModules.KeyModule.class
       }
   )
   @ActivityRetainedScoped
@@ -203,6 +214,7 @@ public final class MyApplication_HiltComponents {
       UrgencyCategory_GeneratedInjector,
       ChooseWordPass_GeneratedInjector,
       ChooseWordVoice_GeneratedInjector,
+      HearVoice_GeneratedInjector,
       PassCategory_GeneratedInjector,
       ShowSelectedWord_GeneratedInjector,
       ActivityComponent,
@@ -218,11 +230,14 @@ public final class MyApplication_HiltComponents {
 
   @Subcomponent(
       modules = {
+          ChooseWordPassViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           LocationViewModel_HiltModules.BindsModule.class,
           LoginViewModel_HiltModules.BindsModule.class,
+          MainViewModel_HiltModules.BindsModule.class,
           PassCategoryViewModel_HiltModules.BindsModule.class,
-          RegisterViewModel_HiltModules.BindsModule.class
+          RegisterViewModel_HiltModules.BindsModule.class,
+          ShowSelectedWordVIewModel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped

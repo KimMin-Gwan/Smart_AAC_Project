@@ -12,31 +12,44 @@
 
 package com.example.compass_aac.view.login
 
+import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
-import androidx.lifecycle.ViewModelProvider
 import com.example.compass_aac.R
 import com.example.compass_aac.databinding.ActivityRegisterMainBinding
-import com.example.compass_aac.viewmodel.RegisterViewModel
+import com.example.compass_aac.viewmodel.login.RegisterViewModel
 import com.example.compass_aac.view.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.regex.Pattern
 
 @AndroidEntryPoint
 class RegisterMain : AppCompatActivity() {
+
+    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            val intent= Intent(this@RegisterMain, TitleActivity::class.java)
+            startActivity(intent)
+            Log.e(ContentValues.TAG, "뒤로가기 클릭")
+            // 뒤로가기 시 실행할 코드
+        }
+    }
     private val viewModel: RegisterViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityRegisterMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback) //위에서 생성한 콜백 인스턴스 붙여주기
 
         binding.registerNextBtn.isEnabled = false
         if (!binding.registerNextBtn.isEnabled){
@@ -81,9 +94,9 @@ class RegisterMain : AppCompatActivity() {
 //            startActivity(intent)
         }
 
-        //이전으로 돌아가기
+        //뒤로가기
         binding.registerBackBtn.setOnClickListener {
-            onBackPressed()
+            onBackPressedDispatcher.onBackPressed()
         }
 
         viewModel.registerResult.observe(this){result ->
