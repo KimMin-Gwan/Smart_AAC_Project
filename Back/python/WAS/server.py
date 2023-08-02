@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 #from fastapi.responses import FileResponse
 from fastapi import UploadFile, File
-from constant import GPS
+import WAS
 import uvicorn
 #from constant import WAV_SAVE_PATH
 
@@ -13,15 +13,15 @@ class AppServer():
 
     def register_routes(self):
         #wav 데이터 받기
-        @self.app.post('/get_wav')
-        async def recog_voice(file: UploadFile = File(..., required = False)):
-            if file is None:
-                print('wav file did not uploaded')
-                return {"error": "No file provided"}
+        @self.app.post('/get_string')
+        async def recog_voice(data : dict):
+            if data is None:
+                print('data did not uploaded')
+                return {"key": "ERROR"} 
             else:
-                print('wav file upload complete')
+                print('json loaded')
             try:
-                result = self.mainfunction.recog_wav(file)
+                result = self.mainfunction.recog_wav(data['key'])
             except Exception as e:
                 print("Error : ", str(e))
 
@@ -33,7 +33,7 @@ class AppServer():
 
         #GPS 데이터 보내기
         @self.app.post('/get_gps')
-        async def recog_GPS(data : GPS):
+        async def recog_GPS(data : WAS.GPS):
             if data is None:
                 print('gps not uploaded')
                 return {"error": "data did not usable"}

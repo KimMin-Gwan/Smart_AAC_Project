@@ -1,4 +1,5 @@
-from PROCESS import MainFunction
+import back_end
+from back_end import MainFunction
 from WAS import AppServer
 import uvicorn 
 

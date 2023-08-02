@@ -1,14 +1,14 @@
 import os
 import shutil
 import speech_recognition as sr
-from category_ai import Classifier
+import back_end 
 # 유저 별로 꼬이지 않도록 설계해야함
 
 
 class Recognizer():
     # 생성자
     def __init__(self):
-        self.classifier = Classifier()
+        self.classifier = back_end.Classifier()
         #self.path = __file__ + file.filename
     
     def __call__(self):
@@ -47,8 +47,7 @@ class Recognizer():
         # 군집화나 RNN으로 분석해서 리턴시켜야됨
         result = self.classifier.classifier(text)
         # {real_txt : class key}
-        return result
-    
+        return result    
 
 
     ## 분석기

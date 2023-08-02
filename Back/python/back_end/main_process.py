@@ -1,10 +1,9 @@
-from recognize_wav import Recognizer
-from gps import GPS
+import back_end
 
 class MainFunction():
     def __init__(self):
         self.status = 0
-        self.recognizer = Recognizer()
+        self.recognizer = back_end.Recognizer()
     
     def __call__(self):
         if self.status == 0:
@@ -22,7 +21,7 @@ class MainFunction():
         try:
             result = self.recognizer.recognizer(txt)
         except Exception as e:
-            print("ERROR : ", e)
+            print("ERROR_main : ", e)
             result = {'key' : "ERROR" }
             self.status == -1
             self()
@@ -37,7 +36,7 @@ class MainFunction():
 
         #---------------
         #분석기 생성
-        recognizer = GPS(x, y)
+        recognizer = back_end.GPS(x, y)
         # 분석
         result = recognizer.gps_analyzer()
         # 분석기 메모리 반환 
