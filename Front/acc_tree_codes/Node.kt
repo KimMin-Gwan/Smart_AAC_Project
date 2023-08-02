@@ -67,9 +67,10 @@ class NodeList(var size : Int){
         else
             println("NodeList is FULL !!!")
     }
+
     // valid 한 index인지 검사
     fun isInvalid(index : Int) : Boolean{
-        if (index >= 0 && index < this.size) return true else return false
+        if (index >= 0 && index < this.size && node_Array[index].getID() != -1) return true else return false
     }
 }
 
