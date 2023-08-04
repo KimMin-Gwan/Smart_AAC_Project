@@ -36,7 +36,7 @@ raw_label = intence['tag'].unique().tolist()
 num_label = len(raw_label)
 
 label_dict = [{x: i+1} for i, x in enumerate(raw_label)]
-print(label_dict)
+#print(label_dict)
 
 # 리스트를 딕셔너리로 해체 
 label_data = {}
@@ -113,6 +113,7 @@ model.save('./model')
 """
 #모델 불러오기
 model = tf.keras.models.load_model('./model/')
+print(valX[150])
 predict = model.predict(valX)
 
 #숫자로 된 데이터를 텍스트로 변경
@@ -127,7 +128,7 @@ for sample in test_sentence:
     test_list.append(temp.replace(' ', ''))
     
 #테스트 포인트
-index = 188
+index = 150
 
 #조사해본 문자열
 print("test")
