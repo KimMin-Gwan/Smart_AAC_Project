@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="category">#FFFFFF</color>
     <style name="Base.Theme.Compass_AAC" parent="Theme.Material3.DayNight.NoActionBar">
         
         

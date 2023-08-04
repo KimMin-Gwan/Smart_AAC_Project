@@ -4,6 +4,7 @@ package com.example.data.source.remote
 
 import android.app.Application
 import android.content.Context
+import android.util.Log
 import com.example.data.model.remote.AAC
 import com.example.json.Node
 import com.example.json.NodeList
@@ -264,10 +265,24 @@ class Make_Root_Category()
     }
 
     // gps를 통해 카테고리를 추천할 때
-    fun get_gps_root_category(node_list : NodeList, gps_data : ArrayList<Int>) :ArrayList<Int>
+    fun get_gps_root_category(node_list : NodeList, gps_data : List<Int>) :ArrayList<Int>
     {
+        // 100부터 200사이에 루트노드를 검색
+        for (idx in this.min_index..this.max_index)
+        {
+            if (node_list.isInvalid(idx))
+            {
+                this.root_category.add(idx)
+                this.size += 1
+            }
+            // 100 부터 순차적으로 찾아볼때 invalid함 데이터면 더이상 루트노드는 없다
+            else
+                continue
+        }
+        Log.d("gps_data", gps_data.toString())
         for ( arg in gps_data )
         {
+            Log.d("root_category", this.root_category.toString())
             if (this.root_category.isEmpty() || !this.root_category.contains(arg))
                 throw ArithmeticException("Invalid Index")
             // 데이터 삭제
@@ -283,7 +298,7 @@ class Make_Root_Category()
 }
 
 
-fun main(){
+//fun main(){
 //    val application : Application
 //    // 노드 생성 ( 앱 실행 초기 상태)
 //    val node_maker : MakeNode = MakeNode()
@@ -360,4 +375,4 @@ fun main(){
 //    {
 //        print(arg)
 //    }
-}
+//}

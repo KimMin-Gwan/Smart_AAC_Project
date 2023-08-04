@@ -21,12 +21,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <LinearLayout
+        android:id="@+id/recyclerViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_pass_back_btn">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@id/selectwordBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choose_pass_back_btn"
+            tools:listitem="@layout/activity_choose_word_item">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/selectwordBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
         android:text="선택 완료"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -35,18 +63,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.933" />
-
-    <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recycler_view_pass"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_gravity="center"
-    android:layout_marginTop="28dp"
-    android:scrollbars="vertical"
-    app:layout_constraintBottom_toTopOf="@id/selectwordBtn"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/choose_pass_back_btn" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

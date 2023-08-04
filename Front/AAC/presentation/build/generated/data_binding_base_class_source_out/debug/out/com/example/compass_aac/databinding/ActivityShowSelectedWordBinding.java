@@ -26,6 +26,9 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
   public final ImageView imageView5;
 
   @NonNull
+  public final MaterialButton rechooseBtn;
+
+  @NonNull
   public final ImageButton selectWordBackBtn;
 
   @NonNull
@@ -44,12 +47,13 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
   public final ImageButton ttsBtn1;
 
   private ActivityShowSelectedWordBinding(@NonNull ScrollView rootView,
-      @NonNull ImageView imageView5, @NonNull ImageButton selectWordBackBtn,
-      @NonNull MaterialButton selectedWordAnswerBtn, @NonNull MaterialButton selectedWordOkBtn,
-      @NonNull TextView selectedWordShowTv, @NonNull ImageButton ttsBtn,
-      @NonNull ImageButton ttsBtn1) {
+      @NonNull ImageView imageView5, @NonNull MaterialButton rechooseBtn,
+      @NonNull ImageButton selectWordBackBtn, @NonNull MaterialButton selectedWordAnswerBtn,
+      @NonNull MaterialButton selectedWordOkBtn, @NonNull TextView selectedWordShowTv,
+      @NonNull ImageButton ttsBtn, @NonNull ImageButton ttsBtn1) {
     this.rootView = rootView;
     this.imageView5 = imageView5;
+    this.rechooseBtn = rechooseBtn;
     this.selectWordBackBtn = selectWordBackBtn;
     this.selectedWordAnswerBtn = selectedWordAnswerBtn;
     this.selectedWordOkBtn = selectedWordOkBtn;
@@ -91,6 +95,12 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rechoose_btn;
+      MaterialButton rechooseBtn = ViewBindings.findChildViewById(rootView, id);
+      if (rechooseBtn == null) {
+        break missingId;
+      }
+
       id = R.id.select_word_back_btn;
       ImageButton selectWordBackBtn = ViewBindings.findChildViewById(rootView, id);
       if (selectWordBackBtn == null) {
@@ -127,7 +137,7 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityShowSelectedWordBinding((ScrollView) rootView, imageView5,
+      return new ActivityShowSelectedWordBinding((ScrollView) rootView, imageView5, rechooseBtn,
           selectWordBackBtn, selectedWordAnswerBtn, selectedWordOkBtn, selectedWordShowTv, ttsBtn,
           ttsBtn1);
     }

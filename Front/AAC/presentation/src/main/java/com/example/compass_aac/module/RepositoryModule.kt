@@ -2,11 +2,12 @@ package com.example.compass_aac.module
 
 import com.example.data.repository.FindNodeRepositoryImpl
 import com.example.data.repository.LocationRepositoryImpl
-import com.example.data.repository.NodeRepositoryImpl
 import com.example.data.repository.UserRepositoryImpl
-import com.example.domain.repository.FindNodeRepository
+import com.example.data.repository.FindNodeRepository
+import com.example.data.repository.VoiceRepositoryImpl
 import com.example.domain.repository.LocationRepository
 import com.example.domain.repository.UserRepository
+import com.example.domain.repository.VoiceRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -25,4 +26,7 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindFindNodeRepository(findNodeRepositoryImpl: FindNodeRepositoryImpl) : FindNodeRepository
+
+    @Binds
+    abstract fun bindVoiceRepository(voiceRepositoryImpl: VoiceRepositoryImpl): VoiceRepository
 }

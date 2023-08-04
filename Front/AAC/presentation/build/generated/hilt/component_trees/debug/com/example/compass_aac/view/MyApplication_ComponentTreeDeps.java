@@ -20,11 +20,12 @@ import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_compo
 import hilt_aggregated_deps._com_example_compass_aac_module_DataSourceModule;
 import hilt_aggregated_deps._com_example_compass_aac_module_LocationModule;
 import hilt_aggregated_deps._com_example_compass_aac_module_NetworkModule;
-import hilt_aggregated_deps._com_example_compass_aac_module_NodeRepository;
 import hilt_aggregated_deps._com_example_compass_aac_module_RepositoryModule;
 import hilt_aggregated_deps._com_example_compass_aac_module_TextToSpeechModule;
 import hilt_aggregated_deps._com_example_compass_aac_module_UseCaseModule;
 import hilt_aggregated_deps._com_example_compass_aac_module_UserModule;
+import hilt_aggregated_deps._com_example_compass_aac_module_VoiceDataSourceModule;
+import hilt_aggregated_deps._com_example_compass_aac_module_VoiceModule;
 import hilt_aggregated_deps._com_example_compass_aac_view_MainActivity_GeneratedInjector;
 import hilt_aggregated_deps._com_example_compass_aac_view_MyApplication_GeneratedInjector;
 import hilt_aggregated_deps._com_example_compass_aac_view_dailyaac_DailyCategory_GeneratedInjector;
@@ -46,6 +47,8 @@ import hilt_aggregated_deps._com_example_compass_aac_viewmodel_login_RegisterVie
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_login_RegisterViewModel_HiltModules_KeyModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_voiceaac_ChooseWordPassViewModel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_voiceaac_ChooseWordPassViewModel_HiltModules_KeyModule;
+import hilt_aggregated_deps._com_example_compass_aac_viewmodel_voiceaac_ChooseWordVoiceViewModel_HiltModules_BindsModule;
+import hilt_aggregated_deps._com_example_compass_aac_viewmodel_voiceaac_ChooseWordVoiceViewModel_HiltModules_KeyModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_voiceaac_LocationViewModel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_voiceaac_LocationViewModel_HiltModules_KeyModule;
 import hilt_aggregated_deps._com_example_compass_aac_viewmodel_voiceaac_PassCategoryViewModel_HiltModules_BindsModule;
@@ -94,11 +97,12 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
         _com_example_compass_aac_module_DataSourceModule.class,
         _com_example_compass_aac_module_LocationModule.class,
         _com_example_compass_aac_module_NetworkModule.class,
-        _com_example_compass_aac_module_NodeRepository.class,
         _com_example_compass_aac_module_RepositoryModule.class,
         _com_example_compass_aac_module_TextToSpeechModule.class,
         _com_example_compass_aac_module_UseCaseModule.class,
         _com_example_compass_aac_module_UserModule.class,
+        _com_example_compass_aac_module_VoiceDataSourceModule.class,
+        _com_example_compass_aac_module_VoiceModule.class,
         _com_example_compass_aac_view_MainActivity_GeneratedInjector.class,
         _com_example_compass_aac_view_MyApplication_GeneratedInjector.class,
         _com_example_compass_aac_view_dailyaac_DailyCategory_GeneratedInjector.class,
@@ -120,6 +124,8 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
         _com_example_compass_aac_viewmodel_login_RegisterViewModel_HiltModules_KeyModule.class,
         _com_example_compass_aac_viewmodel_voiceaac_ChooseWordPassViewModel_HiltModules_BindsModule.class,
         _com_example_compass_aac_viewmodel_voiceaac_ChooseWordPassViewModel_HiltModules_KeyModule.class,
+        _com_example_compass_aac_viewmodel_voiceaac_ChooseWordVoiceViewModel_HiltModules_BindsModule.class,
+        _com_example_compass_aac_viewmodel_voiceaac_ChooseWordVoiceViewModel_HiltModules_KeyModule.class,
         _com_example_compass_aac_viewmodel_voiceaac_LocationViewModel_HiltModules_BindsModule.class,
         _com_example_compass_aac_viewmodel_voiceaac_LocationViewModel_HiltModules_KeyModule.class,
         _com_example_compass_aac_viewmodel_voiceaac_PassCategoryViewModel_HiltModules_BindsModule.class,

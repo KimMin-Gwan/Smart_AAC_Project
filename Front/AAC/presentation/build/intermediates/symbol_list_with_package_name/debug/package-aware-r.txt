@@ -1382,6 +1382,7 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color category
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -2970,10 +2971,16 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable button_clicked_color
 drawable button_unclicked_color
 drawable categorybakery
+drawable categorybooks
 drawable categorycafe
+drawable categorycinema
 drawable categoryconvenience
+drawable categorygrocerystore
 drawable categoryhospital
+drawable categorylibrary
+drawable categorymart
 drawable categoryrestaurant
+drawable categorysalon
 drawable categorysubway
 drawable circle_shape
 drawable common_full_open_on_phone
@@ -3236,6 +3243,7 @@ id chains
 id checkbox
 id checked
 id chooseWordPassTv
+id chooseWordVoiceTv
 id choose_pass_back_btn
 id chronometer
 id circle_center
@@ -3501,7 +3509,9 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rechoose_btn
 id rectangles
+id recyclerViewLayout
 id recycler_view
 id recycler_view_pass
 id recycler_view_voice

@@ -31,6 +31,10 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class PassCategory : AppCompatActivity() {
 
+    //어댑터에 연결할 카테고리 리스트
+    private var categorylist :List<String> = listOf()
+//    private lateinit var adapter : PassCategoryAdapter
+
     private var backPressedTime: Long = 0
 
     //뒤로 가기 두번 누르면 로그아웃되고 다시 로그인 하는 창으로 이동
@@ -79,33 +83,46 @@ class PassCategory : AppCompatActivity() {
 
 
         // intent로부터 categoryData를 받아 ViewModel에 전달
-        val categoryData = intent.getStringExtra("category")
-//        val categories = categoryData!!.split(",")
-        if (categoryData != null) {
-            viewModel.initCategoryData(categoryData)
-        } else {
-            Toast.makeText(this, "카테고리 데이터가 없습니다.", Toast.LENGTH_SHORT).show()
+        var categoryData = intent.getStringExtra("CATEGORY") ?: "default"
+        Log.d("categoryData", categoryData)
+
+        viewModel.receiveCategory(categoryData)
+
+        viewModel.receivedCategory.observe(this){
+            categoryData = it
         }
 
-        val categories = listOf("카페","음식점","병원","지하철","베이커리","편의점")
+        if (categoryData != "default") {
+//          viewModel.initCategoryData(categoryData)
+            categorylist = viewModel.processNodes(categoryData)
+        } else if(categoryData == "default"){
+            categorylist= viewModel.defaultprocessNodes(categoryData)
+        }
+
+//        viewModel.categorylist.observe(this){list->
+//            adapter = PassCategoryAdapter(list)
+//            binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
+//            binding.recyclerView.adapter = adapter
+//        }
+
+//        val categories = arrayListOf("편의점", "문구점", "영화관", "마트", "도서관", "카페", "서점", "미용실", "식당")
+
+
+
 
         // Adapter 생성 및 설정
-        val adapter = PassCategoryAdapter(categories)
-
+        val adapter = PassCategoryAdapter(categorylist)
         binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
         binding.recyclerView.adapter = adapter
 
-
-
-
         // ViewModel에서 LiveData를 관찰하여 데이터가 변경될 때마다 GridView를 업데이트
-        viewModel.categoryResult.observe(this) { result ->
-            if (result != null) {
-                adapter.submitList(categories) //업데이트
-            } else {
-                Toast.makeText(this, "카테고리를 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
-            }
-        }
+//        viewModel.categoryResult.observe(this) { result ->
+//            if (result != null) {
+//                adapter.submitList(result) //업데이트
+//            } else {
+//                Toast.makeText(this, "카테고리를 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
+//            }
+//        }
 
         binding.researchBtn.setOnClickListener {
             val intent =  Intent(this, SearchLocation::class.java)

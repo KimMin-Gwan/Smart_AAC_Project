@@ -57,21 +57,18 @@ class SearchLocation : AppCompatActivity() {
         })
 
         locationViewModel.categoryResult.observe(this) { result ->
-            locationViewModel.categoryResult.observe(this) { result ->
-                if (result.isSuccess) {
-                    val category = result.getOrNull()
-                    if (category != null) {
-                        Handler(Looper.getMainLooper()).postDelayed({
-                            val intent = Intent(this, PassCategory::class.java)
-                            // Category 정보 Passcategory로 넘겨주기
-                            intent.putExtra("CATEGORY", category[0].categories)
-                            startActivity(intent)
-                        }, 3000)  // 3 seconds delay
-                    }
-                } else {
-                    // 에러 처리
-                    Log.e("MainActivity", "Error fetching category", result.exceptionOrNull())
+            if (result.isSuccess) {
+                val category = result.getOrNull()
+                if (category != null) {
+                    val intent = Intent(this, PassCategory::class.java)
+                    // Category 정보 Passcategory로 넘겨주기
+                    intent.putExtra("CATEGORY", category.categories)
+                    Log.d("categoryintent", category.categories)
+                    startActivity(intent)
                 }
+            } else {
+                // 에러 처리
+                Log.e("MainActivity", "Error fetching category", result.exceptionOrNull())
             }
         }
 
@@ -79,14 +76,9 @@ class SearchLocation : AppCompatActivity() {
         if (checkPermissions()) {
             //위치 정보 가져오는 동안 프로그래스바 실행, 위치 정보 다 가져오면 placeCategory로 intent
             locationViewModel.fetchLocationAsync()
-            //임시
-            val intent = Intent(this, PassCategory::class.java)
-            startActivity(intent)
         } else {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, PERMISSIONS_REQUEST_CODE)
         }
-
-
 
     }
 

@@ -7,5 +7,7 @@
 
     <!--음성 인식-->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
+    <application
+    android:usesCleartextTraffic="true">
+</application>
 </manifest>

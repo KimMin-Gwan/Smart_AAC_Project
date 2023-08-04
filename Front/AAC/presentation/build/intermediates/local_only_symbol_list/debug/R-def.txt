@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color category
 color lightpurple
 color white
 color yellow
@@ -12,10 +13,16 @@ drawable aac_information
 drawable button_clicked_color
 drawable button_unclicked_color
 drawable categorybakery
+drawable categorybooks
 drawable categorycafe
+drawable categorycinema
 drawable categoryconvenience
+drawable categorygrocerystore
 drawable categoryhospital
+drawable categorylibrary
+drawable categorymart
 drawable categoryrestaurant
+drawable categorysalon
 drawable categorysubway
 drawable circle_shape
 drawable ic_launcher_background
@@ -43,6 +50,7 @@ id category_btn
 id category_img
 id category_name
 id chooseWordPassTv
+id chooseWordVoiceTv
 id choose_pass_back_btn
 id compass
 id constraintLayout3
@@ -69,6 +77,8 @@ id main_pass_btn
 id main_urgency_btn
 id main_user
 id progressBar
+id rechoose_btn
+id recyclerViewLayout
 id recycler_view
 id recycler_view_pass
 id recycler_view_voice

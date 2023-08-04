@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#F6CE3D</color>
     <color name="lightpurple">#D7DFFB</color>
+    <color name ="category">#FF000000</color>
 </resources>

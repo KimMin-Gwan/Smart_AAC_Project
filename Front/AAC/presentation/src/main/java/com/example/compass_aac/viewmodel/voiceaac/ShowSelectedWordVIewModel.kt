@@ -1,6 +1,7 @@
 package com.example.compass_aac.viewmodel.voiceaac
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,19 +11,19 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlin.math.log
 
 
 @HiltViewModel
 class ShowSelectedWordVIewModel @Inject constructor(private val showSelectedWordUseCase: ShowSelectedWordUseCase, application: Application): AndroidViewModel(application) {
 
-    private val _textToRead = MutableLiveData<String>()
-    val textToRead :LiveData<String> get() = _textToRead
+    private val _textToRead = MutableLiveData<ArrayList<String>>()
+    val textToRead :LiveData<ArrayList<String>> get() = _textToRead
 
     fun speakText() {
-        viewModelScope.launch {
-            val text=_textToRead.value
-            showSelectedWordUseCase.speakText(text!!)
-        }
+        val text=_textToRead.value
+        val sentence = text?.joinToString(" ")
+        showSelectedWordUseCase.speakText(sentence!!)
     }
 
     fun speakInf(){
@@ -39,16 +40,14 @@ class ShowSelectedWordVIewModel @Inject constructor(private val showSelectedWord
     }
 
 
-    fun getText(text : String){
-        viewModelScope.launch(Dispatchers.IO) {
-//            _textToRead.postValue("안녕하세요, TTS 기능을 사용하고 있습니다.")
-            _textToRead.postValue(text)
-
-        }
+    fun getText(text : ArrayList<String>){
+        val gettext = text.toString()
+        Log.d("getText", gettext)
+         _textToRead.postValue(text)
     }
 
     fun resetData(){
-        _textToRead.value = ""
+        _textToRead.value = arrayListOf()
     }
 
 }

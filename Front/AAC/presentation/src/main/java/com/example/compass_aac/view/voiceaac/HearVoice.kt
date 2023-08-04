@@ -146,7 +146,7 @@ class HearVoice : AppCompatActivity() {
                     SpeechRecognizer.ERROR_NETWORK_TIMEOUT ->
                         message = "네트워크 타임아웃"
                     SpeechRecognizer.ERROR_NO_MATCH ->
-                        message = "찾을 수 없음"
+                        message = "음성을 찾을 수 없음"
                     SpeechRecognizer.ERROR_RECOGNIZER_BUSY ->
                         message = "RECOGNIZER가 바쁨"
                     SpeechRecognizer.ERROR_SERVER ->
@@ -156,7 +156,7 @@ class HearVoice : AppCompatActivity() {
                     else ->
                         message = "알 수 없는 오류"
                 }
-                Toast.makeText(applicationContext, "에러 발생 $message", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "$message", Toast.LENGTH_SHORT).show()
             }
 
             //음성인식 한 결과

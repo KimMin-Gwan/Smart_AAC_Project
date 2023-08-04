@@ -8,10 +8,14 @@ import com.google.android.gms.location.LocationRequest
 import androidx.core.app.ActivityCompat
 import com.example.data.model.remote.CategoryResponse
 import com.example.data.api.LocationApiService
+import com.example.data.mapper.MapperToLocation
+import com.example.data.mapper.MapperToLogin
+import com.example.domain.model.LocationParam
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
 import dagger.hilt.android.qualifiers.ApplicationContext
+import retrofit2.Response
 import javax.inject.Inject
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
@@ -22,8 +26,9 @@ class LocationDataSourceImpl @Inject constructor(
     @ApplicationContext private val context: Context
 ) : LocationDataSource {
     override suspend fun getLocation() = getLastKnownLocation()
-    override suspend fun getCategories(x: Double, y: Double): List<CategoryResponse> {
-        return locationApiService.locationXY(x,y)
+    override suspend fun getCategories(param:LocationParam): CategoryResponse {
+        val mapper = MapperToLocation(param)
+        return locationApiService.locationXY(mapper)
     }
 
 

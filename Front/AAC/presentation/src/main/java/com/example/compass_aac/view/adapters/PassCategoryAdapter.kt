@@ -36,7 +36,7 @@ class PassCategoryAdapter(private var categories: List<String>) :
             "카페" -> {
                 holder.categoryImage.setImageResource(R.drawable.categorycafe)
             }
-            "음식점" -> {
+            "식당" -> {
                 holder.categoryImage.setImageResource(R.drawable.categoryrestaurant)
             }
             "병원" ->{
@@ -51,6 +51,25 @@ class PassCategoryAdapter(private var categories: List<String>) :
             "편의점" ->{
                 holder.categoryImage.setImageResource(R.drawable.categoryconvenience)
             }
+            "문구점" -> {
+                holder.categoryImage.setImageResource(R.drawable.categorygrocerystore)
+            }
+            "마트" -> {
+                holder.categoryImage.setImageResource(R.drawable.categorymart)
+            }
+            "서점" -> {
+                holder.categoryImage.setImageResource(R.drawable.categorybooks)
+            }
+            "도서관" -> {
+                holder.categoryImage.setImageResource(R.drawable.categorylibrary)
+            }
+            "영화관" -> {
+                holder.categoryImage.setImageResource(R.drawable.categorycinema)
+            }
+            "미용실" ->{
+                holder.categoryImage.setImageResource(R.drawable.categorysalon)
+            }
+
         }
         // TextView를 클릭할 때, 해당 카테고리 이름을 로그로 출력
         holder.button.setOnClickListener {view->

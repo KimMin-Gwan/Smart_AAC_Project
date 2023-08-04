@@ -3,6 +3,7 @@ package com.example.compass_aac.view;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 import androidx.activity.OnBackPressedCallback;
 import com.example.compass_aac.databinding.ActivityMainBinding;

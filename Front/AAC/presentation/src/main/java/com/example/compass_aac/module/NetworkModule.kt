@@ -15,7 +15,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
-    private val baseUrl = "http://192.168.1.101/"
+    private val baseUrl = "http://13.125.205.99/"
 
     @Provides
     fun provideOkHttpClient(): OkHttpClient {

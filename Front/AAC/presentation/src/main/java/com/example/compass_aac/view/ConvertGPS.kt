@@ -63,16 +63,16 @@ fun ConvertGPS(mode: Int, lat_X: Double, lng_Y: Double): LatXLngY {
             } else theta = Math.atan2(xn, yn)
         }
         val alon = theta / sn + olon
-        rs.lat = alat * RADDEG
-        rs.lng = alon * RADDEG
+        rs.lat = (alat * RADDEG)
+        rs.lng = (alon * RADDEG)
     }
     return rs
 }
 
 
 class LatXLngY {
-    var lat = 0.0
-    var lng = 0.0
+    var lat  = 0.0
+    var lng  = 0.0
     var x = 0.0
     var y = 0.0
 }

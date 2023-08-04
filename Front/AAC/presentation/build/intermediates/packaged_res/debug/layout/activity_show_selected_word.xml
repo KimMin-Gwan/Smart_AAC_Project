@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/white"
+    android:background="@color/white"
     tools:context=".view.voiceaac.ShowSelectedWord">
 
     <LinearLayout
@@ -27,12 +27,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rechoose_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:text="다시\n선택하기"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.942"
+                app:layout_constraintStart_toEndOf="@+id/select_word_back_btn"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="422dp"
                 android:layout_height="261dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
                 android:src="@drawable/aac_information"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.545"
@@ -63,12 +77,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"
                 android:layout_marginRight="35dp"
+                android:layout_marginBottom="10dp"
                 android:background= "@drawable/text_radius"
                 android:gravity="center"
                 android:padding="20dp"
                 android:text="선택된 단어\n\n\n\n\n\n\n"
                 android:textColor="#636060"
-                android:textSize="25sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +118,7 @@
             android:textStyle="bold"
             android:text="대답하기"
             app:cornerRadius="10dp" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/selected_word_ok_btn"

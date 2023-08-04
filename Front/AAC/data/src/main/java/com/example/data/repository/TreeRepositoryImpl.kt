@@ -4,9 +4,9 @@ import com.example.data.source.remote.AAC_Tree
 import com.example.data.source.remote.Tree_Node
 import javax.inject.Inject
 
-class TreeRepositoryImpl @Inject constructor(private val nodeRepositoryImpl: NodeRepositoryImpl) {
-
-    fun Tree(rootIndex : Int){
+//class TreeRepositoryImpl @Inject constructor(private val nodeRepositoryImpl: NodeRepositoryImpl) {
+//
+//    fun Tree(rootIndex : Int){
 //        // aac tree 생성
 //        val aac_tree = AAC_Tree(rootIndex, nodeRepositoryImpl.getNodeList())
 //        // tree에서 루트 노드 접근
@@ -64,6 +64,6 @@ class TreeRepositoryImpl @Inject constructor(private val nodeRepositoryImpl: Nod
 //        for (arg in pick_string) {
 //            print(arg)
 //        }
-    }
-}
+//    }
+//}
 

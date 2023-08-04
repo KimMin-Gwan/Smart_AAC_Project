@@ -3,11 +3,12 @@ package com.example.compass_aac.view;
 import com.example.compass_aac.module.DataSourceModule;
 import com.example.compass_aac.module.LocationModule;
 import com.example.compass_aac.module.NetworkModule;
-import com.example.compass_aac.module.NodeRepository;
 import com.example.compass_aac.module.RepositoryModule;
 import com.example.compass_aac.module.TextToSpeechModule;
 import com.example.compass_aac.module.UseCaseModule;
 import com.example.compass_aac.module.UserModule;
+import com.example.compass_aac.module.VoiceDataSourceModule;
+import com.example.compass_aac.module.VoiceModule;
 import com.example.compass_aac.view.dailyaac.DailyCategory_GeneratedInjector;
 import com.example.compass_aac.view.location.SearchLocation_GeneratedInjector;
 import com.example.compass_aac.view.login.LoginMain_GeneratedInjector;
@@ -23,6 +24,7 @@ import com.example.compass_aac.viewmodel.MainViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.login.LoginViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.login.RegisterViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.voiceaac.ChooseWordVoiceViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.voiceaac.LocationViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel_HiltModules;
@@ -147,11 +149,12 @@ public final class MyApplication_HiltComponents {
           ActivityRetainedCBuilderModule.class,
           ServiceCBuilderModule.class,
           NetworkModule.class,
-          NodeRepository.class,
           RepositoryModule.class,
           TextToSpeechModule.class,
           UseCaseModule.class,
-          UserModule.class
+          UserModule.class,
+          VoiceDataSourceModule.class,
+          VoiceModule.class
       }
   )
   @Singleton
@@ -175,6 +178,7 @@ public final class MyApplication_HiltComponents {
   @Subcomponent(
       modules = {
           ChooseWordPassViewModel_HiltModules.KeyModule.class,
+          ChooseWordVoiceViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           LocationViewModel_HiltModules.KeyModule.class,
           LoginViewModel_HiltModules.KeyModule.class,
@@ -231,6 +235,7 @@ public final class MyApplication_HiltComponents {
   @Subcomponent(
       modules = {
           ChooseWordPassViewModel_HiltModules.BindsModule.class,
+          ChooseWordVoiceViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           LocationViewModel_HiltModules.BindsModule.class,
           LoginViewModel_HiltModules.BindsModule.class,

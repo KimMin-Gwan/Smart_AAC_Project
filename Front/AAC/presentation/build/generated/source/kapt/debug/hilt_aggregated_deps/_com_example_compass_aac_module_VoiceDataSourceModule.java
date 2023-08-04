@@ -1,0 +1,13 @@
+package hilt_aggregated_deps;
+
+import dagger.hilt.processor.internal.aggregateddeps.AggregatedDeps;
+
+/**
+ * This class should only be referenced by generated code! This class aggregates information across multiple compilations.
+ */
+@AggregatedDeps(
+    components = "dagger.hilt.components.SingletonComponent",
+    modules = "com.example.compass_aac.module.VoiceDataSourceModule"
+)
+public class _com_example_compass_aac_module_VoiceDataSourceModule {
+}

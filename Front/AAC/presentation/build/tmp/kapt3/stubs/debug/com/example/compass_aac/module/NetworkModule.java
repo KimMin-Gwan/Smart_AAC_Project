@@ -16,7 +16,7 @@ import javax.inject.Singleton;
 @dagger.hilt.InstallIn(value = {dagger.hilt.components.SingletonComponent.class})
 public final class NetworkModule {
     @org.jetbrains.annotations.NotNull
-    private static final java.lang.String baseUrl = "http://192.168.1.101/";
+    private static final java.lang.String baseUrl = "http://13.125.205.99/";
     @org.jetbrains.annotations.NotNull
     public static final com.example.compass_aac.module.NetworkModule INSTANCE = null;
     

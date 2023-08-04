@@ -15,6 +15,7 @@ package com.example.compass_aac.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
@@ -79,7 +80,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        viewModel.makeNode()
+
+//        viewModel.makeNode()
+//        viewModel.processNodes()
+
 
 
 //        // 루트 노드 지정 ( 여기선 101 == 카페 로 지정)
