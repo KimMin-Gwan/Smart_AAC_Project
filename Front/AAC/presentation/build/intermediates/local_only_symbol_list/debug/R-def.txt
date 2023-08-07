@@ -56,6 +56,7 @@ id compass
 id constraintLayout3
 id constraintLayout4
 id constraintLayout5
+id downArrow
 id goRegisterBtn
 id hear_voice_back_btn
 id hear_voice_btn

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.presentation-mergeDebugResources-44:/values-land/values-land.xml",
+            "outputFile": "com.example.compass_aac.presentation-mergeDebugResources-4:/values-land/values-land.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\a191931e67e775d1e9d095ec48ef944a\\transformed\\material-1.9.0\\res\\values-land\\values-land.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ellen\\Github\\Smart_AAC_Project\\Front\\AAC\\presentation\\src\\main\\res\\values-land\\dimens.xml",
+                    "source": "C:\\Smart_AAC_Project\\Front\\AAC\\presentation\\src\\main\\res\\values-land\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

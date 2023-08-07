@@ -39,7 +39,7 @@ class Tree_Node(val self_node : Node) {
     fun getChild() : ArrayList<Tree_Node> = this.child_tree_node
     fun setNodeStatus(status : NodeStatus) { this.self_node.setNodeStatus(status) }
     override fun equals(other: Any?): Boolean {
-        if (this == other) return true
+        if (this === other) return true
         if (other !is Tree_Node) return false
         return this.self_node == other.self_node
     }

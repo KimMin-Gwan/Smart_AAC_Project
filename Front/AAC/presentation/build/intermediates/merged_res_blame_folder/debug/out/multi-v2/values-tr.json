@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.presentation-mergeDebugResources-44:/values-tr/values-tr.xml",
+            "outputFile": "com.example.compass_aac.presentation-mergeDebugResources-4:/values-tr/values-tr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\cb06e3a298bbaa5176ff027874a5437a\\transformed\\jetified-play-services-base-18.1.0\\res\\values-tr\\values.xml",

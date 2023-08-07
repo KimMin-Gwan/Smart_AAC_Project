@@ -3295,6 +3295,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id downArrow
 id dragAnticlockwise
 id dragClockwise
 id dragDown

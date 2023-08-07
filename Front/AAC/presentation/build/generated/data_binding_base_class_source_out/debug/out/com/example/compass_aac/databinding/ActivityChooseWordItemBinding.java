@@ -4,6 +4,7 @@ package com.example.compass_aac.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,10 +23,14 @@ public final class ActivityChooseWordItemBinding implements ViewBinding {
   @NonNull
   public final MaterialButton chooseWordPassTv;
 
+  @NonNull
+  public final ImageView downArrow;
+
   private ActivityChooseWordItemBinding(@NonNull LinearLayout rootView,
-      @NonNull MaterialButton chooseWordPassTv) {
+      @NonNull MaterialButton chooseWordPassTv, @NonNull ImageView downArrow) {
     this.rootView = rootView;
     this.chooseWordPassTv = chooseWordPassTv;
+    this.downArrow = downArrow;
   }
 
   @Override
@@ -61,7 +66,14 @@ public final class ActivityChooseWordItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityChooseWordItemBinding((LinearLayout) rootView, chooseWordPassTv);
+      id = R.id.downArrow;
+      ImageView downArrow = ViewBindings.findChildViewById(rootView, id);
+      if (downArrow == null) {
+        break missingId;
+      }
+
+      return new ActivityChooseWordItemBinding((LinearLayout) rootView, chooseWordPassTv,
+          downArrow);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.compass_aac.presentation-mergeDebugResources-44:/values-uz/values-uz.xml",
+            "outputFile": "com.example.compass_aac.presentation-mergeDebugResources-4:/values-uz/values-uz.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ellen\\.gradle\\caches\\transforms-3\\a191931e67e775d1e9d095ec48ef944a\\transformed\\material-1.9.0\\res\\values-uz\\values-uz.xml",
