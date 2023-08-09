@@ -24,6 +24,7 @@ import com.example.compass_aac.view.dailyaac.DailyCategory
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory
 import com.example.compass_aac.view.location.SearchLocation
 import com.example.compass_aac.view.login.TitleActivity
+import com.example.compass_aac.view.user.UserPage
 import com.example.compass_aac.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -80,15 +81,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-//        viewModel.makeNode()
-//        viewModel.processNodes()
-
-
-
-//        // 루트 노드 지정 ( 여기선 101 == 카페 로 지정)
-//        val node : Node = node_list.getNode(101)
-
+        //유저페이지
+        binding.mainUser.setOnClickListener {
+            val intent = Intent(this, UserPage::class.java)
+            startActivity(intent)
+        }
     }
 
 }

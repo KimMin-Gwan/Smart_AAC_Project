@@ -2,16 +2,15 @@ package com.example.data.source.remote
 
 import com.example.data.model.remote.LoginResponse
 import com.example.data.model.remote.RegisterResponse
+import com.example.domain.model.Loginrequest
+import com.example.domain.model.Registerrequest
 
 interface UserDataSource {
     suspend fun getLoginUser(
-        phone : String,
-        password: String
-    ) : List<LoginResponse>
+        loginRequest: Loginrequest
+    ) : LoginResponse
 
     suspend fun getRegisterUser(
-        name : String,
-        phone: String,
-        password: String
-    ) : List<RegisterResponse>
+        registerRequest : Registerrequest
+    ) :RegisterResponse
 }

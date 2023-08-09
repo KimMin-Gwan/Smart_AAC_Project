@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -23,7 +22,7 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final ImageView imageView5;
+  public final TextView customizeText;
 
   @NonNull
   public final MaterialButton rechooseBtn;
@@ -47,12 +46,12 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
   public final ImageButton ttsBtn1;
 
   private ActivityShowSelectedWordBinding(@NonNull ScrollView rootView,
-      @NonNull ImageView imageView5, @NonNull MaterialButton rechooseBtn,
+      @NonNull TextView customizeText, @NonNull MaterialButton rechooseBtn,
       @NonNull ImageButton selectWordBackBtn, @NonNull MaterialButton selectedWordAnswerBtn,
       @NonNull MaterialButton selectedWordOkBtn, @NonNull TextView selectedWordShowTv,
       @NonNull ImageButton ttsBtn, @NonNull ImageButton ttsBtn1) {
     this.rootView = rootView;
-    this.imageView5 = imageView5;
+    this.customizeText = customizeText;
     this.rechooseBtn = rechooseBtn;
     this.selectWordBackBtn = selectWordBackBtn;
     this.selectedWordAnswerBtn = selectedWordAnswerBtn;
@@ -89,9 +88,9 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView5;
-      ImageView imageView5 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView5 == null) {
+      id = R.id.customizeText;
+      TextView customizeText = ViewBindings.findChildViewById(rootView, id);
+      if (customizeText == null) {
         break missingId;
       }
 
@@ -137,7 +136,7 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityShowSelectedWordBinding((ScrollView) rootView, imageView5, rechooseBtn,
+      return new ActivityShowSelectedWordBinding((ScrollView) rootView, customizeText, rechooseBtn,
           selectWordBackBtn, selectedWordAnswerBtn, selectedWordOkBtn, selectedWordShowTv, ttsBtn,
           ttsBtn1);
     }

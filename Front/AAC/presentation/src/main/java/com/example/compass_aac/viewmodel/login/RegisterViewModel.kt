@@ -20,6 +20,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.model.Register
+import com.example.domain.model.Registerrequest
 import com.example.domain.usecase.RegisterUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -39,8 +40,8 @@ class RegisterViewModel @Inject constructor(private val usecase: RegisterUseCase
     private val _userPassword = MutableLiveData<String>()
     val userPassword: LiveData<String> = _userPassword
 
-    private val _registerResult = MutableLiveData<Result<List<Register>>>()
-    val registerResult :LiveData<Result<List<Register>>> get() = _registerResult
+    private val _registerResult = MutableLiveData<Result<Register>>()
+    val registerResult :LiveData<Result<Register>> get() = _registerResult
 
 
     fun updateUserName(name: String) {
@@ -61,17 +62,19 @@ class RegisterViewModel @Inject constructor(private val usecase: RegisterUseCase
         val registerpw = _userPassword.value!!
         Log.d("register", "${registername}, ${registerphone}, $registerpw")
 
+        val register = Registerrequest(registername,registerphone,registerpw)
+
         viewModelScope.launch {
             withContext(Dispatchers.IO){
                 try {
-                    val response = usecase.invoke(registername,registerphone,registerpw)
-                    if (response.isNotEmpty()){
+                    val response = usecase.invoke(register)
+//                    if (response.isNotEmpty()){
                         _registerResult.postValue(Result.success(response))
                         Log.d("response", response.toString())
-                    }
-                    else{
-                        _registerResult.postValue(Result.failure(Throwable("fail")))
-                    }
+//                    }
+//                    else{
+//                        _registerResult.postValue(Result.failure(Throwable("fail")))
+//                    }
 
                 }
                 catch (e:Exception){

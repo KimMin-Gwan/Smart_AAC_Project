@@ -12,6 +12,5 @@
 package com.example.data.model.remote
 
 data class RegisterResponse(
-    val message: String,
-    val status: String
+    val message: String
 )

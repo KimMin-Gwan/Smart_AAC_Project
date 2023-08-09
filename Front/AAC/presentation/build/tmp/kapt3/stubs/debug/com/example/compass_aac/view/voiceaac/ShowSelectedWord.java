@@ -4,19 +4,13 @@ import android.content.ContentValues;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.util.Log;
-import android.widget.Toast;
 import androidx.activity.OnBackPressedCallback;
-import com.example.compass_aac.R;
-import com.example.compass_aac.databinding.ActivityChooseWordPassBinding;
 import com.example.compass_aac.databinding.ActivityShowSelectedWordBinding;
 import com.example.compass_aac.view.MainActivity;
-import com.example.compass_aac.view.location.SearchLocation;
-import com.example.compass_aac.viewmodel.voiceaac.HearVoiceViewModel;
+import com.example.compass_aac.viewmodel.user.UserPageViewModel;
 import com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel;
 import dagger.hilt.android.AndroidEntryPoint;
-import java.util.Locale;
 import javax.inject.Inject;
 
 @dagger.hilt.android.AndroidEntryPoint

@@ -19,7 +19,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.compass_aac.view.ConvertGPS
-import com.example.data.api.LocationRequest
 import com.example.domain.model.Categories
 import com.example.domain.model.LocationParam
 import com.example.domain.usecase.LocationUseCase

@@ -34,6 +34,8 @@ import com.example.compass_aac.view.login.LoginMain;
 import com.example.compass_aac.view.login.RegisterMain;
 import com.example.compass_aac.view.login.TitleActivity;
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory;
+import com.example.compass_aac.view.user.Customizing;
+import com.example.compass_aac.view.user.UserPage;
 import com.example.compass_aac.view.voiceaac.ChooseWordPass;
 import com.example.compass_aac.view.voiceaac.ChooseWordVoice;
 import com.example.compass_aac.view.voiceaac.HearVoice;
@@ -507,6 +509,14 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     @Override
     public void injectUrgencyCategory(UrgencyCategory arg0) {
+    }
+
+    @Override
+    public void injectCustomizing(Customizing arg0) {
+    }
+
+    @Override
+    public void injectUserPage(UserPage arg0) {
     }
 
     @Override

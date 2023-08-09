@@ -1,10 +1,8 @@
 package com.example.data.api
 
 import com.example.data.model.remote.CategoryResponse
-import retrofit2.Response
+import com.example.data.model.remote.LocationRequest
 import retrofit2.http.Body
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 interface LocationApiService {

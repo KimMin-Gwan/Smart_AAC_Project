@@ -11,6 +11,7 @@ import com.example.compass_aac.view.dailyaac.DailyCategory;
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory;
 import com.example.compass_aac.view.location.SearchLocation;
 import com.example.compass_aac.view.login.TitleActivity;
+import com.example.compass_aac.view.user.UserPage;
 import com.example.compass_aac.viewmodel.MainViewModel;
 import dagger.hilt.android.AndroidEntryPoint;
 

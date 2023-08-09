@@ -4,5 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#F6CE3D</color>
     <color name="lightpurple">#D7DFFB</color>
+
+    //다크모드
     <color name ="category">#FF000000</color>
+    //단어 선택시 클릭 모드
+    <color name="button_pressed">#CED6F6</color>
+    <color name="button_default">#EEE7E7</color>
+    <color name="border_color">#818CBB</color>
 </resources>

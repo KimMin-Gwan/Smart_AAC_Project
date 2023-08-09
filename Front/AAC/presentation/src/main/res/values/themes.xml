@@ -5,12 +5,18 @@
          <item name="colorPrimary">#695CFA</item>
     </style>
 
-    <style name="Theme.Compass_AAC" parent="Base.Theme.Compass_AAC" />
-
     <style name="Theme.App" parent="Theme.MaterialComponents">
-        ...
         <item name="colorOnSurface">#BCBCBC</item>
         <item name="colorSecondary">#7266FF</item>
+    </style>
+
+    <style name="CustomMaterialButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@drawable/button_background</item>
+    </style>
+  <!-- Base application theme. -->
+    <style name="Base.Base.Theme.Compass_AAC" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
 </resources>

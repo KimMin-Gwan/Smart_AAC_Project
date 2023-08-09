@@ -15,20 +15,14 @@ import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
-import com.example.compass_aac.R
-import com.example.compass_aac.databinding.ActivityChooseWordPassBinding
 import com.example.compass_aac.databinding.ActivityShowSelectedWordBinding
 import com.example.compass_aac.view.MainActivity
-import com.example.compass_aac.view.location.SearchLocation
-import com.example.compass_aac.viewmodel.voiceaac.HearVoiceViewModel
+import com.example.compass_aac.viewmodel.user.UserPageViewModel
 import com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.Locale
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -49,8 +43,8 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
 
     // ViewBinding 객체 선언
     private lateinit var binding: ActivityShowSelectedWordBinding
-
-    private val viewModel: ShowSelectedWordVIewModel by viewModels() // ViewModel 인스턴스 주입
+    // ViewModel 인스턴스 주입
+    private val viewModel: ShowSelectedWordVIewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,11 +76,16 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
 
         viewModel.textToRead.observe(this){text ->
             selectedWord = text
-            val sentence = text.joinToString(" ")
+            val sentence = text.toList().joinToString("\n")
             Log.d("sentence", sentence)
             val formattedText = formatText(sentence, 4)
-            binding.selectedWordShowTv.text= formattedText
+            binding.selectedWordShowTv.text= sentence
         }
+
+//        customizeViewModel.fixedText.observe(this){
+//            binding.customizeText.text = it
+//            viewModel.getTextInf(it)
+//        }
 
 
         binding.selectedWordAnswerBtn.setOnClickListener {

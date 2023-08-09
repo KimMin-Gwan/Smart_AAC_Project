@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 import androidx.activity.OnBackPressedCallback;
 import com.example.compass_aac.view.MainActivity;
 import com.example.compass_aac.R;

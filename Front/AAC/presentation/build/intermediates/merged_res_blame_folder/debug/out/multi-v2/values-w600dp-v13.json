@@ -6,18 +6,18 @@
                 {
                     "source": "C:\\Smart_AAC_Project\\Front\\AAC\\presentation\\src\\main\\res\\values-w600dp\\dimens.xml",
                     "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "57",
-                        "endOffsets": "70"
+                        "startLines": "1,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "16,74",
+                        "endColumns": "57,41",
+                        "endOffsets": "69,111"
                     },
                     "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,113",
+                        "endColumns": "57,41",
+                        "endOffsets": "108,150"
                     }
                 }
             ]

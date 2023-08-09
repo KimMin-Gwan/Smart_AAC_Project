@@ -12,6 +12,5 @@
 package com.example.data.model.remote
 
 data class LoginResponse(
-    val message: String,
-    val status: String
+    val message: String
 )

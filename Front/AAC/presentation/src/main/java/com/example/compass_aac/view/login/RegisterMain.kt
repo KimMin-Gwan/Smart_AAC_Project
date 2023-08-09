@@ -101,7 +101,8 @@ class RegisterMain : AppCompatActivity() {
 
         viewModel.registerResult.observe(this){result ->
             if(result.isSuccess){
-                val intent = Intent(this, MainActivity::class.java)
+                Toast.makeText(this, "회원가입 완료하였습니다. 로그인해주세요.", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, TitleActivity::class.java)
                 startActivity(intent)
             }
             else{

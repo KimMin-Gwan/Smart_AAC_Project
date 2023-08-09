@@ -1,6 +1,10 @@
 R_DEF: Internal format may change without notice
 local
+anim scale_animation
 color black
+color border_color
+color button_default
+color button_pressed
 color category
 color lightpurple
 color white
@@ -8,9 +12,12 @@ color yellow
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen compass_text_size
+dimen fab_margin
 dimen zero_text_size
 drawable aac_information
+drawable button_background
 drawable button_clicked_color
+drawable button_selector_color
 drawable button_unclicked_color
 drawable categorybakery
 drawable categorybooks
@@ -25,6 +32,7 @@ drawable categoryrestaurant
 drawable categorysalon
 drawable categorysubway
 drawable circle_shape
+drawable cutomizing_tv
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable login_back_btn
@@ -46,6 +54,10 @@ drawable title_compass
 drawable title_sub_text
 drawable title_text
 drawable voice_btn
+id FirstFragment
+id SecondFragment
+id action_FirstFragment_to_SecondFragment
+id action_SecondFragment_to_FirstFragment
 id category_btn
 id category_img
 id category_name
@@ -56,6 +68,10 @@ id compass
 id constraintLayout3
 id constraintLayout4
 id constraintLayout5
+id customizeBtn
+id customizeEdit
+id customizeOkBtn
+id customizeText
 id downArrow
 id goRegisterBtn
 id hear_voice_back_btn
@@ -65,7 +81,6 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
-id imageView5
 id linearLayout
 id login_app_bar
 id login_back_btn
@@ -77,6 +92,7 @@ id main_daily_btn
 id main_pass_btn
 id main_urgency_btn
 id main_user
+id nav_graph
 id progressBar
 id rechoose_btn
 id recyclerViewLayout
@@ -114,6 +130,7 @@ layout activity_choose_voice_word_voice
 layout activity_choose_word_item
 layout activity_choose_word_pass
 layout activity_choose_word_voice
+layout activity_customizing
 layout activity_daily_category
 layout activity_hear_voice
 layout activity_login_main
@@ -125,21 +142,30 @@ layout activity_show_selected_word
 layout activity_splash
 layout activity_title
 layout activity_urgency_category
+layout activity_user_page
 mipmap ic_launcher
 mipmap ic_launcher_round
+navigation nav_graph
 string action_sign_in
 string action_sign_in_short
 string app_name
+string first_fragment_label
 string hello_blank_fragment
 string invalid_password
 string invalid_username
 string login_failed
+string lorem_ipsum
+string next
+string previous
 string prompt_email
 string prompt_password
+string second_fragment_label
 string title_activity_login
+string title_activity_user_page
 string welcome
+style Base.Base.Theme.Compass_AAC
 style Base.Theme.Compass_AAC
+style CustomMaterialButton
 style Theme.App
-style Theme.Compass_AAC
 xml backup_rules
 xml data_extraction_rules

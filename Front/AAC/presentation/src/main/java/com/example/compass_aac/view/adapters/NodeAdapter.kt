@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
@@ -59,7 +60,12 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
             holder.chooseWord.text = newName
         }
 
+        //클릭시 에니메이션 적용
+        val scaleAnimation = AnimationUtils.loadAnimation(context, R.anim.scale_animation)
+
         holder.chooseWord.setOnClickListener {
+            it.startAnimation(scaleAnimation)
+            it.isSelected = !it.isSelected
             itemClick?.onClick(it, treeNode)
         }
     }

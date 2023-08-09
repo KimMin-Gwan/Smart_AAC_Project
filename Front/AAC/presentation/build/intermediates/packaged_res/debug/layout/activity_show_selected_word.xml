@@ -27,41 +27,45 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/rechoose_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:text="다시\n선택하기"
-                android:textSize="10sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.942"
-                app:layout_constraintStart_toEndOf="@+id/select_word_back_btn"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="422dp"
-                android:layout_height="261dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/aac_information"
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView5"-->
+<!--                android:layout_width="422dp"-->
+<!--                android:layout_height="261dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:src="@drawable/aac_information"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.545"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/select_word_back_btn" />-->
+
+            <TextView
+                android:id="@+id/customizeText"
+                android:layout_width="350dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="8dp"
+                android:text="안녕하세요!\n저는 언어소통에 어려움이 있습니다.\n저는 COMPASS앱을 통해\n효율적이고 빠른 의사소통을 합니다.\n저에게 추가로 하고 싶은 말이 있으시면\n아래 [대답하기]를 눌러주시면 음성인식이 됩니다.\n친절히 응대해주셔서 감사합니다."
+                android:background="@drawable/cutomizing_tv"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.545"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/select_word_back_btn" />
+                app:layout_constraintTop_toBottomOf="@+id/select_word_back_btn"/>
+
 
             <ImageButton
                 android:id="@+id/ttsBtn1"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="90dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="88dp"
                 android:background="@color/black"
                 android:src="@drawable/select_voice_word"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.876"
+                app:layout_constraintHorizontal_bias="0.894"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,12 +82,13 @@
                 android:layout_marginLeft="35dp"
                 android:layout_marginRight="35dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
                 android:background= "@drawable/text_radius"
                 android:gravity="center"
                 android:padding="20dp"
                 android:text="선택된 단어\n\n\n\n\n\n\n"
                 android:textColor="#636060"
-                android:textSize="15sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -92,8 +97,8 @@
 
             <ImageButton
                 android:id="@+id/ttsBtn"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="#FBE9FF"
                 android:src="@drawable/select_voice_word"
                 app:layout_constraintBottom_toBottomOf="@+id/selected_word_show_tv"
@@ -101,7 +106,7 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/selected_word_show_tv"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.974" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -128,6 +133,18 @@
             android:layout_marginRight="35dp"
             android:layout_marginTop="10dp"
             android:text="사용 완료하기"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rechoose_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:text="다시 선택하기"
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="10dp" />

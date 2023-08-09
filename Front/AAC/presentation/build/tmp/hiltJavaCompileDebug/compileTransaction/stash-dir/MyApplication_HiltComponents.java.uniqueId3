@@ -15,6 +15,8 @@ import com.example.compass_aac.view.login.LoginMain_GeneratedInjector;
 import com.example.compass_aac.view.login.RegisterMain_GeneratedInjector;
 import com.example.compass_aac.view.login.TitleActivity_GeneratedInjector;
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory_GeneratedInjector;
+import com.example.compass_aac.view.user.Customizing_GeneratedInjector;
+import com.example.compass_aac.view.user.UserPage_GeneratedInjector;
 import com.example.compass_aac.view.voiceaac.ChooseWordPass_GeneratedInjector;
 import com.example.compass_aac.view.voiceaac.ChooseWordVoice_GeneratedInjector;
 import com.example.compass_aac.view.voiceaac.HearVoice_GeneratedInjector;
@@ -216,6 +218,8 @@ public final class MyApplication_HiltComponents {
       RegisterMain_GeneratedInjector,
       TitleActivity_GeneratedInjector,
       UrgencyCategory_GeneratedInjector,
+      Customizing_GeneratedInjector,
+      UserPage_GeneratedInjector,
       ChooseWordPass_GeneratedInjector,
       ChooseWordVoice_GeneratedInjector,
       HearVoice_GeneratedInjector,

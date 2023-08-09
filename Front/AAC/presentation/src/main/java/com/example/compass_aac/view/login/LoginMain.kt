@@ -20,6 +20,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.core.widget.addTextChangedListener
@@ -77,8 +78,6 @@ class LoginMain : AppCompatActivity() {
         //로그인 버튼 눌렀을 때
         binding.loginBtn.setOnClickListener {
             viewModel.CheckLogin()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }
 
         binding.goRegisterBtn.setOnClickListener {
@@ -92,15 +91,15 @@ class LoginMain : AppCompatActivity() {
         }
 
 
-//        viewModel.loginresult.observe(this){ result ->
-//            if(result.isSuccess){
-//                val intent = Intent(this, MainActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else{
-//                Toast.makeText(this, "로그인이 되지 않았습니다. 다시 시도해주세요", Toast.LENGTH_SHORT).show()
-//            }
-//        }
+        viewModel.loginresult.observe(this){ result ->
+            if(result.isSuccess){
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            else{
+                Toast.makeText(this, "로그인이 되지 않았습니다. 다시 시도해주세요", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
     // EditText 입력 상태를 확인하여 로그인 버튼 상태 업데이트
     fun checkLoginButtonStatus() {

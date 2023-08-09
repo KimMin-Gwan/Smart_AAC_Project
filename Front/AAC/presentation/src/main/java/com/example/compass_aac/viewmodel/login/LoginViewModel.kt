@@ -19,6 +19,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.model.Login
+import com.example.domain.model.Loginrequest
 import com.example.domain.usecase.LoginUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -37,8 +38,8 @@ class LoginViewModel @Inject constructor(private val usecase: LoginUseCase):View
     private val _userloginpw = MutableLiveData<String>()
      val userLoginPw: LiveData<String> = _userloginpw
 
-    private val _loginresult = MutableLiveData<Result<List<Login>>>()
-     val loginresult : LiveData<Result<List<Login>>> get() = _loginresult
+    private val _loginresult = MutableLiveData<Result<Login>>()
+     val loginresult : LiveData<Result<Login>> get() = _loginresult
 
     fun updateUserLoginPhone(phone: String) {
         _userloginphone.value = phone
@@ -53,18 +54,19 @@ class LoginViewModel @Inject constructor(private val usecase: LoginUseCase):View
         val enteredUserphone = _userloginphone.value
         val enteredPassword = _userloginpw.value
         Log.d("entered", "${enteredUserphone}, $enteredPassword")
+        val login = Loginrequest(enteredUserphone!!,enteredPassword!!)
 
         viewModelScope.launch {
             withContext(Dispatchers.IO){
                 try {
-                    val response = usecase.invoke(enteredUserphone!!,enteredPassword!!)
+                    val response = usecase.invoke(login)
                     Log.d("response", response.toString())
-                    if(response.isNotEmpty()){
+//                    if(response.message=""){
                         _loginresult.postValue(Result.success(response))
-                    }
-                    else{
-                        _loginresult.postValue(Result.failure(Throwable("fail")))
-                    }
+//                    }
+//                    else{
+//                        _loginresult.postValue(Result.failure(Throwable("fail")))
+//                    }
                 }
                 catch (e :Exception)
                 {

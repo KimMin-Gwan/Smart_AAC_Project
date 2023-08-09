@@ -6,18 +6,18 @@
                 {
                     "source": "C:\\Smart_AAC_Project\\Front\\AAC\\presentation\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "58",
-                        "endOffsets": "71"
+                        "startLines": "1,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "16,75",
+                        "endColumns": "58,42",
+                        "endOffsets": "70,113"
                     },
                     "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "58",
-                        "endOffsets": "109"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,114",
+                        "endColumns": "58,42",
+                        "endOffsets": "109,152"
                     }
                 }
             ]

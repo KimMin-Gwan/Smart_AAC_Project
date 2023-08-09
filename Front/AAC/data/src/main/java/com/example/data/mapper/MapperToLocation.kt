@@ -1,7 +1,6 @@
 package com.example.data.mapper
 
-import android.location.Location
-import com.example.data.api.LocationRequest
+import com.example.data.model.remote.LocationRequest
 import com.example.domain.model.LocationParam
 
 

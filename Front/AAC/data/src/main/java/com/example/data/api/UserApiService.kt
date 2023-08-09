@@ -12,31 +12,26 @@
 
 package com.example.data.api
 
+import com.example.data.model.remote.LoginRequest
 import com.example.data.model.remote.LoginResponse
+import com.example.data.model.remote.RegisterRequest
 import com.example.data.model.remote.RegisterResponse
-import retrofit2.Response
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
+import retrofit2.http.Body
 import retrofit2.http.POST
 
 
 //사용자 정보
 interface UserApiService {
-    //로그인
-    @FormUrlEncoded
+    //로그인, json
     @POST("/login")
     suspend fun loginUser(
-        @Field("phone") phone: String,
-        @Field("password") password: String
-    ): List<LoginResponse>
+       @Body login : LoginRequest
+    ): LoginResponse
 
-    //회원가입
-    @FormUrlEncoded
+    //회원가입, json
     @POST("/register")
     suspend fun registerUser(
-        @Field("name") name: String,
-        @Field("phone") phone: String,
-        @Field("password") password :String,
-    ): List<RegisterResponse>
+        @Body register : RegisterRequest
+    ): RegisterResponse
 }
 
