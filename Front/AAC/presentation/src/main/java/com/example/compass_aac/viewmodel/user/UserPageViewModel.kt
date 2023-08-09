@@ -13,11 +13,11 @@ class UserPageViewModel :ViewModel() {
     val fixedText: LiveData<String> get() = _fixedText
 
     fun updateCustomize(text: String){
-        _customize.postValue(text)
+        _customize.value = text
     }
 
     fun fixedText(fixedText: String){
-        _fixedText.postValue(fixedText)
+        _fixedText.value= fixedText
     }
 
 }

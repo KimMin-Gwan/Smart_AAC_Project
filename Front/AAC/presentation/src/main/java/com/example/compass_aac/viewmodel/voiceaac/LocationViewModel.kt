@@ -23,8 +23,10 @@ import com.example.domain.model.Categories
 import com.example.domain.model.LocationParam
 import com.example.domain.usecase.LocationUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 
@@ -38,49 +40,44 @@ class LocationViewModel @Inject constructor(private val usecase : LocationUseCas
     val _categoryResult = MutableLiveData<Result<Categories>>()
     val categoryResult : LiveData<Result<Categories>> get() = _categoryResult
 
+    //현재 위치 받아오기
     fun fetchLocationAsync() = viewModelScope.launch {
-        _isLoading.postValue(true)
+        _isLoading.value = true
 
-        try {
-            val result = usecase.execute()
-            Log.d("location", result.toString())
-            val location: Location? = result.getOrNull()
+        withContext(Dispatchers.IO){
+            try {
+                val result = usecase.execute()
+                Log.d("location", result.toString())
+                val location: Location? = result.getOrNull()
 
-            Log.d("location", location.toString())
+                Log.d("location", location.toString())
 
-            location?.let {
-                val latitude = it.latitude
-                val longitude = it.longitude
-                Log.d("Location", "Latitude: ${latitude}, Longitude: ${longitude}")
-                val XY = ConvertGPS(0, location.latitude, location.longitude)
-                Log.d("좌표 값", "${XY.x}, ${XY.y}")
-                val locationRequest = LocationParam(latitude,longitude)
-                val categoryresult = usecase.getCategories(locationRequest)
-                _categoryResult.postValue(Result.success(categoryresult))
+                location?.let {
+                    val latitude = it.latitude
+                    val longitude = it.longitude
+                    Log.d("Location", "Latitude: ${latitude}, Longitude: ${longitude}")
+                    val XY = ConvertGPS(0, location.latitude, location.longitude)
+                    Log.d("좌표 값", "${XY.x}, ${XY.y}")
 
-                Log.d("categoryresult", categoryresult.toString())
-
-
-
-
-                //x,y좌표값 서버에 전송 후 카테고리 응답값 받기
-
-
-                //받아온 카테고리 값 livedata에 저장
-
+                    //x,y좌표값 서버에 전송 후 카테고리 응답값 받기
+                    //받아온 카테고리 값 livedata에 저장
+                    val locationRequest = LocationParam(latitude,longitude)
+                    val categoryresult = usecase.getCategories(locationRequest)
+                    _categoryResult.postValue(Result.success(categoryresult))
+                    Log.d("categoryresult", categoryresult.toString())
 
                 } ?: run {
-                    Log.d("hi", "hi")
-                // location이 null인 경우 실행될 코드를 여기에 작성
-            }
-            delay(3000)
-            _isLoading.postValue(false)
+                    // location이 null인 경우 실행될 코드를 여기에 작성
+                }
+                delay(3000)
+                _isLoading.postValue(false)
 
             } catch (e: Exception) {
-            Log.e("LocationViewModel", "Error fetching location", e)
-        } finally {
-            delay(2000)
-            _isLoading.postValue(false)
+                Log.e("LocationViewModel", "Error fetching location", e)
+            } finally {
+                delay(2000)
+                _isLoading.postValue(false)
+            }
         }
         return@launch
     }

@@ -37,7 +37,7 @@ class PassCategoryViewModel @Inject constructor(private val findNodeRepository: 
     fun initCategoryData(categoryData: String) : List<String> {
         val categories  = categoryData.split(",")  //공백있으면 공백 추가
         Log.d("categories", categories.toString())
-        _categoryResult.postValue(categories)
+        _categoryResult.value = categories
         return categories
     }
 
@@ -45,14 +45,14 @@ class PassCategoryViewModel @Inject constructor(private val findNodeRepository: 
     //가져온 카테고리 문자열을 id로변환
     fun getCategory(categorystring: List<String>): List<Int> {
         Log.d("category", categorystring.toString())
-        val categoryId = ConvertCategoryId(categorystring!!)
-
+        val categoryId = ConvertCategoryId(categorystring)
         return categoryId
     }
 
     fun makeNode() : NodeList {
         return findNodeRepository.MakeNode()
     }
+
     private fun calculateCategoryList(categoryData: String): List<String> {
         val categorystring = initCategoryData(categoryData)
         val nodeList = makeNode()
@@ -66,6 +66,7 @@ class PassCategoryViewModel @Inject constructor(private val findNodeRepository: 
 
         return convertstring
     }
+
     private fun defaultcalculateCategoryList(categoryData: String): List<String> {
         val categorystring = initCategoryData(categoryData)
         val nodeList = makeNode()

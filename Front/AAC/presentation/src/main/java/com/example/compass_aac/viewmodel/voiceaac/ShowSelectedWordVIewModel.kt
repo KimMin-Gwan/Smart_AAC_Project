@@ -56,12 +56,12 @@ class ShowSelectedWordVIewModel @Inject constructor(private val showSelectedWord
     fun getText(text : ArrayList<String>){
         val gettext = text.toString()
         Log.d("getText", gettext)
-         _textToRead.postValue(text)
+         _textToRead.value = text
     }
 
     //커스터마이즈 문장 가져오기
     fun getTextInf(text: String){
-        _customizedText.postValue(text)
+        _customizedText.value = text
     }
 
     fun resetData(){

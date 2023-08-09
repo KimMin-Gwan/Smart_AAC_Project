@@ -12,7 +12,9 @@ import com.example.domain.model.KeyParam
 import com.example.domain.model.VoiceCategory
 import com.example.domain.usecase.VoiceUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import kotlin.math.log
 
@@ -40,17 +42,20 @@ class ChooseWordVoiceViewModel @Inject constructor(private val findNodeRepositor
 
 
     fun getCategory(voiceText : String)= viewModelScope.launch{
-        try {
-            Log.d("voiceText", voiceText)
-            val keyparam = KeyParam(voiceText)
-            val response = voiceUseCase.voiceCategory(keyparam)
-            _category.postValue(Result.success(response))
+        withContext(Dispatchers.IO){
+            try {
+                Log.d("voiceText", voiceText)
+                val keyparam = KeyParam(voiceText)
+                val response = voiceUseCase.voiceCategory(keyparam)
+                _category.postValue(Result.success(response))
 
-            Log.d("response", response.key)
+                Log.d("response", response.key)
 
 
-        } catch (e:Exception){
-            Log.d("VoiceViewModel", "${e.message}")
+            } catch (e:Exception){
+                Log.d("VoiceViewModel", "${e.message}")
+            }
+
         }
     }
 }

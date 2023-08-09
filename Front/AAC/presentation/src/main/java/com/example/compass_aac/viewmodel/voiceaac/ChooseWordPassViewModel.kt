@@ -37,7 +37,7 @@ class ChooseWordPassViewModel @Inject constructor(private val findNodeRepository
 
 
     fun UpdateSelectedWord(sentence : List<String>){
-        _selectedWord.postValue(sentence)
+        _selectedWord.value = sentence
     }
 
 //    fun getCategoryId(selectedId : Int){
@@ -74,7 +74,7 @@ class ChooseWordPassViewModel @Inject constructor(private val findNodeRepository
     }
 
     fun updateCategory(category: String) {
-        _categories.postValue(category)
+        _categories.value = category
     }
 
     fun OnResetData(){
