@@ -48,6 +48,9 @@ class ChooseWordPass() : AppCompatActivity() {
     private lateinit var category : String
     private lateinit var child_list :ArrayList<Tree_Node>
 
+    //클릭한 단어들 계층별로 해쉬맵에 저장
+    private val clickedWord : HashMap<Int, String> =  hashMapOf()
+
     private val selectedWord : ArrayList<String> = arrayListOf()
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
@@ -64,6 +67,7 @@ class ChooseWordPass() : AppCompatActivity() {
         binding = ActivityChooseWordPassBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         // 카테고리 변경을 관찰
         viewModel.categories.observe(this) { selectedCategory ->
 
@@ -76,7 +80,8 @@ class ChooseWordPass() : AppCompatActivity() {
             //override
             adapter.itemClick = object : NodeAdapter.ItemClick {
                 override fun onClick(view: View, treeNode: Tree_Node) {
-
+                    Log.d("클릭된 단어", treeNode.getName())
+                    CheckHashMap(treeNode.getName())
                     selectedWord.add(treeNode.getName())
                     val childTree = viewModel.getAAC_Tree(treeNode.getId())
                     Log.d("자식노드", childTree.toString())
@@ -143,5 +148,10 @@ class ChooseWordPass() : AppCompatActivity() {
 
     companion object {
         const val SELECTED_CATEGORY = "selectedCategory"
+    }
+
+
+    private fun CheckHashMap(clickedWord :String){
+
     }
 }

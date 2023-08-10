@@ -61,12 +61,12 @@ class LoginViewModel @Inject constructor(private val usecase: LoginUseCase):View
                 try {
                     val response = usecase.invoke(login)
                     Log.d("response", response.toString())
-//                    if(response.message=""){
+                    if(response.message=="login success"){
                         _loginresult.postValue(Result.success(response))
-//                    }
-//                    else{
-//                        _loginresult.postValue(Result.failure(Throwable("fail")))
-//                    }
+                    }
+                    else{
+                        _loginresult.postValue(Result.failure(Throwable("fail")))
+                    }
                 }
                 catch (e :Exception)
                 {
