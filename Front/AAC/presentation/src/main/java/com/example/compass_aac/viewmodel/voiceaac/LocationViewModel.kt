@@ -43,31 +43,31 @@ class LocationViewModel @Inject constructor(private val usecase : LocationUseCas
     //현재 위치 받아오기
     fun fetchLocationAsync() = viewModelScope.launch {
         _isLoading.value = true
-
-        withContext(Dispatchers.IO){
             try {
-                val result = usecase.execute()
-                Log.d("location", result.toString())
-                val location: Location? = result.getOrNull()
+                withContext(Dispatchers.IO) {
+                    val result = usecase.execute()
+                    Log.d("location", result.toString())
+                    val location: Location? = result.getOrNull()
 
-                Log.d("location", location.toString())
+                    Log.d("location", location.toString())
 
-                location?.let {
-                    val latitude = it.latitude
-                    val longitude = it.longitude
-                    Log.d("Location", "Latitude: ${latitude}, Longitude: ${longitude}")
-                    val XY = ConvertGPS(0, location.latitude, location.longitude)
-                    Log.d("좌표 값", "${XY.x}, ${XY.y}")
+                    location?.let {
+                        val latitude = it.latitude
+                        val longitude = it.longitude
+                        Log.d("Location", "Latitude: ${latitude}, Longitude: ${longitude}")
+                        val XY = ConvertGPS(0, location.latitude, location.longitude)
+                        Log.d("좌표 값", "${XY.x}, ${XY.y}")
 
-                    //x,y좌표값 서버에 전송 후 카테고리 응답값 받기
-                    //받아온 카테고리 값 livedata에 저장
-                    val locationRequest = LocationParam(latitude,longitude)
-                    val categoryresult = usecase.getCategories(locationRequest)
-                    _categoryResult.postValue(Result.success(categoryresult))
-                    Log.d("categoryresult", categoryresult.toString())
+                        //x,y좌표값 서버에 전송 후 카테고리 응답값 받기
+                        //받아온 카테고리 값 livedata에 저장
+                        val locationRequest = LocationParam(latitude, longitude)
+                        val categoryresult = usecase.getCategories(locationRequest)
+                        _categoryResult.postValue(Result.success(categoryresult))
+                        Log.d("categoryresult", categoryresult.toString())
 
-                } ?: run {
-                    // location이 null인 경우 실행될 코드를 여기에 작성
+                    } ?: run {
+                        // location이 null인 경우 실행될 코드를 여기에 작성
+                    }
                 }
                 delay(3000)
                 _isLoading.postValue(false)
@@ -78,7 +78,7 @@ class LocationViewModel @Inject constructor(private val usecase : LocationUseCas
                 delay(2000)
                 _isLoading.postValue(false)
             }
-        }
+
         return@launch
     }
 }

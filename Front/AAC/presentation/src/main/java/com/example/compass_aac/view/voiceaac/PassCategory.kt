@@ -78,9 +78,6 @@ class PassCategory : AppCompatActivity() {
 
         this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback) //위에서 생성한 콜백 인스턴스 붙여주기
 
-        // ViewModel
-//        viewModel = ViewModelProvider(this).get(PassCategoryViewModel::class.java)
-
 
         // intent로부터 categoryData를 받아 ViewModel에 전달
         var categoryData = intent.getStringExtra("CATEGORY") ?: "default"
@@ -104,8 +101,6 @@ class PassCategory : AppCompatActivity() {
 //            binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
 //            binding.recyclerView.adapter = adapter
 //        }
-
-//        val categories = arrayListOf("편의점", "문구점", "영화관", "마트", "도서관", "카페", "서점", "미용실", "식당")
 
 
 

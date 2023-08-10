@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.compass_aac.R
 import com.example.compass_aac.view.voiceaac.ShowSelectedWord
@@ -56,6 +57,7 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
         } else {
             holder.chooseWord.isEnabled = true
             holder.chooseWord.visibility = View.VISIBLE
+
             val newName = treeNode.getName().replace(" ", "\n")
             holder.chooseWord.text = newName
         }
@@ -68,6 +70,7 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
             it.isSelected = !it.isSelected
             itemClick?.onClick(it, treeNode)
         }
+
     }
 
     fun UpdateChild(childNode: ArrayList<Tree_Node>, selectedword: ArrayList<String>) {
@@ -83,6 +86,8 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
         notifyItemRangeInserted(positionStart, childTree.size - positionStart)
     }
 
+
+    //빈노드 생성하기
     private fun fillEmptyNodes() {
         var extraItems = 0
         if (childTree.size % 3 != 0) {

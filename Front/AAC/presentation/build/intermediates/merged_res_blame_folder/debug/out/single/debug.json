@@ -4,16 +4,16 @@
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\anim\\scale_animation.xml"
     },
     {
-        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\drawable_categorysalon.png.flat",
-        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\drawable\\categorysalon.png"
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\layout_activity_register_main.xml.flat",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_register_main.xml"
     },
     {
-        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\drawable_categorysalon.png.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\drawable\\categorysalon.png"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -26,6 +26,10 @@
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.compass_aac.presentation-merged_res-6:/layout_activity_choose_word_item.xml.flat",
+        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_choose_word_item.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\layout_activity_choose_pass_category_item.xml.flat",
@@ -44,12 +48,12 @@
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\layout_activity_title.xml.flat",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\xml_data_extraction_rules.xml.flat",
@@ -222,10 +226,6 @@
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "com.example.compass_aac.presentation-merged_res-6:/layout_activity_show_selected_word.xml.flat",
-        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_show_selected_word.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\layout_activity_user_page.xml.flat",

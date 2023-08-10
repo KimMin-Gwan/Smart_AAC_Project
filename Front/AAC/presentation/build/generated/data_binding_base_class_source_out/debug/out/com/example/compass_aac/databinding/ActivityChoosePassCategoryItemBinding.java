@@ -8,18 +8,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityChoosePassCategoryItemBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final MaterialCardView rootView;
 
   @NonNull
   public final MaterialButton categoryBtn;
@@ -30,7 +30,7 @@ public final class ActivityChoosePassCategoryItemBinding implements ViewBinding 
   @NonNull
   public final TextView categoryName;
 
-  private ActivityChoosePassCategoryItemBinding(@NonNull ConstraintLayout rootView,
+  private ActivityChoosePassCategoryItemBinding(@NonNull MaterialCardView rootView,
       @NonNull MaterialButton categoryBtn, @NonNull ImageView categoryImg,
       @NonNull TextView categoryName) {
     this.rootView = rootView;
@@ -41,7 +41,7 @@ public final class ActivityChoosePassCategoryItemBinding implements ViewBinding 
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public MaterialCardView getRoot() {
     return rootView;
   }
 
@@ -84,7 +84,7 @@ public final class ActivityChoosePassCategoryItemBinding implements ViewBinding 
         break missingId;
       }
 
-      return new ActivityChoosePassCategoryItemBinding((ConstraintLayout) rootView, categoryBtn,
+      return new ActivityChoosePassCategoryItemBinding((MaterialCardView) rootView, categoryBtn,
           categoryImg, categoryName);
     }
     String missingId = rootView.getResources().getResourceName(id);

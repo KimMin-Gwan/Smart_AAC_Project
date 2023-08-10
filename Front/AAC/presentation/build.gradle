@@ -99,6 +99,8 @@ dependencies {
     //hilt
     implementation "com.google.dagger:hilt-android:2.44"
     kapt "com.google.dagger:hilt-compiler:2.44"
+
+    //material design
 }
 // Allow references to generated code
 kapt {

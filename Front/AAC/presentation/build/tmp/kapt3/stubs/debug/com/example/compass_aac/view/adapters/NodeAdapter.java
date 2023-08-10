@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.compass_aac.R;
 import com.example.compass_aac.view.voiceaac.ShowSelectedWord;

@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Location
+import android.os.Looper
 import com.google.android.gms.location.LocationRequest
 import androidx.core.app.ActivityCompat
 import com.example.data.model.remote.CategoryResponse
@@ -15,6 +16,7 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.suspendCancellableCoroutine
 import retrofit2.Response
 import javax.inject.Inject
 import kotlin.coroutines.resume
@@ -32,7 +34,7 @@ class LocationDataSourceImpl @Inject constructor(
     }
 
 
-    private suspend fun getLastKnownLocation(): Result<Location?> = suspendCoroutine { continuation ->
+    private suspend fun getLastKnownLocation(): Result<Location?> = suspendCancellableCoroutine { continuation ->
         val locationRequest = LocationRequest.create().apply {
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY
             numUpdates = 1
@@ -47,7 +49,11 @@ class LocationDataSourceImpl @Inject constructor(
                     fusedLocationClient.removeLocationUpdates(this)
                 }
             }
-            fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, null)
+            fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper())
+            continuation.invokeOnCancellation {
+                fusedLocationClient.removeLocationUpdates(locationCallback)
+            }
         }
     }
+
 }
