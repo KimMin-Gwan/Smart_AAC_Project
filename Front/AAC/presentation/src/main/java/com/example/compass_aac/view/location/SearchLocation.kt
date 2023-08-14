@@ -24,6 +24,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.example.compass_aac.databinding.ActivitySearchLocationBinding
 import com.example.compass_aac.viewmodel.voiceaac.LocationViewModel
@@ -69,6 +70,17 @@ class SearchLocation : AppCompatActivity() {
             } else {
                 // 에러 처리
                 Log.e("MainActivity", "Error fetching category", result.exceptionOrNull())
+            }
+        }
+
+        //위치 탐색 오류로 다시 위치 탐색할 때
+        locationViewModel.researchBtn.observe(this){
+            if (it == "visible"){
+                binding.locSearchBtn.isVisible = true
+
+                binding.locSearchBtn.setOnClickListener {
+                    recreate()
+                }
             }
         }
 

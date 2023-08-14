@@ -3453,6 +3453,7 @@ id linear
 id linearLayout
 id listMode
 id list_item
+id locSearchBtn
 id locale
 id login_app_bar
 id login_back_btn
@@ -3709,6 +3710,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon

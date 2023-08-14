@@ -3452,6 +3452,7 @@ int id linear 0x7f080112
 int id linearLayout 0x7f080113
 int id listMode 0x7f080114
 int id list_item 0x7f080115
+int id locSearchBtn 0x7f080254
 int id locale 0x7f080116
 int id login_app_bar 0x7f080117
 int id login_back_btn 0x7f080118
@@ -3708,6 +3709,7 @@ int id textView2 0x7f080212
 int id textView3 0x7f080213
 int id textView4 0x7f080214
 int id textView5 0x7f080215
+int id textView6 0x7f080255
 int id textWatcher 0x7f080216
 int id text_input_end_icon 0x7f080217
 int id text_input_error_icon 0x7f080218

@@ -40,10 +40,6 @@
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_customizing.xml"
     },
     {
-        "merged": "com.example.compass_aac.presentation-mergeDebugResources-5:/layout/activity_login_main.xml",
-        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_login_main.xml"
-    },
-    {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_user_page.xml",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_user_page.xml"
     },
@@ -54,6 +50,10 @@
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_pass_category.xml",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_pass_category.xml"
+    },
+    {
+        "merged": "com.example.compass_aac.presentation-mergeDebugResources-5:/layout/activity_search_location.xml",
+        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_search_location.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_hear_voice.xml",
@@ -70,10 +70,6 @@
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_register_main.xml",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_register_main.xml"
-    },
-    {
-        "merged": "com.example.compass_aac.presentation-mergeDebugResources-5:/layout/activity_title.xml",
-        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_title.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_daily_category.xml",

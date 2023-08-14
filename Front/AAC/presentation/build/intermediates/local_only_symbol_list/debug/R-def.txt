@@ -81,6 +81,7 @@ id imageView2
 id imageView3
 id imageView4
 id linearLayout
+id locSearchBtn
 id login_app_bar
 id login_back_btn
 id login_btn
@@ -117,6 +118,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id title_login_btn
 id title_tv
 id title_unlogin_btn

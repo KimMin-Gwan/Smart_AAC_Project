@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -28,14 +29,23 @@ public final class ActivitySearchLocationBinding implements ViewBinding {
   public final ImageView imageView;
 
   @NonNull
+  public final MaterialButton locSearchBtn;
+
+  @NonNull
   public final ProgressBar progressBar;
 
+  @NonNull
+  public final TextView textView6;
+
   private ActivitySearchLocationBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView compass, @NonNull ImageView imageView, @NonNull ProgressBar progressBar) {
+      @NonNull TextView compass, @NonNull ImageView imageView, @NonNull MaterialButton locSearchBtn,
+      @NonNull ProgressBar progressBar, @NonNull TextView textView6) {
     this.rootView = rootView;
     this.compass = compass;
     this.imageView = imageView;
+    this.locSearchBtn = locSearchBtn;
     this.progressBar = progressBar;
+    this.textView6 = textView6;
   }
 
   @Override
@@ -77,14 +87,26 @@ public final class ActivitySearchLocationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.locSearchBtn;
+      MaterialButton locSearchBtn = ViewBindings.findChildViewById(rootView, id);
+      if (locSearchBtn == null) {
+        break missingId;
+      }
+
       id = R.id.progressBar;
       ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
         break missingId;
       }
 
+      id = R.id.textView6;
+      TextView textView6 = ViewBindings.findChildViewById(rootView, id);
+      if (textView6 == null) {
+        break missingId;
+      }
+
       return new ActivitySearchLocationBinding((ConstraintLayout) rootView, compass, imageView,
-          progressBar);
+          locSearchBtn, progressBar, textView6);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
