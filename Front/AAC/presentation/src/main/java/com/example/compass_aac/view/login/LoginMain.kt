@@ -80,7 +80,7 @@ class LoginMain : AppCompatActivity() {
             viewModel.CheckLogin()
         }
 
-        binding.goRegisterBtn.setOnClickListener {
+        binding.loginRegisterBtn.setOnClickListener {
             val intent = Intent(this, RegisterMain::class.java)
             startActivity(intent)
         }

@@ -3404,7 +3404,6 @@ int id frost 0x7f0800e1
 int id fullscreen_header 0x7f0800e2
 int id ghost_view 0x7f0800e3
 int id ghost_view_holder 0x7f0800e4
-int id goRegisterBtn 0x7f0800e5
 int id gone 0x7f0800e6
 int id graph 0x7f0800e7
 int id graph_wrap 0x7f0800e8
@@ -3457,9 +3456,9 @@ int id locale 0x7f080116
 int id login_app_bar 0x7f080117
 int id login_back_btn 0x7f080118
 int id login_btn 0x7f080119
-int id login_kakao_btn 0x7f08011a
 int id login_phone_edt 0x7f08011b
 int id login_pw_edt 0x7f08011c
+int id login_register_btn 0x7f080252
 int id ltr 0x7f08011d
 int id m3_side_sheet 0x7f08011e
 int id main_daily_btn 0x7f08011f
@@ -3724,9 +3723,9 @@ int id time 0x7f080221
 int id title 0x7f080222
 int id titleDividerNoCustom 0x7f080223
 int id title_login_btn 0x7f080224
-int id title_register_btn 0x7f080225
 int id title_template 0x7f080226
 int id title_tv 0x7f080227
+int id title_unlogin_btn 0x7f080253
 int id toggle 0x7f080228
 int id top 0x7f080229
 int id topPanel 0x7f08022a

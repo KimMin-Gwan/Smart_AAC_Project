@@ -30,21 +30,21 @@ public final class ActivityTitleBinding implements ViewBinding {
   public final MaterialButton titleLoginBtn;
 
   @NonNull
-  public final MaterialButton titleRegisterBtn;
+  public final ImageView titleTv;
 
   @NonNull
-  public final ImageView titleTv;
+  public final MaterialButton titleUnloginBtn;
 
   private ActivityTitleBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout constraintLayout5, @NonNull ImageView imageView3,
-      @NonNull MaterialButton titleLoginBtn, @NonNull MaterialButton titleRegisterBtn,
-      @NonNull ImageView titleTv) {
+      @NonNull MaterialButton titleLoginBtn, @NonNull ImageView titleTv,
+      @NonNull MaterialButton titleUnloginBtn) {
     this.rootView = rootView;
     this.constraintLayout5 = constraintLayout5;
     this.imageView3 = imageView3;
     this.titleLoginBtn = titleLoginBtn;
-    this.titleRegisterBtn = titleRegisterBtn;
     this.titleTv = titleTv;
+    this.titleUnloginBtn = titleUnloginBtn;
   }
 
   @Override
@@ -92,20 +92,20 @@ public final class ActivityTitleBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.title_register_btn;
-      MaterialButton titleRegisterBtn = ViewBindings.findChildViewById(rootView, id);
-      if (titleRegisterBtn == null) {
-        break missingId;
-      }
-
       id = R.id.title_tv;
       ImageView titleTv = ViewBindings.findChildViewById(rootView, id);
       if (titleTv == null) {
         break missingId;
       }
 
+      id = R.id.title_unlogin_btn;
+      MaterialButton titleUnloginBtn = ViewBindings.findChildViewById(rootView, id);
+      if (titleUnloginBtn == null) {
+        break missingId;
+      }
+
       return new ActivityTitleBinding((ConstraintLayout) rootView, constraintLayout5, imageView3,
-          titleLoginBtn, titleRegisterBtn, titleTv);
+          titleLoginBtn, titleTv, titleUnloginBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

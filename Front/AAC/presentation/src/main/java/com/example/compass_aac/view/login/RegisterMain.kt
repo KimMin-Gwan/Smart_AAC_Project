@@ -36,7 +36,7 @@ class RegisterMain : AppCompatActivity() {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            val intent= Intent(this@RegisterMain, TitleActivity::class.java)
+            val intent= Intent(this@RegisterMain, LoginMain::class.java)
             startActivity(intent)
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
             // 뒤로가기 시 실행할 코드

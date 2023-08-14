@@ -73,7 +73,6 @@ id customizeEdit
 id customizeOkBtn
 id customizeText
 id downArrow
-id goRegisterBtn
 id hear_voice_back_btn
 id hear_voice_btn
 id hear_voice_end_btn
@@ -85,9 +84,9 @@ id linearLayout
 id login_app_bar
 id login_back_btn
 id login_btn
-id login_kakao_btn
 id login_phone_edt
 id login_pw_edt
+id login_register_btn
 id main_daily_btn
 id main_pass_btn
 id main_urgency_btn
@@ -119,8 +118,8 @@ id textView3
 id textView4
 id textView5
 id title_login_btn
-id title_register_btn
 id title_tv
+id title_unlogin_btn
 id ttsBtn
 id ttsBtn1
 id voiceText

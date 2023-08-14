@@ -4,7 +4,6 @@ package com.example.compass_aac.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -32,9 +31,6 @@ public final class ActivityLoginMainBinding implements ViewBinding {
   public final ConstraintLayout constraintLayout4;
 
   @NonNull
-  public final Button goRegisterBtn;
-
-  @NonNull
   public final ImageView imageView2;
 
   @NonNull
@@ -47,13 +43,13 @@ public final class ActivityLoginMainBinding implements ViewBinding {
   public final MaterialButton loginBtn;
 
   @NonNull
-  public final MaterialButton loginKakaoBtn;
-
-  @NonNull
   public final EditText loginPhoneEdt;
 
   @NonNull
   public final EditText loginPwEdt;
+
+  @NonNull
+  public final MaterialButton loginRegisterBtn;
 
   @NonNull
   public final TextView textView2;
@@ -63,22 +59,21 @@ public final class ActivityLoginMainBinding implements ViewBinding {
 
   private ActivityLoginMainBinding(@NonNull ScrollView rootView,
       @NonNull ConstraintLayout constraintLayout3, @NonNull ConstraintLayout constraintLayout4,
-      @NonNull Button goRegisterBtn, @NonNull ImageView imageView2,
-      @NonNull ConstraintLayout loginAppBar, @NonNull ImageButton loginBackBtn,
-      @NonNull MaterialButton loginBtn, @NonNull MaterialButton loginKakaoBtn,
-      @NonNull EditText loginPhoneEdt, @NonNull EditText loginPwEdt, @NonNull TextView textView2,
+      @NonNull ImageView imageView2, @NonNull ConstraintLayout loginAppBar,
+      @NonNull ImageButton loginBackBtn, @NonNull MaterialButton loginBtn,
+      @NonNull EditText loginPhoneEdt, @NonNull EditText loginPwEdt,
+      @NonNull MaterialButton loginRegisterBtn, @NonNull TextView textView2,
       @NonNull TextView textView4) {
     this.rootView = rootView;
     this.constraintLayout3 = constraintLayout3;
     this.constraintLayout4 = constraintLayout4;
-    this.goRegisterBtn = goRegisterBtn;
     this.imageView2 = imageView2;
     this.loginAppBar = loginAppBar;
     this.loginBackBtn = loginBackBtn;
     this.loginBtn = loginBtn;
-    this.loginKakaoBtn = loginKakaoBtn;
     this.loginPhoneEdt = loginPhoneEdt;
     this.loginPwEdt = loginPwEdt;
+    this.loginRegisterBtn = loginRegisterBtn;
     this.textView2 = textView2;
     this.textView4 = textView4;
   }
@@ -122,12 +117,6 @@ public final class ActivityLoginMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.goRegisterBtn;
-      Button goRegisterBtn = ViewBindings.findChildViewById(rootView, id);
-      if (goRegisterBtn == null) {
-        break missingId;
-      }
-
       id = R.id.imageView2;
       ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
       if (imageView2 == null) {
@@ -152,12 +141,6 @@ public final class ActivityLoginMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.login_kakao_btn;
-      MaterialButton loginKakaoBtn = ViewBindings.findChildViewById(rootView, id);
-      if (loginKakaoBtn == null) {
-        break missingId;
-      }
-
       id = R.id.login_phone_edt;
       EditText loginPhoneEdt = ViewBindings.findChildViewById(rootView, id);
       if (loginPhoneEdt == null) {
@@ -167,6 +150,12 @@ public final class ActivityLoginMainBinding implements ViewBinding {
       id = R.id.login_pw_edt;
       EditText loginPwEdt = ViewBindings.findChildViewById(rootView, id);
       if (loginPwEdt == null) {
+        break missingId;
+      }
+
+      id = R.id.login_register_btn;
+      MaterialButton loginRegisterBtn = ViewBindings.findChildViewById(rootView, id);
+      if (loginRegisterBtn == null) {
         break missingId;
       }
 
@@ -183,8 +172,8 @@ public final class ActivityLoginMainBinding implements ViewBinding {
       }
 
       return new ActivityLoginMainBinding((ScrollView) rootView, constraintLayout3,
-          constraintLayout4, goRegisterBtn, imageView2, loginAppBar, loginBackBtn, loginBtn,
-          loginKakaoBtn, loginPhoneEdt, loginPwEdt, textView2, textView4);
+          constraintLayout4, imageView2, loginAppBar, loginBackBtn, loginBtn, loginPhoneEdt,
+          loginPwEdt, loginRegisterBtn, textView2, textView4);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

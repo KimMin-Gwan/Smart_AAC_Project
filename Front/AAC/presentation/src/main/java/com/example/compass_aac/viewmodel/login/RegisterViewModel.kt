@@ -68,13 +68,13 @@ class RegisterViewModel @Inject constructor(private val usecase: RegisterUseCase
             withContext(Dispatchers.IO){
                 try {
                     val response = usecase.invoke(register)
-//                    if (response.isNotEmpty()){
+                    if (response.message == "register failed phone already exists or invalid number"){
+                        _registerResult.postValue(Result.failure(Throwable("fail")))
+                    }
+                    else{
                         _registerResult.postValue(Result.success(response))
                         Log.d("response", response.toString())
-//                    }
-//                    else{
-//                        _registerResult.postValue(Result.failure(Throwable("fail")))
-//                    }
+                    }
 
                 }
                 catch (e:Exception){

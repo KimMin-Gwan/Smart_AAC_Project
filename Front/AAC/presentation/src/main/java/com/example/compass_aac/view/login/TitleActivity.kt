@@ -16,6 +16,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.compass_aac.databinding.ActivityTitleBinding
+import com.example.compass_aac.view.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -33,8 +34,8 @@ class TitleActivity : AppCompatActivity() {
 
         }
         //회원가입 눌렀을 때
-        binding.titleRegisterBtn.setOnClickListener {
-            val intent = Intent(this, RegisterMain::class.java)
+        binding.titleUnloginBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 

@@ -79,7 +79,6 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
             intent.putExtra("selectedword", selectedword)
             context.startActivity(intent)
         }
-
         val positionStart = itemCount
         childTree.addAll(childNode)
         fillEmptyNodes()

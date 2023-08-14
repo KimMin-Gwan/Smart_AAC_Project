@@ -3405,7 +3405,6 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
-id goRegisterBtn
 id gone
 id graph
 id graph_wrap
@@ -3458,9 +3457,9 @@ id locale
 id login_app_bar
 id login_back_btn
 id login_btn
-id login_kakao_btn
 id login_phone_edt
 id login_pw_edt
+id login_register_btn
 id ltr
 id m3_side_sheet
 id main_daily_btn
@@ -3725,9 +3724,9 @@ id time
 id title
 id titleDividerNoCustom
 id title_login_btn
-id title_register_btn
 id title_template
 id title_tv
+id title_unlogin_btn
 id toggle
 id top
 id topPanel
