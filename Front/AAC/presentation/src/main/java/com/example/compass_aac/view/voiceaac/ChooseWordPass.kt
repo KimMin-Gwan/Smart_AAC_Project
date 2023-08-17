@@ -15,24 +15,16 @@ import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.speech.tts.TextToSpeech
-import android.speech.tts.TextToSpeech.OnInitListener
 import android.util.Log
 import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.compass_aac.R
 import com.example.compass_aac.databinding.ActivityChooseWordPassBinding
-import com.example.compass_aac.databinding.ActivityPassCategoryBinding
 import com.example.compass_aac.view.adapters.NodeAdapter
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel
-import com.example.compass_aac.viewmodel.voiceaac.HearVoiceViewModel
-import com.example.data.repository.FindNodeRepositoryImpl
 import com.example.data.source.remote.Tree_Node
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 
 @AndroidEntryPoint
@@ -74,14 +66,13 @@ class ChooseWordPass() : AppCompatActivity() {
             child_list = viewModel.processUpdateNodes()!!
 
             adapter = NodeAdapter(child_list, this)
-            binding.recyclerViewPass.layoutManager = GridLayoutManager(this, 3)
+            binding.recyclerViewPass.layoutManager = GridLayoutManager(this, 2)
             binding.recyclerViewPass.adapter = adapter
 
             //override
             adapter.itemClick = object : NodeAdapter.ItemClick {
                 override fun onClick(view: View, treeNode: Tree_Node) {
                     Log.d("클릭된 단어", treeNode.getName())
-                    CheckHashMap(treeNode.getName())
                     selectedWord.add(treeNode.getName())
                     val childTree = viewModel.getAAC_Tree(treeNode.getId())
                     Log.d("자식노드", childTree.toString())
@@ -120,6 +111,11 @@ class ChooseWordPass() : AppCompatActivity() {
         }
         this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
 
+        //다시 선택하기
+        binding.reChooseBtn.setOnClickListener {
+            recreate()
+        }
+
     }
 
 
@@ -148,10 +144,5 @@ class ChooseWordPass() : AppCompatActivity() {
 
     companion object {
         const val SELECTED_CATEGORY = "selectedCategory"
-    }
-
-
-    private fun CheckHashMap(clickedWord :String){
-
     }
 }

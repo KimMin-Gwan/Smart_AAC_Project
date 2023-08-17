@@ -3,6 +3,7 @@ local
 anim scale_animation
 color black
 color border_color
+color border_color_pass
 color button_default
 color button_pressed
 color category
@@ -15,6 +16,7 @@ dimen compass_text_size
 dimen fab_margin
 dimen zero_text_size
 drawable aac_information
+drawable baseline_refresh_24
 drawable button_background
 drawable button_clicked_color
 drawable button_selector_color
@@ -31,6 +33,7 @@ drawable categorymart
 drawable categoryrestaurant
 drawable categorysalon
 drawable categorysubway
+drawable choose_word_background
 drawable circle_shape
 drawable cutomizing_tv
 drawable ic_launcher_background
@@ -61,8 +64,12 @@ id action_SecondFragment_to_FirstFragment
 id category_btn
 id category_img
 id category_name
-id chooseWordPassTv
-id chooseWordVoiceTv
+id chooseWordName
+id chooseWordPassBtn
+id chooseWordPassImg
+id chooseWordVoiceBtn
+id chooseWordVoiceImg
+id chooseWordVoiceName
 id choose_pass_back_btn
 id compass
 id constraintLayout3
@@ -72,8 +79,6 @@ id customizeBtn
 id customizeEdit
 id customizeOkBtn
 id customizeText
-id downArrow
-id downArrowVoice
 id hear_voice_back_btn
 id hear_voice_btn
 id hear_voice_end_btn
@@ -95,8 +100,8 @@ id main_urgency_btn
 id main_user
 id nav_graph
 id progressBar
+id reChooseBtn
 id rechoose_btn
-id recyclerViewLayout
 id recycler_view
 id recycler_view_pass
 id recycler_view_voice

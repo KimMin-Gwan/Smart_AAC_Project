@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.compass_aac.R
@@ -22,7 +23,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val context: Context) : RecyclerView.Adapter<NodeAdapter.ViewHolder>() {
 
     init {
-        fillEmptyNodes()
+//        fillEmptyNodes()
     }
 
     interface ItemClick {
@@ -32,8 +33,10 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
     var itemClick: ItemClick? = null
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val chooseWord: Button = view.findViewById(R.id.chooseWordPassTv)
-        val downarrow: ImageView = view.findViewById(R.id.downArrow)
+        val chooseWord: Button = view.findViewById(R.id.chooseWordPassBtn)
+        val chooseName : TextView = view.findViewById(R.id.chooseWordName)
+        val chooseImg : ImageView = view.findViewById(R.id.chooseWordPassImg)
+//        val downarrow: ImageView = view.findViewById(R.id.downArrow)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -48,8 +51,8 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
         val treeNode = childTree[position]
 
         // 화살표 보이기: 현재 위치가 마지막 줄의 가운데 버튼인 경우에만
-        holder.downarrow.visibility =
-            if ((position % 3 == 1) && ((position / 3) == (itemCount - 1) / 3)) View.VISIBLE else View.INVISIBLE
+//        holder.downarrow.visibility =
+//            if ((position % 3 == 1) && ((position / 3) == (itemCount - 1) / 3)) View.VISIBLE else View.INVISIBLE
 
         if (childTree[position].getName() == "") {
             holder.chooseWord.isEnabled = false
@@ -59,7 +62,7 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
             holder.chooseWord.visibility = View.VISIBLE
 
             val newName = treeNode.getName().replace(" ", "\n")
-            holder.chooseWord.text = newName
+            holder.chooseName.text = newName
         }
 
         //클릭시 에니메이션 적용
@@ -80,23 +83,25 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
             context.startActivity(intent)
         }
         val positionStart = itemCount
-        childTree.addAll(childNode)
-        fillEmptyNodes()
-        notifyItemRangeInserted(positionStart, childTree.size - positionStart)
+//        childTree.addAll(childNode)
+        childTree = childNode
+//        fillEmptyNodes()
+//        notifyItemRangeInserted(positionStart, childTree.size - positionStart)
+        notifyDataSetChanged()
     }
 
 
     //빈노드 생성하기
-    private fun fillEmptyNodes() {
-        var extraItems = 0
-        if (childTree.size % 3 != 0) {
-            extraItems = 3 - (childTree.size % 3)
-        }
-
-        for (i in 0 until extraItems) {
-            val emptyNode = Node().apply { node_init(-1, "", arrayListOf()) }
-            val emptyTreeNode = Tree_Node(emptyNode)
-            childTree.add(emptyTreeNode)
-        }
-    }
+//    private fun fillEmptyNodes() {
+//        var extraItems = 0
+//        if (childTree.size % 3 != 0) {
+//            extraItems = 3 - (childTree.size % 3)
+//        }
+//
+//        for (i in 0 until extraItems) {
+//            val emptyNode = Node().apply { node_init(-1, "", arrayListOf()) }
+//            val emptyTreeNode = Tree_Node(emptyNode)
+//            childTree.add(emptyTreeNode)
+//        }
+//    }
 }

@@ -5,37 +5,43 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityChooseVoiceWordVoiceBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final MaterialCardView rootView;
 
   @NonNull
-  public final MaterialButton chooseWordVoiceTv;
+  public final MaterialButton chooseWordVoiceBtn;
 
   @NonNull
-  public final ImageView downArrowVoice;
+  public final ImageView chooseWordVoiceImg;
 
-  private ActivityChooseVoiceWordVoiceBinding(@NonNull LinearLayout rootView,
-      @NonNull MaterialButton chooseWordVoiceTv, @NonNull ImageView downArrowVoice) {
+  @NonNull
+  public final TextView chooseWordVoiceName;
+
+  private ActivityChooseVoiceWordVoiceBinding(@NonNull MaterialCardView rootView,
+      @NonNull MaterialButton chooseWordVoiceBtn, @NonNull ImageView chooseWordVoiceImg,
+      @NonNull TextView chooseWordVoiceName) {
     this.rootView = rootView;
-    this.chooseWordVoiceTv = chooseWordVoiceTv;
-    this.downArrowVoice = downArrowVoice;
+    this.chooseWordVoiceBtn = chooseWordVoiceBtn;
+    this.chooseWordVoiceImg = chooseWordVoiceImg;
+    this.chooseWordVoiceName = chooseWordVoiceName;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public MaterialCardView getRoot() {
     return rootView;
   }
 
@@ -60,20 +66,26 @@ public final class ActivityChooseVoiceWordVoiceBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.chooseWordVoiceTv;
-      MaterialButton chooseWordVoiceTv = ViewBindings.findChildViewById(rootView, id);
-      if (chooseWordVoiceTv == null) {
+      id = R.id.chooseWordVoiceBtn;
+      MaterialButton chooseWordVoiceBtn = ViewBindings.findChildViewById(rootView, id);
+      if (chooseWordVoiceBtn == null) {
         break missingId;
       }
 
-      id = R.id.downArrowVoice;
-      ImageView downArrowVoice = ViewBindings.findChildViewById(rootView, id);
-      if (downArrowVoice == null) {
+      id = R.id.chooseWordVoiceImg;
+      ImageView chooseWordVoiceImg = ViewBindings.findChildViewById(rootView, id);
+      if (chooseWordVoiceImg == null) {
         break missingId;
       }
 
-      return new ActivityChooseVoiceWordVoiceBinding((LinearLayout) rootView, chooseWordVoiceTv,
-          downArrowVoice);
+      id = R.id.chooseWordVoiceName;
+      TextView chooseWordVoiceName = ViewBindings.findChildViewById(rootView, id);
+      if (chooseWordVoiceName == null) {
+        break missingId;
+      }
+
+      return new ActivityChooseVoiceWordVoiceBinding((MaterialCardView) rootView,
+          chooseWordVoiceBtn, chooseWordVoiceImg, chooseWordVoiceName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -11,4 +11,6 @@
     <color name="button_pressed">#CED6F6</color>
     <color name="button_default">#EEE7E7</color>
     <color name="border_color">#818CBB</color>
+
+    <color name="border_color_pass">#D9E0FF</color>
 </resources>

@@ -11,8 +11,8 @@
         android:id="@+id/splashTv"
         android:layout_width="227dp"
         android:layout_height="127dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="100dp"
         android:src="@drawable/title_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +21,7 @@
         android:id="@+id/splashImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/title_compass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -31,7 +31,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/title_sub_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

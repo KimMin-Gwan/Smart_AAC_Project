@@ -93,7 +93,6 @@ class ChooseWordVoice : AppCompatActivity() {
                         selectedWord.add(treeNode.getName())
                         val childtree = viewModel.getAAC_Tree(treeNode.getId())
                         Log.d("자식노드", childtree.toString())
-
                         adapter.UpdateChild(childtree, selectedWord)
 
                     }

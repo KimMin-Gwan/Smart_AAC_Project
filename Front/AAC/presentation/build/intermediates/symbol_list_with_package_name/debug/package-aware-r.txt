@@ -1415,6 +1415,7 @@ color background_material_light
 color background_text_color
 color black
 color border_color
+color border_color_pass
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -3011,6 +3012,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_refresh_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3035,6 +3037,7 @@ drawable categorymart
 drawable categoryrestaurant
 drawable categorysalon
 drawable categorysubway
+drawable choose_word_background
 drawable circle_shape
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -3301,8 +3304,12 @@ id chain2
 id chains
 id checkbox
 id checked
-id chooseWordPassTv
-id chooseWordVoiceTv
+id chooseWordName
+id chooseWordPassBtn
+id chooseWordPassImg
+id chooseWordVoiceBtn
+id chooseWordVoiceImg
+id chooseWordVoiceName
 id choose_pass_back_btn
 id chronometer
 id circle_center
@@ -3358,8 +3365,6 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
-id downArrow
-id downArrowVoice
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3578,9 +3583,9 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id reChooseBtn
 id rechoose_btn
 id rectangles
-id recyclerViewLayout
 id recycler_view
 id recycler_view_pass
 id recycler_view_voice

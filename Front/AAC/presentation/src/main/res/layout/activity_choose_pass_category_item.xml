@@ -5,8 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:backgroundTint="#CED6F6"
-    app:cardElevation="5dp"
+    android:backgroundTint="@color/white"
+    app:cardElevation="4dp"
     app:cardUseCompatPadding="true"
     android:padding="5dp">
 
@@ -19,7 +19,7 @@
             android:id="@+id/category_btn"
             android:layout_width="140dp"
             android:layout_height="170dp"
-            android:backgroundTint="#CED6F6"
+            android:backgroundTint="@color/white"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:text="@{category}"
             android:textColor="@color/black"
-            android:textSize="21sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,14 +43,14 @@
 
         <ImageView
             android:id="@+id/category_img"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.785"
+            app:layout_constraintHorizontal_bias="0.733"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/category_name"
-            app:layout_constraintVertical_bias="0.698" />
+            app:layout_constraintVertical_bias="0.644" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

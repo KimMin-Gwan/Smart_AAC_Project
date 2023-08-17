@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.compass_aac.R
 import com.example.compass_aac.view.voiceaac.ShowSelectedWord
@@ -25,8 +26,9 @@ class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val cont
     var itemClick: ItemClick? = null
 
     class ViewHolder(view:View) : RecyclerView.ViewHolder(view){
-        val chooseWord: Button = view.findViewById(R.id.chooseWordVoiceTv)
-        val downarrow: ImageView = view.findViewById(R.id.downArrowVoice)
+        val chooseWord: Button = view.findViewById(R.id.chooseWordVoiceBtn)
+        val chooseVoiceName : TextView = view.findViewById(R.id.chooseWordVoiceName)
+        val chooseVoiceImg : ImageView = view.findViewById(R.id.chooseWordVoiceImg)
 
     }
 
@@ -41,10 +43,6 @@ class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val cont
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val treeNode = childTree[position]
 
-        // 화살표 보이기: 현재 위치가 마지막 줄의 가운데 버튼인 경우에만
-        holder.downarrow.visibility =
-            if ((position % 3 == 1) && ((position / 3) == (itemCount - 1) / 3)) View.VISIBLE else View.INVISIBLE
-
         if (childTree[position].getName() == "") {
             holder.chooseWord.isEnabled = false
             holder.chooseWord.visibility = View.INVISIBLE
@@ -53,7 +51,7 @@ class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val cont
             holder.chooseWord.visibility = View.VISIBLE
 
             val newName = treeNode.getName().replace(" ", "\n")
-            holder.chooseWord.text = newName
+            holder.chooseVoiceName.text = newName
         }
 
         //클릭시 에니메이션 적용
@@ -74,24 +72,10 @@ class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val cont
             context.startActivity(intent)
         }
         val positionStart = itemCount
-        childTree.addAll(childNode)
-        fillEmptyNodes()
+//        childTree.addAll(childNode)
+        childTree = childNode
         notifyItemRangeInserted(positionStart, childTree.size - positionStart)
 
-    }
-
-    //빈노드 생성하기
-    private fun fillEmptyNodes() {
-        var extraItems = 0
-        if (childTree.size % 3 != 0) {
-            extraItems = 3 - (childTree.size % 3)
-        }
-
-        for (i in 0 until extraItems) {
-            val emptyNode = Node().apply { node_init(-1, "", arrayListOf()) }
-            val emptyTreeNode = Tree_Node(emptyNode)
-            childTree.add(emptyTreeNode)
-        }
     }
 
 }

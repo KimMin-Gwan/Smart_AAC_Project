@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,7 +25,7 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
   public final ImageButton choosePassBackBtn;
 
   @NonNull
-  public final LinearLayout recyclerViewLayout;
+  public final ImageButton reChooseBtn;
 
   @NonNull
   public final RecyclerView recyclerViewPass;
@@ -35,11 +34,11 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
   public final MaterialButton selectwordBtn;
 
   private ActivityChooseWordPassBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton choosePassBackBtn, @NonNull LinearLayout recyclerViewLayout,
+      @NonNull ImageButton choosePassBackBtn, @NonNull ImageButton reChooseBtn,
       @NonNull RecyclerView recyclerViewPass, @NonNull MaterialButton selectwordBtn) {
     this.rootView = rootView;
     this.choosePassBackBtn = choosePassBackBtn;
-    this.recyclerViewLayout = recyclerViewLayout;
+    this.reChooseBtn = reChooseBtn;
     this.recyclerViewPass = recyclerViewPass;
     this.selectwordBtn = selectwordBtn;
   }
@@ -77,9 +76,9 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recyclerViewLayout;
-      LinearLayout recyclerViewLayout = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerViewLayout == null) {
+      id = R.id.reChooseBtn;
+      ImageButton reChooseBtn = ViewBindings.findChildViewById(rootView, id);
+      if (reChooseBtn == null) {
         break missingId;
       }
 
@@ -96,7 +95,7 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
       }
 
       return new ActivityChooseWordPassBinding((ConstraintLayout) rootView, choosePassBackBtn,
-          recyclerViewLayout, recyclerViewPass, selectwordBtn);
+          reChooseBtn, recyclerViewPass, selectwordBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

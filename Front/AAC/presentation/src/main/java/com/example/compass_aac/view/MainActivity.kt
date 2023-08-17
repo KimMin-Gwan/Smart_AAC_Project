@@ -38,21 +38,21 @@ class MainActivity : AppCompatActivity() {
 
 
     //뒤로 가기 두번 누르면 로그아웃되고 다시 로그인 하는 창으로 이동
-    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
-        override fun handleOnBackPressed() {
-            val currentTime = System.currentTimeMillis()
-            val intervalTime = currentTime - backPressedTime
-
-            if (intervalTime in 0..2000) {
-                val intent = Intent(this@MainActivity, TitleActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(intent)
-            } else {
-                backPressedTime = currentTime
-                Toast.makeText(applicationContext, "뒤로가기 버튼을 한번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
+//    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+//        override fun handleOnBackPressed() {
+//            val currentTime = System.currentTimeMillis()
+//            val intervalTime = currentTime - backPressedTime
+//
+//            if (intervalTime in 0..2000) {
+//                val intent = Intent(this@MainActivity, ::class.java)
+//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+//                startActivity(intent)
+//            } else {
+//                backPressedTime = currentTime
+//                Toast.makeText(applicationContext, "뒤로가기 버튼을 한번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show()
+//            }
+//        }
+//    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
+//        this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
 
 
         //PASS AAC

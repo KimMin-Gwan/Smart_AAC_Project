@@ -1,42 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="10dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:backgroundTint="@color/white"
 
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    android:padding="5dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/chooseWordPassTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:backgroundTint="@drawable/button_selector_color"
-            android:gravity="center"
-            android:elevation="10dp"
-            android:stateListAnimator="@null"
-            android:text="단어"
-            android:textColor="#636060"
-            android:textSize="18sp"
-            app:cornerRadius="5dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="31dp" />
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/chooseWordPassBtn"
+                    android:layout_width="140dp"
+                    android:layout_height="170dp"
+                    android:backgroundTint="@color/white"
+                    app:cornerRadius="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/chooseWordName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="단어"
+                    android:textColor="#515151"
+                    android:textSize="21sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.504"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chooseWordPassImg"
+                    app:layout_constraintVertical_bias="0.39" />
 
                 <ImageView
-                    android:id="@+id/downArrow"
-                    android:layout_width="30dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="-20dp"
-                    android:src="@drawable/select_word_arrow" />
+                    android:id="@+id/chooseWordPassImg"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="28dp"
+                    android:src="@drawable/login_compass"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/chooseWordPassTv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:backgroundTint="@drawable/button_selector_color"-->
+<!--            android:gravity="center"-->
+<!--            android:elevation="10dp"-->
+<!--            android:stateListAnimator="@null"-->
+<!--            android:text="단어"-->
+<!--            android:textColor="#636060"-->
+<!--            android:textSize="18sp"-->
+<!--            app:cornerRadius="5dp"-->
+<!--            tools:layout_editor_absoluteX="16dp"-->
+<!--            tools:layout_editor_absoluteY="31dp" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/downArrow"-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginStart="-20dp"-->
+<!--                    android:src="@drawable/select_word_arrow" />-->
+
+<!--        </LinearLayout>-->
