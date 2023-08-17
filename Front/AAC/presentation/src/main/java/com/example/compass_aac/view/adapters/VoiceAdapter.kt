@@ -6,11 +6,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.compass_aac.R
 import com.example.compass_aac.view.voiceaac.ShowSelectedWord
 import com.example.data.source.remote.Tree_Node
+import com.example.json.Node
 
 
 class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val context: Context) : RecyclerView.Adapter<VoiceAdapter.ViewHolder>() {
@@ -21,10 +24,9 @@ class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val cont
 
     var itemClick: ItemClick? = null
 
-//    private var childTree: MutableList<String> = mutableListOf()
-
     class ViewHolder(view:View) : RecyclerView.ViewHolder(view){
         val chooseWord: Button = view.findViewById(R.id.chooseWordVoiceTv)
+        val downarrow: ImageView = view.findViewById(R.id.downArrowVoice)
 
     }
 
@@ -33,31 +35,37 @@ class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val cont
             .inflate(R.layout.activity_choose_voice_word_voice, parent, false)
         return ViewHolder(view)
     }
+
     override fun getItemCount() = childTree.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.chooseWord.text = childTree[position].getName()
         val treeNode = childTree[position]
 
-        holder.chooseWord.setOnClickListener{
-            Log.d("선택된 값", treeNode.getId().toString())
-            Log.d("t_hashMap", t_hashMap.keys.toString())
-            for ((key, values) in t_hashMap) {
-                if (values.contains(treeNode.getId())) {
-                    Log.d("findLayer", key.toString())
-                }
-                else{
-//                    itemClick?.onClick(it, treeNode)
-                }
-            }
-            itemClick?.onClick(it, treeNode)
+        // 화살표 보이기: 현재 위치가 마지막 줄의 가운데 버튼인 경우에만
+        holder.downarrow.visibility =
+            if ((position % 3 == 1) && ((position / 3) == (itemCount - 1) / 3)) View.VISIBLE else View.INVISIBLE
 
+        if (childTree[position].getName() == "") {
+            holder.chooseWord.isEnabled = false
+            holder.chooseWord.visibility = View.INVISIBLE
+        } else {
+            holder.chooseWord.isEnabled = true
+            holder.chooseWord.visibility = View.VISIBLE
+
+            val newName = treeNode.getName().replace(" ", "\n")
+            holder.chooseWord.text = newName
+        }
+
+        //클릭시 에니메이션 적용
+        val scaleAnimation = AnimationUtils.loadAnimation(context, R.anim.scale_animation)
+
+        holder.chooseWord.setOnClickListener {
+            it.startAnimation(scaleAnimation)
+            it.isSelected = !it.isSelected
+            itemClick?.onClick(it, treeNode)
         }
 
     }
-    var t_hashMap = HashMap<Int, List<Int>>()
-    val totaldataSet : MutableList<List<Int>> = mutableListOf()
-    var layer = 0
 
     fun UpdateChild(childNode : ArrayList<Tree_Node>, selectedword : ArrayList<String>){
         if(childNode.isEmpty()){
@@ -65,10 +73,25 @@ class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val cont
             intent.putExtra("selectedword", selectedword)
             context.startActivity(intent)
         }
-        childTree= childNode
-        notifyDataSetChanged()
+        val positionStart = itemCount
+        childTree.addAll(childNode)
+        fillEmptyNodes()
+        notifyItemRangeInserted(positionStart, childTree.size - positionStart)
 
     }
 
+    //빈노드 생성하기
+    private fun fillEmptyNodes() {
+        var extraItems = 0
+        if (childTree.size % 3 != 0) {
+            extraItems = 3 - (childTree.size % 3)
+        }
+
+        for (i in 0 until extraItems) {
+            val emptyNode = Node().apply { node_init(-1, "", arrayListOf()) }
+            val emptyTreeNode = Tree_Node(emptyNode)
+            childTree.add(emptyTreeNode)
+        }
+    }
 
 }

@@ -3359,6 +3359,7 @@ id disablePostScroll
 id disableScroll
 id disjoint
 id downArrow
+id downArrowVoice
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3662,6 +3663,8 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id splashImg
+id splashTv
 id spline
 id split_action_bar
 id spread

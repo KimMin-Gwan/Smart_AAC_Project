@@ -26,6 +26,10 @@ enum class NodeStatus {
 class Tree_Node(val self_node : Node) {
     var child_tree_node = ArrayList<Tree_Node>()
     var num_child : Int = 0
+
+    fun setLevel(level: Int) {
+        this.self_node.level = level
+    }
     fun setChildNodePointer(tree_node_list : ArrayList<Tree_Node>) {
         this.child_tree_node = tree_node_list
         this.num_child = this.child_tree_node.size
@@ -69,7 +73,7 @@ class AAC_Tree(var root_index :Int, val node_list : NodeList)
     }
 
     // 재귀 부분
-    fun _makeChild(now_node : Tree_Node){
+    fun _makeChild(now_node : Tree_Node, currentLevel: Int = 0){
         val child_list : ArrayList<Int> = now_node.getChildNodeList()
         var now_node_list = ArrayList<Tree_Node>()
         // 재귀 탈출 (자식이 더 없을 때)
@@ -80,6 +84,7 @@ class AAC_Tree(var root_index :Int, val node_list : NodeList)
         {
             // 노드를 생성
             val temp_node = Tree_Node(this.node_list.getNode(node))
+            temp_node.setLevel(currentLevel + 1)  // 레벨 설정
             // Tree node 자식 배열 포인터로 세팅
             now_node_list.add(temp_node)
             // Tree 자체 보관용 포인터
@@ -90,7 +95,7 @@ class AAC_Tree(var root_index :Int, val node_list : NodeList)
 
         // 재귀
         for (node in now_node_list) {
-            this._makeChild(node)
+            this._makeChild(node, currentLevel + 1)  // 다음 레벨로 재귀
         }
 
         // 재귀 탈출 (같은 층에 노드가 더 없을 때)

@@ -100,4 +100,3 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
         }
     }
 }
-

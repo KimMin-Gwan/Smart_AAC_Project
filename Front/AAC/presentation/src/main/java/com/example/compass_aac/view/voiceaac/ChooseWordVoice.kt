@@ -33,8 +33,15 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ChooseWordVoice : AppCompatActivity() {
 
+    //어댑터
     private lateinit var adapter: VoiceAdapter
+    //뷰모델
     private val viewModel: ChooseWordVoiceViewModel by viewModels()
+    //트리 노드
+    private lateinit var childList :ArrayList<Tree_Node>
+
+    //선택된 단어 (클릭된 단어)
+    val selectedWord : ArrayList<String> = arrayListOf()
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
@@ -55,6 +62,7 @@ class ChooseWordVoice : AppCompatActivity() {
         this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
 
 
+        //음성 받아오기
         val voicetext = intent.getStringExtra("voiceText")
         binding.voiceText.text = "\"${voicetext}\""
         Log.d("voiceText", voicetext!! )
@@ -65,36 +73,36 @@ class ChooseWordVoice : AppCompatActivity() {
             val intent = Intent(this, HearVoice::class.java)
             startActivity(intent)
         }
+        else{
+            viewModel.getCategory(voicetext)
+        }
 
-        viewModel.getCategory(voicetext)
 
+        //받아온 음성 카테고리로 변환 후 관찰
         viewModel.category.observe(this){
             if (it.isSuccess){
-                val childTree = it.getOrNull()?.let { result -> viewModel.processNodes(result.key) }
+                val childTree = viewModel.processUpdateNodes()
                 adapter = VoiceAdapter(childTree!!,this)
                 binding.recyclerViewVoice.layoutManager = GridLayoutManager(this, 3)
                 binding.recyclerViewVoice.adapter = adapter
 
+                //버튼 클릭 시
+                adapter.itemClick = object : VoiceAdapter.ItemClick{
+                    override fun onClick(view: View, treeNode: Tree_Node) {
+                        Log.d("클릭된 단어", treeNode.getName())
+                        selectedWord.add(treeNode.getName())
+                        val childtree = viewModel.getAAC_Tree(treeNode.getId())
+                        Log.d("자식노드", childtree.toString())
+
+                        adapter.UpdateChild(childtree, selectedWord)
+
+                    }
+
+                }
             }
         }
 
-        val selectedWord : ArrayList<String> = arrayListOf()
 
-
-
-        //override
-//        adapter.itemClick = object : VoiceAdapter.ItemClick{
-//            override fun onClick(view: View, treeNode: Tree_Node) {
-//
-//                selectedWord.add(treeNode.getName())
-//                val childTree = viewModel.getAAC_Tree(treeNode.getId())
-//                Log.d("자식노드", childTree.toString())
-//
-//                val result = adapter.UpdateChild(childTree, selectedWord)
-//
-//            }
-//
-//        }
 
         binding.selectWordVoiceBackBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()

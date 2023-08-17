@@ -58,7 +58,7 @@ class ChooseWordPassViewModel @Inject constructor(private val findNodeRepository
         return child_stringList
 
     }
-    fun processUpdateNodes(selectedcategory: String): ArrayList<Tree_Node>? {
+    fun processUpdateNodes(): ArrayList<Tree_Node>? {
         val updatedcategory = _categories.value
         val selectedId = updatedcategory?.let { ConvertToId(it) }
 //        getCategoryId(selectedId)

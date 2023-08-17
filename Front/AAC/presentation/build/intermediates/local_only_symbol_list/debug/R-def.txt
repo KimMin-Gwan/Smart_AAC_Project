@@ -73,6 +73,7 @@ id customizeEdit
 id customizeOkBtn
 id customizeText
 id downArrow
+id downArrowVoice
 id hear_voice_back_btn
 id hear_voice_btn
 id hear_voice_end_btn
@@ -113,6 +114,8 @@ id selected_word_answer_btn
 id selected_word_ok_btn
 id selected_word_show_tv
 id selectwordBtn
+id splashImg
+id splashTv
 id textView
 id textView2
 id textView3

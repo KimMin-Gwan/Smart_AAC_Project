@@ -69,9 +69,9 @@ class ChooseWordPass() : AppCompatActivity() {
 
 
         // 카테고리 변경을 관찰
-        viewModel.categories.observe(this) { selectedCategory ->
+        viewModel.categories.observe(this) {
 
-            child_list = viewModel.processUpdateNodes(selectedCategory)!!
+            child_list = viewModel.processUpdateNodes()!!
 
             adapter = NodeAdapter(child_list, this)
             binding.recyclerViewPass.layoutManager = GridLayoutManager(this, 3)

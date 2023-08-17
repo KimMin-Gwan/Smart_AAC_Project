@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -15,6 +14,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textview.MaterialTextView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -36,12 +36,12 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
   public final MaterialButton selectedWordVoiceBtn;
 
   @NonNull
-  public final TextView voiceText;
+  public final MaterialTextView voiceText;
 
   private ActivityChooseWordVoiceBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout linearLayout, @NonNull RecyclerView recyclerViewVoice,
       @NonNull ImageButton selectWordVoiceBackBtn, @NonNull MaterialButton selectedWordVoiceBtn,
-      @NonNull TextView voiceText) {
+      @NonNull MaterialTextView voiceText) {
     this.rootView = rootView;
     this.linearLayout = linearLayout;
     this.recyclerViewVoice = recyclerViewVoice;
@@ -102,7 +102,7 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
       }
 
       id = R.id.voiceText;
-      TextView voiceText = ViewBindings.findChildViewById(rootView, id);
+      MaterialTextView voiceText = ViewBindings.findChildViewById(rootView, id);
       if (voiceText == null) {
         break missingId;
       }

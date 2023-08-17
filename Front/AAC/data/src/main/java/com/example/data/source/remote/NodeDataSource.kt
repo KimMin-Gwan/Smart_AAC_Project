@@ -8,6 +8,7 @@ class Node(){
     var name : String = "name"
     var node_status : NodeStatus = NodeStatus.NOT_USING
     var child_index_list = ArrayList<Int>()
+    var level: Int = 0
     // --------------------------------------------------
     fun setID(id : Int){this._id = id}
     fun getID() : Int  = this._id

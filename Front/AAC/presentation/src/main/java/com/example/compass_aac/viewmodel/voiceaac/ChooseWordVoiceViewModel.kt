@@ -32,10 +32,19 @@ class ChooseWordVoiceViewModel @Inject constructor(private val findNodeRepositor
         return child_string
     }
 
-    fun processNodes(selectedcategory : String): ArrayList<Tree_Node> {
-        val selectedId = ConvertToId(selectedcategory)
+    private fun processNodes(selectedCategory : String): ArrayList<Tree_Node> {
+        val selectedId = ConvertToId(selectedCategory)
 //        getCategoryId(selectedId)
-        val child_stringList = getAAC_Tree(selectedId)
+        val childStringList = getAAC_Tree(selectedCategory.toInt())
+        return childStringList
+
+    }
+
+    fun processUpdateNodes(): ArrayList<Tree_Node>? {
+        val category = _category.value?.getOrNull()
+//        val selectedId = category?.let { ConvertToId(category.key) }
+//        getCategoryId(selectedId)
+        val child_stringList = category?.let { getAAC_Tree(it.key.toInt()) }
         return child_stringList
 
     }
@@ -50,6 +59,8 @@ class ChooseWordVoiceViewModel @Inject constructor(private val findNodeRepositor
                 _category.postValue(Result.success(response))
 
                 Log.d("response", response.key)
+
+//                processNodes(response.key)
 
 
             } catch (e:Exception){

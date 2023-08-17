@@ -7,19 +7,36 @@
     android:padding="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/chooseWordVoiceTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:backgroundTint="#EEE7E7"
-        android:padding="10dp"
-        android:textSize="18sp"
+        app:backgroundTint="@drawable/button_selector_color"
         android:gravity="center"
+        android:elevation="10dp"
+        android:stateListAnimator="@null"
         android:text="단어"
         android:textColor="#636060"
+        android:textSize="18sp"
         app:cornerRadius="5dp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="31dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/downArrowVoice"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="-20dp"
+            android:src="@drawable/select_word_arrow" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
