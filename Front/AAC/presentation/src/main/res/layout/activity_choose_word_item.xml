@@ -7,8 +7,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:backgroundTint="@color/white"
-
-    app:cardElevation="1dp"
+    app:cardElevation="4dp"
     app:cardUseCompatPadding="true"
     android:padding="5dp">
 
@@ -19,10 +18,10 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/chooseWordPassBtn"
-                    android:layout_width="140dp"
+                    android:layout_width="120dp"
                     android:layout_height="170dp"
                     android:backgroundTint="@color/white"
-                    app:cornerRadius="10dp"
+                    app:cornerRadius="5dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

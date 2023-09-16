@@ -71,10 +71,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         //일상 AAC
-        binding.mainDailyBtn.setOnClickListener {
-            val intent = Intent(this, DailyCategory::class.java)
-            startActivity(intent)
-        }
+//        binding.mainDailyBtn.setOnClickListener {
+//            val intent = Intent(this, DailyCategory::class.java)
+//            startActivity(intent)
+//        }
         //긴급 AAC
         binding.mainUrgencyBtn.setOnClickListener {
             val intent = Intent(this, UrgencyCategory::class.java)

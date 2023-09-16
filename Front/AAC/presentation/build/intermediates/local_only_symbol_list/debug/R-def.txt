@@ -16,7 +16,11 @@ dimen compass_text_size
 dimen fab_margin
 dimen zero_text_size
 drawable aac_information
+drawable backgroundlogo
+drawable backgroundlogo1
+drawable backgroundlogo2
 drawable baseline_refresh_24
+drawable blueaac
 drawable button_background
 drawable button_clicked_color
 drawable button_selector_color
@@ -36,6 +40,7 @@ drawable categorysubway
 drawable choose_word_background
 drawable circle_shape
 drawable cutomizing_tv
+drawable greenaac
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable login_back_btn
@@ -46,6 +51,7 @@ drawable main_pass_
 drawable main_urgency_pass
 drawable main_urgencypass
 drawable main_user
+drawable redaac
 drawable register_subtext
 drawable search_location
 drawable search_location_progress_bar
@@ -86,6 +92,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id linearLayout
 id locSearchBtn
 id login_app_bar
@@ -94,10 +101,11 @@ id login_btn
 id login_phone_edt
 id login_pw_edt
 id login_register_btn
-id main_daily_btn
-id main_pass_btn
-id main_urgency_btn
+id mainPassBtn
+id mainUrgencyBtn
 id main_user
+id materialCardView2
+id materialCardView3
 id nav_graph
 id progressBar
 id reChooseBtn
@@ -127,6 +135,8 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textView7
+id textView8
 id title_login_btn
 id title_tv
 id title_unlogin_btn

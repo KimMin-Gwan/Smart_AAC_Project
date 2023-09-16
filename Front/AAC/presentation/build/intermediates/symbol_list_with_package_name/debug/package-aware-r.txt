@@ -3012,7 +3012,11 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable backgroundlogo
+drawable backgroundlogo1
+drawable backgroundlogo2
 drawable baseline_refresh_24
+drawable blueaac
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3066,6 +3070,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable greenaac
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3165,6 +3170,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable redaac
 drawable register_subtext
 drawable search_location
 drawable search_location_progress_bar
@@ -3437,6 +3443,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id immediateStop
 id included
 id indeterminate
@@ -3469,14 +3476,15 @@ id login_pw_edt
 id login_register_btn
 id ltr
 id m3_side_sheet
-id main_daily_btn
-id main_pass_btn
-id main_urgency_btn
+id mainPassBtn
+id mainUrgencyBtn
 id main_user
 id marquee
 id masked
 id match_constraint
 id match_parent
+id materialCardView2
+id materialCardView3
 id material_clock_display
 id material_clock_display_and_toggle
 id material_clock_face
@@ -3719,6 +3727,8 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textView7
+id textView8
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon

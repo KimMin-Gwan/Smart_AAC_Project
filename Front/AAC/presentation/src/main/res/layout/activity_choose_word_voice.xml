@@ -19,6 +19,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/star"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/baseline_stars_24"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/voiceText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/select_word_voice_back_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -35,7 +49,8 @@
             android:id="@+id/recycler_view_voice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="10dp"
+            tools:listitem="@layout/activity_choose_voice_word_voice"
             android:scrollbars="vertical"
             app:layout_constraintBottom_toTopOf="@+id/researchBtn"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,12 +61,13 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/selectedWordVoiceBtn"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/black"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:text="선택완료"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,7 +87,7 @@
         android:padding="10dp"
         android:elevation="4dp"
         android:text="음성인식된 말 넣기"
-        android:textColor="#636060"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@+id/select_word_voice_back_btn"
         app:layout_constraintVertical_bias="0.105"

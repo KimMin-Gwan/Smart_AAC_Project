@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.example.compass_aac.presentation-mergeDebugResources-5:/layout/activity_main.xml",
+        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_main.xml",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_main.xml"
     },
@@ -24,6 +28,10 @@
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_choose_word_item.xml"
     },
     {
+        "merged": "com.example.compass_aac.presentation-mergeDebugResources-5:/layout/activity_choose_word_pass.xml",
+        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_choose_word_pass.xml"
+    },
+    {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_search_location.xml",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_search_location.xml"
     },
@@ -40,8 +48,8 @@
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_customizing.xml"
     },
     {
-        "merged": "com.example.compass_aac.presentation-mergeDebugResources-5:/layout/activity_choose_voice_word_voice.xml",
-        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_choose_voice_word_voice.xml"
+        "merged": "com.example.compass_aac.presentation-mergeDebugResources-5:/layout/activity_choose_word_item.xml",
+        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_choose_word_item.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_user_page.xml",
@@ -60,12 +68,12 @@
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_hear_voice.xml"
     },
     {
-        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_choose_word_voice.xml",
-        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_choose_word_voice.xml"
-    },
-    {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_choose_voice_word_voice.xml",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_choose_voice_word_voice.xml"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_choose_word_voice.xml",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_choose_word_voice.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-mergeDebugResources-5:\\layout\\activity_register_main.xml",

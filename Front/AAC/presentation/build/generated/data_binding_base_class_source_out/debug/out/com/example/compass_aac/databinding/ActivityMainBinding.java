@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,6 +13,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,26 +27,44 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView compass;
 
   @NonNull
-  public final ImageButton mainDailyBtn;
+  public final ImageView imageView5;
 
   @NonNull
-  public final ImageButton mainPassBtn;
+  public final MaterialButton mainPassBtn;
 
   @NonNull
-  public final ImageButton mainUrgencyBtn;
+  public final MaterialButton mainUrgencyBtn;
 
   @NonNull
   public final ImageButton mainUser;
 
+  @NonNull
+  public final MaterialCardView materialCardView2;
+
+  @NonNull
+  public final MaterialCardView materialCardView3;
+
+  @NonNull
+  public final TextView textView7;
+
+  @NonNull
+  public final TextView textView8;
+
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView compass,
-      @NonNull ImageButton mainDailyBtn, @NonNull ImageButton mainPassBtn,
-      @NonNull ImageButton mainUrgencyBtn, @NonNull ImageButton mainUser) {
+      @NonNull ImageView imageView5, @NonNull MaterialButton mainPassBtn,
+      @NonNull MaterialButton mainUrgencyBtn, @NonNull ImageButton mainUser,
+      @NonNull MaterialCardView materialCardView2, @NonNull MaterialCardView materialCardView3,
+      @NonNull TextView textView7, @NonNull TextView textView8) {
     this.rootView = rootView;
     this.compass = compass;
-    this.mainDailyBtn = mainDailyBtn;
+    this.imageView5 = imageView5;
     this.mainPassBtn = mainPassBtn;
     this.mainUrgencyBtn = mainUrgencyBtn;
     this.mainUser = mainUser;
+    this.materialCardView2 = materialCardView2;
+    this.materialCardView3 = materialCardView3;
+    this.textView7 = textView7;
+    this.textView8 = textView8;
   }
 
   @Override
@@ -79,20 +100,20 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.main_daily_btn;
-      ImageButton mainDailyBtn = ViewBindings.findChildViewById(rootView, id);
-      if (mainDailyBtn == null) {
+      id = R.id.imageView5;
+      ImageView imageView5 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView5 == null) {
         break missingId;
       }
 
-      id = R.id.main_pass_btn;
-      ImageButton mainPassBtn = ViewBindings.findChildViewById(rootView, id);
+      id = R.id.mainPassBtn;
+      MaterialButton mainPassBtn = ViewBindings.findChildViewById(rootView, id);
       if (mainPassBtn == null) {
         break missingId;
       }
 
-      id = R.id.main_urgency_btn;
-      ImageButton mainUrgencyBtn = ViewBindings.findChildViewById(rootView, id);
+      id = R.id.mainUrgencyBtn;
+      MaterialButton mainUrgencyBtn = ViewBindings.findChildViewById(rootView, id);
       if (mainUrgencyBtn == null) {
         break missingId;
       }
@@ -103,8 +124,32 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, compass, mainDailyBtn,
-          mainPassBtn, mainUrgencyBtn, mainUser);
+      id = R.id.materialCardView2;
+      MaterialCardView materialCardView2 = ViewBindings.findChildViewById(rootView, id);
+      if (materialCardView2 == null) {
+        break missingId;
+      }
+
+      id = R.id.materialCardView3;
+      MaterialCardView materialCardView3 = ViewBindings.findChildViewById(rootView, id);
+      if (materialCardView3 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView7;
+      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
+      if (textView7 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView8;
+      TextView textView8 = ViewBindings.findChildViewById(rootView, id);
+      if (textView8 == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, compass, imageView5, mainPassBtn,
+          mainUrgencyBtn, mainUser, materialCardView2, materialCardView3, textView7, textView8);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

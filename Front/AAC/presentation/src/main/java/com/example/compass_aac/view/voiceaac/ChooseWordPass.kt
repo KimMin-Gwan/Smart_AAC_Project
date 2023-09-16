@@ -66,7 +66,7 @@ class ChooseWordPass() : AppCompatActivity() {
             child_list = viewModel.processUpdateNodes()!!
 
             adapter = NodeAdapter(child_list, this)
-            binding.recyclerViewPass.layoutManager = GridLayoutManager(this, 2)
+            binding.recyclerViewPass.layoutManager = GridLayoutManager(this, 3)
             binding.recyclerViewPass.adapter = adapter
 
             //override
