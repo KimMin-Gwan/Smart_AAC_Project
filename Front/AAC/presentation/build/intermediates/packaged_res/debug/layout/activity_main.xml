@@ -14,7 +14,7 @@
         android:gravity="center"
         android:text="C O M P A S S"
         android:textColor="#1E0055"
-        android:textSize="26sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,74 +23,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
 
-    <ImageButton
-        android:id="@+id/main_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/main_user"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="600dp"-->
-    <!--        android:layout_marginTop="128dp"-->
-    <!--        android:orientation="horizontal"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="1.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/compass">-->
-
-
-    <!--누구나 AAC-->
-    <!--        <ImageButton-->
-    <!--            android:id="@+id/main_pass_btn"-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:layout_weight="1"-->
-    <!--            android:backgroundTint="@color/white"-->
-    <!--            android:scaleType="centerCrop"-->
-    <!--            android:src="@drawable/main_pass_"-->
-    <!--            android:adjustViewBounds="true"/>-->
-    <!--        &lt;!&ndash;어디든 AAC&ndash;&gt;-->
-    <!--        <ImageButton-->
-    <!--            android:id="@+id/main_daily_btn"-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:layout_weight="1"-->
-    <!--            android:backgroundTint="@color/white"-->
-    <!--            android:scaleType="centerCrop"-->
-    <!--            android:src="@drawable/main_daily_pass"-->
-    <!--            android:adjustViewBounds="true"/>-->
-    <!--        &lt;!&ndash;긴급 AAC&ndash;&gt;-->
-    <!--        <ImageButton-->
-    <!--            android:id="@+id/main_urgency_btn"-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:layout_weight="1"-->
-    <!--            android:adjustViewBounds="true"-->
-    <!--            android:backgroundTint="@color/white"-->
-    <!--            android:scaleType="centerCrop"-->
-    <!--            android:src="@drawable/main_urgency_pass" />-->
-    <!--    </LinearLayout>-->
-
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView2"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="60dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="35dp"
-        android:layout_marginEnd="60dp"
-        android:backgroundTint="#AAECAA"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#B3FAFF"
         android:elevation="8dp"
-        app:cardElevation="5dp"
-        app:strokeColor="#9FE19F"
-        app:strokeWidth="2dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +47,7 @@
                 android:id="@+id/mainPassBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="#AAECAA"
+                android:backgroundTint="#B3FAFF"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -130,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#8DEC8D"
-                android:src="@drawable/greenaac"
+                android:src="@drawable/blueaac"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView7"
                 app:layout_constraintHorizontal_bias="0.627"
@@ -143,19 +85,76 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView4"
+        android:layout_width="135dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#A0EDAC"
+        android:elevation="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/materialCardView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mainStarBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#A0EDAC"
+                app:cornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="즐겨찾기"
+                android:textColor="#E60C4315"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.296"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.148" />
+
+            <ImageView
+                android:layout_width="59dp"
+                android:layout_height="77dp"
+                android:backgroundTint="#85E8EE"
+                android:src="@drawable/greenaac2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.886"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView3"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
+        android:layout_width="175dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginTop="25dp"
         android:backgroundTint="#FF9191"
-        app:strokeWidth="1dp"
-        app:strokeColor="#CF7878"
         android:elevation="8dp"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -178,26 +177,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="H E L P"
+                android:text="긴급"
                 android:textColor="#9F2121"
-                android:textSize="28sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.258"
+                app:layout_constraintHorizontal_bias="0.156"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.156" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="69dp"
+                android:layout_height="88dp"
                 android:backgroundTint="#85E8EE"
+                android:scaleType="fitXY"
                 android:src="@drawable/redaac"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.814"
+                app:layout_constraintHorizontal_bias="0.886"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -210,7 +212,7 @@
         android:layout_height="450dp"
         android:scaleType="fitXY"
         android:src="@drawable/backgroundlogo2"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#9EFFFFFF"
         android:layout_marginBottom="-100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,10 +1,12 @@
 package com.example.compass_aac.module
 
+import com.example.data.repository.FavoriteRepositoryImpl
 import com.example.data.repository.FindNodeRepositoryImpl
 import com.example.data.repository.LocationRepositoryImpl
 import com.example.data.repository.UserRepositoryImpl
 import com.example.data.repository.FindNodeRepository
 import com.example.data.repository.VoiceRepositoryImpl
+import com.example.domain.repository.FavoriteRepository
 import com.example.domain.repository.LocationRepository
 import com.example.domain.repository.UserRepository
 import com.example.domain.repository.VoiceRepository
@@ -29,4 +31,7 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindVoiceRepository(voiceRepositoryImpl: VoiceRepositoryImpl): VoiceRepository
+
+    @Binds
+    abstract fun bindFavoriteRepository(favoriteRepositoryImpl: FavoriteRepositoryImpl) : FavoriteRepository
 }

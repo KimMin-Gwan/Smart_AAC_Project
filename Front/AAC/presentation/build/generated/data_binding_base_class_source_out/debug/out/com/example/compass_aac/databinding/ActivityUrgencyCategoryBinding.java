@@ -4,20 +4,75 @@ package com.example.compass_aac.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityUrgencyCategoryBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private ActivityUrgencyCategoryBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final MaterialCardView danger;
+
+  @NonNull
+  public final MaterialCardView etc;
+
+  @NonNull
+  public final MaterialCardView hospital;
+
+  @NonNull
+  public final ImageButton imageButton;
+
+  @NonNull
+  public final ImageView imageView10;
+
+  @NonNull
+  public final ImageView imageView6;
+
+  @NonNull
+  public final ImageView imageView7;
+
+  @NonNull
+  public final ImageView imageView8;
+
+  @NonNull
+  public final ImageView imageView9;
+
+  @NonNull
+  public final MaterialCardView location;
+
+  @NonNull
+  public final TextView textView9;
+
+  private ActivityUrgencyCategoryBinding(@NonNull ConstraintLayout rootView,
+      @NonNull MaterialCardView danger, @NonNull MaterialCardView etc,
+      @NonNull MaterialCardView hospital, @NonNull ImageButton imageButton,
+      @NonNull ImageView imageView10, @NonNull ImageView imageView6, @NonNull ImageView imageView7,
+      @NonNull ImageView imageView8, @NonNull ImageView imageView9,
+      @NonNull MaterialCardView location, @NonNull TextView textView9) {
     this.rootView = rootView;
+    this.danger = danger;
+    this.etc = etc;
+    this.hospital = hospital;
+    this.imageButton = imageButton;
+    this.imageView10 = imageView10;
+    this.imageView6 = imageView6;
+    this.imageView7 = imageView7;
+    this.imageView8 = imageView8;
+    this.imageView9 = imageView9;
+    this.location = location;
+    this.textView9 = textView9;
   }
 
   @Override
@@ -43,10 +98,81 @@ public final class ActivityUrgencyCategoryBinding implements ViewBinding {
 
   @NonNull
   public static ActivityUrgencyCategoryBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.danger;
+      MaterialCardView danger = ViewBindings.findChildViewById(rootView, id);
+      if (danger == null) {
+        break missingId;
+      }
 
-    return new ActivityUrgencyCategoryBinding((ConstraintLayout) rootView);
+      id = R.id.etc;
+      MaterialCardView etc = ViewBindings.findChildViewById(rootView, id);
+      if (etc == null) {
+        break missingId;
+      }
+
+      id = R.id.hospital;
+      MaterialCardView hospital = ViewBindings.findChildViewById(rootView, id);
+      if (hospital == null) {
+        break missingId;
+      }
+
+      id = R.id.imageButton;
+      ImageButton imageButton = ViewBindings.findChildViewById(rootView, id);
+      if (imageButton == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView10;
+      ImageView imageView10 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView10 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView6;
+      ImageView imageView6 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView6 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView7;
+      ImageView imageView7 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView7 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView8;
+      ImageView imageView8 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView8 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView9;
+      ImageView imageView9 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView9 == null) {
+        break missingId;
+      }
+
+      id = R.id.location;
+      MaterialCardView location = ViewBindings.findChildViewById(rootView, id);
+      if (location == null) {
+        break missingId;
+      }
+
+      id = R.id.textView9;
+      TextView textView9 = ViewBindings.findChildViewById(rootView, id);
+      if (textView9 == null) {
+        break missingId;
+      }
+
+      return new ActivityUrgencyCategoryBinding((ConstraintLayout) rootView, danger, etc, hospital,
+          imageButton, imageView10, imageView6, imageView7, imageView8, imageView9, location,
+          textView9);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

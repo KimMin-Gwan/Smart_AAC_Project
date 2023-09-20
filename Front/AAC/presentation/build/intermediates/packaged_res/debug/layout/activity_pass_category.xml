@@ -55,7 +55,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#7266FF"
+        android:backgroundTint="#000000"
         android:text="위치 다시 탐색하기"
         android:textSize="18sp"
         app:cornerRadius="5dp"

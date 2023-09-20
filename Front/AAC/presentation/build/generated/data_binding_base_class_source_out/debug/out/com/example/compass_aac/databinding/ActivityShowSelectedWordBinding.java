@@ -13,6 +13,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.compass_aac.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -23,6 +24,9 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
 
   @NonNull
   public final TextView customizeText;
+
+  @NonNull
+  public final MaterialCardView materialCardView;
 
   @NonNull
   public final MaterialButton rechooseBtn;
@@ -40,23 +44,29 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
   public final TextView selectedWordShowTv;
 
   @NonNull
+  public final ImageButton star;
+
+  @NonNull
   public final ImageButton ttsBtn;
 
   @NonNull
   public final ImageButton ttsBtn1;
 
   private ActivityShowSelectedWordBinding(@NonNull ScrollView rootView,
-      @NonNull TextView customizeText, @NonNull MaterialButton rechooseBtn,
-      @NonNull ImageButton selectWordBackBtn, @NonNull MaterialButton selectedWordAnswerBtn,
-      @NonNull MaterialButton selectedWordOkBtn, @NonNull TextView selectedWordShowTv,
-      @NonNull ImageButton ttsBtn, @NonNull ImageButton ttsBtn1) {
+      @NonNull TextView customizeText, @NonNull MaterialCardView materialCardView,
+      @NonNull MaterialButton rechooseBtn, @NonNull ImageButton selectWordBackBtn,
+      @NonNull MaterialButton selectedWordAnswerBtn, @NonNull MaterialButton selectedWordOkBtn,
+      @NonNull TextView selectedWordShowTv, @NonNull ImageButton star, @NonNull ImageButton ttsBtn,
+      @NonNull ImageButton ttsBtn1) {
     this.rootView = rootView;
     this.customizeText = customizeText;
+    this.materialCardView = materialCardView;
     this.rechooseBtn = rechooseBtn;
     this.selectWordBackBtn = selectWordBackBtn;
     this.selectedWordAnswerBtn = selectedWordAnswerBtn;
     this.selectedWordOkBtn = selectedWordOkBtn;
     this.selectedWordShowTv = selectedWordShowTv;
+    this.star = star;
     this.ttsBtn = ttsBtn;
     this.ttsBtn1 = ttsBtn1;
   }
@@ -94,6 +104,12 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.materialCardView;
+      MaterialCardView materialCardView = ViewBindings.findChildViewById(rootView, id);
+      if (materialCardView == null) {
+        break missingId;
+      }
+
       id = R.id.rechoose_btn;
       MaterialButton rechooseBtn = ViewBindings.findChildViewById(rootView, id);
       if (rechooseBtn == null) {
@@ -124,6 +140,12 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.star;
+      ImageButton star = ViewBindings.findChildViewById(rootView, id);
+      if (star == null) {
+        break missingId;
+      }
+
       id = R.id.ttsBtn;
       ImageButton ttsBtn = ViewBindings.findChildViewById(rootView, id);
       if (ttsBtn == null) {
@@ -136,9 +158,9 @@ public final class ActivityShowSelectedWordBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityShowSelectedWordBinding((ScrollView) rootView, customizeText, rechooseBtn,
-          selectWordBackBtn, selectedWordAnswerBtn, selectedWordOkBtn, selectedWordShowTv, ttsBtn,
-          ttsBtn1);
+      return new ActivityShowSelectedWordBinding((ScrollView) rootView, customizeText,
+          materialCardView, rechooseBtn, selectWordBackBtn, selectedWordAnswerBtn,
+          selectedWordOkBtn, selectedWordShowTv, star, ttsBtn, ttsBtn1);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

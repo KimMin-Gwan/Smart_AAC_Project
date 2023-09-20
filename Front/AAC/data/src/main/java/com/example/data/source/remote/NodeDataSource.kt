@@ -1,5 +1,6 @@
 package com.example.json
 
+import android.util.Log
 import com.example.data.source.remote.NodeStatus
 
 // node
@@ -41,7 +42,7 @@ class Node(){
 }
 
 // 노드를 가지고 있는 리스트
-class NodeList(var size : Int){
+class NodeList(private var size : Int){
     var node_Array = Array(size) { Node() }
     // 루트 노드를 미리 저장
     //var root_node : Array<Int> = emptyArray()
@@ -64,6 +65,7 @@ class NodeList(var size : Int){
     fun addNode(node : Node){
         if (this.num_node < this.size){
             val index = node.getID()
+            Log.d("index", index.toString())
             node_Array[index] = node
             this.num_node++
         }

@@ -104,11 +104,6 @@ class ChooseWordPass() : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //뒤로가기 구현
-        binding.choosePassBackBtn.setOnClickListener {
-            Log.d("뒤로가기", "뒤로가기")
-            onBackPressedDispatcher.onBackPressed()
-        }
         this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
 
         //다시 선택하기

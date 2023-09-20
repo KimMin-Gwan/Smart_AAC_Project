@@ -4,6 +4,8 @@ import com.example.data.source.remote.LocationDataSource
 import com.example.data.source.remote.LocationDataSourceImpl
 import com.example.data.source.remote.UserDataSource
 import com.example.data.source.remote.UserDataSourceImpl
+import com.example.data.source.remote.local.FavoriteSource
+import com.example.data.source.remote.local.FavoriteSourceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,5 +20,8 @@ class DataSourceModule {
 
     @Provides
     fun provideLocationSource(LocationDataSourceImpl: LocationDataSourceImpl): LocationDataSource = LocationDataSourceImpl
+
+    @Provides
+    fun provideFavoriteSource(favoriteSourceImpl: FavoriteSourceImpl) : FavoriteSource = favoriteSourceImpl
 
 }

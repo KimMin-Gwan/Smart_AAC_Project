@@ -22,10 +22,23 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="33">
         <activity
+            android:name=".view.urgencyaac.AddSentence"
+            android:exported="false" />
+        <activity
+            android:name=".view.favorite.FavoriteMain"
+            android:exported="false" />
+        <activity
+            android:name=".view.urgencyaac.FullSrceen"
+            android:exported="false" />
+        <activity
+            android:name=".view.urgencyaac.UrgencySentence"
+            android:exported="false" />
+        <activity
             android:name=".view.user.Customizing"
             android:exported="false" />
-        <activity android:name=".view.user.UserPage"
-            android:exported="false"/>
+        <activity
+            android:name=".view.user.UserPage"
+            android:exported="false" />
         <activity
             android:name=".view.voiceaac.ChooseWordVoice"
             android:exported="true" />
@@ -47,8 +60,7 @@
             android:exported="false" />
         <activity
             android:name=".view.login.TitleActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".view.urgencyaac.UrgencyCategory"
             android:exported="false" />
@@ -63,14 +75,13 @@
             android:exported="false" />
         <activity
             android:name=".view.splash.Splash"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity
             android:name=".view.MainActivity"
             android:exported="false" />

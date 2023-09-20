@@ -22,9 +22,6 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageButton choosePassBackBtn;
-
-  @NonNull
   public final ImageButton reChooseBtn;
 
   @NonNull
@@ -33,14 +30,17 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
   @NonNull
   public final MaterialButton selectwordBtn;
 
+  @NonNull
+  public final ImageButton star;
+
   private ActivityChooseWordPassBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton choosePassBackBtn, @NonNull ImageButton reChooseBtn,
-      @NonNull RecyclerView recyclerViewPass, @NonNull MaterialButton selectwordBtn) {
+      @NonNull ImageButton reChooseBtn, @NonNull RecyclerView recyclerViewPass,
+      @NonNull MaterialButton selectwordBtn, @NonNull ImageButton star) {
     this.rootView = rootView;
-    this.choosePassBackBtn = choosePassBackBtn;
     this.reChooseBtn = reChooseBtn;
     this.recyclerViewPass = recyclerViewPass;
     this.selectwordBtn = selectwordBtn;
+    this.star = star;
   }
 
   @Override
@@ -70,12 +70,6 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.choose_pass_back_btn;
-      ImageButton choosePassBackBtn = ViewBindings.findChildViewById(rootView, id);
-      if (choosePassBackBtn == null) {
-        break missingId;
-      }
-
       id = R.id.reChooseBtn;
       ImageButton reChooseBtn = ViewBindings.findChildViewById(rootView, id);
       if (reChooseBtn == null) {
@@ -94,8 +88,14 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityChooseWordPassBinding((ConstraintLayout) rootView, choosePassBackBtn,
-          reChooseBtn, recyclerViewPass, selectwordBtn);
+      id = R.id.star;
+      ImageButton star = ViewBindings.findChildViewById(rootView, id);
+      if (star == null) {
+        break missingId;
+      }
+
+      return new ActivityChooseWordPassBinding((ConstraintLayout) rootView, reChooseBtn,
+          recyclerViewPass, selectwordBtn, star);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

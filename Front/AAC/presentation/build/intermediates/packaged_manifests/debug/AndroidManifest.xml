@@ -37,6 +37,18 @@
         android:theme="@style/Base.Theme.Compass_AAC"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.compass_aac.view.urgencyaac.AddSentence"
+            android:exported="false" />
+        <activity
+            android:name="com.example.compass_aac.view.favorite.FavoriteMain"
+            android:exported="false" />
+        <activity
+            android:name="com.example.compass_aac.view.urgencyaac.FullSrceen"
+            android:exported="false" />
+        <activity
+            android:name="com.example.compass_aac.view.urgencyaac.UrgencySentence"
+            android:exported="false" />
+        <activity
             android:name="com.example.compass_aac.view.user.Customizing"
             android:exported="false" />
         <activity
@@ -63,8 +75,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.compass_aac.view.login.TitleActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name="com.example.compass_aac.view.urgencyaac.UrgencyCategory"
             android:exported="false" />
@@ -119,6 +130,11 @@
         <uses-library
             android:name="androidx.window.sidecar"
             android:required="false" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"

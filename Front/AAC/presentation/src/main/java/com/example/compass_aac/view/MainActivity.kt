@@ -21,6 +21,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import com.example.compass_aac.databinding.ActivityMainBinding
 import com.example.compass_aac.view.dailyaac.DailyCategory
+import com.example.compass_aac.view.favorite.FavoriteMain
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory
 import com.example.compass_aac.view.location.SearchLocation
 import com.example.compass_aac.view.login.TitleActivity
@@ -70,6 +71,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SearchLocation::class.java)
             startActivity(intent)
         }
+
+        //즐겨찾기
+        binding.mainStarBtn.setOnClickListener {
+            val intent = Intent(this, FavoriteMain::class.java)
+            startActivity(intent)
+        }
         //일상 AAC
 //        binding.mainDailyBtn.setOnClickListener {
 //            val intent = Intent(this, DailyCategory::class.java)
@@ -82,10 +89,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         //유저페이지
-        binding.mainUser.setOnClickListener {
-            val intent = Intent(this, UserPage::class.java)
-            startActivity(intent)
-        }
+//        binding.mainUser.setOnClickListener {
+//            val intent = Intent(this, UserPage::class.java)
+//            startActivity(intent)
+//        }
     }
 
 }

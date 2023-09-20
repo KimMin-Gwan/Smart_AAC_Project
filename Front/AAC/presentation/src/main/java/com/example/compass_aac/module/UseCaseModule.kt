@@ -1,8 +1,11 @@
 package com.example.compass_aac.module
 
+import com.example.data.repository.FindNodeRepository
+import com.example.domain.repository.FavoriteRepository
 import com.example.domain.repository.LocationRepository
 import com.example.domain.repository.UserRepository
 import com.example.domain.repository.VoiceRepository
+import com.example.domain.usecase.FavoriteUseCase
 import com.example.domain.usecase.LocationUseCase
 import com.example.domain.usecase.LoginUseCase
 import com.example.domain.usecase.RegisterUseCase
@@ -37,5 +40,10 @@ object UseCaseModule {
     @Provides
     fun provideVoiceUseCase(voiceRepository: VoiceRepository):VoiceUseCase{
         return VoiceUseCase(voiceRepository)
+    }
+
+    @Provides
+    fun provideFavoriteUseCase(favoriteRepository: FavoriteRepository) : FavoriteUseCase{
+        return FavoriteUseCase(favoriteRepository)
     }
 }

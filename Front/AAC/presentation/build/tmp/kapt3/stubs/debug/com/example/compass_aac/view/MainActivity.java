@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.activity.OnBackPressedCallback;
 import com.example.compass_aac.databinding.ActivityMainBinding;
 import com.example.compass_aac.view.dailyaac.DailyCategory;
+import com.example.compass_aac.view.favorite.FavoriteMain;
 import com.example.compass_aac.view.urgencyaac.UrgencyCategory;
 import com.example.compass_aac.view.location.SearchLocation;
 import com.example.compass_aac.view.login.TitleActivity;
