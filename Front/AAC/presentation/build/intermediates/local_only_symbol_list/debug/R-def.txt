@@ -19,6 +19,7 @@ drawable aac_information
 drawable backgroundlogo
 drawable backgroundlogo1
 drawable backgroundlogo2
+drawable baseline_add_24
 drawable baseline_add_circle_24
 drawable baseline_arrow_back_ios_24
 drawable baseline_close_24
@@ -168,6 +169,7 @@ id selected_word_ok_btn
 id selected_word_show_tv
 id selectwordBtn
 id sentenceItem
+id sentenceLine
 id sentenceList
 id setSentence
 id splashImg
@@ -175,7 +177,6 @@ id splashTv
 id star
 id textInputEditText
 id textView
-id textView10
 id textView11
 id textView2
 id textView3
@@ -242,5 +243,6 @@ style Base.Base.Theme.Compass_AAC
 style Base.Theme.Compass_AAC
 style CustomMaterialButton
 style Theme.App
+style floatingActionButtonSmallStyle
 xml backup_rules
 xml data_extraction_rules

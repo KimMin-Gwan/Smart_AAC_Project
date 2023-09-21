@@ -67,12 +67,10 @@
     <string name="title_activity_user_page">UserPage</string>
     <string name="welcome">"Welcome !"</string>
     <style name="Base.Base.Theme.Compass_AAC" parent="Theme.Material3.DayNight.NoActionBar">
-        
-        
     </style>
     <style name="Base.Theme.Compass_AAC" parent="Theme.Material3.DayNight.NoActionBar">
         
-         <item name="colorPrimary">#695CFA</item>
+         <item name="colorPrimary">#00FFFFFF</item>
     </style>
     <style name="CustomMaterialButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="backgroundTint">@drawable/button_background</item>
@@ -80,5 +78,8 @@
     <style name="Theme.App" parent="Theme.MaterialComponents">
         <item name="colorOnSurface">#BCBCBC</item>
         <item name="colorSecondary">#7266FF</item>
+    </style>
+    <style name="floatingActionButtonSmallStyle" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="itemIconTint">#ffffff</item>
     </style>
 </resources>

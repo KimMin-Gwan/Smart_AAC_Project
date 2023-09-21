@@ -26,16 +26,11 @@ public final class ActivityFavoriteListBinding implements ViewBinding {
   @NonNull
   public final TextView sentenceItem;
 
-  @NonNull
-  public final TextView textView10;
-
   private ActivityFavoriteListBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LinearLayout linearLayout2, @NonNull TextView sentenceItem,
-      @NonNull TextView textView10) {
+      @NonNull LinearLayout linearLayout2, @NonNull TextView sentenceItem) {
     this.rootView = rootView;
     this.linearLayout2 = linearLayout2;
     this.sentenceItem = sentenceItem;
-    this.textView10 = textView10;
   }
 
   @Override
@@ -77,14 +72,8 @@ public final class ActivityFavoriteListBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView10;
-      TextView textView10 = ViewBindings.findChildViewById(rootView, id);
-      if (textView10 == null) {
-        break missingId;
-      }
-
       return new ActivityFavoriteListBinding((ConstraintLayout) rootView, linearLayout2,
-          sentenceItem, textView10);
+          sentenceItem);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

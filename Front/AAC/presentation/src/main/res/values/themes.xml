@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Compass_AAC" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">#695CFA</item>
+         <item name="colorPrimary">#00FFFFFF</item>
     </style>
 
     <style name="Theme.App" parent="Theme.MaterialComponents">
@@ -13,10 +13,11 @@
     <style name="CustomMaterialButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="backgroundTint">@drawable/button_background</item>
     </style>
-  <!-- Base application theme. -->
     <style name="Base.Base.Theme.Compass_AAC" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="floatingActionButtonSmallStyle" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="itemIconTint">#ffffff</item>
+    </style>
+    
 </resources>

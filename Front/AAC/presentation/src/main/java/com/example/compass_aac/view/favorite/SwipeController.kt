@@ -121,10 +121,10 @@ class SwipeController() : ItemTouchHelper.Callback() {
 //        } else
         if (buttonsShowedState === ButtonState.RIGHT_VISIBLE) { //왼쪽으로 스와이프 했을 때, 오른쪽 버튼(삭제)이 나와야 함
             val rightButton = RectF(
-                itemView.right - buttonWidthWithOutPadding, (itemView.top + 10).toFloat(),
-                (itemView.right - 10).toFloat(), (itemView.bottom - 10).toFloat()
+                itemView.right - buttonWidthWithOutPadding, itemView.top.toFloat(),
+                (itemView.right - 10).toFloat(), itemView.bottom.toFloat()
             )
-            p.color = Color.parseColor("#FD4848")
+            p.color = Color.parseColor("#FF4E4E")
             c.drawRoundRect(rightButton, corners, corners, p)
             drawText("삭제", c, rightButton, p)
             buttonInstance = rightButton

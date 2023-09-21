@@ -35,6 +35,7 @@ package com.example.compass_aac.view.favorite
 //        notifyDataSetChanged()
 //    }
 //}
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -53,7 +54,7 @@ import com.example.domain.model.favorite
 class FavoriteAdapter : ListAdapter<favorite, FavoriteAdapter.ViewHolder>(DiffCallback), ItemTouchHelperListener  {
 
     interface ItemClick {
-        fun onDelete(view: View, id: Int )
+        fun onDelete(view: View, id: Int , position :Int)
     }
 
     var itemClick: ItemClick? = null
@@ -61,7 +62,7 @@ class FavoriteAdapter : ListAdapter<favorite, FavoriteAdapter.ViewHolder>(DiffCa
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val sentenceTextView: TextView = itemView.findViewById(R.id.sentenceItem)
-        val textNumber: TextView = itemView.findViewById(R.id.textView10)
+//        val textNumber: TextView = itemView.findViewById(R.id.textView10)
 
     }
 
@@ -72,7 +73,7 @@ class FavoriteAdapter : ListAdapter<favorite, FavoriteAdapter.ViewHolder>(DiffCa
             }
 
             override fun areContentsTheSame(oldItem: favorite, newItem: favorite): Boolean {
-                return oldItem == newItem
+                return oldItem.sentence == newItem.sentence
             }
         }
     }
@@ -86,7 +87,7 @@ class FavoriteAdapter : ListAdapter<favorite, FavoriteAdapter.ViewHolder>(DiffCa
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val favorite = getItem(position)
         holder.sentenceTextView.text = favorite.sentence
-        holder.textNumber.text = (position + 1).toString()
+//        holder.textNumber.text = (position + 1).toString()
 
     }
 
@@ -97,22 +98,15 @@ class FavoriteAdapter : ListAdapter<favorite, FavoriteAdapter.ViewHolder>(DiffCa
         TODO("Not yet implemented")
     }
 
-//    override fun onLeftClick(position: Int, viewHolder: RecyclerView.ViewHolder?) {
-//        val context = viewHolder?.itemView?.context
-//        Toast.makeText(context, "LeftClick", Toast.LENGTH_SHORT).show()
-//    }
-
     // FavoriteAdapter.kt
     override fun onRightClick(position: Int, viewHolder: RecyclerView.ViewHolder?) {
-        val context = viewHolder?.itemView?.context
         val favorite = getItem(position)
 
-       itemClick?.onDelete(viewHolder!!.itemView, favorite.id.toInt() )
+       itemClick?.onDelete(viewHolder!!.itemView, favorite.id.toInt() , position)
 
         // 삭제한 아이템을 RecyclerView에서 제거
-        notifyItemRemoved(position)
+//        notifyItemRemoved(position)
 
-        Toast.makeText(context, "RightClick", Toast.LENGTH_SHORT).show()
     }
 
 }

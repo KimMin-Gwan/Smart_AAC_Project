@@ -4,6 +4,7 @@ package com.example.compass_aac.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,14 +21,19 @@ public final class ActivityUrgencySentenceItemBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final LinearLayout sentenceLine;
+
+  @NonNull
   public final TextView sentenceList;
 
   @NonNull
   public final ConstraintLayout urgencyItem;
 
   private ActivityUrgencySentenceItemBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView sentenceList, @NonNull ConstraintLayout urgencyItem) {
+      @NonNull LinearLayout sentenceLine, @NonNull TextView sentenceList,
+      @NonNull ConstraintLayout urgencyItem) {
     this.rootView = rootView;
+    this.sentenceLine = sentenceLine;
     this.sentenceList = sentenceList;
     this.urgencyItem = urgencyItem;
   }
@@ -59,6 +65,12 @@ public final class ActivityUrgencySentenceItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.sentenceLine;
+      LinearLayout sentenceLine = ViewBindings.findChildViewById(rootView, id);
+      if (sentenceLine == null) {
+        break missingId;
+      }
+
       id = R.id.sentenceList;
       TextView sentenceList = ViewBindings.findChildViewById(rootView, id);
       if (sentenceList == null) {
@@ -67,8 +79,8 @@ public final class ActivityUrgencySentenceItemBinding implements ViewBinding {
 
       ConstraintLayout urgencyItem = (ConstraintLayout) rootView;
 
-      return new ActivityUrgencySentenceItemBinding((ConstraintLayout) rootView, sentenceList,
-          urgencyItem);
+      return new ActivityUrgencySentenceItemBinding((ConstraintLayout) rootView, sentenceLine,
+          sentenceList, urgencyItem);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

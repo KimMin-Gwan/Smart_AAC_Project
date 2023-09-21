@@ -16,10 +16,6 @@
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.compass_aac.presentation-merged_res-6:/layout_activity_favorite_main.xml.flat",
-        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_favorite_main.xml"
-    },
-    {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\drawable_redaac.png.flat",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\drawable\\redaac.png"
     },
@@ -74,6 +70,10 @@
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\layout_activity_favorite_main.xml.flat",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\layout\\activity_favorite_main.xml"
+    },
+    {
+        "merged": "com.example.compass_aac.presentation-merged_res-6:/layout_activity_urgency_sentence_item.xml.flat",
+        "source": "com.example.compass_aac.presentation-main-8:/layout/activity_urgency_sentence_item.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\drawable_categorybooks.png.flat",
@@ -364,10 +364,6 @@
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\drawable\\categorylibrary.png"
     },
     {
-        "merged": "com.example.compass_aac.presentation-merged_res-6:/drawable_baseline_add_circle_24.xml.flat",
-        "source": "com.example.compass_aac.presentation-main-8:/drawable/baseline_add_circle_24.xml"
-    },
-    {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\drawable_baseline_record_voice_over_24.xml.flat",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\drawable\\baseline_record_voice_over_24.xml"
     },
@@ -426,6 +422,10 @@
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\drawable_categorybakery.png.flat",
         "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\drawable\\categorybakery.png"
+    },
+    {
+        "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\drawable_baseline_add_24.xml.flat",
+        "source": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-main-8:\\drawable\\baseline_add_24.xml"
     },
     {
         "merged": "C:\\Users\\ellen\\.gradle\\daemon\\8.0\\com.example.compass_aac.presentation-merged_res-6:\\layout_activity_daily_category.xml.flat",

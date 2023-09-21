@@ -111,30 +111,32 @@ class FavoriteMain : AppCompatActivity() {
                         viewModel.addList(text)
                         withContext(Dispatchers.Main){
                             alertDialog.dismiss()
+
                         }
                     }
                 }
-
             }
-
         }
 
         //데이터베이스 데이터 관찰
-        viewModel.lists.observe(this){
-            Log.d("데이터 관찰", it.toString())
+        viewModel.lists.observe(this){updatedLists->
+            Log.d("데이터 관찰", updatedLists.toString())
             // 지연 없이 데이터를 갱신
             binding.favoriteRecycler.post {
-                adapter.submitList(it)
+                adapter.submitList(updatedLists)
             }
 
         }
         //override
         adapter.itemClick = object : FavoriteAdapter.ItemClick {
-            override fun onDelete(view: View, id: Int) {
-                Log.d("삭제 클릭된 id", id.toString())
+            override fun onDelete(view: View, id: Int, position: Int) {
+                Log.d("데이터 삭제 id", id.toString())
                 lifecycleScope.launch(Dispatchers.IO) {
                     viewModel.delList(id)
+                    // 데이터베이스에서 데이터 삭제 후 LiveData를 업데이트
+                    viewModel.getLists()
                 }
+                Toast.makeText(applicationContext, "삭제되었습니다." , Toast.LENGTH_SHORT).show()
             }
         }
     }
