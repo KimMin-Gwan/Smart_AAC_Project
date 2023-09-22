@@ -22,24 +22,24 @@ public final class ActivityFavoriteMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageButton backButton;
+
+  @NonNull
   public final ConstraintLayout constraintLayout2;
 
   @NonNull
   public final RecyclerView favoriteRecycler;
 
   @NonNull
-  public final ImageButton imageButton3;
-
-  @NonNull
   public final FloatingActionButton plusSentence;
 
   private ActivityFavoriteMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout constraintLayout2, @NonNull RecyclerView favoriteRecycler,
-      @NonNull ImageButton imageButton3, @NonNull FloatingActionButton plusSentence) {
+      @NonNull ImageButton backButton, @NonNull ConstraintLayout constraintLayout2,
+      @NonNull RecyclerView favoriteRecycler, @NonNull FloatingActionButton plusSentence) {
     this.rootView = rootView;
+    this.backButton = backButton;
     this.constraintLayout2 = constraintLayout2;
     this.favoriteRecycler = favoriteRecycler;
-    this.imageButton3 = imageButton3;
     this.plusSentence = plusSentence;
   }
 
@@ -70,6 +70,12 @@ public final class ActivityFavoriteMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.backButton;
+      ImageButton backButton = ViewBindings.findChildViewById(rootView, id);
+      if (backButton == null) {
+        break missingId;
+      }
+
       id = R.id.constraintLayout2;
       ConstraintLayout constraintLayout2 = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout2 == null) {
@@ -82,20 +88,14 @@ public final class ActivityFavoriteMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageButton3;
-      ImageButton imageButton3 = ViewBindings.findChildViewById(rootView, id);
-      if (imageButton3 == null) {
-        break missingId;
-      }
-
       id = R.id.plusSentence;
       FloatingActionButton plusSentence = ViewBindings.findChildViewById(rootView, id);
       if (plusSentence == null) {
         break missingId;
       }
 
-      return new ActivityFavoriteMainBinding((ConstraintLayout) rootView, constraintLayout2,
-          favoriteRecycler, imageButton3, plusSentence);
+      return new ActivityFavoriteMainBinding((ConstraintLayout) rootView, backButton,
+          constraintLayout2, favoriteRecycler, plusSentence);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

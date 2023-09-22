@@ -37,6 +37,9 @@
         android:theme="@style/Base.Theme.Compass_AAC"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.compass_aac.view.favorite.FavoriteFullScreen"
+            android:exported="false" />
+        <activity
             android:name="com.example.compass_aac.view.urgencyaac.AddSentence"
             android:exported="false" />
         <activity

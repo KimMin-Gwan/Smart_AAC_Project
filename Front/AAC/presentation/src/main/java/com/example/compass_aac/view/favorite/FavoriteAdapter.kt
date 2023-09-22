@@ -35,6 +35,7 @@ package com.example.compass_aac.view.favorite
 //        notifyDataSetChanged()
 //    }
 //}
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -43,11 +44,13 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.view.menu.MenuView.ItemView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.compass_aac.R
 import com.example.compass_aac.view.adapters.NodeAdapter
+import com.example.compass_aac.view.urgencyaac.FullSrceen
 import com.example.data.source.remote.Tree_Node
 import com.example.domain.model.favorite
 
@@ -63,6 +66,7 @@ class FavoriteAdapter : ListAdapter<favorite, FavoriteAdapter.ViewHolder>(DiffCa
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val sentenceTextView: TextView = itemView.findViewById(R.id.sentenceItem)
 //        val textNumber: TextView = itemView.findViewById(R.id.textView10)
+        val favoriteListView : ConstraintLayout = itemView.findViewById(R.id.favoriteListView)
 
     }
 
@@ -88,6 +92,12 @@ class FavoriteAdapter : ListAdapter<favorite, FavoriteAdapter.ViewHolder>(DiffCa
         val favorite = getItem(position)
         holder.sentenceTextView.text = favorite.sentence
 //        holder.textNumber.text = (position + 1).toString()
+
+        holder.favoriteListView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, FavoriteFullScreen::class.java)
+            intent.putExtra("selectedSentence", favorite.sentence)
+            holder.itemView.context.startActivity(intent)
+        }
 
     }
 

@@ -1,5 +1,6 @@
 package com.example.compass_aac.view.favorite;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +9,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.view.menu.MenuView.ItemView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.compass_aac.R;
 import com.example.compass_aac.view.adapters.NodeAdapter;
+import com.example.compass_aac.view.urgencyaac.FullSrceen;
 import com.example.data.source.remote.Tree_Node;
 import com.example.domain.model.favorite;
 
@@ -79,10 +82,12 @@ public final class FavoriteAdapter extends androidx.recyclerview.widget.ListAdap
         android.view.View view, int id, int position);
     }
     
-    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\b\u00a8\u0006\t"}, d2 = {"Lcom/example/compass_aac/view/favorite/FavoriteAdapter$ViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "itemView", "Landroid/view/View;", "(Lcom/example/compass_aac/view/favorite/FavoriteAdapter;Landroid/view/View;)V", "sentenceTextView", "Landroid/widget/TextView;", "getSentenceTextView", "()Landroid/widget/TextView;", "presentation_debug"})
+    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\f\u00a8\u0006\r"}, d2 = {"Lcom/example/compass_aac/view/favorite/FavoriteAdapter$ViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "itemView", "Landroid/view/View;", "(Lcom/example/compass_aac/view/favorite/FavoriteAdapter;Landroid/view/View;)V", "favoriteListView", "Landroidx/constraintlayout/widget/ConstraintLayout;", "getFavoriteListView", "()Landroidx/constraintlayout/widget/ConstraintLayout;", "sentenceTextView", "Landroid/widget/TextView;", "getSentenceTextView", "()Landroid/widget/TextView;", "presentation_debug"})
     public final class ViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
         @org.jetbrains.annotations.NotNull
         private final android.widget.TextView sentenceTextView = null;
+        @org.jetbrains.annotations.NotNull
+        private final androidx.constraintlayout.widget.ConstraintLayout favoriteListView = null;
         
         public ViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View itemView) {
@@ -91,6 +96,11 @@ public final class FavoriteAdapter extends androidx.recyclerview.widget.ListAdap
         
         @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getSentenceTextView() {
+            return null;
+        }
+        
+        @org.jetbrains.annotations.NotNull
+        public final androidx.constraintlayout.widget.ConstraintLayout getFavoriteListView() {
             return null;
         }
     }

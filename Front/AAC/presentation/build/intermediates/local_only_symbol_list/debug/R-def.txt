@@ -8,6 +8,7 @@ color button_default
 color button_pressed
 color category
 color lightpurple
+color mint
 color white
 color yellow
 dimen activity_horizontal_margin
@@ -24,6 +25,7 @@ drawable baseline_add_circle_24
 drawable baseline_arrow_back_ios_24
 drawable baseline_close_24
 drawable baseline_delete_24
+drawable baseline_error_outline_24
 drawable baseline_record_voice_over_24
 drawable baseline_refresh_24
 drawable baseline_star_outline_24
@@ -62,6 +64,8 @@ drawable main_urgency_pass
 drawable main_urgencypass
 drawable main_user
 drawable outline_person_outline_24
+drawable pass_choose_background
+drawable pass_default_background
 drawable redaac
 drawable register_subtext
 drawable search_location
@@ -83,11 +87,15 @@ drawable urgencylocation
 drawable voice_background
 drawable voice_btn
 drawable voiceimg
+font font
+font omue
+font suit_regular
 id FirstFragment
 id SecondFragment
 id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id addSentenceBtn
+id backButton
 id category_btn
 id category_img
 id category_name
@@ -109,14 +117,16 @@ id customizeOkBtn
 id customizeText
 id danger
 id etc
+id favoriteClose
+id favoriteListView
 id favoriteRecycler
+id favoriteSentence
 id hear_voice_back_btn
 id hear_voice_btn
 id hear_voice_end_btn
 id hospital
 id imageButton
 id imageButton2
-id imageButton3
 id imageButton4
 id imageView
 id imageView10
@@ -203,6 +213,7 @@ layout activity_choose_word_pass
 layout activity_choose_word_voice
 layout activity_customizing
 layout activity_daily_category
+layout activity_favorite_full_screen
 layout activity_favorite_list
 layout activity_favorite_main
 layout activity_full_srceen

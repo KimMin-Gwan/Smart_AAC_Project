@@ -36,21 +36,17 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
   public final MaterialButton selectedWordVoiceBtn;
 
   @NonNull
-  public final ImageButton star;
-
-  @NonNull
   public final MaterialTextView voiceText;
 
   private ActivityChooseWordVoiceBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout linearLayout, @NonNull RecyclerView recyclerViewVoice,
       @NonNull ImageButton selectWordVoiceBackBtn, @NonNull MaterialButton selectedWordVoiceBtn,
-      @NonNull ImageButton star, @NonNull MaterialTextView voiceText) {
+      @NonNull MaterialTextView voiceText) {
     this.rootView = rootView;
     this.linearLayout = linearLayout;
     this.recyclerViewVoice = recyclerViewVoice;
     this.selectWordVoiceBackBtn = selectWordVoiceBackBtn;
     this.selectedWordVoiceBtn = selectedWordVoiceBtn;
-    this.star = star;
     this.voiceText = voiceText;
   }
 
@@ -105,12 +101,6 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.star;
-      ImageButton star = ViewBindings.findChildViewById(rootView, id);
-      if (star == null) {
-        break missingId;
-      }
-
       id = R.id.voiceText;
       MaterialTextView voiceText = ViewBindings.findChildViewById(rootView, id);
       if (voiceText == null) {
@@ -118,7 +108,7 @@ public final class ActivityChooseWordVoiceBinding implements ViewBinding {
       }
 
       return new ActivityChooseWordVoiceBinding((ConstraintLayout) rootView, linearLayout,
-          recyclerViewVoice, selectWordVoiceBackBtn, selectedWordVoiceBtn, star, voiceText);
+          recyclerViewVoice, selectWordVoiceBackBtn, selectedWordVoiceBtn, voiceText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

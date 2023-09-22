@@ -2063,6 +2063,7 @@ color material_timepicker_button_stroke
 color material_timepicker_clock_text_color
 color material_timepicker_clockface
 color material_timepicker_modebutton_tint
+color mint
 color mtrl_btn_bg_color_selector
 color mtrl_btn_ripple_color
 color mtrl_btn_stroke_color_selector
@@ -3020,6 +3021,7 @@ drawable baseline_add_circle_24
 drawable baseline_arrow_back_ios_24
 drawable baseline_close_24
 drawable baseline_delete_24
+drawable baseline_error_outline_24
 drawable baseline_record_voice_over_24
 drawable baseline_refresh_24
 drawable baseline_star_outline_24
@@ -3181,6 +3183,8 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable outline_person_outline_24
+drawable pass_choose_background
+drawable pass_default_background
 drawable redaac
 drawable register_subtext
 drawable search_location
@@ -3205,6 +3209,9 @@ drawable urgencylocation
 drawable voice_background
 drawable voice_btn
 drawable voiceimg
+font font
+font omue
+font suit_regular
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3301,6 +3308,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backButton
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3421,7 +3429,10 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id favoriteClose
+id favoriteListView
 id favoriteRecycler
+id favoriteSentence
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3442,6 +3453,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3467,7 +3479,6 @@ id ignoreRequest
 id image
 id imageButton
 id imageButton2
-id imageButton3
 id imageButton4
 id imageView
 id imageView10
@@ -3962,6 +3973,7 @@ layout activity_choose_word_pass
 layout activity_choose_word_voice
 layout activity_customizing
 layout activity_daily_category
+layout activity_favorite_full_screen
 layout activity_favorite_list
 layout activity_favorite_main
 layout activity_full_srceen

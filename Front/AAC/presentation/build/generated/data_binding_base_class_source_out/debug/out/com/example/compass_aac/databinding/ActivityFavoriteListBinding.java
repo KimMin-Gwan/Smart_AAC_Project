@@ -21,14 +21,19 @@ public final class ActivityFavoriteListBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ConstraintLayout favoriteListView;
+
+  @NonNull
   public final LinearLayout linearLayout2;
 
   @NonNull
   public final TextView sentenceItem;
 
   private ActivityFavoriteListBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LinearLayout linearLayout2, @NonNull TextView sentenceItem) {
+      @NonNull ConstraintLayout favoriteListView, @NonNull LinearLayout linearLayout2,
+      @NonNull TextView sentenceItem) {
     this.rootView = rootView;
+    this.favoriteListView = favoriteListView;
     this.linearLayout2 = linearLayout2;
     this.sentenceItem = sentenceItem;
   }
@@ -60,6 +65,8 @@ public final class ActivityFavoriteListBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      ConstraintLayout favoriteListView = (ConstraintLayout) rootView;
+
       id = R.id.linearLayout2;
       LinearLayout linearLayout2 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout2 == null) {
@@ -72,8 +79,8 @@ public final class ActivityFavoriteListBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityFavoriteListBinding((ConstraintLayout) rootView, linearLayout2,
-          sentenceItem);
+      return new ActivityFavoriteListBinding((ConstraintLayout) rootView, favoriteListView,
+          linearLayout2, sentenceItem);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

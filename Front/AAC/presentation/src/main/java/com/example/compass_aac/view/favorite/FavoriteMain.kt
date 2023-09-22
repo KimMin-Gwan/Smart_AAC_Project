@@ -1,5 +1,7 @@
 package com.example.compass_aac.view.favorite
 
+import android.content.ContentValues
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -8,6 +10,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
@@ -16,7 +19,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.compass_aac.R
 import com.example.compass_aac.databinding.ActivityFavoriteMainBinding
+import com.example.compass_aac.view.MainActivity
 import com.example.compass_aac.view.adapters.NodeAdapter
+import com.example.compass_aac.view.voiceaac.HearVoice
 import com.example.compass_aac.viewmodel.favorite.FavoriteMainViewModel
 import com.example.data.source.remote.Tree_Node
 import com.example.domain.model.favorite
@@ -34,11 +39,24 @@ class FavoriteMain : AppCompatActivity() {
     private lateinit var lists : List<favorite>
     private lateinit var adapter: FavoriteAdapter
 
+    //뒤로가기
+    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            val intent = Intent(this@FavoriteMain, MainActivity::class.java)
+            startActivity(intent)
+            Log.e(ContentValues.TAG, "뒤로가기 클릭")
+            // 뒤로가기 시 실행할 코드
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val binding = ActivityFavoriteMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //뒤로가기
+        this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
 
         val viewModel : FavoriteMainViewModel by viewModels()
 
@@ -138,6 +156,11 @@ class FavoriteMain : AppCompatActivity() {
                 }
                 Toast.makeText(applicationContext, "삭제되었습니다." , Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.backButton.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+
         }
     }
 }

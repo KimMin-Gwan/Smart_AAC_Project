@@ -30,17 +30,13 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
   @NonNull
   public final MaterialButton selectwordBtn;
 
-  @NonNull
-  public final ImageButton star;
-
   private ActivityChooseWordPassBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageButton reChooseBtn, @NonNull RecyclerView recyclerViewPass,
-      @NonNull MaterialButton selectwordBtn, @NonNull ImageButton star) {
+      @NonNull MaterialButton selectwordBtn) {
     this.rootView = rootView;
     this.reChooseBtn = reChooseBtn;
     this.recyclerViewPass = recyclerViewPass;
     this.selectwordBtn = selectwordBtn;
-    this.star = star;
   }
 
   @Override
@@ -88,14 +84,8 @@ public final class ActivityChooseWordPassBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.star;
-      ImageButton star = ViewBindings.findChildViewById(rootView, id);
-      if (star == null) {
-        break missingId;
-      }
-
       return new ActivityChooseWordPassBinding((ConstraintLayout) rootView, reChooseBtn,
-          recyclerViewPass, selectwordBtn, star);
+          recyclerViewPass, selectwordBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -92,7 +92,7 @@ class PassCategory : AppCompatActivity() {
         if (categoryData != "default") {
 //          viewModel.initCategoryData(categoryData)
             categorylist = viewModel.processNodes(categoryData)
-        } else if(categoryData == "default"){
+        } else{
             categorylist= viewModel.defaultprocessNodes(categoryData)
         }
 

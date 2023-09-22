@@ -109,11 +109,12 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:background= "@drawable/text_radius"
+                android:fontFamily="@font/omue"
                 android:gravity="center"
                 android:padding="20dp"
                 android:text="선택된 단어\n\n\n\n\n\n\n"
                 android:textColor="#636060"
-                android:textSize="22sp"
+                android:textSize="27sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -144,7 +145,8 @@
             android:layout_height="60dp"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
-            android:textSize="18sp"
+            android:fontFamily="@font/omue"
+            android:textSize="23sp"
             android:textStyle="bold"
             android:text="대답하기"
             app:cornerRadius="10dp" />
@@ -159,7 +161,8 @@
             android:layout_marginRight="35dp"
             android:layout_marginTop="10dp"
             android:text="사용 완료하기"
-            android:textSize="18sp"
+            android:fontFamily="@font/omue"
+            android:textSize="23sp"
             android:textStyle="bold"
             app:cornerRadius="10dp" />
 
@@ -171,8 +174,9 @@
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/omue"
             android:text="다시 선택하기"
-            android:textSize="18sp"
+            android:textSize="23sp"
             android:textStyle="bold"
             app:cornerRadius="10dp" />
 

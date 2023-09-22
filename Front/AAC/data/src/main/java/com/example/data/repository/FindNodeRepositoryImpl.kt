@@ -9,7 +9,6 @@ import com.example.data.source.remote.Tree_Node
 import com.example.json.NodeList
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
-import kotlin.math.log
 
 class FindNodeRepositoryImpl @Inject constructor(@ApplicationContext private val context:Context) :
     FindNodeRepository {
@@ -32,9 +31,9 @@ class FindNodeRepositoryImpl @Inject constructor(@ApplicationContext private val
 
     }
 
-    override fun MakeRootGpsCategory(node_list : NodeList, categoryid : List<Int>): ArrayList<Int> {
+    override fun MakeRootGpsCategory(node_list : NodeList, categoryId : List<Int>): ArrayList<Int> {
         val root_maker: Make_Root_Category = Make_Root_Category()
-        val root_category: ArrayList<Int> = root_maker.get_gps_root_category(node_list, categoryid)
+        val root_category: ArrayList<Int> = root_maker.get_gps_root_category(node_list, categoryId)
 
         Log.d("root_category", root_category.toString())
         return root_category

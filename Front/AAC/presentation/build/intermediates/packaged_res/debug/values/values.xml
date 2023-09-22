@@ -7,6 +7,7 @@
     <color name="button_pressed">#CED6F6</color>
     <color name="category">#FF000000</color>
     <color name="lightpurple">#D7DFFB</color>
+    <color name="mint">#BBEDF0</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#F6CE3D</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>

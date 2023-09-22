@@ -13,4 +13,6 @@
     <color name="border_color">#818CBB</color>
 
     <color name="border_color_pass">#D9E0FF</color>
+
+    <color name="mint">#BBEDF0</color>
 </resources>

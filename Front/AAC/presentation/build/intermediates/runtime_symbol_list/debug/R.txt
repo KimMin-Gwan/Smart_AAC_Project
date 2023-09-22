@@ -2062,6 +2062,7 @@ int color material_timepicker_button_stroke 0x7f0502a9
 int color material_timepicker_clock_text_color 0x7f0502aa
 int color material_timepicker_clockface 0x7f0502ab
 int color material_timepicker_modebutton_tint 0x7f0502ac
+int color mint 0x7f0502ff
 int color mtrl_btn_bg_color_selector 0x7f0502ad
 int color mtrl_btn_ripple_color 0x7f0502ae
 int color mtrl_btn_stroke_color_selector 0x7f0502af
@@ -3019,6 +3020,7 @@ int drawable baseline_add_circle_24 0x7f07007f
 int drawable baseline_arrow_back_ios_24 0x7f070080
 int drawable baseline_close_24 0x7f070081
 int drawable baseline_delete_24 0x7f070082
+int drawable baseline_error_outline_24 0x7f07013c
 int drawable baseline_record_voice_over_24 0x7f070083
 int drawable baseline_refresh_24 0x7f070084
 int drawable baseline_star_outline_24 0x7f070085
@@ -3180,6 +3182,8 @@ int drawable notification_template_icon_low_bg 0x7f070120
 int drawable notification_tile_bg 0x7f070121
 int drawable notify_panel_notification_icon_bg 0x7f070122
 int drawable outline_person_outline_24 0x7f070123
+int drawable pass_choose_background 0x7f07013d
+int drawable pass_default_background 0x7f07013e
 int drawable redaac 0x7f070124
 int drawable register_subtext 0x7f070125
 int drawable search_location 0x7f070126
@@ -3204,6 +3208,9 @@ int drawable urgencylocation 0x7f070138
 int drawable voice_background 0x7f070139
 int drawable voice_btn 0x7f07013a
 int drawable voiceimg 0x7f07013b
+int font font 0x7f140000
+int font omue 0x7f140002
+int font suit_regular 0x7f140001
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
@@ -3300,6 +3307,7 @@ int id auto 0x7f08005c
 int id autoComplete 0x7f08005d
 int id autoCompleteToEnd 0x7f08005e
 int id autoCompleteToStart 0x7f08005f
+int id backButton 0x7f08027b
 int id barrier 0x7f080060
 int id baseline 0x7f080061
 int id beginOnFirstDraw 0x7f080062
@@ -3420,7 +3428,10 @@ int id exitUntilCollapsed 0x7f0800d4
 int id expand_activities_button 0x7f0800d5
 int id expanded_menu 0x7f0800d6
 int id fade 0x7f0800d7
+int id favoriteClose 0x7f08027d
+int id favoriteListView 0x7f08027e
 int id favoriteRecycler 0x7f0800d8
+int id favoriteSentence 0x7f08027f
 int id fill 0x7f0800d9
 int id fill_horizontal 0x7f0800da
 int id fill_vertical 0x7f0800db
@@ -3441,6 +3452,7 @@ int id frost 0x7f0800e9
 int id fullscreen_header 0x7f0800ea
 int id ghost_view 0x7f0800eb
 int id ghost_view_holder 0x7f0800ec
+int id glide_custom_view_target_tag 0x7f08027c
 int id gone 0x7f0800ed
 int id graph 0x7f0800ee
 int id graph_wrap 0x7f0800ef
@@ -3466,7 +3478,6 @@ int id ignoreRequest 0x7f080102
 int id image 0x7f080103
 int id imageButton 0x7f080104
 int id imageButton2 0x7f080105
-int id imageButton3 0x7f080106
 int id imageButton4 0x7f080107
 int id imageView 0x7f080108
 int id imageView10 0x7f080109
@@ -3961,6 +3972,7 @@ int layout activity_choose_word_pass 0x7f0b0020
 int layout activity_choose_word_voice 0x7f0b0021
 int layout activity_customizing 0x7f0b0022
 int layout activity_daily_category 0x7f0b0023
+int layout activity_favorite_full_screen 0x7f0b008a
 int layout activity_favorite_list 0x7f0b0024
 int layout activity_favorite_main 0x7f0b0025
 int layout activity_full_srceen 0x7f0b0026

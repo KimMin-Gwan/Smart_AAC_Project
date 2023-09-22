@@ -17,9 +17,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
+import com.example.compass_aac.R
 import com.example.compass_aac.databinding.ActivityChooseWordPassBinding
 import com.example.compass_aac.view.adapters.NodeAdapter
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel
@@ -44,6 +47,8 @@ class ChooseWordPass() : AppCompatActivity() {
     private val clickedWord : HashMap<Int, String> =  hashMapOf()
 
     private val selectedWord : ArrayList<String> = arrayListOf()
+    private val glideImg : ArrayList<String> = arrayListOf()
+
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
             val intent = Intent(this@ChooseWordPass, PassCategory::class.java)
@@ -60,6 +65,7 @@ class ChooseWordPass() : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        val ImgPass = findViewById<ImageView>(R.id.chooseWordPassImg)
         // 카테고리 변경을 관찰
         viewModel.categories.observe(this) {
 

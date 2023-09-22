@@ -22,6 +22,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="33">
         <activity
+            android:name=".view.favorite.FavoriteFullScreen"
+            android:exported="false" />
+        <activity
             android:name=".view.urgencyaac.AddSentence"
             android:exported="false" />
         <activity

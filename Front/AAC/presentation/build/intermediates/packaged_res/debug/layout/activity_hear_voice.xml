@@ -76,6 +76,8 @@
         android:layout_marginRight="25dp"
         android:backgroundTint="@color/black"
         android:text="음성 인식 완료"
+        android:textSize="23sp"
+        android:fontFamily="@font/omue"
         android:visibility="invisible"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
