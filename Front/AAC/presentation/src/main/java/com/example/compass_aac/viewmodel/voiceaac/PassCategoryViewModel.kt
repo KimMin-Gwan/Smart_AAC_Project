@@ -30,7 +30,7 @@ class PassCategoryViewModel @Inject constructor(private val findNodeRepository: 
     val receivedCategory : LiveData<String> get() =  _receivedCategory
 
     fun receiveCategory(categoryData: String){
-        _receivedCategory.postValue(categoryData)
+        _receivedCategory.value = categoryData
     }
 
 

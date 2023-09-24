@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bumptech.glide.Glide;
 import com.example.compass_aac.R;
 import com.example.compass_aac.view.voiceaac.ShowSelectedWord;
 import com.example.data.source.remote.Tree_Node;
@@ -70,14 +71,12 @@ public final class VoiceAdapter extends androidx.recyclerview.widget.RecyclerVie
         com.example.data.source.remote.Tree_Node treeNode);
     }
     
-    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\r\u001a\u00020\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010\u00a8\u0006\u0011"}, d2 = {"Lcom/example/compass_aac/view/adapters/VoiceAdapter$ViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "chooseVoiceImg", "Landroid/widget/ImageView;", "getChooseVoiceImg", "()Landroid/widget/ImageView;", "chooseVoiceName", "Landroid/widget/TextView;", "getChooseVoiceName", "()Landroid/widget/TextView;", "chooseWord", "Landroid/widget/Button;", "getChooseWord", "()Landroid/widget/Button;", "presentation_debug"})
+    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\f\u00a8\u0006\r"}, d2 = {"Lcom/example/compass_aac/view/adapters/VoiceAdapter$ViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "chooseVoiceName", "Landroid/widget/TextView;", "getChooseVoiceName", "()Landroid/widget/TextView;", "chooseWord", "Landroid/widget/Button;", "getChooseWord", "()Landroid/widget/Button;", "presentation_debug"})
     public static final class ViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
         @org.jetbrains.annotations.NotNull
         private final android.widget.Button chooseWord = null;
         @org.jetbrains.annotations.NotNull
         private final android.widget.TextView chooseVoiceName = null;
-        @org.jetbrains.annotations.NotNull
-        private final android.widget.ImageView chooseVoiceImg = null;
         
         public ViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View view) {
@@ -91,11 +90,6 @@ public final class VoiceAdapter extends androidx.recyclerview.widget.RecyclerVie
         
         @org.jetbrains.annotations.NotNull
         public final android.widget.TextView getChooseVoiceName() {
-            return null;
-        }
-        
-        @org.jetbrains.annotations.NotNull
-        public final android.widget.ImageView getChooseVoiceImg() {
             return null;
         }
     }

@@ -3,6 +3,7 @@ package com.example.compass_aac.view.urgencyaac;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.compass_aac.R;
+import com.example.compass_aac.databinding.ActivityAddSentenceBinding;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @dagger.hilt.android.AndroidEntryPoint

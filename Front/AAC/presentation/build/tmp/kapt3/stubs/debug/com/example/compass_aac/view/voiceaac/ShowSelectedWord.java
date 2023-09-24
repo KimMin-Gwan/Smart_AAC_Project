@@ -8,6 +8,7 @@ import android.util.Log;
 import androidx.activity.OnBackPressedCallback;
 import com.example.compass_aac.databinding.ActivityShowSelectedWordBinding;
 import com.example.compass_aac.view.MainActivity;
+import com.example.compass_aac.view.favorite.FavoriteMain;
 import com.example.compass_aac.viewmodel.user.UserPageViewModel;
 import com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel;
 import dagger.hilt.android.AndroidEntryPoint;

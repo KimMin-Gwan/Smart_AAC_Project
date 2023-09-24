@@ -17,6 +17,7 @@ dimen compass_text_size
 dimen fab_margin
 dimen zero_text_size
 drawable aac_information
+drawable applogo
 drawable backgroundlogo
 drawable backgroundlogo1
 drawable backgroundlogo2
@@ -63,6 +64,7 @@ drawable main_pass_
 drawable main_urgency_pass
 drawable main_urgencypass
 drawable main_user
+drawable micblue
 drawable outline_person_outline_24
 drawable pass_choose_background
 drawable pass_default_background
@@ -103,7 +105,6 @@ id chooseWordName
 id chooseWordPassBtn
 id chooseWordPassImg
 id chooseWordVoiceBtn
-id chooseWordVoiceImg
 id chooseWordVoiceName
 id compass
 id constraintLayout

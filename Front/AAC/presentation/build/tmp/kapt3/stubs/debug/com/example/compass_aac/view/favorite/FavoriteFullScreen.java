@@ -1,10 +1,13 @@
 package com.example.compass_aac.view.favorite;
 
+import android.animation.ObjectAnimator;
 import android.content.ContentValues;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.animation.LinearInterpolator;
 import androidx.activity.OnBackPressedCallback;
 import com.example.compass_aac.R;
 import com.example.compass_aac.databinding.ActivityFavoriteFullScreenBinding;

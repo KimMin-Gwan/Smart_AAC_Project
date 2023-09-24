@@ -41,8 +41,8 @@
         android:layout_marginEnd="40dp"
         android:background="@drawable/sentence_edit_text"
         android:padding="25dp"
-        android:text="ex.화장실이 어디에요?"
-        android:textColor="#696969"
+        android:hint="ex.화장실이 어디에요?"
+        android:textColorHint="#696969"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

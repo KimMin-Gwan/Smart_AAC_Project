@@ -75,7 +75,7 @@ public final class NodeAdapter extends androidx.recyclerview.widget.RecyclerView
         com.example.data.source.remote.Tree_Node treeNode);
     }
     
-    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\r\u001a\u00020\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u001a\u0010\u0011\u001a\u00020\u0012X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0013\"\u0004\b\u0014\u0010\u0015\u00a8\u0006\u0016"}, d2 = {"Lcom/example/compass_aac/view/adapters/NodeAdapter$ViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "chooseImg", "Landroid/widget/ImageView;", "getChooseImg", "()Landroid/widget/ImageView;", "chooseName", "Landroid/widget/TextView;", "getChooseName", "()Landroid/widget/TextView;", "chooseWord", "Landroid/widget/Button;", "getChooseWord", "()Landroid/widget/Button;", "isSelected", "", "()Z", "setSelected", "(Z)V", "presentation_debug"})
+    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\r\u001a\u00020\u000e\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010\u00a8\u0006\u0011"}, d2 = {"Lcom/example/compass_aac/view/adapters/NodeAdapter$ViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "chooseImg", "Landroid/widget/ImageView;", "getChooseImg", "()Landroid/widget/ImageView;", "chooseName", "Landroid/widget/TextView;", "getChooseName", "()Landroid/widget/TextView;", "chooseWord", "Landroid/widget/Button;", "getChooseWord", "()Landroid/widget/Button;", "presentation_debug"})
     public static final class ViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
         @org.jetbrains.annotations.NotNull
         private final android.widget.Button chooseWord = null;
@@ -83,7 +83,6 @@ public final class NodeAdapter extends androidx.recyclerview.widget.RecyclerView
         private final android.widget.TextView chooseName = null;
         @org.jetbrains.annotations.NotNull
         private final android.widget.ImageView chooseImg = null;
-        private boolean isSelected = false;
         
         public ViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View view) {
@@ -103,13 +102,6 @@ public final class NodeAdapter extends androidx.recyclerview.widget.RecyclerView
         @org.jetbrains.annotations.NotNull
         public final android.widget.ImageView getChooseImg() {
             return null;
-        }
-        
-        public final boolean isSelected() {
-            return false;
-        }
-        
-        public final void setSelected(boolean p0) {
         }
     }
 }

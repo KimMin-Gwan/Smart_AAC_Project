@@ -1,0 +1,3 @@
+com.example.compass_aac.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

@@ -4,7 +4,6 @@ package com.example.compass_aac.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,17 +24,12 @@ public final class ActivityChooseVoiceWordVoiceBinding implements ViewBinding {
   public final MaterialButton chooseWordVoiceBtn;
 
   @NonNull
-  public final ImageView chooseWordVoiceImg;
-
-  @NonNull
   public final TextView chooseWordVoiceName;
 
   private ActivityChooseVoiceWordVoiceBinding(@NonNull MaterialCardView rootView,
-      @NonNull MaterialButton chooseWordVoiceBtn, @NonNull ImageView chooseWordVoiceImg,
-      @NonNull TextView chooseWordVoiceName) {
+      @NonNull MaterialButton chooseWordVoiceBtn, @NonNull TextView chooseWordVoiceName) {
     this.rootView = rootView;
     this.chooseWordVoiceBtn = chooseWordVoiceBtn;
-    this.chooseWordVoiceImg = chooseWordVoiceImg;
     this.chooseWordVoiceName = chooseWordVoiceName;
   }
 
@@ -72,12 +66,6 @@ public final class ActivityChooseVoiceWordVoiceBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.chooseWordVoiceImg;
-      ImageView chooseWordVoiceImg = ViewBindings.findChildViewById(rootView, id);
-      if (chooseWordVoiceImg == null) {
-        break missingId;
-      }
-
       id = R.id.chooseWordVoiceName;
       TextView chooseWordVoiceName = ViewBindings.findChildViewById(rootView, id);
       if (chooseWordVoiceName == null) {
@@ -85,7 +73,7 @@ public final class ActivityChooseVoiceWordVoiceBinding implements ViewBinding {
       }
 
       return new ActivityChooseVoiceWordVoiceBinding((MaterialCardView) rootView,
-          chooseWordVoiceBtn, chooseWordVoiceImg, chooseWordVoiceName);
+          chooseWordVoiceBtn, chooseWordVoiceName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

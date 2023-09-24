@@ -9,6 +9,7 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
@@ -99,6 +100,7 @@ class FavoriteMain : AppCompatActivity() {
             alertDialog.show()
             val textInputEditText = dialogView.findViewById<TextInputEditText>(R.id.textInputEditText)
             val finishBtn = dialogView.findViewById<MaterialButton>(R.id.addSentenceBtn)
+            val closeBtn = dialogView.findViewById<ImageButton>(R.id.imageButton4)
 
             var text = ""
 
@@ -133,6 +135,10 @@ class FavoriteMain : AppCompatActivity() {
                         }
                     }
                 }
+            }
+
+            closeBtn.setOnClickListener {
+                alertDialog.dismiss()
             }
         }
 

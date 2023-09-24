@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.compass_aac.R
 import com.example.compass_aac.view.voiceaac.ShowSelectedWord
 import com.example.data.source.remote.Tree_Node
@@ -28,7 +29,7 @@ class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val cont
     class ViewHolder(view:View) : RecyclerView.ViewHolder(view){
         val chooseWord: Button = view.findViewById(R.id.chooseWordVoiceBtn)
         val chooseVoiceName : TextView = view.findViewById(R.id.chooseWordVoiceName)
-        val chooseVoiceImg : ImageView = view.findViewById(R.id.chooseWordVoiceImg)
+//        val chooseVoiceImg : ImageView = view.findViewById(R.id.chooseWordVoiceImg)
 
     }
 
@@ -49,9 +50,14 @@ class VoiceAdapter(private var childTree: ArrayList<Tree_Node>, private val cont
         } else {
             holder.chooseWord.isEnabled = true
             holder.chooseWord.visibility = View.VISIBLE
+            //이미지 url로 처리
+            val urlId = treeNode.getId()
+            val url = "http://13.125.205.99/images/$urlId.png"
+//            Glide.with(context).load(url).error(R.drawable.baseline_error_outline_24).into(holder.chooseVoiceImg)
 
-            val newName = treeNode.getName().replace(" ", "\n")
-            holder.chooseVoiceName.text = newName
+
+//            val newName = treeNode.getName().replace(" ", "\n")
+            holder.chooseVoiceName.text = treeNode.getName()
         }
 
         //클릭시 에니메이션 적용

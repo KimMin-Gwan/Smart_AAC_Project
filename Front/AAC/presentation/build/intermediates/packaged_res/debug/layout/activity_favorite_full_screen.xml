@@ -6,21 +6,20 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".view.favorite.FavoriteFullScreen">
+
     <TextView
         android:id="@+id/favoriteSentence"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:rotation="90"
         android:text="도와주세요"
-        android:fontFamily="@font/font"
         android:textColor="@color/white"
-        android:textSize="55sp"
+        android:textSize="70sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <ImageButton
         android:id="@+id/favoriteClose"
         android:layout_width="60dp"

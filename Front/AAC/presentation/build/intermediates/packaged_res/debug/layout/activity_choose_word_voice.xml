@@ -19,28 +19,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/star"-->
-<!--        android:layout_width="60dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:backgroundTint="@color/white"-->
-<!--        android:scaleType="fitXY"-->
-<!--        android:src="@drawable/baseline_stars_24"-->
-<!--        android:layout_marginEnd="10dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/voiceText"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="1.0"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/select_word_voice_back_btn"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.25" />-->
+    <ImageButton
+        android:id="@+id/star"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/baseline_stars_24"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/voiceText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/select_word_voice_back_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="550dp"
         android:orientation="vertical"
         android:padding="5dp"
-        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/selectedWordVoiceBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/voiceText">
@@ -50,12 +50,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            tools:listitem="@layout/activity_choose_voice_word_voice"
+            android:layout_marginBottom="15dp"
             android:scrollbars="vertical"
             app:layout_constraintBottom_toTopOf="@+id/researchBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            tools:listitem="@layout/activity_choose_voice_word_voice" />
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -85,11 +85,11 @@
         android:layout_marginRight="35dp"
         android:background="@drawable/text_voice_radius"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="12dp"
         android:elevation="4dp"
         android:text="음성인식된 말 넣기"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/select_word_voice_back_btn"
         app:layout_constraintVertical_bias="0.105"
         tools:layout_editor_absoluteX="0dp" />

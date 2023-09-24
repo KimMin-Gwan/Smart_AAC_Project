@@ -1,6 +1,7 @@
 package com.example.compass_aac.view.voiceaac;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,9 +11,11 @@ import android.widget.Toast;
 import androidx.activity.OnBackPressedCallback;
 import androidx.lifecycle.ViewModel;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.compass_aac.databinding.ActivityChooseWordVoiceBinding;
 import com.example.compass_aac.view.adapters.NodeAdapter;
 import com.example.compass_aac.view.adapters.VoiceAdapter;
+import com.example.compass_aac.view.favorite.FavoriteMain;
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel;
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordVoiceViewModel;
 import com.example.data.source.remote.Tree_Node;

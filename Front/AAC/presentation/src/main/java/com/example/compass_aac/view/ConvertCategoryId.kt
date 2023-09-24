@@ -8,15 +8,15 @@ fun ConvertCategoryId(categoryresult: List<String>) : List<Int> {
     for (category in categoryresult){
 
         val result : Int = when(category){
-            "도서관" -> 101
-            "카페" -> 102
-            "문구점" -> 103
-            "영화관" -> 104
-            "식당" -> 105
-            "서점" -> 106
-            "마트" -> 107
+            "문구점" -> 101
+            "식당" -> 102
+            "영화관" -> 103
+            "마트" -> 104
+            "편의점" -> 105
+            "도서관" -> 106
+            "카페" -> 107
             "미용실" -> 108
-            "편의점" -> 109
+            "서점" -> 109
             else -> 0
         }
 

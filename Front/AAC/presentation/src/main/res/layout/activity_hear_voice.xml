@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
         android:background="@color/white"
-        android:src="@drawable/voiceimg"
+        android:src="@drawable/micblue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/hear_voice_end_btn"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:backgroundTint="@color/black"

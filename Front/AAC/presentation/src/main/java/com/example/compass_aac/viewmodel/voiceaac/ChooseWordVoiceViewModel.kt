@@ -1,6 +1,8 @@
 package com.example.compass_aac.viewmodel.voiceaac
 
+import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -21,6 +23,10 @@ import kotlin.math.log
 @HiltViewModel
 class ChooseWordVoiceViewModel @Inject constructor(private val findNodeRepository: FindNodeRepository, private val voiceUseCase: VoiceUseCase) :ViewModel() {
 
+    private val context: Context
+        get() {
+            return context.applicationContext
+        }
     private val _category = MutableLiveData<Result<VoiceCategory>>()
     val category :LiveData<Result<VoiceCategory>> = _category
 
@@ -57,11 +63,8 @@ class ChooseWordVoiceViewModel @Inject constructor(private val findNodeRepositor
                 val keyparam = KeyParam(voiceText)
                 val response = voiceUseCase.voiceCategory(keyparam)
                 _category.postValue(Result.success(response))
-
                 Log.d("response", response.key)
-
 //                processNodes(response.key)
-
 
             } catch (e:Exception){
                 Log.d("VoiceViewModel", "${e.message}")

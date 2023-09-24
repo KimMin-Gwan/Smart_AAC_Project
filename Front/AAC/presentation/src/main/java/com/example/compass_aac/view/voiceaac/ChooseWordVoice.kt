@@ -11,6 +11,7 @@
 package com.example.compass_aac.view.voiceaac
 
 import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,9 +22,11 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.compass_aac.databinding.ActivityChooseWordVoiceBinding
 import com.example.compass_aac.view.adapters.NodeAdapter
 import com.example.compass_aac.view.adapters.VoiceAdapter
+import com.example.compass_aac.view.favorite.FavoriteMain
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordVoiceViewModel
 import com.example.data.source.remote.Tree_Node
@@ -81,27 +84,37 @@ class ChooseWordVoice : AppCompatActivity() {
         //받아온 음성 카테고리로 변환 후 관찰
         viewModel.category.observe(this){
             if (it.isSuccess){
-                val childTree = viewModel.processUpdateNodes()
-                adapter = VoiceAdapter(childTree!!,this)
-                binding.recyclerViewVoice.layoutManager = GridLayoutManager(this, 3)
-                binding.recyclerViewVoice.adapter = adapter
+                if(it.getOrNull()?.key =="default"){
+                    Toast.makeText(this, "해당되는 카테고리가 없습니다.\n음성인식을 다시 해주시기 바랍니다.", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    val childTree = viewModel.processUpdateNodes()
+                    adapter = VoiceAdapter(childTree!!,this)
+                    binding.recyclerViewVoice.layoutManager = LinearLayoutManager(this)
+                    binding.recyclerViewVoice.adapter = adapter
 
-                //버튼 클릭 시
-                adapter.itemClick = object : VoiceAdapter.ItemClick{
-                    override fun onClick(view: View, treeNode: Tree_Node) {
-                        Log.d("클릭된 단어", treeNode.getName())
-                        selectedWord.add(treeNode.getName())
-                        val childtree = viewModel.getAAC_Tree(treeNode.getId())
-                        Log.d("자식노드", childtree.toString())
-                        adapter.UpdateChild(childtree, selectedWord)
+                    //버튼 클릭 시
+                    adapter.itemClick = object : VoiceAdapter.ItemClick{
+                        override fun onClick(view: View, treeNode: Tree_Node) {
+                            Log.d("클릭된 단어", treeNode.getName())
+                            selectedWord.add(treeNode.getName())
+                            val childtree = viewModel.getAAC_Tree(treeNode.getId())
+                            Log.d("자식노드", childtree.toString())
+                            adapter.UpdateChild(childtree, selectedWord)
+
+                        }
 
                     }
-
                 }
             }
         }
 
 
+        binding.star.setOnClickListener {
+            val intent = Intent(this, FavoriteMain::class.java)
+            startActivity(intent)
+//            finish()
+        }
 
         binding.selectWordVoiceBackBtn.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()

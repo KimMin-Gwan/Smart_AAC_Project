@@ -20,6 +20,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import com.example.compass_aac.databinding.ActivityShowSelectedWordBinding
 import com.example.compass_aac.view.MainActivity
+import com.example.compass_aac.view.favorite.FavoriteMain
 import com.example.compass_aac.viewmodel.user.UserPageViewModel
 import com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -74,6 +75,11 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
 
         }
 
+        binding.star.setOnClickListener {
+            val intent = Intent(this, FavoriteMain::class.java)
+            startActivity(intent)
+        }
+
         viewModel.textToRead.observe(this){text ->
             selectedWord = text
             val sentence = text.toList().joinToString("\n")
@@ -81,6 +87,7 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
             val formattedText = formatText(sentence, 4)
             binding.selectedWordShowTv.text= sentence
         }
+
 
 //        customizeViewModel.fixedText.observe(this){
 //            binding.customizeText.text = it

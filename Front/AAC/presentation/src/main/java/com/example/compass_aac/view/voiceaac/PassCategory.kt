@@ -35,6 +35,7 @@ class PassCategory : AppCompatActivity() {
     private var categorylist :List<String> = listOf()
 //    private lateinit var adapter : PassCategoryAdapter
 
+    private lateinit var newCategory : String
     private var backPressedTime: Long = 0
 
     //뒤로 가기 두번 누르면 로그아웃되고 다시 로그인 하는 창으로 이동
@@ -77,7 +78,7 @@ class PassCategory : AppCompatActivity() {
         setContentView(view)
 
         this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback) //위에서 생성한 콜백 인스턴스 붙여주기
-
+        newCategory = ""
 
         // intent로부터 categoryData를 받아 ViewModel에 전달
         var categoryData = intent.getStringExtra("CATEGORY") ?: "default"
@@ -85,15 +86,33 @@ class PassCategory : AppCompatActivity() {
 
         viewModel.receiveCategory(categoryData)
 
-        viewModel.receivedCategory.observe(this){
-            categoryData = it
-        }
+//        viewModel.receivedCategory.observe(this){
+//            categoryData = it
+//        }
 
-        if (categoryData != "default") {
-//          viewModel.initCategoryData(categoryData)
-            categorylist = viewModel.processNodes(categoryData)
-        } else{
-            categorylist= viewModel.defaultprocessNodes(categoryData)
+
+        val existPlace : ArrayList<String> = arrayListOf("문구점", "식당", "영화관","마트","편의점", "도서관","카페","미용실", "서점")
+        //해당 위치에 대한 정보가 없는 경우
+        when (categoryData) {
+            "default" -> {
+                newCategory = "default"
+                //          viewModel.initCategoryData(categoryData)
+                Log.d("newCategory1", newCategory)
+
+                categorylist = viewModel.defaultprocessNodes(newCategory)
+            }
+            //장소는 잘 나오지만 json에 해당 카테고리가 없는 경우
+            !in existPlace -> {
+                newCategory = "default"
+                Log.d("newCategory2", newCategory)
+                categorylist = viewModel.defaultprocessNodes(newCategory)
+
+            }
+            //해당 위치에 대한 장소가 잘 나온 경우
+            else -> {
+                Log.d("newCategory3", categoryData)
+                categorylist= viewModel.processNodes(categoryData)
+            }
         }
 
 //        viewModel.categorylist.observe(this){list->

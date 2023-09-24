@@ -38,7 +38,6 @@ class NodeAdapter(private var childTree: ArrayList<Tree_Node>, private val conte
         val chooseWord: Button = view.findViewById(R.id.chooseWordPassBtn)
         val chooseName : TextView = view.findViewById(R.id.chooseWordName)
         val chooseImg : ImageView = view.findViewById(R.id.chooseWordPassImg)
-        var isSelected: Boolean = false // 추가
 //        val downarrow: ImageView = view.findViewById(R.id.downArrow)
     }
 

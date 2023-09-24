@@ -61,7 +61,8 @@ class HearVoice : AppCompatActivity() {
 
         // 음성인식 후 텍스트보여지는 livedata 관찰
         viewModel.recognizedSpeechText.observe(this, Observer { text ->
-            binding.voiceToTextTv.text = text
+            val fullSentence = "'${text}'"
+            binding.voiceToTextTv.text = fullSentence
             binding.hearVoiceEndBtn.setOnClickListener {
                 val intent = Intent(this@HearVoice, ChooseWordVoice::class.java)
                 intent.putExtra("voiceText", text)
