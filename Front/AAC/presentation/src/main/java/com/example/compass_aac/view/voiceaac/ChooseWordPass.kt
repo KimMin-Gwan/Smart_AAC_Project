@@ -65,12 +65,12 @@ class ChooseWordPass() : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
         val ImgPass = findViewById<ImageView>(R.id.chooseWordPassImg)
         // 카테고리 변경을 관찰
         viewModel.categories.observe(this) {
 
             child_list = viewModel.processUpdateNodes()!!
-
             adapter = NodeAdapter(child_list, this)
             binding.recyclerViewPass.layoutManager = GridLayoutManager(this, 3)
             binding.recyclerViewPass.adapter = adapter
@@ -83,6 +83,8 @@ class ChooseWordPass() : AppCompatActivity() {
                     val childTree = viewModel.getAAC_Tree(treeNode.getId())
                     Log.d("자식노드", childTree.toString())
 
+                    binding.ChoosedWord.text = selectedWord.joinToString(" ")
+
                     adapter.UpdateChild(childTree, selectedWord)
 
                 }
@@ -90,7 +92,8 @@ class ChooseWordPass() : AppCompatActivity() {
         }
 
         // 액티비티가 처음 시작될 때 카테고리를 설정
-        var selectedCategory = intent.getStringExtra("selectedCategory")
+        val selectedCategory = intent.getStringExtra("selectedCategory")
+        Log.d("selcategory", selectedCategory ?: "null")
         val categoryselected = selectedCategory
         if (selectedCategory != null) {
             category = selectedCategory
@@ -99,13 +102,15 @@ class ChooseWordPass() : AppCompatActivity() {
             viewModel.storeCategory(selectedCategory)
             child_list = viewModel.processNodes(selectedCategory)
         }
+//        val selcal = viewModel.categories.value
+//        Log.d("selCal", selcal!!)
 
 
         //선택완료하기
         binding.selectwordBtn.setOnClickListener {
             viewModel.UpdateSelectedWord(selectedWord)
             val intent = Intent(this, ShowSelectedWord::class.java)
-            intent.putExtra("selectedword",selectedWord )
+            intent.putExtra("selectedword", selectedWord)
             intent.putExtra("selectedCategory", categoryselected)
             startActivity(intent)
         }
@@ -141,6 +146,16 @@ class ChooseWordPass() : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d("destroy", "Destroy")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("resume", "resume")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("start", "start")
     }
 
     companion object {

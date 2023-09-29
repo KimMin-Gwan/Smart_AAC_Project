@@ -26,11 +26,16 @@ public final class ActivityFavoriteFullScreenBinding implements ViewBinding {
   @NonNull
   public final TextView favoriteSentence;
 
+  @NonNull
+  public final ImageButton favoriteVoice;
+
   private ActivityFavoriteFullScreenBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton favoriteClose, @NonNull TextView favoriteSentence) {
+      @NonNull ImageButton favoriteClose, @NonNull TextView favoriteSentence,
+      @NonNull ImageButton favoriteVoice) {
     this.rootView = rootView;
     this.favoriteClose = favoriteClose;
     this.favoriteSentence = favoriteSentence;
+    this.favoriteVoice = favoriteVoice;
   }
 
   @Override
@@ -72,8 +77,14 @@ public final class ActivityFavoriteFullScreenBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.favoriteVoice;
+      ImageButton favoriteVoice = ViewBindings.findChildViewById(rootView, id);
+      if (favoriteVoice == null) {
+        break missingId;
+      }
+
       return new ActivityFavoriteFullScreenBinding((ConstraintLayout) rootView, favoriteClose,
-          favoriteSentence);
+          favoriteSentence, favoriteVoice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

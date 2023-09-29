@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 anim scale_animation
+anim translate_alpha
 color black
 color border_color
 color border_color_pass
@@ -92,6 +93,7 @@ drawable voiceimg
 font font
 font omue
 font suit_regular
+id ChoosedWord
 id FirstFragment
 id SecondFragment
 id action_FirstFragment_to_SecondFragment
@@ -122,6 +124,7 @@ id favoriteClose
 id favoriteListView
 id favoriteRecycler
 id favoriteSentence
+id favoriteVoice
 id hear_voice_back_btn
 id hear_voice_btn
 id hear_voice_end_btn
@@ -182,7 +185,6 @@ id selectwordBtn
 id sentenceItem
 id sentenceLine
 id sentenceList
-id setSentence
 id splashImg
 id splashTv
 id star

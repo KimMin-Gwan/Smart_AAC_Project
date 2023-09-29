@@ -1,30 +1,42 @@
 package com.example.compass_aac.view.favorite
 
-import android.animation.ObjectAnimator
+import android.R
 import android.content.ContentValues
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.pm.ActivityInfo
 import android.os.Bundle
-import android.util.DisplayMetrics
 import android.util.Log
-import android.view.animation.LinearInterpolator
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.activity.OnBackPressedCallback
-import com.example.compass_aac.R
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.example.compass_aac.databinding.ActivityFavoriteFullScreenBinding
-import com.example.compass_aac.view.voiceaac.ShowSelectedWord
+import com.example.compass_aac.viewmodel.favorite.FavoriteVoiceViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.HiltAndroidApp
+import javax.inject.Inject
 
-class FavoriteFullScreen : AppCompatActivity() {
+@AndroidEntryPoint
+class FavoriteFullScreen @Inject constructor(): AppCompatActivity() {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            val intent= Intent(this@FavoriteFullScreen, FavoriteMain::class.java)
-            startActivity(intent)
+//            val intent= Intent(this@FavoriteFullScreen, FavoriteMain::class.java)
+//            startActivity(intent)
+            viewModel.shutdownSentence()
+            finish()
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
             // 뒤로가기 시 실행할 코드
         }
     }
+
+    private val viewModel : FavoriteVoiceViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 
         val binding= ActivityFavoriteFullScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -33,40 +45,42 @@ class FavoriteFullScreen : AppCompatActivity() {
 
 
         val selectedSentence = intent.getStringExtra("selectedSentence") ?: "default"
+        //뷰모델에 선택된 문장 저장
+        viewModel.storeSentence(selectedSentence)
 
-//        binding.favoriteSentence.text = selectedSentence
-        binding.favoriteSentence.isSelected = true
-
-
-        // 화면 크기 정보 가져오기
-        val displayMetrics = DisplayMetrics()
-        windowManager.defaultDisplay.getMetrics(displayMetrics)
-        val screenWidth = displayMetrics.widthPixels
-        val screenHeight = displayMetrics.heightPixels
-
-        // 원하는 가로 및 세로 비율 설정
-        val desiredWidthRatio = 0.9 // 가로 80%
-        val desiredHeightRatio = 0.8 // 세로 60%
-
-        val newTextSize = when {
-            screenWidth * desiredHeightRatio < screenHeight * desiredWidthRatio -> {
-                // 세로 비율에 맞게 크기 조절
-                (screenWidth * desiredHeightRatio / selectedSentence.length).toFloat()
-            }
-            else -> {
-                // 가로 비율에 맞게 크기 조절
-                (screenHeight * desiredWidthRatio / selectedSentence.length).toFloat()
-            }
-        }
-
-        binding.favoriteSentence.textSize = newTextSize
         binding.favoriteSentence.text = selectedSentence
 
+        val anim: Animation = AnimationUtils.loadAnimation(this, com.example.compass_aac.R.anim.translate_alpha)
+        binding.favoriteSentence.animation = anim
+        binding.favoriteSentence.startAnimation(anim)
+
+        binding.favoriteVoice.setOnClickListener {
+            viewModel.speakSentence()
+        }
 
         binding.favoriteClose.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
+            viewModel.shutdownSentence()
             finish()
 
         }
+
+
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModel.shutdownSentence()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("pause", "pause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("stop", "stop")
     }
 }

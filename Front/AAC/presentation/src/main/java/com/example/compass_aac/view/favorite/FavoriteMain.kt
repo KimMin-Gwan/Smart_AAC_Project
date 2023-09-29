@@ -124,6 +124,9 @@ class FavoriteMain : AppCompatActivity() {
                     Toast.makeText(applicationContext, "문장을 입력해주세요.", Toast.LENGTH_SHORT).show()
 
                 }
+                else if(text.length >15){
+                    Toast.makeText(applicationContext, "최대 15글자 이하로 작성해주세요.", Toast.LENGTH_SHORT).show()
+                }
                 else{
                     //값 저장
                     viewModel.editText(text)
@@ -131,10 +134,11 @@ class FavoriteMain : AppCompatActivity() {
                         viewModel.addList(text)
                         withContext(Dispatchers.Main){
                             alertDialog.dismiss()
-
                         }
                     }
                 }
+
+                textInputEditText.text?.clear()
             }
 
             closeBtn.setOnClickListener {

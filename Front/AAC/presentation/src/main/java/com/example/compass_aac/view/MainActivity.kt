@@ -84,8 +84,10 @@ class MainActivity : AppCompatActivity() {
 //        }
         //긴급 AAC
         binding.mainUrgencyBtn.setOnClickListener {
-            val intent = Intent(this, UrgencyCategory::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, UrgencyCategory::class.java)
+//            startActivity(intent)
+            Toast.makeText(applicationContext, "기능 구현 중입니다.", Toast.LENGTH_SHORT).show()
+
         }
 
         //유저페이지

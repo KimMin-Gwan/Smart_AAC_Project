@@ -17,6 +17,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
@@ -25,7 +26,9 @@ import com.example.compass_aac.view.adapters.PassCategoryAdapter
 import com.example.compass_aac.databinding.ActivityPassCategoryBinding
 import com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel
 import com.example.compass_aac.view.MainActivity
+import com.example.compass_aac.view.adapters.NodeAdapter
 import com.example.compass_aac.view.location.SearchLocation
+import com.example.data.source.remote.Tree_Node
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -128,6 +131,7 @@ class PassCategory : AppCompatActivity() {
         val adapter = PassCategoryAdapter(categorylist)
         binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
         binding.recyclerView.adapter = adapter
+
 
         // ViewModel에서 LiveData를 관찰하여 데이터가 변경될 때마다 GridView를 업데이트
 //        viewModel.categoryResult.observe(this) { result ->

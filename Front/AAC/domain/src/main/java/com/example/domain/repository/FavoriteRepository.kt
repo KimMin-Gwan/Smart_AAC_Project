@@ -9,4 +9,5 @@ interface FavoriteRepository {
     suspend fun addList(text :String) : List<favorite>
 
     suspend fun delList(id: Int) : List<favorite>
+
 }

@@ -8,8 +8,8 @@ MERGED from [androidx.databinding:databinding-adapters:8.0.2] C:\Users\ellen\.gr
 MERGED from [androidx.databinding:databinding-ktx:8.0.2] C:\Users\ellen\.gradle\caches\transforms-3\c6a3ab4551fb4a1b512422c41a9b911c\transformed\jetified-databinding-ktx-8.0.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:8.0.2] C:\Users\ellen\.gradle\caches\transforms-3\8192da9d5f9fa03333ccb1b4ee1c5e7a\transformed\databinding-runtime-8.0.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:viewbinding:8.0.2] C:\Users\ellen\.gradle\caches\transforms-3\bb0ff4fc4152e7b07b98a25e81763186\transformed\jetified-viewbinding-8.0.2\AndroidManifest.xml:2:1-7:12
-MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-10:12
+MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-20:12
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-16:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.5.2] C:\Users\ellen\.gradle\caches\transforms-3\541a166d3630609655c7c76485b856d2\transformed\navigation-ui-ktx-2.5.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.5.2] C:\Users\ellen\.gradle\caches\transforms-3\f8205290a0dbf9e2dccb5031607cd485\transformed\navigation-ui-2.5.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\ellen\.gradle\caches\transforms-3\a191931e67e775d1e9d095ec48ef944a\transformed\material-1.9.0\AndroidManifest.xml:17:1-26:12
@@ -123,24 +123,34 @@ uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
 ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:7:5-85
 MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-85
 MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-85
+MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-85
+MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-85
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-85
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-85
 	android:name
 		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:7:22-82
 uses-permission#android.permission.RECORD_AUDIO
 ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:8:5-71
-MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-71
-MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-71
+MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-71
+MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-71
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-71
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-71
 	android:name
 		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:8:22-68
 uses-permission#android.permission.INTERNET
 ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:9:5-67
+MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-67
+MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-67
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-67
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-67
 	android:name
 		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:9:22-64
 application
 ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:11:5-91:19
-MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-15:19
-MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-15:19
-MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-8:19
-MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-8:19
+MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:5-18:19
+MERGED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:5-18:19
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-14:19
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-14:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\ellen\.gradle\caches\transforms-3\a191931e67e775d1e9d095ec48ef944a\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\ellen\.gradle\caches\transforms-3\a191931e67e775d1e9d095ec48ef944a\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ellen\.gradle\caches\transforms-3\bd6050a25abff221ba59aa165df6f4ca\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -515,6 +525,12 @@ INJECTED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManife
 		INJECTED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml
 		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml
 		INJECTED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-80
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-80
+MERGED from [:domain] C:\Smart_AAC_Project\Front\AAC\domain\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from [:data] C:\Smart_AAC_Project\Front\AAC\data\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:22-77
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\cb06e3a298bbaa5176ff027874a5437a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
 	android:exported

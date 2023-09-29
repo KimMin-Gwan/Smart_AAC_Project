@@ -2,6 +2,8 @@ package com.example.compass_aac.module;
 
 import android.content.Context;
 import android.speech.tts.TextToSpeech;
+import android.util.Log;
+import android.widget.Toast;
 import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;

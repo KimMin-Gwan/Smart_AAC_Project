@@ -1,5 +1,6 @@
 package com.example.compass_aac.module;
 
+import android.speech.tts.TextToSpeech;
 import com.example.data.repository.FavoriteRepositoryImpl;
 import com.example.data.repository.FindNodeRepositoryImpl;
 import com.example.data.repository.LocationRepositoryImpl;

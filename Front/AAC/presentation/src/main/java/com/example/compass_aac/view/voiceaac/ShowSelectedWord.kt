@@ -82,7 +82,7 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
 
         viewModel.textToRead.observe(this){text ->
             selectedWord = text
-            val sentence = text.toList().joinToString("\n")
+            val sentence = text.toList().joinToString(" ")
             Log.d("sentence", sentence)
             val formattedText = formatText(sentence, 4)
             binding.selectedWordShowTv.text= sentence
@@ -115,18 +115,13 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
         }
 
         binding.rechooseBtn.setOnClickListener {
-            viewModel.resetData()
+//            viewModel.resetData()
             viewModel.onCleared()
             val intent = Intent(this, ChooseWordPass::class.java)
             startActivity(intent)
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        viewModel.onCleared()
-
-    }
 
     private fun formatText(input: String, wordsPerLine: Int): String {
         val words = input.split(" ")
@@ -143,4 +138,34 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
 
         return stringBuilder.toString()
     }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("pause", "pause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("stop", "stop")
+
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("destroy", "Destroy")
+        viewModel.onCleared()
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("resume", "resume")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("start", "start")
+    }
+
 }

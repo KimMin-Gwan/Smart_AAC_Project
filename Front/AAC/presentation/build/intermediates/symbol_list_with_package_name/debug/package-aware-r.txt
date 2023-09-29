@@ -46,6 +46,7 @@ anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
 anim scale_animation
+anim translate_alpha
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -3218,6 +3219,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id ChoosedWord
 id FUNCTION
 id FirstFragment
 id META
@@ -3434,6 +3436,7 @@ id favoriteClose
 id favoriteListView
 id favoriteRecycler
 id favoriteSentence
+id favoriteVoice
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3713,7 +3716,6 @@ id selectwordBtn
 id sentenceItem
 id sentenceLine
 id sentenceList
-id setSentence
 id sharedValueSet
 id sharedValueUnset
 id shortcut

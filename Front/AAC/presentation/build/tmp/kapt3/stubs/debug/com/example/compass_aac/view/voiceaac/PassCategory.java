@@ -4,6 +4,7 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 import androidx.activity.OnBackPressedCallback;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -11,7 +12,9 @@ import com.example.compass_aac.view.adapters.PassCategoryAdapter;
 import com.example.compass_aac.databinding.ActivityPassCategoryBinding;
 import com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel;
 import com.example.compass_aac.view.MainActivity;
+import com.example.compass_aac.view.adapters.NodeAdapter;
 import com.example.compass_aac.view.location.SearchLocation;
+import com.example.data.source.remote.Tree_Node;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @dagger.hilt.android.AndroidEntryPoint

@@ -4,6 +4,7 @@ package com.example.compass_aac.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,12 +21,16 @@ public final class ActivityFullSrceenBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView setSentence;
+  public final TextView favoriteSentence;
+
+  @NonNull
+  public final ImageButton favoriteVoice;
 
   private ActivityFullSrceenBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView setSentence) {
+      @NonNull TextView favoriteSentence, @NonNull ImageButton favoriteVoice) {
     this.rootView = rootView;
-    this.setSentence = setSentence;
+    this.favoriteSentence = favoriteSentence;
+    this.favoriteVoice = favoriteVoice;
   }
 
   @Override
@@ -55,13 +60,20 @@ public final class ActivityFullSrceenBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.setSentence;
-      TextView setSentence = ViewBindings.findChildViewById(rootView, id);
-      if (setSentence == null) {
+      id = R.id.favoriteSentence;
+      TextView favoriteSentence = ViewBindings.findChildViewById(rootView, id);
+      if (favoriteSentence == null) {
         break missingId;
       }
 
-      return new ActivityFullSrceenBinding((ConstraintLayout) rootView, setSentence);
+      id = R.id.favoriteVoice;
+      ImageButton favoriteVoice = ViewBindings.findChildViewById(rootView, id);
+      if (favoriteVoice == null) {
+        break missingId;
+      }
+
+      return new ActivityFullSrceenBinding((ConstraintLayout) rootView, favoriteSentence,
+          favoriteVoice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

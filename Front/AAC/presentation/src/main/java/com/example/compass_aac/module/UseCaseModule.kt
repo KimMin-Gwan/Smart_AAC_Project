@@ -1,5 +1,6 @@
 package com.example.compass_aac.module
 
+import android.speech.tts.TextToSpeech
 import com.example.data.repository.FindNodeRepository
 import com.example.domain.repository.FavoriteRepository
 import com.example.domain.repository.LocationRepository
@@ -43,7 +44,9 @@ object UseCaseModule {
     }
 
     @Provides
-    fun provideFavoriteUseCase(favoriteRepository: FavoriteRepository) : FavoriteUseCase{
+    fun provideFavoriteUseCase(favoriteRepository: FavoriteRepository, textToSpeech: TextToSpeech) : FavoriteUseCase{
         return FavoriteUseCase(favoriteRepository)
     }
+
+
 }

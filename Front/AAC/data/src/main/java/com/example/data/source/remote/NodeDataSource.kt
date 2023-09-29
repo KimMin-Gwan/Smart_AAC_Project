@@ -65,7 +65,7 @@ class NodeList(private var size : Int){
     fun addNode(node : Node){
         if (this.num_node < this.size){
             val index = node.getID()
-            Log.d("index", index.toString())
+//            Log.d("index", index.toString())
             node_Array[index] = node
             this.num_node++
         }

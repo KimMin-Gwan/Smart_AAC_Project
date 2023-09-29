@@ -9,17 +9,23 @@
 
     <TextView
         android:id="@+id/favoriteSentence"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:rotation="90"
-        android:text="도와주세요"
+        android:layout_width="10000dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:maxLines="1"
+        android:ellipsize="none"
+        android:layoutAnimation="@anim/translate_alpha"
+        android:src="@drawable/select_voice_word"
+        android:text="도와주세요 안녕하세요 저는 기은서라고합니다."
         android:textColor="@color/white"
-        android:textSize="70sp"
+        android:textSize="120sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.005"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
     <ImageButton
         android:id="@+id/favoriteClose"
         android:layout_width="60dp"
@@ -32,4 +38,18 @@
         app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/favoriteVoice"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/black"
+        android:scaleType="fitXY"
+        android:src="@drawable/select_voice_word"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
