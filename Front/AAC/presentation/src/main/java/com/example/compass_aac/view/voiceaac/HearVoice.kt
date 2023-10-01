@@ -37,8 +37,9 @@ class HearVoice : AppCompatActivity() {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            val intent= Intent(this@HearVoice, ShowSelectedWord::class.java)
-            startActivity(intent)
+//            val intent= Intent(this@HearVoice, ShowSelectedWord::class.java)
+//            startActivity(intent)
+            finish()
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
             // 뒤로가기 시 실행할 코드
         }

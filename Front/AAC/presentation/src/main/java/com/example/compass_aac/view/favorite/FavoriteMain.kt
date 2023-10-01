@@ -43,8 +43,9 @@ class FavoriteMain : AppCompatActivity() {
     //뒤로가기
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            val intent = Intent(this@FavoriteMain, MainActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this@FavoriteMain, MainActivity::class.java)
+//            startActivity(intent)
+            finish()
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
             // 뒤로가기 시 실행할 코드
         }

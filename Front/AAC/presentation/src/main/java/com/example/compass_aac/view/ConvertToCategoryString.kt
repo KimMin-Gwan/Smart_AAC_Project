@@ -16,6 +16,7 @@ fun ConvertToCategoryString(categoryId: List<Int>) : List<String> {
             107 -> "카페"
             108 -> "미용실"
             109 -> "서점"
+            1010 -> "병원"
             else -> "카테고리 없음 "
         }
 

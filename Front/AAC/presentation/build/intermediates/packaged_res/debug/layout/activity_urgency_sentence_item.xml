@@ -12,10 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-
+        android:padding="15dp"
         android:text="도와주세요"
-        android:textColor="#393939"
-        android:textSize="18sp"
+        android:fontFamily="@font/font"
+        android:textColor="#5C5C5C"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
@@ -26,13 +27,14 @@
     <LinearLayout
         android:id="@+id/sentenceLine"
         android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="#AFAFAF"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#959595"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        android:orientation="horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/sentenceList"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,13 +48,13 @@ class FavoriteVoiceViewModel @Inject constructor( private val voiceUseCase: Favo
 
     fun stopSentence(){
         viewModelScope.launch {
-            voiceUseCase.stopSpeaking()
+//            voiceUseCase.stopSpeaking()
         }
     }
 
     fun shutdownSentence(){
         viewModelScope.launch{
-            voiceUseCase.shutdown()
+//            voiceUseCase.shutdown()
         }
     }
 

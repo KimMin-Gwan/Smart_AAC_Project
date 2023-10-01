@@ -21,16 +21,21 @@ public final class ActivityFullSrceenBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView favoriteSentence;
+  public final TextView UrgencySentence;
 
   @NonNull
-  public final ImageButton favoriteVoice;
+  public final ImageButton UrgencyVoice;
+
+  @NonNull
+  public final ImageButton urgencyClose;
 
   private ActivityFullSrceenBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView favoriteSentence, @NonNull ImageButton favoriteVoice) {
+      @NonNull TextView UrgencySentence, @NonNull ImageButton UrgencyVoice,
+      @NonNull ImageButton urgencyClose) {
     this.rootView = rootView;
-    this.favoriteSentence = favoriteSentence;
-    this.favoriteVoice = favoriteVoice;
+    this.UrgencySentence = UrgencySentence;
+    this.UrgencyVoice = UrgencyVoice;
+    this.urgencyClose = urgencyClose;
   }
 
   @Override
@@ -60,20 +65,26 @@ public final class ActivityFullSrceenBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.favoriteSentence;
-      TextView favoriteSentence = ViewBindings.findChildViewById(rootView, id);
-      if (favoriteSentence == null) {
+      id = R.id.UrgencySentence;
+      TextView UrgencySentence = ViewBindings.findChildViewById(rootView, id);
+      if (UrgencySentence == null) {
         break missingId;
       }
 
-      id = R.id.favoriteVoice;
-      ImageButton favoriteVoice = ViewBindings.findChildViewById(rootView, id);
-      if (favoriteVoice == null) {
+      id = R.id.UrgencyVoice;
+      ImageButton UrgencyVoice = ViewBindings.findChildViewById(rootView, id);
+      if (UrgencyVoice == null) {
         break missingId;
       }
 
-      return new ActivityFullSrceenBinding((ConstraintLayout) rootView, favoriteSentence,
-          favoriteVoice);
+      id = R.id.urgencyClose;
+      ImageButton urgencyClose = ViewBindings.findChildViewById(rootView, id);
+      if (urgencyClose == null) {
+        break missingId;
+      }
+
+      return new ActivityFullSrceenBinding((ConstraintLayout) rootView, UrgencySentence,
+          UrgencyVoice, urgencyClose);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -218,7 +218,7 @@ class AAC_Tree(var root_index :Int, val node_list : NodeList)
 }
 
 
-
+//일상 pass NODE
 class MakeNode(context: Context)
 {
     val assetManager = context.assets
@@ -227,6 +227,32 @@ class MakeNode(context: Context)
     val gson = Gson()
     val datas : AAC = gson.fromJson(fileContent, AAC::class.java)
     val size : Int = datas.AAC.last().id
+    val node_list : NodeList = NodeList(this.size + 1)
+
+    // 노드 생성기
+    fun make_node_list() : NodeList{
+        for (dataObject in this.datas.AAC) {
+            val node : Node = Node()
+            node.setID(dataObject.id)
+            node.setName(dataObject.name)
+            node.setChildIndexList(dataObject.node)
+            node_list.addNode(node)
+        }
+        return node_list
+    }
+}
+
+
+//긴급 NODE
+class MakeUrgencyNode(context: Context)
+{
+    val assetManager = context.assets
+    val inputStream = assetManager.open("json_data_urgency.json")
+    val fileContent = inputStream.bufferedReader().use { it.readText() }
+    val gson = Gson()
+    val datas : AAC = gson.fromJson(fileContent, AAC::class.java)
+    val size : Int = datas.AAC.last().id
+
     val node_list : NodeList = NodeList(this.size + 1)
 
     // 노드 생성기

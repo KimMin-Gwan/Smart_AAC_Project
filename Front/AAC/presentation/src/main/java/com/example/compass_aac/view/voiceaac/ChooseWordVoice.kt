@@ -48,8 +48,7 @@ class ChooseWordVoice : AppCompatActivity() {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            val intent = Intent(this@ChooseWordVoice, HearVoice::class.java)
-            startActivity(intent)
+            finish()
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
             // 뒤로가기 시 실행할 코드
         }
@@ -127,5 +126,39 @@ class ChooseWordVoice : AppCompatActivity() {
 
         }
     }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("워드pause", "pause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("워드stop", "stop")
+
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("워드destroy", "Destroy")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("워드resume", "resume")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("워드restart", "restart")
+        recreate()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("워드start", "start")
+    }
+
 
 }

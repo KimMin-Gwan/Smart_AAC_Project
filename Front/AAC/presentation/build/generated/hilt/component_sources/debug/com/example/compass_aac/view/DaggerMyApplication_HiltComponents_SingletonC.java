@@ -60,6 +60,8 @@ import com.example.compass_aac.viewmodel.login.RegisterViewModel;
 import com.example.compass_aac.viewmodel.login.RegisterViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.compass_aac.viewmodel.urgencyaac.CategoryViewModel;
 import com.example.compass_aac.viewmodel.urgencyaac.CategoryViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.compass_aac.viewmodel.urgencyaac.FullScreenViewModel;
+import com.example.compass_aac.viewmodel.urgencyaac.FullScreenViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel;
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordVoiceViewModel;
@@ -585,7 +587,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(11).add(CategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ChooseWordPassViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ChooseWordVoiceViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FavoriteMainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FavoriteVoiceViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LocationViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(PassCategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(RegisterViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ShowSelectedWordVIewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(12).add(CategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ChooseWordPassViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ChooseWordVoiceViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FavoriteMainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FavoriteVoiceViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FullScreenViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LocationViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(LoginViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(PassCategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(RegisterViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ShowSelectedWordVIewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -620,6 +622,8 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
     private Provider<FavoriteMainViewModel> favoriteMainViewModelProvider;
 
     private Provider<FavoriteVoiceViewModel> favoriteVoiceViewModelProvider;
+
+    private Provider<FullScreenViewModel> fullScreenViewModelProvider;
 
     private Provider<LocationViewModel> locationViewModelProvider;
 
@@ -659,17 +663,18 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
       this.chooseWordVoiceViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
       this.favoriteMainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
       this.favoriteVoiceViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
-      this.locationViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
-      this.loginViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 6);
-      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 7);
-      this.passCategoryViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 8);
-      this.registerViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 9);
-      this.showSelectedWordVIewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 10);
+      this.fullScreenViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
+      this.locationViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 6);
+      this.loginViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 7);
+      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 8);
+      this.passCategoryViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 9);
+      this.registerViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 10);
+      this.showSelectedWordVIewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 11);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(11).put("com.example.compass_aac.viewmodel.urgencyaac.CategoryViewModel", ((Provider) categoryViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel", ((Provider) chooseWordPassViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.ChooseWordVoiceViewModel", ((Provider) chooseWordVoiceViewModelProvider)).put("com.example.compass_aac.viewmodel.favorite.FavoriteMainViewModel", ((Provider) favoriteMainViewModelProvider)).put("com.example.compass_aac.viewmodel.favorite.FavoriteVoiceViewModel", ((Provider) favoriteVoiceViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.LocationViewModel", ((Provider) locationViewModelProvider)).put("com.example.compass_aac.viewmodel.login.LoginViewModel", ((Provider) loginViewModelProvider)).put("com.example.compass_aac.viewmodel.MainViewModel", ((Provider) mainViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel", ((Provider) passCategoryViewModelProvider)).put("com.example.compass_aac.viewmodel.login.RegisterViewModel", ((Provider) registerViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel", ((Provider) showSelectedWordVIewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(12).put("com.example.compass_aac.viewmodel.urgencyaac.CategoryViewModel", ((Provider) categoryViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel", ((Provider) chooseWordPassViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.ChooseWordVoiceViewModel", ((Provider) chooseWordVoiceViewModelProvider)).put("com.example.compass_aac.viewmodel.favorite.FavoriteMainViewModel", ((Provider) favoriteMainViewModelProvider)).put("com.example.compass_aac.viewmodel.favorite.FavoriteVoiceViewModel", ((Provider) favoriteVoiceViewModelProvider)).put("com.example.compass_aac.viewmodel.urgencyaac.FullScreenViewModel", ((Provider) fullScreenViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.LocationViewModel", ((Provider) locationViewModelProvider)).put("com.example.compass_aac.viewmodel.login.LoginViewModel", ((Provider) loginViewModelProvider)).put("com.example.compass_aac.viewmodel.MainViewModel", ((Provider) mainViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel", ((Provider) passCategoryViewModelProvider)).put("com.example.compass_aac.viewmodel.login.RegisterViewModel", ((Provider) registerViewModelProvider)).put("com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel", ((Provider) showSelectedWordVIewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -708,22 +713,25 @@ public final class DaggerMyApplication_HiltComponents_SingletonC {
           case 4: // com.example.compass_aac.viewmodel.favorite.FavoriteVoiceViewModel 
           return (T) new FavoriteVoiceViewModel(viewModelCImpl.favoriteVoiceUseCase(), ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
-          case 5: // com.example.compass_aac.viewmodel.voiceaac.LocationViewModel 
+          case 5: // com.example.compass_aac.viewmodel.urgencyaac.FullScreenViewModel 
+          return (T) new FullScreenViewModel(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 6: // com.example.compass_aac.viewmodel.voiceaac.LocationViewModel 
           return (T) new LocationViewModel(singletonCImpl.locationUseCase(), ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
 
-          case 6: // com.example.compass_aac.viewmodel.login.LoginViewModel 
+          case 7: // com.example.compass_aac.viewmodel.login.LoginViewModel 
           return (T) new LoginViewModel(singletonCImpl.provideLoginUseCaseProvider.get());
 
-          case 7: // com.example.compass_aac.viewmodel.MainViewModel 
+          case 8: // com.example.compass_aac.viewmodel.MainViewModel 
           return (T) new MainViewModel(singletonCImpl.findNodeRepositoryImpl());
 
-          case 8: // com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel 
+          case 9: // com.example.compass_aac.viewmodel.voiceaac.PassCategoryViewModel 
           return (T) new PassCategoryViewModel(singletonCImpl.findNodeRepositoryImpl());
 
-          case 9: // com.example.compass_aac.viewmodel.login.RegisterViewModel 
+          case 10: // com.example.compass_aac.viewmodel.login.RegisterViewModel 
           return (T) new RegisterViewModel(singletonCImpl.provideRegisterUseCaseProvider.get());
 
-          case 10: // com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel 
+          case 11: // com.example.compass_aac.viewmodel.voiceaac.ShowSelectedWordVIewModel 
           return (T) new ShowSelectedWordVIewModel(viewModelCImpl.showSelectedWordUseCase(), ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
 
           default: throw new AssertionError(id);

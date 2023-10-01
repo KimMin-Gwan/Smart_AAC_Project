@@ -33,6 +33,7 @@ import com.example.compass_aac.viewmodel.favorite.FavoriteVoiceViewModel_HiltMod
 import com.example.compass_aac.viewmodel.login.LoginViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.login.RegisterViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.urgencyaac.CategoryViewModel_HiltModules;
+import com.example.compass_aac.viewmodel.urgencyaac.FullScreenViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordPassViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.voiceaac.ChooseWordVoiceViewModel_HiltModules;
 import com.example.compass_aac.viewmodel.voiceaac.LocationViewModel_HiltModules;
@@ -192,6 +193,7 @@ public final class MyApplication_HiltComponents {
           ChooseWordVoiceViewModel_HiltModules.KeyModule.class,
           FavoriteMainViewModel_HiltModules.KeyModule.class,
           FavoriteVoiceViewModel_HiltModules.KeyModule.class,
+          FullScreenViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           LocationViewModel_HiltModules.KeyModule.class,
           LoginViewModel_HiltModules.KeyModule.class,
@@ -259,6 +261,7 @@ public final class MyApplication_HiltComponents {
           ChooseWordVoiceViewModel_HiltModules.BindsModule.class,
           FavoriteMainViewModel_HiltModules.BindsModule.class,
           FavoriteVoiceViewModel_HiltModules.BindsModule.class,
+          FullScreenViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           LocationViewModel_HiltModules.BindsModule.class,
           LoginViewModel_HiltModules.BindsModule.class,

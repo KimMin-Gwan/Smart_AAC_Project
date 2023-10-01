@@ -88,14 +88,13 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView4"
-        android:layout_width="135dp"
+        android:layout_width="120dp"
         android:layout_height="140dp"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="40dp"
         android:backgroundTint="#A0EDAC"
         android:elevation="8dp"
         app:cardElevation="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/materialCardView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
 
@@ -111,8 +110,10 @@
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -149,15 +150,16 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView3"
-        android:layout_width="175dp"
+        android:layout_width="170dp"
         android:layout_height="140dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="#FF9191"
         android:elevation="8dp"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/materialCardView4"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -179,12 +181,12 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/omue"
                 android:gravity="center"
                 android:text="긴급"
                 android:textColor="#9F2121"
                 android:textSize="31sp"
                 android:textStyle="bold"
-                android:fontFamily="@font/omue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.156"

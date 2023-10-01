@@ -51,6 +51,7 @@ class PassCategory : AppCompatActivity() {
                 val intent = Intent(this@PassCategory, MainActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
+                onDestroy()
             } else {
                 backPressedTime = currentTime
                 Toast.makeText(applicationContext, "뒤로가기 버튼을 한번 더 누르면 메인으로 이동합니다.", Toast.LENGTH_SHORT).show()
@@ -148,6 +149,11 @@ class PassCategory : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        finish()
     }
 
 }

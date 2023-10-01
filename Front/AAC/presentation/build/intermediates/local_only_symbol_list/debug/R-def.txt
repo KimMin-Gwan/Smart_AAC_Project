@@ -19,6 +19,7 @@ dimen fab_margin
 dimen zero_text_size
 drawable aac_information
 drawable applogo
+drawable applogo94_background
 drawable backgroundlogo
 drawable backgroundlogo1
 drawable backgroundlogo2
@@ -96,6 +97,8 @@ font suit_regular
 id ChoosedWord
 id FirstFragment
 id SecondFragment
+id UrgencySentence
+id UrgencyVoice
 id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id addSentenceBtn
@@ -204,6 +207,7 @@ id title_tv
 id title_unlogin_btn
 id ttsBtn
 id ttsBtn1
+id urgencyClose
 id urgencyItem
 id urgencyRecycler
 id voiceText
@@ -233,6 +237,9 @@ layout activity_urgency_category
 layout activity_urgency_sentence
 layout activity_urgency_sentence_item
 layout activity_user_page
+mipmap applogo94
+mipmap applogo94_foreground
+mipmap applogo94_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph

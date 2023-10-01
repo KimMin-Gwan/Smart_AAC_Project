@@ -3013,6 +3013,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable applogo
+drawable applogo94_background
 drawable avd_hide_password
 drawable avd_show_password
 drawable backgroundlogo
@@ -3232,6 +3233,8 @@ id SYM
 id SecondFragment
 id TOP_END
 id TOP_START
+id UrgencySentence
+id UrgencyVoice
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3829,6 +3832,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id urgencyClose
 id urgencyItem
 id urgencyRecycler
 id useLogo
@@ -4079,6 +4083,9 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+mipmap applogo94
+mipmap applogo94_foreground
+mipmap applogo94_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph

@@ -22,17 +22,13 @@ import javax.inject.Inject
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
-class LocationDataSourceImpl @Inject constructor(
-    private val locationApiService : LocationApiService,
-    private val fusedLocationClient: FusedLocationProviderClient,
-    @ApplicationContext private val context: Context
-) : LocationDataSource {
+class LocationDataSourceImpl @Inject constructor(private val locationApiService : LocationApiService, private val fusedLocationClient: FusedLocationProviderClient, @ApplicationContext private val context: Context) : LocationDataSource {
     override suspend fun getLocation() = getLastKnownLocation()
+
     override suspend fun getCategories(param:LocationParam): CategoryResponse {
         val mapper = MapperToLocation(param)
         return locationApiService.locationXY(mapper)
     }
-
 
     private suspend fun getLastKnownLocation(): Result<Location?> = suspendCancellableCoroutine { continuation ->
         val locationRequest = LocationRequest.create().apply {

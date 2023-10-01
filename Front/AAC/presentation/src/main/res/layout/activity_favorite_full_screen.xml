@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/favoriteSentence"
-        android:layout_width="10000dp"
+        android:layout_width="5000dp"
         android:layout_height="wrap_content"
         android:background="@color/black"
         android:maxLines="1"

@@ -61,6 +61,10 @@ class UrgencyCategory : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.imageButton.setOnClickListener {
+            finish()
+        }
+
 
     }
 }

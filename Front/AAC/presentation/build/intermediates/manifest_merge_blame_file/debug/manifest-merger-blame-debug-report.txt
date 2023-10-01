@@ -56,12 +56,12 @@
 31        android:extractNativeLibs="false"
 32        android:fullBackupContent="@xml/backup_rules"
 32-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:16:9-54
-33        android:icon="@mipmap/ic_launcher"
-33-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:17:9-43
+33        android:icon="@mipmap/applogo94"
+33-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:17:9-41
 34        android:label="@string/app_name"
 34-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:18:9-41
-35        android:roundIcon="@mipmap/ic_launcher_round"
-35-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:19:9-54
+35        android:roundIcon="@mipmap/applogo94"
+35-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:19:9-46
 36        android:supportsRtl="true"
 36-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:20:9-35
 37        android:testOnly="true"

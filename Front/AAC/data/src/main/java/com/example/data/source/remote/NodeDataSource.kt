@@ -43,6 +43,7 @@ class Node(){
 
 // 노드를 가지고 있는 리스트
 class NodeList(private var size : Int){
+
     var node_Array = Array(size) { Node() }
     // 루트 노드를 미리 저장
     //var root_node : Array<Int> = emptyArray()

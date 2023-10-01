@@ -31,6 +31,7 @@
             android:id="@+id/selectedCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
             android:text="안전/위험"
             android:textColor="@color/black"
             android:textSize="27sp"
@@ -48,10 +49,11 @@
         android:id="@+id/urgencyRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        tools:listitem="@layout/activity_urgency_sentence_item"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:listitem="@layout/activity_urgency_sentence_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

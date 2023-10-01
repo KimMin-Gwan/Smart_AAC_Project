@@ -24,6 +24,7 @@ class FavoriteFullScreen @Inject constructor(): AppCompatActivity() {
         override fun handleOnBackPressed() {
 //            val intent= Intent(this@FavoriteFullScreen, FavoriteMain::class.java)
 //            startActivity(intent)
+            viewModel.stopSentence()
             viewModel.shutdownSentence()
             finish()
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
@@ -36,6 +37,7 @@ class FavoriteFullScreen @Inject constructor(): AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //가로모드
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 
         val binding= ActivityFavoriteFullScreenBinding.inflate(layoutInflater)

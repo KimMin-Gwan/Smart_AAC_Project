@@ -194,11 +194,11 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ellen\.gradle\cach
 	android:fullBackupContent
 		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:16:9-54
 	android:roundIcon
-		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:19:9-54
+		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:19:9-46
 	tools:targetApi
 		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:23:9-29
 	android:icon
-		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:17:9-43
+		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:17:9-41
 	android:allowBackup
 		ADDED from C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:13:9-35
 	android:theme

@@ -51,8 +51,9 @@ class ChooseWordPass() : AppCompatActivity() {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            val intent = Intent(this@ChooseWordPass, PassCategory::class.java)
-            startActivity(intent)
+//            val intent = Intent(this@ChooseWordPass, PassCategory::class.java)
+//            startActivity(intent)
+            finish()
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
             // 뒤로가기 시 실행할 코드
         }
@@ -70,7 +71,7 @@ class ChooseWordPass() : AppCompatActivity() {
         // 카테고리 변경을 관찰
         viewModel.categories.observe(this) {
 
-            child_list = viewModel.processUpdateNodes()!!
+            child_list = viewModel.processUpdateNodes(it)!!
             adapter = NodeAdapter(child_list, this)
             binding.recyclerViewPass.layoutManager = GridLayoutManager(this, 3)
             binding.recyclerViewPass.adapter = adapter
@@ -133,32 +134,35 @@ class ChooseWordPass() : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        Log.d("pause", "pause")
+        Log.d("워드pause", "pause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("stop", "stop")
+        Log.d("워드stop", "stop")
 
     }
 
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("destroy", "Destroy")
+        Log.d("워드destroy", "Destroy")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("resume", "resume")
+        Log.d("워드resume", "resume")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("워드restart", "restart")
+        recreate()
     }
 
     override fun onStart() {
         super.onStart()
-        Log.d("start", "start")
+        Log.d("워드start", "start")
     }
 
-    companion object {
-        const val SELECTED_CATEGORY = "selectedCategory"
-    }
 }

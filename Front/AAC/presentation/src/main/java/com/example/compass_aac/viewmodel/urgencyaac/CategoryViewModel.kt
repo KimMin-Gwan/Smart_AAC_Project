@@ -38,7 +38,7 @@ class CategoryViewModel @Inject constructor(private val useCase: UrgencyUseCase,
 //    }
 
     fun getSentence(selectedId: Int): ArrayList<Tree_Node>{
-        return repository.getAAC_Tree(selectedId)
+        return repository.getAAC_Urgency_Tree(selectedId)
     }
 
 }

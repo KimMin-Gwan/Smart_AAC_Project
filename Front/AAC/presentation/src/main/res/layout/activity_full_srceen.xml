@@ -8,17 +8,18 @@
     tools:context=".view.urgencyaac.FullSrceen">
 
     <TextView
-        android:id="@+id/favoriteSentence"
-        android:layout_width="wrap_content"
+        android:id="@+id/UrgencySentence"
+        android:layout_width="10000dp"
         android:layout_height="wrap_content"
         android:background="@color/black"
         android:singleLine="true"
         android:maxLines="1"
+        android:ellipsize="none"
         android:layoutAnimation="@anim/translate_alpha"
         android:src="@drawable/select_voice_word"
         android:text="도와주세요 안녕하세요 저는 기은서라고합니다."
         android:textColor="@color/white"
-        android:textSize="70sp"
+        android:textSize="120sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.005"
@@ -27,6 +28,7 @@
 
 
     <ImageButton
+        android:id="@+id/urgencyClose"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="4dp"
@@ -39,15 +41,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/favoriteVoice"
+        android:id="@+id/UrgencyVoice"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="5dp"
         android:background="@color/black"
         android:scaleType="fitXY"
         android:src="@drawable/select_voice_word"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
