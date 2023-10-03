@@ -11,7 +11,7 @@ fun ConvertToId(selectedCategory: String) : Int {
         "카페" -> 107
         "미용실" -> 108
         "서점" -> 109
-        "병원" -> 1010
+        "병원" -> 100
         else -> 0
     }
 

@@ -271,7 +271,7 @@ class MakeUrgencyNode(context: Context)
 // Root_Category maker
 class Make_Root_Category()
 {
-    val min_index = 101
+    val min_index = 100
     val max_index = 200
     // 루트 카테고리는 Integer형태로, 인덱스만 보관
     var root_category = ArrayList<Int>()

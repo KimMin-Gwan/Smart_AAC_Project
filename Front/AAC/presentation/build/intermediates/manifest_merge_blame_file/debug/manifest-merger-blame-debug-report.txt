@@ -64,247 +64,246 @@
 35-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:19:9-46
 36        android:supportsRtl="true"
 36-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:20:9-35
-37        android:testOnly="true"
-38        android:theme="@style/Base.Theme.Compass_AAC"
-38-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:21:9-54
-39        android:usesCleartextTraffic="true" >
-39-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:22:9-44
-40        <activity
-40-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:24:9-26:40
-41            android:name="com.example.compass_aac.view.favorite.FavoriteFullScreen"
-41-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:25:13-61
-42            android:exported="false" />
-42-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:26:13-37
-43        <activity
-43-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:27:9-29:40
-44            android:name="com.example.compass_aac.view.urgencyaac.AddSentence"
-44-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:28:13-56
-45            android:exported="false" />
-45-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:29:13-37
-46        <activity
-46-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:30:9-32:40
-47            android:name="com.example.compass_aac.view.favorite.FavoriteMain"
-47-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:31:13-55
-48            android:exported="false" />
-48-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:32:13-37
-49        <activity
-49-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:33:9-35:40
-50            android:name="com.example.compass_aac.view.urgencyaac.FullSrceen"
-50-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:34:13-55
-51            android:exported="false" />
-51-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:35:13-37
-52        <activity
-52-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:36:9-38:40
-53            android:name="com.example.compass_aac.view.urgencyaac.UrgencySentence"
-53-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:37:13-60
-54            android:exported="false" />
-54-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:38:13-37
-55        <activity
-55-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:39:9-41:40
-56            android:name="com.example.compass_aac.view.user.Customizing"
-56-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:40:13-50
-57            android:exported="false" />
-57-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:41:13-37
-58        <activity
-58-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:42:9-44:40
-59            android:name="com.example.compass_aac.view.user.UserPage"
-59-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:43:13-47
-60            android:exported="false" />
-60-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:44:13-37
-61        <activity
-61-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:45:9-47:39
-62            android:name="com.example.compass_aac.view.voiceaac.ChooseWordVoice"
-62-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:46:13-58
-63            android:exported="true" />
-63-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:47:13-36
-64        <activity
-64-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:48:9-50:39
-65            android:name="com.example.compass_aac.view.voiceaac.HearVoice"
-65-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:49:13-52
-66            android:exported="true" />
-66-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:50:13-36
-67        <activity
-67-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:51:9-53:40
-68            android:name="com.example.compass_aac.view.voiceaac.ShowSelectedWord"
-68-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:52:13-59
-69            android:exported="false" />
-69-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:53:13-37
-70        <activity
-70-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:54:9-56:40
-71            android:name="com.example.compass_aac.view.voiceaac.ChooseWordPass"
-71-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:55:13-57
-72            android:exported="false" />
-72-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:56:13-37
-73        <activity
-73-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:57:9-60:55
-74            android:name="com.example.compass_aac.view.login.RegisterMain"
-74-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:58:13-52
-75            android:exported="false"
-75-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:59:13-37
-76            android:windowSoftInputMode="adjustPan" />
-76-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:60:13-52
-77        <activity
-77-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:61:9-63:40
-78            android:name="com.example.compass_aac.view.login.LoginMain"
-78-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:62:13-49
-79            android:exported="false" />
-79-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:63:13-37
-80        <activity
-80-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:64:9-66:40
-81            android:name="com.example.compass_aac.view.login.TitleActivity"
-81-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:65:13-53
-82            android:exported="false" />
-82-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:66:13-37
-83        <activity
-83-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:67:9-69:40
-84            android:name="com.example.compass_aac.view.urgencyaac.UrgencyCategory"
-84-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:68:13-60
-85            android:exported="false" />
-85-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:69:13-37
-86        <activity
-86-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:70:9-72:40
-87            android:name="com.example.compass_aac.view.dailyaac.DailyCategory"
-87-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:71:13-56
-88            android:exported="false" />
-88-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:72:13-37
-89        <activity
-89-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:73:9-75:40
-90            android:name="com.example.compass_aac.view.voiceaac.PassCategory"
-90-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:74:13-55
-91            android:exported="false" />
-91-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:75:13-37
-92        <activity
-92-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:76:9-78:40
-93            android:name="com.example.compass_aac.view.location.SearchLocation"
-93-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:77:13-57
-94            android:exported="false" />
-94-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:78:13-37
-95        <activity
-95-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:79:9-87:20
-96            android:name="com.example.compass_aac.view.splash.Splash"
-96-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:80:13-47
-97            android:exported="true" >
-97-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:81:13-36
-98            <intent-filter>
-98-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:82:13-86:29
-99                <action android:name="android.intent.action.MAIN" />
-99-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:83:17-69
-99-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:83:25-66
-100
-101                <category android:name="android.intent.category.LAUNCHER" />
-101-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:85:17-77
-101-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:85:27-74
-102            </intent-filter>
-103        </activity>
-104        <activity
-104-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:88:9-90:40
-105            android:name="com.example.compass_aac.view.MainActivity"
-105-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:89:13-46
-106            android:exported="false" />
-106-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:90:13-37
-107        <activity
-107-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\cb06e3a298bbaa5176ff027874a5437a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
-108            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-108-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\cb06e3a298bbaa5176ff027874a5437a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
-109            android:exported="false"
-109-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\cb06e3a298bbaa5176ff027874a5437a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
-110            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-110-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\cb06e3a298bbaa5176ff027874a5437a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
-111
-112        <meta-data
-112-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\739994ffc5bd16e25218288d9c288efe\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-113            android:name="com.google.android.gms.version"
-113-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\739994ffc5bd16e25218288d9c288efe\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-114            android:value="@integer/google_play_services_version" />
-114-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\739994ffc5bd16e25218288d9c288efe\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-115
-116        <provider
-116-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-117            android:name="androidx.startup.InitializationProvider"
-117-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-118            android:authorities="com.example.compass_aac.androidx-startup"
-118-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-119            android:exported="false" >
-119-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-120            <meta-data
-120-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-121                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-121-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-122                android:value="androidx.startup" />
-122-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-123            <meta-data
-123-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ellen\.gradle\caches\transforms-3\59d45aca8ebf54455c8e28bbe9f64dfb\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-124                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-124-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ellen\.gradle\caches\transforms-3\59d45aca8ebf54455c8e28bbe9f64dfb\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
-125                android:value="androidx.startup" />
-125-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ellen\.gradle\caches\transforms-3\59d45aca8ebf54455c8e28bbe9f64dfb\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
-126            <meta-data
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-127                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-128                android:value="androidx.startup" />
-128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-129        </provider>
-130
-131        <uses-library
-131-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-132            android:name="androidx.window.extensions"
-132-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-133            android:required="false" />
-133-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-134        <uses-library
-134-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-135            android:name="androidx.window.sidecar"
-135-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-136            android:required="false" />
-136-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-137
-138        <service
-138-->[androidx.room:room-runtime:2.4.0] C:\Users\ellen\.gradle\caches\transforms-3\809723005c488d6faa65ec83c2e34d7c\transformed\room-runtime-2.4.0\AndroidManifest.xml:25:9-28:40
-139            android:name="androidx.room.MultiInstanceInvalidationService"
-139-->[androidx.room:room-runtime:2.4.0] C:\Users\ellen\.gradle\caches\transforms-3\809723005c488d6faa65ec83c2e34d7c\transformed\room-runtime-2.4.0\AndroidManifest.xml:26:13-74
-140            android:directBootAware="true"
-140-->[androidx.room:room-runtime:2.4.0] C:\Users\ellen\.gradle\caches\transforms-3\809723005c488d6faa65ec83c2e34d7c\transformed\room-runtime-2.4.0\AndroidManifest.xml:27:13-43
-141            android:exported="false" />
-141-->[androidx.room:room-runtime:2.4.0] C:\Users\ellen\.gradle\caches\transforms-3\809723005c488d6faa65ec83c2e34d7c\transformed\room-runtime-2.4.0\AndroidManifest.xml:28:13-37
-142
-143        <receiver
-143-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-144            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-144-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-145            android:directBootAware="false"
-145-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-146            android:enabled="true"
-146-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-147            android:exported="true"
-147-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-148            android:permission="android.permission.DUMP" >
-148-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-149            <intent-filter>
-149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-150                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-150-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-150-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-151            </intent-filter>
-152            <intent-filter>
-152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-153                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-153-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-153-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-154            </intent-filter>
-155            <intent-filter>
-155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-156                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-156-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-156-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-157            </intent-filter>
-158            <intent-filter>
-158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-159                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-159-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-159-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-160            </intent-filter>
-161        </receiver>
-162    </application>
-163
-164</manifest>
+37        android:theme="@style/Base.Theme.Compass_AAC"
+37-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:21:9-54
+38        android:usesCleartextTraffic="true" >
+38-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:22:9-44
+39        <activity
+39-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:24:9-26:40
+40            android:name="com.example.compass_aac.view.favorite.FavoriteFullScreen"
+40-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:25:13-61
+41            android:exported="false" />
+41-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:26:13-37
+42        <activity
+42-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:27:9-29:40
+43            android:name="com.example.compass_aac.view.urgencyaac.AddSentence"
+43-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:28:13-56
+44            android:exported="false" />
+44-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:29:13-37
+45        <activity
+45-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:30:9-32:40
+46            android:name="com.example.compass_aac.view.favorite.FavoriteMain"
+46-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:31:13-55
+47            android:exported="false" />
+47-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:32:13-37
+48        <activity
+48-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:33:9-35:40
+49            android:name="com.example.compass_aac.view.urgencyaac.FullSrceen"
+49-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:34:13-55
+50            android:exported="false" />
+50-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:35:13-37
+51        <activity
+51-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:36:9-38:40
+52            android:name="com.example.compass_aac.view.urgencyaac.UrgencySentence"
+52-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:37:13-60
+53            android:exported="false" />
+53-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:38:13-37
+54        <activity
+54-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:39:9-41:40
+55            android:name="com.example.compass_aac.view.user.Customizing"
+55-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:40:13-50
+56            android:exported="false" />
+56-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:41:13-37
+57        <activity
+57-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:42:9-44:40
+58            android:name="com.example.compass_aac.view.user.UserPage"
+58-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:43:13-47
+59            android:exported="false" />
+59-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:44:13-37
+60        <activity
+60-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:45:9-47:39
+61            android:name="com.example.compass_aac.view.voiceaac.ChooseWordVoice"
+61-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:46:13-58
+62            android:exported="true" />
+62-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:47:13-36
+63        <activity
+63-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:48:9-50:39
+64            android:name="com.example.compass_aac.view.voiceaac.HearVoice"
+64-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:49:13-52
+65            android:exported="true" />
+65-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:50:13-36
+66        <activity
+66-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:51:9-53:40
+67            android:name="com.example.compass_aac.view.voiceaac.ShowSelectedWord"
+67-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:52:13-59
+68            android:exported="false" />
+68-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:53:13-37
+69        <activity
+69-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:54:9-56:40
+70            android:name="com.example.compass_aac.view.voiceaac.ChooseWordPass"
+70-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:55:13-57
+71            android:exported="false" />
+71-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:56:13-37
+72        <activity
+72-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:57:9-60:55
+73            android:name="com.example.compass_aac.view.login.RegisterMain"
+73-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:58:13-52
+74            android:exported="false"
+74-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:59:13-37
+75            android:windowSoftInputMode="adjustPan" />
+75-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:60:13-52
+76        <activity
+76-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:61:9-63:40
+77            android:name="com.example.compass_aac.view.login.LoginMain"
+77-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:62:13-49
+78            android:exported="false" />
+78-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:63:13-37
+79        <activity
+79-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:64:9-66:40
+80            android:name="com.example.compass_aac.view.login.TitleActivity"
+80-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:65:13-53
+81            android:exported="false" />
+81-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:66:13-37
+82        <activity
+82-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:67:9-69:40
+83            android:name="com.example.compass_aac.view.urgencyaac.UrgencyCategory"
+83-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:68:13-60
+84            android:exported="false" />
+84-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:69:13-37
+85        <activity
+85-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:70:9-72:40
+86            android:name="com.example.compass_aac.view.dailyaac.DailyCategory"
+86-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:71:13-56
+87            android:exported="false" />
+87-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:72:13-37
+88        <activity
+88-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:73:9-75:40
+89            android:name="com.example.compass_aac.view.voiceaac.PassCategory"
+89-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:74:13-55
+90            android:exported="false" />
+90-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:75:13-37
+91        <activity
+91-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:76:9-78:40
+92            android:name="com.example.compass_aac.view.location.SearchLocation"
+92-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:77:13-57
+93            android:exported="false" />
+93-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:78:13-37
+94        <activity
+94-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:79:9-87:20
+95            android:name="com.example.compass_aac.view.splash.Splash"
+95-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:80:13-47
+96            android:exported="true" >
+96-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:81:13-36
+97            <intent-filter>
+97-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:82:13-86:29
+98                <action android:name="android.intent.action.MAIN" />
+98-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:83:17-69
+98-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:83:25-66
+99
+100                <category android:name="android.intent.category.LAUNCHER" />
+100-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:85:17-77
+100-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:85:27-74
+101            </intent-filter>
+102        </activity>
+103        <activity
+103-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:88:9-90:40
+104            android:name="com.example.compass_aac.view.MainActivity"
+104-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:89:13-46
+105            android:exported="false" />
+105-->C:\Smart_AAC_Project\Front\AAC\presentation\src\main\AndroidManifest.xml:90:13-37
+106        <activity
+106-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\cb06e3a298bbaa5176ff027874a5437a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+107            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+107-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\cb06e3a298bbaa5176ff027874a5437a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+108            android:exported="false"
+108-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\cb06e3a298bbaa5176ff027874a5437a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+109            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+109-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\cb06e3a298bbaa5176ff027874a5437a\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+110
+111        <meta-data
+111-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\739994ffc5bd16e25218288d9c288efe\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+112            android:name="com.google.android.gms.version"
+112-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\739994ffc5bd16e25218288d9c288efe\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+113            android:value="@integer/google_play_services_version" />
+113-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ellen\.gradle\caches\transforms-3\739994ffc5bd16e25218288d9c288efe\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+114
+115        <provider
+115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+116            android:name="androidx.startup.InitializationProvider"
+116-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+117            android:authorities="com.example.compass_aac.androidx-startup"
+117-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+118            android:exported="false" >
+118-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+119            <meta-data
+119-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+120                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+120-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+121                android:value="androidx.startup" />
+121-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ellen\.gradle\caches\transforms-3\8e10c0cb511f1940c2a06c9f7a1dfe3c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+122            <meta-data
+122-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ellen\.gradle\caches\transforms-3\59d45aca8ebf54455c8e28bbe9f64dfb\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+123                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+123-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ellen\.gradle\caches\transforms-3\59d45aca8ebf54455c8e28bbe9f64dfb\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+124                android:value="androidx.startup" />
+124-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ellen\.gradle\caches\transforms-3\59d45aca8ebf54455c8e28bbe9f64dfb\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+125            <meta-data
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+126                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+127                android:value="androidx.startup" />
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+128        </provider>
+129
+130        <uses-library
+130-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+131            android:name="androidx.window.extensions"
+131-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+132            android:required="false" />
+132-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+133        <uses-library
+133-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+134            android:name="androidx.window.sidecar"
+134-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+135            android:required="false" />
+135-->[androidx.window:window:1.0.0] C:\Users\ellen\.gradle\caches\transforms-3\f2de78f20f51236b44b1551e15746805\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+136
+137        <service
+137-->[androidx.room:room-runtime:2.4.0] C:\Users\ellen\.gradle\caches\transforms-3\809723005c488d6faa65ec83c2e34d7c\transformed\room-runtime-2.4.0\AndroidManifest.xml:25:9-28:40
+138            android:name="androidx.room.MultiInstanceInvalidationService"
+138-->[androidx.room:room-runtime:2.4.0] C:\Users\ellen\.gradle\caches\transforms-3\809723005c488d6faa65ec83c2e34d7c\transformed\room-runtime-2.4.0\AndroidManifest.xml:26:13-74
+139            android:directBootAware="true"
+139-->[androidx.room:room-runtime:2.4.0] C:\Users\ellen\.gradle\caches\transforms-3\809723005c488d6faa65ec83c2e34d7c\transformed\room-runtime-2.4.0\AndroidManifest.xml:27:13-43
+140            android:exported="false" />
+140-->[androidx.room:room-runtime:2.4.0] C:\Users\ellen\.gradle\caches\transforms-3\809723005c488d6faa65ec83c2e34d7c\transformed\room-runtime-2.4.0\AndroidManifest.xml:28:13-37
+141
+142        <receiver
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+143            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+143-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+144            android:directBootAware="false"
+144-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+145            android:enabled="true"
+145-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+146            android:exported="true"
+146-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+147            android:permission="android.permission.DUMP" >
+147-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+148            <intent-filter>
+148-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+149                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+150            </intent-filter>
+151            <intent-filter>
+151-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+152                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+153            </intent-filter>
+154            <intent-filter>
+154-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+155                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+156            </intent-filter>
+157            <intent-filter>
+157-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+158                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ellen\.gradle\caches\transforms-3\cfe79c877680032c833613eeefded214\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+159            </intent-filter>
+160        </receiver>
+161    </application>
+162
+163</manifest>

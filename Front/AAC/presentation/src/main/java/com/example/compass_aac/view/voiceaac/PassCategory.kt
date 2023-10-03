@@ -95,7 +95,7 @@ class PassCategory : AppCompatActivity() {
 //        }
 
 
-        val existPlace : ArrayList<String> = arrayListOf("문구점", "식당", "영화관","마트","편의점", "도서관","카페","미용실", "서점")
+        val existPlace : ArrayList<String> = arrayListOf("문구점", "식당", "영화관","마트","편의점", "도서관","카페","미용실", "서점","병원")
         //해당 위치에 대한 정보가 없는 경우
         when (categoryData) {
             "default" -> {
