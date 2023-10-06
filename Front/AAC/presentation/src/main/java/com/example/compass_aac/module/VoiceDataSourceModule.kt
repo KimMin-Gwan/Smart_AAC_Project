@@ -5,10 +5,11 @@ import com.example.data.source.remote.VoiceDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
+import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 
 @Module
-    @InstallIn(SingletonComponent::class)
+    @InstallIn(ViewModelScoped::class)
 abstract class VoiceDataSourceModule {
     @Binds
     abstract fun bindVoiceDataSource(voiceDataSourceImpl: VoiceDataSourceImpl): VoiceDataSource

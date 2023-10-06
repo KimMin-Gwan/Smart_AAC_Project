@@ -47,15 +47,12 @@ class SearchLocation : AppCompatActivity() {
         // 뷰 바인딩
         val binding = ActivitySearchLocationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        // 뷰모델 연결
-//        locationViewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory(application)).get(
-//            LocationViewModel::class.java)
 
         //프로그래스바 업데이트
-        locationViewModel.isLoading.observe(this, Observer { isLoading ->
+        locationViewModel.isLoading.observe(this) { isLoading ->
             binding.progressBar.isIndeterminate = isLoading
             binding.progressBar.visibility = if(isLoading) View.VISIBLE else View.GONE
-        })
+        }
 
         locationViewModel.categoryResult.observe(this) { result ->
             if (result.isSuccess) {

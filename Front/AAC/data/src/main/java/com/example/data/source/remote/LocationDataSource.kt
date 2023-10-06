@@ -9,4 +9,5 @@ interface LocationDataSource {
     suspend fun getLocation(): Result<Location?>
 
     suspend fun getCategories(param: LocationParam) : CategoryResponse
+
 }

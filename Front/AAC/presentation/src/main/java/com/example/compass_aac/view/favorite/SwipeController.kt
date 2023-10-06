@@ -56,8 +56,6 @@ class SwipeController() : ItemTouchHelper.Callback() {
         var dX = dX
         if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
             if (buttonsShowedState !== ButtonState.GONE) {
-//                if (buttonsShowedState === ButtonState.LEFT_VISIBLE) //오른쪽으로 스와이프 했을 때
-//                    dX = dX.coerceAtLeast(buttonWidth)
                 if (buttonsShowedState === ButtonState.RIGHT_VISIBLE) //왼쪽으로 스와이프 했을 때
                     dX = dX.coerceAtMost(-buttonWidth)
                 super.onChildDraw(
@@ -106,19 +104,6 @@ class SwipeController() : ItemTouchHelper.Callback() {
         val p = Paint() //Paint 객체 p 생성
         buttonInstance = null
 
-//        rectF 클래스로 버튼 형태 구현
-//        if (buttonsShowedState === ButtonState.LEFT_VISIBLE) {
-//            val leftButton = RectF(
-//                (itemView.left + 10).toFloat(),
-//                (itemView.top + 10).toFloat(),
-//                itemView.left + buttonWidthWithOutPadding,
-//                (itemView.bottom - 10).toFloat()
-//            ) //rectF : top, bottom, left, right 에 대한4가지 정보를 가지고 있는 직사각형 클래스 (rect : int, rectF : float)
-//            p.color = Color.parseColor("#FD4848") //Paint 객체 컬러 지정, setColor 메서드는 int형 인자를 매개변수로 받기 때문에 string 형태의 색상을 Color 클래스의 parseColor 메서드를 이용해 int형으로 바꿔줌
-//            c.drawRoundRect(leftButton, corners, corners, p) //drawRoundRect : 원 그리기
-//            drawText("삭제", c, leftButton, p)
-//            buttonInstance = leftButton
-//        } else
         if (buttonsShowedState === ButtonState.RIGHT_VISIBLE) { //왼쪽으로 스와이프 했을 때, 오른쪽 버튼(삭제)이 나와야 함
             val rightButton = RectF(
                 itemView.right - buttonWidthWithOutPadding, itemView.top.toFloat(),
@@ -164,8 +149,6 @@ class SwipeController() : ItemTouchHelper.Callback() {
             if (swipeBack) {
                 if (dX < -buttonWidth) buttonsShowedState =
                     ButtonState.RIGHT_VISIBLE
-//                else if (dX > buttonWidth) buttonsShowedState =
-//                    ButtonState.LEFT_VISIBLE
                 if (buttonsShowedState !== ButtonState.GONE) {
                     setTouchDownListener(
                         c,
@@ -229,9 +212,6 @@ class SwipeController() : ItemTouchHelper.Callback() {
                     event.y
                 )
             ) {
-//                if (buttonsShowedState === ButtonState.LEFT_VISIBLE) {
-//                    listener.onLeftClick(viewHolder.adapterPosition, viewHolder)
-//                } else
                 if (buttonsShowedState === ButtonState.RIGHT_VISIBLE) {
                     listener.onRightClick(viewHolder.adapterPosition, viewHolder)
                 }
@@ -250,7 +230,6 @@ class SwipeController() : ItemTouchHelper.Callback() {
 }
 
 enum class ButtonState {
-    LEFT_VISIBLE,  // 왼쪽 버튼이 표시된 상태
     RIGHT_VISIBLE, // 오른쪽 버튼이 표시된 상태
     GONE           // 버튼이 숨겨진 상태
 }

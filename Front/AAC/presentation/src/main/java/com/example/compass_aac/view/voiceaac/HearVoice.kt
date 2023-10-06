@@ -78,7 +78,7 @@ class HearVoice : AppCompatActivity() {
         //음성인식 권한 허용
         requestPermission()
 
-        var intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+        val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
         intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, packageName)
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ko-KR")
 
@@ -135,7 +135,7 @@ class HearVoice : AppCompatActivity() {
                 viewModel.setEndOfSpeech(true)
             }
             override fun onError(error: Int) {
-                var message: String
+                val message: String
                 when (error) {
                     SpeechRecognizer.ERROR_AUDIO ->
                         message = "오디오 에러"
@@ -158,12 +158,12 @@ class HearVoice : AppCompatActivity() {
                     else ->
                         message = "알 수 없는 오류"
                 }
-                Toast.makeText(applicationContext, "$message", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
             }
 
             //음성인식 한 결과
             override fun onResults(results: Bundle?) {
-                var matches: ArrayList<String> = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) as ArrayList<String>
+                val matches: ArrayList<String> = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) as ArrayList<String>
                 Log.d("음성 텍스트로 변환", matches.toString())
 
                 for (i in 0 until matches.size) {

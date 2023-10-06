@@ -51,8 +51,6 @@ class ChooseWordPass() : AppCompatActivity() {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-//            val intent = Intent(this@ChooseWordPass, PassCategory::class.java)
-//            startActivity(intent)
             finish()
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
             // 뒤로가기 시 실행할 코드
@@ -103,8 +101,6 @@ class ChooseWordPass() : AppCompatActivity() {
             viewModel.storeCategory(selectedCategory)
             child_list = viewModel.processNodes(selectedCategory)
         }
-//        val selcal = viewModel.categories.value
-//        Log.d("selCal", selcal!!)
 
 
         //선택완료하기
@@ -125,44 +121,5 @@ class ChooseWordPass() : AppCompatActivity() {
 
     }
 
-
-//    override fun onSaveInstanceState(outState: Bundle) {
-//        super.onSaveInstanceState(outState)
-//        Log.d("category", category)
-//        outState.putString(SELECTED_CATEGORY,  category)
-//    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("워드pause", "pause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d("워드stop", "stop")
-
-    }
-
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("워드destroy", "Destroy")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("워드resume", "resume")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("워드restart", "restart")
-        recreate()
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.d("워드start", "start")
-    }
 
 }

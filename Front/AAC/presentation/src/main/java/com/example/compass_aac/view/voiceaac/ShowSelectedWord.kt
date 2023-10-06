@@ -33,8 +33,6 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-//            val intent = Intent(this@ShowSelectedWord, ChooseWordPass::class.java)
-//            startActivity(intent)
             finish()
             Log.e(ContentValues.TAG, "뒤로가기 클릭")
             // 뒤로가기 시 실행할 코드
@@ -53,11 +51,6 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
         setContentView(binding.root)
 
         this.onBackPressedDispatcher.addCallback(this, onBackPressedCallback) //위에서 생성한 콜백 인스턴스 붙여주기
-//
-//        val category = intent.getStringExtra("selectedCategory")
-//        Log.d("category", category!!)
-//        selectedCategory = category
-//        Log.d("selectedCategory", selectedCategory)
 
         var selectedWord = intent.getStringArrayListExtra("selectedword") ?: arrayListOf("default")
         Log.d("넘겨온 문장", selectedWord.toString())
@@ -87,13 +80,7 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
             val formattedText = formatText(sentence, 4)
             binding.selectedWordShowTv.text= sentence
         }
-
-
-//        customizeViewModel.fixedText.observe(this){
-//            binding.customizeText.text = it
-//            viewModel.getTextInf(it)
-//        }
-
+        
 
         binding.selectedWordAnswerBtn.setOnClickListener {
             val intent = Intent(this, HearVoice::class.java)
@@ -138,42 +125,6 @@ class ShowSelectedWord @Inject constructor(): AppCompatActivity() {
         }
 
         return stringBuilder.toString()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("셀렉pause", "pause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d("셀렉stop", "stop")
-
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("셀렉restart", "restart")
-    }
-
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("셀렉destroy", "Destroy")
-        viewModel.resetData()
-        viewModel.onCleared()
-        finish()
-
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("셀렉resume", "resume")
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.d("셀렉start", "start")
     }
 
 }

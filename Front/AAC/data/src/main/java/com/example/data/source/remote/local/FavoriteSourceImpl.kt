@@ -4,10 +4,11 @@ import android.content.Context
 import com.example.data.mapper.MapperToFavorite
 import com.example.data.source.remote.local.FavoriteSource
 import com.example.domain.model.favorite
+import dagger.hilt.android.qualifiers.ActivityContext
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class FavoriteSourceImpl @Inject constructor(@ApplicationContext private val context : Context) : FavoriteSource {
+class FavoriteSourceImpl @Inject constructor(@ActivityContext private val context : Context) : FavoriteSource {
     override suspend fun getLists(): List<favorite> {
         val favoriteDao = FavoriteDatabase.getInstance(context).favoriteDao()
         val sentences = favoriteDao.getAllFavorites()

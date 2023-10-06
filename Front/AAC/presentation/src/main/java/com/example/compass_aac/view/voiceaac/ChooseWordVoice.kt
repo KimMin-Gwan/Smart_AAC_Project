@@ -112,7 +112,6 @@ class ChooseWordVoice : AppCompatActivity() {
         binding.star.setOnClickListener {
             val intent = Intent(this, FavoriteMain::class.java)
             startActivity(intent)
-//            finish()
         }
 
         binding.selectWordVoiceBackBtn.setOnClickListener {
@@ -125,39 +124,6 @@ class ChooseWordVoice : AppCompatActivity() {
             startActivity(intent)
 
         }
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("워드pause", "pause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d("워드stop", "stop")
-
-    }
-
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("워드destroy", "Destroy")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("워드resume", "resume")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("워드restart", "restart")
-        recreate()
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.d("워드start", "start")
     }
 
 

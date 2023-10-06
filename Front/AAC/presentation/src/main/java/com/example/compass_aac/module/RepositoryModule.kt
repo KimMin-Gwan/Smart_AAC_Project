@@ -14,12 +14,14 @@ import com.example.domain.repository.VoiceRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
+import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 
 @Module
-@InstallIn(SingletonComponent::class)
+@InstallIn(ViewModelScoped::class)
 abstract class RepositoryModule {
 
+    // Interface타입의 객체를 어떻게 생성할지 Hilt에게 알려주기 위한 용도
     @Binds
     abstract fun bindUserRepository(userRepositoryImpl: UserRepositoryImpl): UserRepository
 

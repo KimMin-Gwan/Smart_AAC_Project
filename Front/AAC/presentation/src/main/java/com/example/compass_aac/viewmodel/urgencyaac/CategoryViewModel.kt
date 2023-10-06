@@ -29,13 +29,6 @@ class CategoryViewModel @Inject constructor(private val useCase: UrgencyUseCase,
         return _selectedCategory.value ?: "null"
     }
 
-//    fun getList(){
-//        val category = _selectedCategory.value
-//        useCase.
-//
-//
-//
-//    }
 
     fun getSentence(selectedId: Int): ArrayList<Tree_Node>{
         return repository.getAAC_Urgency_Tree(selectedId)

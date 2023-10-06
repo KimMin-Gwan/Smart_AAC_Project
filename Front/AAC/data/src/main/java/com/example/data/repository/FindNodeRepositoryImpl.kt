@@ -8,10 +8,11 @@ import com.example.data.source.remote.MakeUrgencyNode
 import com.example.data.source.remote.Make_Root_Category
 import com.example.data.source.remote.Tree_Node
 import com.example.json.NodeList
+import dagger.hilt.android.qualifiers.ActivityContext
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class FindNodeRepositoryImpl @Inject constructor(@ApplicationContext private val context:Context) :
+class FindNodeRepositoryImpl @Inject constructor(@ActivityContext private val context:Context) :
     FindNodeRepository {
 
     val node_list = MakeNode()

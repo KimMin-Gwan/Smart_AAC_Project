@@ -3,11 +3,12 @@ package com.example.domain.usecase
 import android.content.Context
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import dagger.hilt.android.qualifiers.ActivityContext
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.util.Locale
 import javax.inject.Inject
 
-class FavoriteVoiceUseCase @Inject constructor(private val textToSpeech: TextToSpeech, @ApplicationContext context: Context) {
+class FavoriteVoiceUseCase @Inject constructor(private val textToSpeech: TextToSpeech, @ActivityContext context: Context) {
     private val tts: TextToSpeech by lazy {
         TextToSpeech(context) { status ->
             if (status == TextToSpeech.SUCCESS) {

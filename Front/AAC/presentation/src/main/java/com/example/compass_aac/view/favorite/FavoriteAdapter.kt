@@ -1,40 +1,5 @@
 package com.example.compass_aac.view.favorite
-//
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.ViewGroup
-//import android.widget.TextView
-//import androidx.recyclerview.widget.RecyclerView
-//import com.example.compass_aac.R
-//import com.example.domain.model.favorite
-//
-//class FavoriteAdapter(private var favorites: List<favorite>) : RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
-//
-//    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        val sentenceTextView: TextView = itemView.findViewById(R.id.sentenceItem)
-//    }
-//
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-//        val view = LayoutInflater.from(parent.context)
-//            .inflate(R.layout.activity_favorite_list, parent, false)
-//        return ViewHolder(view)
-//    }
-//
-//    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-//        val favorite = favorites[position]
-//        holder.sentenceTextView.text = favorite.sentence
-//    }
-//
-//    override fun getItemCount(): Int {
-//        return favorites.size
-//    }
-//
-//    // 데이터 갱신
-//    fun updateData(newFavorites: List<favorite>) {
-//        favorites = newFavorites
-//        notifyDataSetChanged()
-//    }
-//}
+
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
@@ -63,19 +28,19 @@ class FavoriteAdapter : ListAdapter<favorite, FavoriteAdapter.ViewHolder>(DiffCa
     var itemClick: ItemClick? = null
 
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val sentenceTextView: TextView = itemView.findViewById(R.id.sentenceItem)
-//        val textNumber: TextView = itemView.findViewById(R.id.textView10)
         val favoriteListView : ConstraintLayout = itemView.findViewById(R.id.favoriteListView)
 
     }
 
     companion object {
         private val DiffCallback = object : DiffUtil.ItemCallback<favorite>() {
+            //두 객체가 같은 항목인지 여부를 결정
             override fun areItemsTheSame(oldItem: favorite, newItem: favorite): Boolean {
                 return oldItem.id == newItem.id
             }
-
+            //두 항목의 데이터가 같은지 여부를 결정
             override fun areContentsTheSame(oldItem: favorite, newItem: favorite): Boolean {
                 return oldItem.sentence == newItem.sentence
             }
@@ -108,7 +73,7 @@ class FavoriteAdapter : ListAdapter<favorite, FavoriteAdapter.ViewHolder>(DiffCa
         TODO("Not yet implemented")
     }
 
-    // FavoriteAdapter.kt
+
     override fun onRightClick(position: Int, viewHolder: RecyclerView.ViewHolder?) {
         val favorite = getItem(position)
 

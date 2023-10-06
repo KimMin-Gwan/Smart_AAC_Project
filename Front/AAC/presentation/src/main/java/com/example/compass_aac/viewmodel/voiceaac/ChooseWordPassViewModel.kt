@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.compass_aac.view.ConvertToCategoryString
 import com.example.compass_aac.view.ConvertToId
 import com.example.data.repository.FindNodeRepository
@@ -11,6 +12,9 @@ import com.example.data.repository.FindNodeRepositoryImpl
 import com.example.data.source.remote.AAC_Tree
 import com.example.data.source.remote.Tree_Node
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -44,32 +48,30 @@ class ChooseWordPassViewModel @Inject constructor(private val findNodeRepository
 //        return findNodeRepository.RootNode(selectedId)
 //    }
 
-    fun getAAC_Tree(selectedId: Int): ArrayList<Tree_Node>{
-        val child_string =  findNodeRepository.getAAC_Tree(selectedId)
-
+    suspend fun getAAC_Tree(selectedId: Int): ArrayList<Tree_Node> {
+        val child_string = coroutineScope  {
+            async {
+                findNodeRepository.getAAC_Tree(selectedId)
+            }
+        }
         Log.d("child_string", child_string.toString())
-        return child_string
+        return child_string.await() // 비동기 작업의 결과를 기다림
     }
 
-    fun processNodes(selectedcategory : String): ArrayList<Tree_Node> {
+    suspend fun processNodes(selectedcategory : String): ArrayList<Tree_Node> {
         val selectedId = ConvertToId(selectedcategory)
-//        getCategoryId(selectedId)
         val child_stringList = getAAC_Tree(selectedId)
         return child_stringList
 
     }
-    fun processUpdateNodes(it : String): ArrayList<Tree_Node>? {
-//        val updatedcategory = _categories.value
-//        val selectedId = updatedcategory?.let { ConvertToId(it) }
+    suspend fun processUpdateNodes(it : String): ArrayList<Tree_Node>? {
         val selectedId = ConvertToId(it)
-
-//        getCategoryId(selectedId)
         val child_stringList = getAAC_Tree(selectedId)
         return child_stringList
 
     }
 
-    fun getChildNodes(nowNode: Tree_Node) :ArrayList<Tree_Node>{
+    suspend fun getChildNodes(nowNode: Tree_Node) :ArrayList<Tree_Node>{
         val selectedId = nowNode.getId()
         Log.d("selectedId", selectedId.toString())
         return findNodeRepository.getAAC_Tree(selectedId)
