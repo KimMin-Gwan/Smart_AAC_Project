@@ -20,3 +20,7 @@
  # Others
  + 레포지터리 오너 : alsrhks2508@yu.ac.kr
  + [공모전 사이트](https://www.kfpd.org/51/38)
+
+# 결과
+
+<img width="1080" height="1080" alt="KakaoTalk_20261015_124325892" src="https://github.com/user-attachments/assets/5d8d6e39-b5ee-48b3-b48d-b3017486cbcd" />
